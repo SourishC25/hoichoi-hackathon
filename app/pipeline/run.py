@@ -29,6 +29,8 @@ WEB = ROOT / "web"
 
 load_dotenv(ROOT / ".env")
 # default: Gemini (free tier works) when a key is configured, otherwise the fully offline local engine
+LOW_MEM = bool(os.getenv("BIRATI_LOW_MEM"))
+LLM_WORKERS = 2 if LOW_MEM else 6
 ENGINE = os.getenv("BIRATI_ENGINE", "gemini" if os.getenv("GEMINI_API_KEY") else "local").lower()
 if ENGINE == "gemini":
     from . import gemini
@@ -121,7 +123,7 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
             wav = media.extract_audio(proxy, wd / "audio.wav")
             return signals.detect_speech(wav), signals.loudness(wav)
 
-        with ThreadPoolExecutor(3) as ex:
+        with ThreadPoolExecutor(1 if LOW_MEM else 3) as ex:
             f_shots = ex.submit(signals.detect_shots, proxy)
             f_audio = ex.submit(audio_part)
             f_black = ex.submit(media.black_segments, proxy)
@@ -170,7 +172,7 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
         log("C · generating + snapping break candidates")
         lst = breaks.generate(scenes, perc["shots"], perc["speech"], perc["blacks"], perc["loudness"], duration, rules)
         log(f"D · Gemini judging {sum(1 for c in lst if not c['rejections'])} cut points")
-        breaks.judge_all(lst, proxy, wd, scenes, log=log)
+        breaks.judge_all(lst, proxy, wd, scenes, log=log, workers=LLM_WORKERS)
         for c in lst:
             c["where_score"] = breaks.where_score(c)
         cands = {"rules": rules_c, "items": lst}
@@ -186,7 +188,7 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
         t = time.time()
         ads.ensure_all(WEB, brands, log=log)
         pool = [json.loads(json.dumps(c)) for c in items if not c["rejections"] and c["where_score"] >= 0.35]
-        brandlib.match_all(pool, brands, scenes, proxy, wd, log=log)
+        brandlib.match_all(pool, brands, scenes, proxy, wd, log=log, workers=LLM_WORKERS)
         matched = {"catalogue_hash": ch, "items": {c["id"]: c for c in pool}, "verify": {}}
         _save(mp, matched)
         timings["brand_matching"] = round(time.time() - t, 1)
