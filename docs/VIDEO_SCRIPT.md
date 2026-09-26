@@ -44,21 +44,24 @@ Keep the browser at full screen with the live demo link open. Target: **4:30–4
 - Point at the **Self-audit** card: "and every hard rule is re-checked from raw signals — zero speech at
   every cut, pacing and ad-load respected, no negative-context violations."
 
-## 3:20 – 4:05 · Generalises to an unseen brand (Brands & pacing tab)
-- Click **"+ Add an unseen 9th brand"** → **Re-run brand matching & pacing**.
-> "The catalogue is data, not code. I'm adding a ninth brand — a tea brand — with zero code changes.
-> The scene analysis is cached, so only matching and pacing re-run… and here it is, competing in
-> every slot, winning where there's tea or adda, and hard-blocked wherever its negative contexts
-> appear."
-- Optionally change **Max breaks / hour** to show *whether* re-optimising.
+## 3:20 – 3:50 · Generalises to an unseen brand (Brands & pacing tab)
+- Click **"+ Add an unseen 9th brand"** → **Show run with this catalogue**.
+> "The catalogue is data, not code. Here's a ninth brand — a tea brand — added with zero code changes;
+> it's scored in every slot and hard-blocked wherever its negative contexts appear."
 
-## 4:05 – 4:40 · Live processing + outputs
-- Click **Upload episode** → show the file / Google-Drive-link option:
-> "Judges can upload any held-out episode, or paste a Drive link; the full pipeline runs live —
-> a 20-minute episode takes a few minutes."
-- Click **VMAP ↓** and **Debug JSON ↓**:
-> "Outputs are an IAB VMAP 1.0 with inline VAST 3.0 that any standard player can consume, and a debug
-> JSON that explains every single decision — every candidate, every rejection reason, every block."
+## 3:50 – 4:20 · Live processing (on your laptop: http://localhost:7860)
+- Start the local server beforehand (`.venv\Scripts\python -m uvicorn app.main:app --port 7860`).
+- Upload a short clip (5–8 min keeps it within the free Gemini quota) and show the live progress log:
+> "Any episode can be processed live — upload a file or paste a Google-Drive link. It runs on the free tier
+> of Gemini, with rate-limiting and automatic fall-back between free models."
+- Show **VMAP ↓** and **Debug JSON ↓**: "a standard VMAP any player can consume, and a debug JSON that
+  explains every single decision."
+
+## 4:20 – 4:40 · Why an LLM is the core (show the README table)
+> "I also built a fully offline engine on open-source CLIP and CLAP models and measured it against the
+> LLM: it placed ads next to grief or violence three times out of eight, because in these dramas those
+> contexts are *spoken*, not shown. That's why the LLM is the core — and the offline engine ships as a
+> fallback."
 
 ## 4:40 – 4:55 · Close
 > "Birati: Gemini for understanding, signals for precision, hard guarantees for safety.
@@ -67,7 +70,8 @@ Keep the browser at full screen with the live demo link open. Target: **4:30–4
 ---
 
 ### Checklist before recording
-- [ ] Live link loads and the sample episodes appear
+- [ ] https://sourish25-birati.static.hf.space loads and the sample episodes appear
+- [ ] Local server running for the live-processing segment; have a 5–8 min clip ready
 - [ ] Play one break end to end once beforehand (so the video is cached)
 - [ ] Browser zoom ~90% so the timeline and cards fit
 - [ ] Close other tabs / notifications

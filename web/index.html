@@ -109,8 +109,8 @@
 <dialog id="dlg-upload" class="dlg">
   <form method="dialog" id="upload-form">
     <h3>Upload an episode</h3>
-    <p class="muted sm">MP4, any length. The full pipeline runs live on local open-source models: proxy → camera cuts → speech detection →
-      CLIP/CLAP embeddings → scenes → cut judgement → brand matching → pacing → VMAP.
+    <p class="muted sm">MP4, any length. The full pipeline runs live: proxy → camera cuts → speech detection → Gemini scenes → cut judgement →
+      brand matching → pacing → VMAP.
       A 20-minute episode takes a few minutes.</p>
     <input type="file" id="upload-file" accept="video/mp4,video/*">
     <div class="or">— or paste a public link (Google Drive share link or direct .mp4) —</div>
@@ -128,26 +128,23 @@
   <form method="dialog">
     <h3>How Birati decides where, whether and what</h3>
     <ol class="how">
-      <li><b>Perception (frame-precise).</b> Camera cuts (ffmpeg scdet), speech activity (Silero VAD —
-        language-agnostic, so Bengali/English code-switching doesn't matter), loudness, fades to black, plus
-        <b>CLIP</b> embeddings of every second of video and <b>CLAP</b> embeddings of every 5 s of audio.
-        All free, open-weights models running on CPU — no API keys.</li>
-      <li><b>Scenes.</b> A new scene starts when a shot looks unlike everything in the previous minute (CLIP), so
-        shot/reverse-shot dialogue stays one scene. Each scene is tagged zero-shot with activities and sensitive
-        topics — vocabulary taken at runtime from the brand catalogue — using visual (CLIP) and acoustic (CLAP:
-        crying, screaming, sirens…) evidence.</li>
-      <li><b>WHERE.</b> Each scene boundary / fade is snapped to a frame-exact camera cut inside a speech-free gap.
-        No clean cut nearby → rejected: mid-sentence cuts are structurally impossible. Cut quality combines visual
-        change, silence, speech density, loudness dip, fades and music carry-over.</li>
-      <li><b>WHAT.</b> Every brand phrase is scored against the lead-in scene (dominant activity wins). Negative
-        contexts are a hard, fail-closed block from three independent layers: scene tags, a lead-in window check,
-        and a dense 2 fps verifier on the final pick with stricter thresholds.</li>
-      <li><b>WHETHER.</b> An exact dynamic programme picks the best set of breaks under max breaks/hour, min gap and
-        the ad-load budget. Weak moments get no break at all.</li>
-      <li><b>Calibrated.</b> Thresholds were tuned against multimodal-LLM (Gemini) labels from development runs —
-        teacher → student — with leave-one-episode-out validation.</li>
+      <li><b>Perception (deterministic, frame-precise).</b> Camera cuts (ffmpeg scdet), speech activity (Silero VAD —
+        language-agnostic, so Bengali/English code-switching doesn't matter), loudness, fades to black.</li>
+      <li><b>Scenes (Gemini, whole episode, video + Bengali audio).</b> Groups shots into semantically coherent scenes;
+        for each: dominant activity, mood and every sensitive topic — even ones only <i>talked about</i> — using a
+        vocabulary built at runtime from the brand catalogue's <code>negative_contexts</code>.</li>
+      <li><b>WHERE.</b> Each scene boundary / fade is snapped to a frame-exact camera cut inside a speech-free gap: no
+        clean cut nearby → rejected, so mid-sentence cuts are structurally impossible. Gemini then re-watches the cut
+        with an <b>"AD BREAK" card spliced into the clip</b> and judges it like a broadcast editor.</li>
+      <li><b>WHAT.</b> Gemini scores every brand for the slot (dominant activity wins). Negative contexts are a hard,
+        fail-closed block from three independent layers: scene tags, the lead-in clip review, and an adversarial
+        verifier on the final pick.</li>
+      <li><b>WHETHER.</b> An exact dynamic programme picks the best set of breaks under max breaks/hour, min gap and the
+        ad-load budget. Weak moments get no break at all.</li>
       <li><b>Output.</b> IAB VMAP 1.0 with inline VAST 3.0, a debug JSON explaining every decision, and this player,
         which reads the VMAP, cuts on the exact frame, plays the ad and resumes.</li>
+      <li><b>Free to run.</b> Gemini free tier (rate-limited, falls back across free models); an offline engine on
+        open-source CLIP + CLAP ships as a fallback — measured weaker on spoken context, see README.</li>
     </ol>
     <div class="row end"><button class="btn primary">Got it</button></div>
   </form>
@@ -155,10 +152,10 @@
 
 <dialog id="dlg-local" class="dlg wide">
   <form method="dialog">
-    <h3>Process your own episode (free, offline, no API keys)</h3>
+    <h3>Process your own episode (free)</h3>
     <p class="muted sm">This public demo is a free static site, so it plays precomputed runs of the sample episodes.
-      The full pipeline runs on any laptop CPU with free open-source models (CLIP, CLAP, Silero VAD) — a 25-minute
-      episode takes a few minutes, with live progress, upload, Google-Drive-link ingest and catalogue re-runs:</p>
+      The full pipeline runs on any laptop (Gemini free-tier key, or the offline CLIP + CLAP engine with no key) —
+      with live progress, upload, Google-Drive-link ingest and catalogue / pacing re-runs:</p>
     <pre class="code">git clone &lt;this repo&gt; &amp;&amp; cd birati
 python -m venv .venv &amp;&amp; .venv/Scripts/pip install torch --index-url https://download.pytorch.org/whl/cpu
 .venv/Scripts/pip install -r requirements.txt
