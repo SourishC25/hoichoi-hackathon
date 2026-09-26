@@ -2,7 +2,7 @@
 
 > hoichoi Hackathon'26 · Problem 1 — Context-Aware Video Segmentation & Intelligent Ad Placement
 
-**Live demo:** https://sourish25-birati.static.hf.space · **Explainer video:** _<add link>_
+**Live demo:** https://sourish25-birati.static.hf.space · **Code:** https://github.com/SourishC25/hoichoi-hackathon · **Explainer video:** _<add link>_
 
 Birati ingests a long-form Bengali episode, segments it into semantically coherent scenes, decides
 **where** a break is natural, **whether** a break is warranted under pacing rules, and **what** brand

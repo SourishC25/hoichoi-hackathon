@@ -156,7 +156,7 @@
     <p class="muted sm">This public demo is a free static site, so it plays precomputed runs of the sample episodes.
       The full pipeline runs on any laptop (Gemini free-tier key, or the offline CLIP + CLAP engine with no key) —
       with live progress, upload, Google-Drive-link ingest and catalogue / pacing re-runs:</p>
-    <pre class="code">git clone &lt;this repo&gt; &amp;&amp; cd birati
+    <pre class="code">git clone https://github.com/SourishC25/hoichoi-hackathon &amp;&amp; cd hoichoi-hackathon
 python -m venv .venv &amp;&amp; .venv/Scripts/pip install torch --index-url https://download.pytorch.org/whl/cpu
 .venv/Scripts/pip install -r requirements.txt
 .venv/Scripts/python -m uvicorn app.main:app --port 7860   # then open http://localhost:7860</pre>
