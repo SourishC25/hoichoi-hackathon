@@ -20,7 +20,7 @@ the precision comes from deterministic signals. Each does what it is best at:
 | Is this cut natural? is dialogue continuing? has the beat landed? | **Gemini, 42 s clip around each cut, 2 fps** | Needs to hear the Bengali conversation and judge dramatic rhythm |
 | Which brand fits? which are blocked? | **Gemini, lead-in clip + scene context + catalogue as data** | Dominant activity ≠ background props; generalises to unseen brands |
 | Final brand-safety check | **Independent adversarial Gemini call** | Fail-closed second opinion on the chosen brand only |
-| Exactly which frame? is anyone speaking? | PySceneDetect camera cuts + Silero VAD | Frame-exact and language-agnostic; a mid-sentence cut becomes structurally impossible |
+| Exactly which frame? is anyone speaking? | ffmpeg scdet camera cuts (PySceneDetect fallback) + Silero VAD | Frame-exact and language-agnostic; a mid-sentence cut becomes structurally impossible |
 | How many breaks, where, which creative length? | Exact dynamic programme | Hard constraints must be guaranteed, not "usually" respected |
 
 ## Pipeline
@@ -28,7 +28,7 @@ the precision comes from deterministic signals. Each does what it is best at:
 ```
 video ─► A. perception ──────────► B. global understanding ─► C. candidates ─► D. local cut judge ─► E. brand match ─► F. pacing + verify ─► VMAP + debug JSON
          ffmpeg proxy               Gemini watches the whole     every scene       Gemini re-watches     Gemini scores all     DP under max/hr,
-         PySceneDetect cuts         episode → scenes, activity,  boundary & fade   ±30 s around each     brands + violations;  min gap, ad load;
+         ffmpeg scdet cuts          episode → scenes, activity,  boundary & fade   ±30 s around each     brands + violations;  min gap, ad load;
          Silero VAD speech          mood, sensitive topics       snapped to a      cut: dialogue          deterministic tag     adversarial verifier
          loudness, blackdetect      (vocab from catalogue)       silent camera cut continues? beat done?  blocks (fail-closed)  on the final pick
 ```
@@ -89,7 +89,7 @@ upload any episode in the UI to run the full pipeline live.
 ## Repo layout
 ```
 app/pipeline/media.py       ffmpeg helpers (proxy, audio, blackdetect, clips)
-app/pipeline/signals.py     camera cuts, Silero VAD, loudness + queries
+app/pipeline/signals.py     camera cuts (scdet), Silero VAD, loudness + queries
 app/pipeline/understand.py  B · Gemini full-episode scene segmentation + sensitivity tagging
 app/pipeline/breaks.py      C/D · candidate snapping + Gemini cut judgement + where-score
 app/pipeline/brands.py      E · catalogue-driven matching, 3-layer hard blocks, verifier

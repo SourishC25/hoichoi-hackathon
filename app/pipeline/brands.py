@@ -24,7 +24,7 @@ LOOKBACK, LOOKAHEAD = 150.0, 30.0
 IMPLIES = {
     "death": ["grief", "funeral"], "dead body": ["grief", "funeral"], "mourning": ["grief", "funeral"],
     "funeral": ["grief"], "suicide": ["grief", "violence"], "blood": ["injury", "violence"],
-    "fight": ["violence"], "weapon": ["violence"], "injury": ["hospital"], "illness": ["hospital"],
+    "fight": ["violence"], "weapon": ["violence"],
     "medical emergency": ["hospital", "illness"], "hospital": ["illness"],
 }
 
@@ -172,7 +172,6 @@ tasteless there. When unsure, answer true."""
 
 def match_all(cands: list[dict], brands: list[dict], scenes: list[dict], proxy: Path, workdir: Path,
               log=print, workers: int = 6) -> None:
-    by_id = {b["brand_id"]: b for b in brands}
     log(f"brand matching on {len(cands)} candidates x {len(brands)} brands")
 
     def one(c):
@@ -189,31 +188,35 @@ def match_all(cands: list[dict], brands: list[dict], scenes: list[dict], proxy: 
     if failed:  # never cache a half-matched stage
         raise RuntimeError(f"{len(failed)} brand-matching calls failed: {failed[0]['rejections'][-1]}")
 
-    for c in cands:
-        ranking = []
-        llm = {b["brand_id"]: b for b in (c.get("match") or {}).get("brands", [])}
-        for bid, brand in by_id.items():
-            blocks = deterministic_blocks(brand, scenes, c["t"])
-            m = llm.get(bid)
-            if m is None:
-                blocks.append({"negative_context": "*", "source": "llm", "evidence": "brand missing from LLM answer (fail-closed)"})
-            else:
-                # fail-closed: any violation the model claims blocks, even if it paraphrased the label
-                for v in m["violations"]:
-                    blocks.append({"negative_context": v["negative_context"], "source": "llm_lead_in", "evidence": v["evidence"]})
-            ranking.append({
-                "brand_id": bid,
-                "relevance": round(float(m["relevance"]), 3) if m else 0.0,
-                "matched_contexts": m["matched_contexts"] if m else [],
-                "rationale": m["rationale"] if m else "",
-                "blocked": bool(blocks),
-                "blocks": blocks,
-            })
-        ranking.sort(key=lambda r: (r["blocked"], -r["relevance"]))
-        c["brand_ranking"] = ranking
-        c["dominant_activity"] = (c.get("match") or {}).get("dominant_activity", "")
-        if c.get("match") and all(r["blocked"] for r in ranking):
-            c["rejections"].append("every brand is blocked by negative contexts here")
+
+def rank(c: dict, brands: list[dict], scenes: list[dict]) -> None:
+    """Combine the cached LLM verdicts with deterministic blocks into a per-slot brand ranking.
+    Kept separate from the LLM stage so blocking rules apply without new model calls."""
+    by_id = {b["brand_id"]: b for b in brands}
+    ranking = []
+    llm = {b["brand_id"]: b for b in (c.get("match") or {}).get("brands", [])}
+    for bid, brand in by_id.items():
+        blocks = deterministic_blocks(brand, scenes, c["t"])
+        m = llm.get(bid)
+        if m is None:
+            blocks.append({"negative_context": "*", "source": "llm", "evidence": "brand missing from LLM answer (fail-closed)"})
+        else:
+            # fail-closed: any violation the model claims blocks, even if it paraphrased the label
+            for v in m["violations"]:
+                blocks.append({"negative_context": v["negative_context"], "source": "llm_lead_in", "evidence": v["evidence"]})
+        ranking.append({
+            "brand_id": bid,
+            "relevance": round(float(m["relevance"]), 3) if m else 0.0,
+            "matched_contexts": m["matched_contexts"] if m else [],
+            "rationale": m["rationale"] if m else "",
+            "blocked": bool(blocks),
+            "blocks": blocks,
+        })
+    ranking.sort(key=lambda r: (r["blocked"], -r["relevance"]))
+    c["brand_ranking"] = ranking
+    c["dominant_activity"] = (c.get("match") or {}).get("dominant_activity", "")
+    if c.get("match") and all(r["blocked"] for r in ranking):
+        c["rejections"].append("every brand is blocked by negative contexts here")
 
 
 def pick_creative(brand: dict, max_sec: float) -> dict | None:

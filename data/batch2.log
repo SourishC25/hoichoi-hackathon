@@ -1,2 +1,11 @@
-[feluda] A · transcoding web proxy
-[feluda] A · detecting camera cuts
+[feluda] B · uploading episode to Gemini
+[feluda] uploaded proxy.mp4 -> files/imqhlsn22y15
+[feluda] B · Gemini watching full episode → semantic scenes
+[feluda] global analysis: 349 shots, vocab 28 terms
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+[feluda] B · 13 scenes
+[feluda] C · generating + snapping break candidates
+[feluda] D · Gemini judging 7 cut points
+[feluda] local judgement on 7 / 16 candidates
+[feluda] creatives ready for 8 brands
+[feluda] brand matching on 6 candidates x 8 brands

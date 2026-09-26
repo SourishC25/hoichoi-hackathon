@@ -1,0 +1,477 @@
+{
+ "rules": {
+  "no_break_first_sec": 120,
+  "no_break_last_sec": 90
+ },
+ "items": [
+  {
+   "id": "c000",
+   "t0": 0.58,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 0.58,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.58,
+    "silence_after": 14.82,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c001",
+   "t0": 11.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 6.0,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": -5.0,
+    "silence_before": 6.0,
+    "silence_after": 9.4,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.06,
+    "loudness_dip_db": 17.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c002",
+   "t0": 80.48,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 84.72,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 4.24,
+    "silence_before": 4.32,
+    "silence_after": 102.78,
+    "speech_density_10s_before": 0.19,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.1,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c003",
+   "t0": 302.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 302.0,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 8.1,
+    "silence_after": 11.3,
+    "speech_density_10s_before": 0.19,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1,
+    "jarring": 0,
+    "suspense_hook": 0,
+    "natural_break_score": 0.95,
+    "reason": "The cut occurs at a perfect transition point between the end of the cold open/prologue and the start of the animated opening credits sequence."
+   },
+   "where_score": 0.834
+  },
+  {
+   "id": "c004",
+   "t0": 389.08,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 389.08,
+   "scene_before": 5,
+   "scene_after": 6,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 1.0,
+    "speech_density_10s_after": 0.74,
+    "loudness_dip_db": 10.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c005",
+   "t0": 509.6,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 509.6,
+   "scene_before": 6,
+   "scene_after": 7,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.7,
+    "silence_after": 38.1,
+    "speech_density_10s_before": 0.57,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 16.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "ক",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.1,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The scene in the astrologer's chamber concludes naturally with the clue 'K', and the cut transitions cleanly to a completely new location and sequence in Kashmir."
+   },
+   "where_score": 0.815
+  },
+  {
+   "id": "c006",
+   "t0": 544.86,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 544.86,
+   "scene_before": 7,
+   "scene_after": 8,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 35.96,
+    "silence_after": 2.84,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.64,
+    "loudness_dip_db": 29.7,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "আপনি যাই বলুন।",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.0,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.95,
+    "reason": "The cut occurs during a complete fade to black after a dramatic action sequence concludes, transitioning cleanly to a new scene in a different location."
+   },
+   "where_score": 0.938
+  },
+  {
+   "id": "c007",
+   "t0": 684.6,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 684.6,
+   "scene_before": 8,
+   "scene_after": 9,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 2.5,
+    "silence_after": 3.9,
+    "speech_density_10s_before": 0.74,
+    "speech_density_10s_after": 0.43,
+    "loudness_dip_db": 2.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "আমাদের আইডিয়াটা চমৎকার লাগছে না?",
+    "first_line_after_cut": "আপনারা রেডি?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs during a clean transition from a car ride to a hotel room, with the previous conversation fully concluded."
+   },
+   "where_score": 0.607
+  },
+  {
+   "id": "c008",
+   "t0": 851.56,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 854.4,
+   "scene_before": 10,
+   "scene_after": 11,
+   "signals": {
+    "snap_delta": 2.84,
+    "silence_before": 2.2,
+    "silence_after": 15.9,
+    "speech_density_10s_before": 0.78,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 6.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "তাহলে আপনাদের সাথে আবার দেখা হচ্ছে ভূস্বর্গে।",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.85,
+    "reason": "The conversation in the room concludes naturally with a transition line, followed by scenic establishing shots of Kashmir, making it an excellent and non-disruptive place for an ad break."
+   },
+   "where_score": 0.705
+  },
+  {
+   "id": "c009",
+   "t0": 1081.36,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1081.36,
+   "scene_before": 10,
+   "scene_after": 11,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.96,
+    "silence_after": 37.34,
+    "speech_density_10s_before": 0.43,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.5,
+    "jarring": 0.4,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.55,
+    "reason": "The cut occurs during a scenic montage of the boat ride with continuous background music, making it a decent but slightly jarring place for a break as the sequence is still ongoing."
+   },
+   "where_score": 0.412
+  },
+  {
+   "id": "c010",
+   "t0": 1200.24,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "LLM: conversation continues across the cut"
+   ],
+   "t": 1204.28,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 4.04,
+    "silence_before": 1.08,
+    "silence_after": 3.42,
+    "speech_density_10s_before": 0.52,
+    "speech_density_10s_after": 0.26,
+    "loudness_dip_db": 12.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "শুকরিয়া",
+    "first_line_after_cut": "Thank you. শুকরিয়া।",
+    "dialogue_continues_across_cut": true,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.3,
+    "jarring": 0.6,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.35,
+    "reason": "The cut occurs mid-sequence while tea is being served to the guests, making it a bit jarring as the action resumes immediately after the break."
+   },
+   "where_score": 0.372
+  },
+  {
+   "id": "c011",
+   "t0": 1478.1,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1478.1,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 7.6,
+    "silence_after": 5.1,
+    "speech_density_10s_before": 0.2,
+    "speech_density_10s_after": 0.45,
+    "loudness_dip_db": 1.2,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c012",
+   "t0": 1490.38,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1490.38,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.68,
+    "speech_density_10s_after": 0.93,
+    "loudness_dip_db": 12.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c013",
+   "t0": 1505.0,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1505.0,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.93,
+    "speech_density_10s_after": 0.94,
+    "loudness_dip_db": 5.5,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c014",
+   "t0": 1513.42,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1513.42,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.94,
+    "speech_density_10s_after": 0.93,
+    "loudness_dip_db": 15.2,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c015",
+   "t0": 1533.86,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1533.86,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 4.96,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.5,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 58.3,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  }
+ ]
+}

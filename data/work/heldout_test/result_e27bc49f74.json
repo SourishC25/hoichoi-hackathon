@@ -1,0 +1,2066 @@
+{
+ "video_id": "heldout_test",
+ "generated_at": "2026-09-26T13:07:17+0530",
+ "models": {
+  "global": "gemini-3.5-flash",
+  "local": "gemini-3.5-flash"
+ },
+ "catalogue_hash": "7331d21427",
+ "brands": [
+  "brand_a",
+  "brand_b",
+  "brand_c",
+  "brand_d",
+  "brand_e",
+  "brand_f",
+  "brand_g",
+  "brand_h"
+ ],
+ "video": {
+  "duration": 420.083333,
+  "width": 854,
+  "height": 480,
+  "fps": 24.0
+ },
+ "rules": {
+  "max_breaks_per_hour": 12,
+  "min_gap_sec": 120,
+  "max_ad_load_pct": 12.0,
+  "no_break_first_sec": 120,
+  "no_break_last_sec": 90,
+  "min_break_score": 0.55,
+  "brand_relevance_weight": 0.15
+ },
+ "summary": {
+  "scenes": 8,
+  "camera_cuts": 71,
+  "candidates": 7,
+  "breaks": 1,
+  "ad_seconds": 30,
+  "ad_load_pct": 6.67,
+  "breaks_per_hour": 8.57,
+  "allowed_breaks": 1
+ },
+ "audit": [
+  {
+   "check": "No speech at any cut point (VAD)",
+   "pass": true,
+   "detail": "max speech overlap in ±guard window: 0.00s"
+  },
+  {
+   "check": "Every cut on a camera cut or black frame",
+   "pass": true,
+   "detail": "1/1 breaks frame-aligned"
+  },
+  {
+   "check": "Min gap between breaks",
+   "pass": true,
+   "detail": "single break or none"
+  },
+  {
+   "check": "Max breaks per hour",
+   "pass": true,
+   "detail": "1 placed, 1 allowed for 7.0 min"
+  },
+  {
+   "check": "Ad load within budget",
+   "pass": true,
+   "detail": "6.67% (max 12.0%)"
+  },
+  {
+   "check": "Protected opening/closing windows",
+   "pass": true,
+   "detail": "first 120s / last 90s untouched"
+  },
+  {
+   "check": "No negative-context brand placed (3 layers re-checked)",
+   "pass": true,
+   "detail": "violations: none"
+  },
+  {
+   "check": "Every placed brand passed the independent verifier",
+   "pass": true,
+   "detail": "1 verifier passes"
+  }
+ ],
+ "synopsis": "A chaotic fight near a pond unfolds while a local police officer remains indifferent, enjoying his meal nearby. Meanwhile, a man struggles with personal issues as he contemplates posters for a sexual health clinic before calling his wife. Elsewhere, a tense confrontation takes place at the docks between an angry young man and an influential local businessman.",
+ "breaks": [
+  {
+   "candidate_id": "c003",
+   "t": 300.042,
+   "quality": 0.89,
+   "where_score": 0.815,
+   "brand_id": "brand_b",
+   "brand_name": "Brand B",
+   "relevance": 0.2,
+   "matched_contexts": [
+    "bathroom"
+   ],
+   "dominant_activity": "heated argument",
+   "creative": {
+    "id": "b_30s_bn",
+    "duration_sec": 30,
+    "language": "bn",
+    "url": "ads/brand_b/b_30s_bn.mp4"
+   },
+   "reason": "The cut occurs during a clean transition between two entirely different scenes, with the dock confrontation fully resolved and a fade to black before the new scene begins. Brand: The scene after the break features a washroom/bathroom setting, but it is used for washing clothes rather than personal care or skincare routines.",
+   "last_line_before_cut": "",
+   "first_line_after_cut": "",
+   "blocked_brands": [
+    {
+     "brand_id": "brand_d",
+     "why": [
+      {
+       "negative_context": "verifier",
+       "evidence": "The scene immediately following the ad break shows a hand holding a flyer for 'GUPTA CLINIC', which is a medical clinic, violating the advertiser's restriction against placement adjacent to hospital or medical environments."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "why": [
+      {
+       "negative_context": "bathroom",
+       "source": "global_scene_tags",
+       "scene": 4,
+       "evidence": "bathroom: The woman is washing clothes in a washroom/bathroom setting."
+      },
+      {
+       "negative_context": "bathroom",
+       "source": "llm_lead_in",
+       "evidence": "The scene after the break shows a woman washing clothes in a washroom/bathroom setting."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 124.833,
+   "location": "Pond side and nearby tea stall",
+   "characters": [
+    "Police Officer",
+    "Man in Pink Shirt",
+    "Young Man with Headphones"
+   ],
+   "summary": "A violent fight breaks out near a pond, which a local man in pink tries to stop while a police officer calmly eats his meal at a nearby stall, ignoring the commotion.",
+   "dominant_activity": "physical fight and conversation",
+   "contexts": [
+    "pond",
+    "tea stall",
+    "eating",
+    "crowd",
+    "shouting"
+   ],
+   "mood": "tense",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "fight",
+     "evidence": "Men are seen physically fighting and shoving each other near the pond.",
+     "confidence": 0.9
+    },
+    {
+     "topic": "violence",
+     "evidence": "A physical altercation occurs with multiple people grabbing and pushing.",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "transition",
+   "index": 0,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h"
+   ],
+   "blocked_contexts": [
+    "violence"
+   ]
+  },
+  {
+   "start": 124.833,
+   "end": 212.375,
+   "location": "Street stall",
+   "characters": [
+    "Man in Brown Shirt"
+   ],
+   "summary": "A man in a brown shirt stands near a closed shop, looking at posters advertising a clinic for marital and sexual problems, while smoking a cigarette.",
+   "dominant_activity": "smoking and reading posters",
+   "contexts": [
+    "posters",
+    "cigarette",
+    "street",
+    "village"
+   ],
+   "mood": "pensive",
+   "emotional_intensity": 0.4,
+   "sensitive": [
+    {
+     "topic": "smoking",
+     "evidence": "The man is shown smoking a cigarette.",
+     "confidence": 0.9
+    },
+    {
+     "topic": "sexual content",
+     "evidence": "The posters on the wall advertise treatment for sexual dysfunction and marital disharmony.",
+     "confidence": 0.8
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.83,
+   "llm_start": 124.0,
+   "index": 1,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 212.375,
+   "end": 221.25,
+   "location": "Road",
+   "characters": [
+    "Young Man with Headphones"
+   ],
+   "summary": "The young man with headphones rides his motorcycle along a highway, passing a small truck.",
+   "dominant_activity": "motorcycle ride",
+   "contexts": [
+    "highway",
+    "motorcycle",
+    "truck",
+    "driving"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.2,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.38,
+   "llm_start": 212.0,
+   "index": 2,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 221.25,
+   "end": 300.042,
+   "location": "Boat harbor",
+   "characters": [
+    "Young Man with Headphones",
+    "Businessman"
+   ],
+   "summary": "The young man with headphones confronts a wealthy local businessman at the docks, leading to a heated argument about their business before he storms off.",
+   "dominant_activity": "heated argument",
+   "contexts": [
+    "docks",
+    "boats",
+    "gold chains",
+    "shouting",
+    "office"
+   ],
+   "mood": "angry",
+   "emotional_intensity": 0.9,
+   "sensitive": [
+    {
+     "topic": "heated argument",
+     "evidence": "The young man and the businessman shout angrily at each other.",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.25,
+   "llm_start": 221.0,
+   "index": 3,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 300.042,
+   "end": 373.667,
+   "location": "Street and washroom",
+   "characters": [
+    "Man in Brown Shirt",
+    "Wife"
+   ],
+   "summary": "A man in a brown shirt calls his wife, who is washing clothes at home, to check in on her and discuss when he will return.",
+   "dominant_activity": "phone call",
+   "contexts": [
+    "mobile phone",
+    "washing clothes",
+    "bucket",
+    "street"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.3,
+   "sensitive": [
+    {
+     "topic": "bathroom",
+     "evidence": "The woman is washing clothes in a washroom/bathroom setting.",
+     "confidence": 0.7
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.04,
+   "llm_start": 300.0,
+   "index": 4,
+   "blocks_brands": [
+    "brand_a"
+   ],
+   "blocked_contexts": [
+    "bathroom"
+   ]
+  },
+  {
+   "start": 373.667,
+   "end": 394.375,
+   "location": "Street market",
+   "characters": [
+    "Man in Brown Shirt",
+    "Vendor"
+   ],
+   "summary": "The man in the brown shirt browses sunglasses at a street stall, and the vendor shows him a pair of red sunglasses.",
+   "dominant_activity": "shopping for sunglasses",
+   "contexts": [
+    "sunglasses",
+    "market",
+    "vendor",
+    "clay statues"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.2,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.67,
+   "llm_start": 373.0,
+   "index": 5,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 394.375,
+   "end": 407.917,
+   "location": "Car",
+   "characters": [
+    "Businessman"
+   ],
+   "summary": "The wealthy businessman rides in his car, adjusting his sunglasses as the vehicle travels along a scenic coastal road.",
+   "dominant_activity": "car ride",
+   "contexts": [
+    "car interior",
+    "sunglasses",
+    "road",
+    "aerial view"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.2,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.38,
+   "llm_start": 394.0,
+   "index": 6,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 407.917,
+   "end": 420.083,
+   "location": "Country road",
+   "characters": [
+    "Man in Pink Shirt"
+   ],
+   "summary": "The man in the pink shirt walks along a dusty road, wiping his face, as a car approaches him from behind.",
+   "dominant_activity": "walking on road",
+   "contexts": [
+    "road",
+    "walking",
+    "car",
+    "dusty"
+   ],
+   "mood": "suspenseful",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "cliffhanger",
+   "snap_delta": 0.92,
+   "llm_start": 407.0,
+   "index": 7,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  }
+ ],
+ "candidates": [
+  {
+   "id": "c000",
+   "t0": 124.833,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 124.833,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 62.03,
+    "silence_after": 119.97,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 4.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.1,
+    "suspense_hook": 0.2,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs during a clean transition between two distinct scenes, with the previous sequence of the police officer watching the road concluding and a new scene at a tea stall beginning."
+   },
+   "where_score": 0.757,
+   "match": {
+    "dominant_activity": "physical fight and conversation",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+       }
+      ],
+      "relevance": 0.6,
+      "matched_contexts": [
+       "eating"
+      ],
+      "rationale": "The police officer is eating a meal in the lead-in scene, but the presence of a physical fight violates the brand's negative context of violence."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+       },
+       {
+        "negative_context": "eating",
+        "evidence": "The police officer is eating a meal in the lead-in scene."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no matching contexts, and the scene contains both violence and eating, which are negative contexts for this brand."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no matching contexts, and the scene contains violence, which is a negative context for this brand."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+       }
+      ],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "phone",
+       "mobile"
+      ],
+      "rationale": "The police officer is using his mobile phone in the lead-in scene, but the physical fight violates the brand's negative context of violence."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no matching contexts, and the scene contains violence, which is a negative context for this brand."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no matching contexts, and the scene contains violence, which is a negative context for this brand."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no matching contexts, and the scene contains violence, which is a negative context for this brand."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no matching contexts, and the scene contains violence, which is a negative context for this brand."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.6,
+     "matched_contexts": [
+      "eating"
+     ],
+     "rationale": "The police officer is eating a meal in the lead-in scene, but the presence of a physical fight violates the brand's negative context of violence.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "phone",
+      "mobile"
+     ],
+     "rationale": "The police officer is using his mobile phone in the lead-in scene, but the physical fight violates the brand's negative context of violence.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no matching contexts, and the scene contains both violence and eating, which are negative contexts for this brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "The police officer is eating a meal in the lead-in scene."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no matching contexts, and the scene contains violence, which is a negative context for this brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no matching contexts, and the scene contains violence, which is a negative context for this brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no matching contexts, and the scene contains violence, which is a negative context for this brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no matching contexts, and the scene contains violence, which is a negative context for this brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no matching contexts, and the scene contains violence, which is a negative context for this brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A physical fight breaks out near the pond in the lead-in scene."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "physical fight and conversation",
+   "quality": 0.757,
+   "selected": false
+  },
+  {
+   "id": "c001",
+   "t0": 212.375,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 212.375,
+   "scene_before": 1,
+   "scene_after": 2,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 149.57,
+    "silence_after": 32.43,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 4.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.3,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.7,
+    "reason": "The cut occurs during a clean transition between two different scenes, although the rhythmic background music continues seamlessly across the break."
+   },
+   "where_score": 0.649,
+   "match": {
+    "dominant_activity": "smoking and reading posters",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+       }
+      ],
+      "relevance": 0.85,
+      "matched_contexts": [
+       "motorcycle",
+       "highway",
+       "road",
+       "vehicle"
+      ],
+      "rationale": "The brand is highly relevant due to the motorcycle ride on the highway immediately after the break, but there is a violation of the negative context 'violence' in the preceding scene."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+       }
+      ],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "road trip"
+      ],
+      "rationale": "The brand has low relevance as the motorcycle ride is a local commute rather than a vacation, and there is a violation of the negative context 'violence' in the preceding scene."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.85,
+     "matched_contexts": [
+      "motorcycle",
+      "highway",
+      "road",
+      "vehicle"
+     ],
+     "rationale": "The brand is highly relevant due to the motorcycle ride on the highway immediately after the break, but there is a violation of the negative context 'violence' in the preceding scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "road trip"
+     ],
+     "rationale": "The brand has low relevance as the motorcycle ride is a local commute rather than a vacation, and there is a violation of the negative context 'violence' in the preceding scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand is not relevant to the scenes, and there is a violation of the negative context 'violence' in the preceding scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent fight breaks out near a pond in the scene context before the break."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "smoking and reading posters",
+   "quality": 0.649,
+   "selected": false
+  },
+  {
+   "id": "c002",
+   "t0": 221.25,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 221.25,
+   "scene_before": 2,
+   "scene_after": 3,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 158.45,
+    "silence_after": 23.55,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.6,
+    "jarring": 0.3,
+    "suspense_hook": 0.2,
+    "natural_break_score": 0.75,
+    "reason": "The cut occurs during a transition from the highway to the docks as the character travels, with the background music continuing across the break."
+   },
+   "where_score": 0.547,
+   "match": {
+    "dominant_activity": "motorcycle ride",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene features a motorcycle ride and a heated argument at the docks, which has no relevance to cooking, food, or family meals."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene of riding a motorcycle on a highway does not relate to personal care or skincare routines."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The motorcycle ride and subsequent dockside argument do not align with beauty, cosmetics, or getting ready for special occasions."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+       }
+      ],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "The character is traveling by motorcycle, which moderately aligns with the travel context of telecom connectivity, though no mobile devices are actively used."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+       }
+      ],
+      "relevance": 0.9,
+      "matched_contexts": [
+       "motorcycle",
+       "highway",
+       "road",
+       "commuting",
+       "vehicle",
+       "journey"
+      ],
+      "rationale": "The lead-in scene prominently features the protagonist riding a motorcycle on a highway, making it highly relevant for an automotive brand."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenes of motorcycle riding and arguing at the docks do not involve any financial transactions or digital payments."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+       }
+      ],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "While the character is traveling on a highway, it depicts a local commute rather than a vacation or leisure travel, offering moderate relevance."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The motorcycle ride and dockside confrontation have no connection to online shopping or e-commerce."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.9,
+     "matched_contexts": [
+      "motorcycle",
+      "highway",
+      "road",
+      "commuting",
+      "vehicle",
+      "journey"
+     ],
+     "rationale": "The lead-in scene prominently features the protagonist riding a motorcycle on a highway, making it highly relevant for an automotive brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.4,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "While the character is traveling on a highway, it depicts a local commute rather than a vacation or leisure travel, offering moderate relevance.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "The character is traveling by motorcycle, which moderately aligns with the travel context of telecom connectivity, though no mobile devices are actively used.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene of riding a motorcycle on a highway does not relate to personal care or skincare routines.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenes of motorcycle riding and arguing at the docks do not involve any financial transactions or digital payments.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene features a motorcycle ride and a heated argument at the docks, which has no relevance to cooking, food, or family meals.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The motorcycle ride and subsequent dockside argument do not align with beauty, cosmetics, or getting ready for special occasions.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The motorcycle ride and dockside confrontation have no connection to online shopping or e-commerce.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "fight: Men are seen physically fighting and shoving each other near the pond."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 0,
+       "evidence": "violence: A physical altercation occurs with multiple people grabbing and pushing."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent physical fight occurs near a pond in the wider context of the episode."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "motorcycle ride",
+   "quality": 0.547,
+   "selected": false
+  },
+  {
+   "id": "c003",
+   "t0": 300.042,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 300.042,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 7.04,
+    "silence_after": 42.86,
+    "speech_density_10s_before": 0.23,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 5.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.0,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition between two entirely different scenes, with the dock confrontation fully resolved and a fade to black before the new scene begins."
+   },
+   "where_score": 0.815,
+   "match": {
+    "dominant_activity": "heated argument",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "bathroom",
+        "evidence": "The scene after the break shows a woman washing clothes in a washroom/bathroom setting."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand has no relevance to the scenes around the break, and the bathroom setting in the scene after the break violates its negative contexts."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "bathroom"
+      ],
+      "rationale": "The scene after the break features a washroom/bathroom setting, but it is used for washing clothes rather than personal care or skincare routines."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand's beauty and cosmetics focus has no relevance to the heated argument or the phone call scenes."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "phone",
+       "calling",
+       "communication",
+       "family conversation"
+      ],
+      "rationale": "The scene after the break features a man calling his wife to check in, which directly matches the brand's focus on phone communication and family conversations."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand's automotive focus has no relevance to the heated argument at the docks or the subsequent phone call scene."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand's digital payment focus has no relevance to the heated argument or the phone call scenes."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand's travel and hospitality focus has no relevance to the heated argument or the phone call scenes."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand's online shopping focus has no relevance to the heated argument or the phone call scenes."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "phone",
+      "calling",
+      "communication",
+      "family conversation"
+     ],
+     "rationale": "The scene after the break features a man calling his wife to check in, which directly matches the brand's focus on phone communication and family conversations.",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": true,
+      "violated_contexts": [
+       "hospital"
+      ],
+      "evidence": "The scene immediately following the ad break shows a hand holding a flyer for 'GUPTA CLINIC', which is a medical clinic, violating the advertiser's restriction against placement adjacent to hospital or medical environments.",
+      "confidence": 0.9
+     },
+     "verifier_blocked": true
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.2,
+     "matched_contexts": [
+      "bathroom"
+     ],
+     "rationale": "The scene after the break features a washroom/bathroom setting, but it is used for washing clothes rather than personal care or skincare routines.",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": false,
+      "violated_contexts": [],
+      "evidence": "The scenes adjacent to the ad break contain a heated verbal argument and a man smoking a cigarette, but do not depict or discuss any of the forbidden contexts: funeral, violence, eating, accident, hospital, or grief.",
+      "confidence": 0.95
+     }
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand's beauty and cosmetics focus has no relevance to the heated argument or the phone call scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand's automotive focus has no relevance to the heated argument at the docks or the subsequent phone call scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand's digital payment focus has no relevance to the heated argument or the phone call scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand's travel and hospitality focus has no relevance to the heated argument or the phone call scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand's online shopping focus has no relevance to the heated argument or the phone call scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand has no relevance to the scenes around the break, and the bathroom setting in the scene after the break violates its negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "bathroom",
+       "source": "global_scene_tags",
+       "scene": 4,
+       "evidence": "bathroom: The woman is washing clothes in a washroom/bathroom setting."
+      },
+      {
+       "negative_context": "bathroom",
+       "source": "llm_lead_in",
+       "evidence": "The scene after the break shows a woman washing clothes in a washroom/bathroom setting."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "heated argument",
+   "quality": 0.89,
+   "selected": true
+  },
+  {
+   "id": "c004",
+   "t0": 373.667,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 373.667,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 4.97,
+    "silence_after": 8.73,
+    "speech_density_10s_before": 0.34,
+    "speech_density_10s_after": 0.13,
+    "loudness_dip_db": 3.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c005",
+   "t0": 394.375,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 394.375,
+   "scene_before": 5,
+   "scene_after": 6,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 5.88,
+    "silence_after": 18.32,
+    "speech_density_10s_before": 0.35,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 5.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c006",
+   "t0": 407.917,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 407.917,
+   "scene_before": 6,
+   "scene_after": 7,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 19.42,
+    "silence_after": 4.78,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.15,
+    "loudness_dip_db": 1.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  }
+ ],
+ "speech": [
+  {
+   "start": 0.8,
+   "end": 1.8
+  },
+  {
+   "start": 1.9,
+   "end": 14.6
+  },
+  {
+   "start": 18.9,
+   "end": 20.3
+  },
+  {
+   "start": 20.5,
+   "end": 22.1
+  },
+  {
+   "start": 22.6,
+   "end": 24.2
+  },
+  {
+   "start": 24.3,
+   "end": 32.4
+  },
+  {
+   "start": 33.1,
+   "end": 36.2
+  },
+  {
+   "start": 36.7,
+   "end": 38.2
+  },
+  {
+   "start": 39.2,
+   "end": 41.1
+  },
+  {
+   "start": 41.2,
+   "end": 43.5
+  },
+  {
+   "start": 44.2,
+   "end": 47.9
+  },
+  {
+   "start": 48.1,
+   "end": 49.8
+  },
+  {
+   "start": 50.0,
+   "end": 52.8
+  },
+  {
+   "start": 55.0,
+   "end": 62.8
+  },
+  {
+   "start": 244.8,
+   "end": 245.6
+  },
+  {
+   "start": 245.9,
+   "end": 246.6
+  },
+  {
+   "start": 252.2,
+   "end": 255.1
+  },
+  {
+   "start": 255.3,
+   "end": 258.0
+  },
+  {
+   "start": 258.7,
+   "end": 259.4
+  },
+  {
+   "start": 259.6,
+   "end": 264.3
+  },
+  {
+   "start": 264.6,
+   "end": 266.8
+  },
+  {
+   "start": 267.0,
+   "end": 267.4
+  },
+  {
+   "start": 268.2,
+   "end": 271.8
+  },
+  {
+   "start": 272.7,
+   "end": 273.2
+  },
+  {
+   "start": 274.5,
+   "end": 275.2
+  },
+  {
+   "start": 276.0,
+   "end": 277.1
+  },
+  {
+   "start": 277.6,
+   "end": 279.4
+  },
+  {
+   "start": 279.5,
+   "end": 280.1
+  },
+  {
+   "start": 287.5,
+   "end": 287.9
+  },
+  {
+   "start": 288.9,
+   "end": 289.7
+  },
+  {
+   "start": 290.7,
+   "end": 293.0
+  },
+  {
+   "start": 342.9,
+   "end": 343.6
+  },
+  {
+   "start": 346.2,
+   "end": 346.8
+  },
+  {
+   "start": 347.5,
+   "end": 348.0
+  },
+  {
+   "start": 349.2,
+   "end": 350.4
+  },
+  {
+   "start": 351.5,
+   "end": 352.8
+  },
+  {
+   "start": 355.0,
+   "end": 355.6
+  },
+  {
+   "start": 356.9,
+   "end": 357.8
+  },
+  {
+   "start": 360.6,
+   "end": 362.4
+  },
+  {
+   "start": 363.1,
+   "end": 365.5
+  },
+  {
+   "start": 366.5,
+   "end": 367.3
+  },
+  {
+   "start": 367.9,
+   "end": 368.7
+  },
+  {
+   "start": 382.4,
+   "end": 383.7
+  },
+  {
+   "start": 383.8,
+   "end": 384.8
+  },
+  {
+   "start": 385.2,
+   "end": 386.3
+  },
+  {
+   "start": 386.5,
+   "end": 388.5
+  },
+  {
+   "start": 412.7,
+   "end": 413.6
+  },
+  {
+   "start": 415.0,
+   "end": 415.6
+  }
+ ],
+ "shots": [
+  2.083,
+  3.125,
+  7.458,
+  9.292,
+  10.667,
+  11.125,
+  14.375,
+  18.125,
+  24.0,
+  27.292,
+  35.958,
+  42.5,
+  46.375,
+  50.0,
+  53.25,
+  55.0,
+  57.042,
+  57.75,
+  58.583,
+  62.458,
+  67.25,
+  73.667,
+  77.708,
+  83.333,
+  90.958,
+  93.625,
+  97.0,
+  98.583,
+  102.75,
+  107.25,
+  112.208,
+  116.083,
+  124.833,
+  138.875,
+  142.667,
+  154.083,
+  212.375,
+  221.25,
+  246.667,
+  250.042,
+  254.333,
+  256.542,
+  257.833,
+  261.042,
+  266.583,
+  267.458,
+  269.583,
+  271.417,
+  275.083,
+  277.0,
+  281.042,
+  284.0,
+  288.333,
+  290.542,
+  292.458,
+  300.042,
+  305.708,
+  324.75,
+  339.667,
+  346.667,
+  352.583,
+  362.083,
+  366.0,
+  373.667,
+  378.417,
+  383.667,
+  386.083,
+  394.375,
+  399.583,
+  407.917,
+  419.792
+ ],
+ "blacks": [],
+ "timings_sec": {
+  "selection": 21.2,
+  "total_this_run": 21.2
+ },
+ "variant": "e27bc49f74"
+}

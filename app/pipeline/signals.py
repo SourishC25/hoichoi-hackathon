@@ -7,9 +7,25 @@ from pathlib import Path
 import numpy as np
 import soundfile as sf
 
+from . import media  # noqa: F401  (puts ffmpeg on PATH)
+
 
 def detect_shots(video: Path) -> list[float]:
-    """Returns shot-cut timestamps (seconds), excluding 0."""
+    """Shot-cut timestamps (seconds). ffmpeg's scdet on a 256px stream is ~30x faster than
+    PySceneDetect with ~93% recall / ~100% precision against it on our samples; falls back to
+    PySceneDetect if scdet is unavailable."""
+    import re
+    import subprocess
+
+    p = subprocess.run(["ffmpeg", "-v", "info", "-i", str(video), "-an", "-vf", "scale=256:-2,scdet=threshold=4.5:sc_pass=1",
+                        "-f", "null", "-"], capture_output=True, text=True, encoding="utf-8", errors="replace")
+    cuts = sorted(float(m.group(1)) for m in re.finditer(r"lavfi\.scd\.time:\s*([\d.]+)", p.stderr))
+    if p.returncode == 0 and cuts:
+        out = []
+        for c in cuts:
+            if c > 0.2 and (not out or c - out[-1] > 0.3):
+                out.append(round(c, 3))
+        return out
     from scenedetect import AdaptiveDetector, detect
 
     scenes = detect(str(video), AdaptiveDetector(min_scene_len=8), show_progress=False)

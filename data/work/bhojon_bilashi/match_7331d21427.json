@@ -1722,6 +1722,12 @@
    "violated_contexts": [],
    "evidence": "",
    "confidence": 0.95
+  },
+  "c010:brand_d": {
+   "violation": false,
+   "violated_contexts": [],
+   "evidence": "The scenes immediately preceding and following the ad break consist of a lighthearted cooking segment and a reflective personal interview about starting a career early. There is no depiction or discussion of funerals, hospitals, medical emergencies, or violence.",
+   "confidence": 0.95
   }
  }
 }

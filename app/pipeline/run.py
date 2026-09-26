@@ -96,14 +96,19 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
         log("A · transcoding web proxy")
         media.make_proxy(source, proxy)
         info = media.probe(proxy)
-        log("A · detecting camera cuts")
-        shots = signals.detect_shots(proxy)
-        log(f"A · {len(shots)} cuts; running speech detection (Silero VAD)")
-        wav = media.extract_audio(proxy, wd / "audio.wav")
-        speech = signals.detect_speech(wav)
-        loud = signals.loudness(wav)
-        log("A · detecting fades to black")
-        blacks = media.black_segments(proxy)
+        log("A · camera cuts (ffmpeg scdet) ‖ speech (Silero VAD) ‖ fades — in parallel")
+        from concurrent.futures import ThreadPoolExecutor
+
+        def audio_part():
+            wav = media.extract_audio(proxy, wd / "audio.wav")
+            return signals.detect_speech(wav), signals.loudness(wav)
+
+        with ThreadPoolExecutor(3) as ex:
+            f_shots = ex.submit(signals.detect_shots, proxy)
+            f_audio = ex.submit(audio_part)
+            f_black = ex.submit(media.black_segments, proxy)
+            shots, (speech, loud), blacks = f_shots.result(), f_audio.result(), f_black.result()
+        log(f"A · {len(shots)} camera cuts, {len(speech)} speech segments, {len(blacks)} black segments")
         perc = {**info, "shots": shots, "speech": speech, "loudness": loud, "blacks": blacks}
         _save(pp, perc)
         timings["perception"] = round(time.time() - t, 1)
@@ -164,6 +169,9 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
         m = matched["items"].get(c["id"])
         merged.append(json.loads(json.dumps(m if m else c)))
     for c in merged:
+        c["rejections"] = [x for x in c["rejections"] if not x.startswith("every brand is blocked")]
+        if c.get("match"):
+            brandlib.rank(c, brands, scenes)
         viable = [r for r in c.get("brand_ranking", []) if not r["blocked"]]
         c["quality"] = round(c["where_score"] + rules["brand_relevance_weight"] * (viable[0]["relevance"] if viable else 0), 3)
         if not c["rejections"] and c["where_score"] < rules["min_break_score"]:

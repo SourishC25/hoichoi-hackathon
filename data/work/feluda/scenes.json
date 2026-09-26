@@ -1,0 +1,400 @@
+{
+ "synopsis": "Feluda, Topshe, and Lalmohan Babu decide to take a vacation to Kashmir on the advice of an astrologer to cure Lalmohan's writer's block. Upon arriving in Srinagar, they meet a retired judge who harbors deep guilt over the death sentences he handed down during his career. The judge reveals his plan to use a planchette to contact the souls of the executed to find out if his judgments were correct.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.0,
+   "location": "studio intro",
+   "characters": [],
+   "summary": "The video opens with the production company's logo and brand introduction.",
+   "dominant_activity": "logo animation",
+   "contexts": [
+    "logo",
+    "brand intro",
+    "text"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "index": 0
+  },
+  {
+   "start": 6.0,
+   "end": 11.0,
+   "location": "disclaimer screen",
+   "characters": [],
+   "summary": "A standard disclaimer screen is displayed before the episode begins.",
+   "dominant_activity": "reading text",
+   "contexts": [
+    "disclaimer",
+    "text screen"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 6.0,
+   "index": 1
+  },
+  {
+   "start": 11.0,
+   "end": 80.48,
+   "location": "wooden cabin",
+   "characters": [
+    "Kashmiri Man"
+   ],
+   "summary": "A man in traditional Kashmiri attire watches a news broadcast about the recent assembly elections in Jammu and Kashmir before making a phone call to speak with a general.",
+   "dominant_activity": "watching television",
+   "contexts": [
+    "television",
+    "news broadcast",
+    "rotary phone",
+    "wooden cabin",
+    "political discussion"
+   ],
+   "mood": "serious",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": -5.0,
+   "llm_start": 11.0,
+   "index": 2
+  },
+  {
+   "start": 80.48,
+   "end": 84.84,
+   "location": "title card",
+   "characters": [],
+   "summary": "The title card for the original series is displayed.",
+   "dominant_activity": "title card display",
+   "contexts": [
+    "title card",
+    "text"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.48,
+   "llm_start": 80.0,
+   "index": 3
+  },
+  {
+   "start": 84.84,
+   "end": 302.0,
+   "location": "military tent",
+   "characters": [
+    "Pakistani Army Officers"
+   ],
+   "summary": "Inside a military tent in the snowy mountains, officers discuss the rigged elections and plan a proxy war in Kashmir, targeting Indian officials, before being surrounded by Indian forces.",
+   "dominant_activity": "heated argument",
+   "contexts": [
+    "military tent",
+    "soldiers",
+    "dartboard",
+    "map",
+    "conspiracy",
+    "insurgency planning",
+    "snowy mountains"
+   ],
+   "mood": "tense",
+   "emotional_intensity": 0.7,
+   "sensitive": [
+    {
+     "topic": "crime",
+     "evidence": "planning a proxy war and targeting government officials",
+     "confidence": 0.9
+    },
+    {
+     "topic": "weapon",
+     "evidence": "soldiers holding rifles",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "cliffhanger",
+   "snap_delta": 0.84,
+   "llm_start": 84.0,
+   "index": 4
+  },
+  {
+   "start": 302.0,
+   "end": 389.08,
+   "location": "animated sequence",
+   "characters": [],
+   "summary": "The animated opening credits sequence plays, featuring sketches of the main characters and the theme song.",
+   "dominant_activity": "opening credits",
+   "contexts": [
+    "animation",
+    "theme song",
+    "sketches",
+    "credits"
+   ],
+   "mood": "mysterious",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 302.0,
+   "index": 5
+  },
+  {
+   "start": 389.08,
+   "end": 509.6,
+   "location": "astrologer's room",
+   "characters": [
+    "Feluda",
+    "Topshe",
+    "Lalmohan Babu",
+    "Madhusudan Sen"
+   ],
+   "summary": "An astrologer examines Lalmohan Babu's palm and suggests a trip to a place starting with the letter 'K' to cure his writer's block.",
+   "dominant_activity": "palm reading",
+   "contexts": [
+    "astrologer",
+    "magnifying glass",
+    "palmistry",
+    "scroll",
+    "living room",
+    "writer's block"
+   ],
+   "mood": "humorous",
+   "emotional_intensity": 0.3,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.08,
+   "llm_start": 389.0,
+   "index": 6
+  },
+  {
+   "start": 509.6,
+   "end": 545.84,
+   "location": "Kashmiri town square",
+   "characters": [
+    "Militants",
+    "Indian Soldiers"
+   ],
+   "summary": "A violent shootout erupts in a Kashmiri town square as militants on a motorcycle attack Indian security forces.",
+   "dominant_activity": "gunfight",
+   "contexts": [
+    "shootout",
+    "militants",
+    "soldiers",
+    "motorcycle",
+    "explosion",
+    "smoke",
+    "rifles"
+   ],
+   "mood": "action-packed",
+   "emotional_intensity": 0.9,
+   "sensitive": [
+    {
+     "topic": "violence",
+     "evidence": "militants shooting soldiers and a vehicle exploding",
+     "confidence": 0.95
+    },
+    {
+     "topic": "weapon",
+     "evidence": "rifles and guns being fired",
+     "confidence": 0.95
+    },
+    {
+     "topic": "injury",
+     "evidence": "soldiers falling after being shot",
+     "confidence": 0.85
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.6,
+   "llm_start": 509.0,
+   "index": 7
+  },
+  {
+   "start": 545.84,
+   "end": 684.6,
+   "location": "moving car",
+   "characters": [
+    "Feluda",
+    "Topshe",
+    "Lalmohan Babu",
+    "Driver"
+   ],
+   "summary": "While driving through the countryside, the trio discusses the astrologer's advice and decides to travel to Kashmir.",
+   "dominant_activity": "car ride",
+   "contexts": [
+    "ambassador car",
+    "driving",
+    "smoking",
+    "travel planning",
+    "scenic road"
+   ],
+   "mood": "cheerful",
+   "emotional_intensity": 0.4,
+   "sensitive": [
+    {
+     "topic": "smoking",
+     "evidence": "Feluda lights and smokes a cigarette",
+     "confidence": 0.95
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.84,
+   "llm_start": 545.0,
+   "index": 8
+  },
+  {
+   "start": 684.6,
+   "end": 851.56,
+   "location": "hotel lobby",
+   "characters": [
+    "Feluda",
+    "Topshe",
+    "Lalmohan Babu",
+    "Sushanto Som",
+    "Shidheshwar Mitter"
+   ],
+   "summary": "At their hotel in Srinagar, a young fan named Sushanto introduces himself and his boss, a retired judge named Mr. Mitter.",
+   "dominant_activity": "conversation",
+   "contexts": [
+    "hotel lobby",
+    "sofa",
+    "tea cups",
+    "retired judge",
+    "introductions",
+    "fan meeting"
+   ],
+   "mood": "polite",
+   "emotional_intensity": 0.3,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.6,
+   "llm_start": 684.0,
+   "index": 9
+  },
+  {
+   "start": 851.56,
+   "end": 1081.36,
+   "location": "Dal Lake",
+   "characters": [
+    "Feluda",
+    "Topshe",
+    "Lalmohan Babu"
+   ],
+   "summary": "The trio enjoys a scenic Shikara boat ride on Dal Lake, where Lalmohan Babu sings and recites poetry.",
+   "dominant_activity": "boat ride",
+   "contexts": [
+    "shikara boat",
+    "dal lake",
+    "mountains",
+    "singing",
+    "flowers",
+    "scenic views"
+   ],
+   "mood": "peaceful",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": -0.44,
+   "llm_start": 852.0,
+   "index": 10
+  },
+  {
+   "start": 1081.36,
+   "end": 1200.24,
+   "location": "houseboat",
+   "characters": [
+    "Feluda",
+    "Topshe",
+    "Lalmohan Babu",
+    "Sushanto Som"
+   ],
+   "summary": "They arrive at their houseboat, 'Miranda', and sit down for tea while Sushanto mentions some card players on board.",
+   "dominant_activity": "drinking tea",
+   "contexts": [
+    "houseboat",
+    "tea",
+    "lake",
+    "conversation",
+    "gamblers"
+   ],
+   "mood": "relaxed",
+   "emotional_intensity": 0.3,
+   "sensitive": [],
+   "ends_with": "conversation_continues",
+   "snap_delta": 0.36,
+   "llm_start": 1081.0,
+   "index": 11
+  },
+  {
+   "start": 1200.24,
+   "end": 1535.6,
+   "location": "houseboat study",
+   "characters": [
+    "Shidheshwar Mitter",
+    "Sushanto Som",
+    "Feluda"
+   ],
+   "summary": "In his study, the retired judge confesses his deep guilt over handing down death sentences and expresses his desire to perform a planchette to contact the executed souls.",
+   "dominant_activity": "confession",
+   "contexts": [
+    "study room",
+    "diaries",
+    "death penalty",
+    "guilt",
+    "planchette",
+    "seance",
+    "philosophical discussion"
+   ],
+   "mood": "somber",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "death",
+     "evidence": "discussion of capital punishment and executing people",
+     "confidence": 0.9
+    },
+    {
+     "topic": "smoking",
+     "evidence": "Feluda smoking a cigarette",
+     "confidence": 0.95
+    }
+   ],
+   "ends_with": "cliffhanger",
+   "snap_delta": 0.24,
+   "llm_start": 1200.0,
+   "index": 12
+  }
+ ],
+ "sensitive_vocab": [
+  "funeral",
+  "hospital",
+  "violence",
+  "illness",
+  "bathroom",
+  "accident",
+  "grief",
+  "eating",
+  "medical emergency",
+  "injury",
+  "financial distress",
+  "death",
+  "dead body",
+  "mourning",
+  "crying",
+  "blood",
+  "fight",
+  "weapon",
+  "crime",
+  "police arrest",
+  "alcohol",
+  "smoking",
+  "drugs",
+  "sexual content",
+  "poverty",
+  "suicide",
+  "religious ritual",
+  "heated argument"
+ ],
+ "model": "gemini-3.5-flash"
+}

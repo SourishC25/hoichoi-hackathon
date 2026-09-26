@@ -1,6 +1,6 @@
 {
  "video_id": "bhojon_bilashi",
- "generated_at": "2026-09-26T13:00:44+0530",
+ "generated_at": "2026-09-26T13:02:00+0530",
  "models": {
   "global": "gemini-3.5-flash",
   "local": "gemini-3.5-flash"
@@ -35,12 +35,54 @@
   "scenes": 17,
   "camera_cuts": 433,
   "candidates": 18,
-  "breaks": 1,
-  "ad_seconds": 30,
-  "ad_load_pct": 2.39,
-  "breaks_per_hour": 2.93,
+  "breaks": 2,
+  "ad_seconds": 60,
+  "ad_load_pct": 4.66,
+  "breaks_per_hour": 5.87,
   "allowed_breaks": 2
  },
+ "audit": [
+  {
+   "check": "No speech at any cut point (VAD)",
+   "pass": true,
+   "detail": "max speech overlap in ±guard window: 0.00s"
+  },
+  {
+   "check": "Every cut on a camera cut or black frame",
+   "pass": true,
+   "detail": "2/2 breaks frame-aligned"
+  },
+  {
+   "check": "Min gap between breaks",
+   "pass": true,
+   "detail": "smallest gap 369s (rule ≥ 300s)"
+  },
+  {
+   "check": "Max breaks per hour",
+   "pass": true,
+   "detail": "2 placed, 2 allowed for 20.5 min"
+  },
+  {
+   "check": "Ad load within budget",
+   "pass": true,
+   "detail": "4.66% (max 12.0%)"
+  },
+  {
+   "check": "Protected opening/closing windows",
+   "pass": true,
+   "detail": "first 120s / last 90s untouched"
+  },
+  {
+   "check": "No negative-context brand placed (3 layers re-checked)",
+   "pass": true,
+   "detail": "violations: none"
+  },
+  {
+   "check": "Every placed brand passed the independent verifier",
+   "pass": true,
+   "detail": "2 verifier passes"
+  }
+ ],
  "synopsis": "In this episode of Sunrise Pure Bhojon Bilashi Season 2, host Somak Ghosh travels to the historic town of Serampore, a former Danish colony on the banks of the Hooghly River. He meets actress Parno Mittra, who shares stories of her early acting career, personal life, and love for cooking. Together, they play a guessing game and enjoy delicious local dishes prepared by Chef Prasanta Dawn, before receiving a mysterious clue about their next destination.",
  "breaks": [
   {
@@ -82,6 +124,78 @@
        "negative_context": "eating",
        "source": "llm_lead_in",
        "evidence": "Parno Mittra is shown eating a snack on a boat in the wider context before the break."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "candidate_id": "c010",
+   "t": 581.16,
+   "quality": 0.76,
+   "where_score": 0.715,
+   "brand_id": "brand_d",
+   "brand_name": "Brand D",
+   "relevance": 0.3,
+   "matched_contexts": [
+    "communication"
+   ],
+   "dominant_activity": "cooking in kitchen",
+   "creative": {
+    "id": "d_30s_bn",
+    "duration_sec": 30,
+    "language": "bn",
+    "url": "ads/brand_d/d_30s_bn.mp4"
+   },
+   "reason": "The cut is placed cleanly between the end of a cooking demonstration montage and the start of a new conversation segment, with no overlapping dialogue or music. Brand: While the characters are engaged in a conversation, there is no focus on mobile devices, internet connectivity, or telecom services.",
+   "last_line_before_cut": "",
+   "first_line_after_cut": "আচ্ছা, এই যে আমরা একটা...",
+   "blocked_brands": [
+    {
+     "brand_id": "brand_a",
+     "why": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Parno discusses experiencing school trauma"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "why": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Parno discusses experiencing school trauma"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "why": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Parno discusses experiencing school trauma"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
       }
      ]
     }
@@ -400,16 +514,10 @@
    "index": 10,
    "blocks_brands": [
     "brand_a",
-    "brand_b",
     "brand_c",
-    "brand_d",
-    "brand_e",
-    "brand_f",
-    "brand_g",
-    "brand_h"
+    "brand_g"
    ],
    "blocked_contexts": [
-    "hospital",
     "illness"
    ]
   },
@@ -501,16 +609,10 @@
    "index": 13,
    "blocks_brands": [
     "brand_a",
-    "brand_b",
     "brand_c",
-    "brand_d",
-    "brand_e",
-    "brand_f",
-    "brand_g",
-    "brand_h"
+    "brand_g"
    ],
    "blocked_contexts": [
-    "hospital",
     "illness"
    ]
   },
@@ -1609,9 +1711,7 @@
    "sources": [
     "scene_boundary"
    ],
-   "rejections": [
-    "every brand is blocked by negative contexts here"
-   ],
+   "rejections": [],
    "t": 581.16,
    "scene_before": 9,
    "scene_after": 10,
@@ -1729,6 +1829,54 @@
    },
    "brand_ranking": [
     {
+     "brand_id": "brand_d",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "communication"
+     ],
+     "rationale": "While the characters are engaged in a conversation, there is no focus on mobile devices, internet connectivity, or telecom services.",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": false,
+      "violated_contexts": [],
+      "evidence": "The scenes immediately preceding and following the ad break consist of a lighthearted cooking segment and a reflective personal interview about starting a career early. There is no depiction or discussion of funerals, hospitals, medical emergencies, or violence.",
+      "confidence": 0.95
+     }
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.2,
+     "matched_contexts": [],
+     "rationale": "Although a food truck is visible in the background, the scene does not involve driving, commuting, or automotive travel.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There is no connection to skincare, personal hygiene, or morning routines in the scenes surrounding the break.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenes do not depict any financial transactions, shopping, or digital payment activities.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There is no connection to online shopping, deliveries, or e-commerce in the surrounding scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
      "brand_id": "brand_a",
      "relevance": 0.95,
      "matched_contexts": [
@@ -1742,12 +1890,6 @@
      "rationale": "The lead-in scene directly features a chef preparing food and using spices, which perfectly aligns with the brand's focus on cooking and seasoning.",
      "blocked": true,
      "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 10,
-       "evidence": "illness: Parno discusses experiencing school trauma"
-      },
       {
        "negative_context": "illness",
        "source": "global_scene_tags",
@@ -1772,12 +1914,6 @@
      "blocked": true,
      "blocks": [
       {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 10,
-       "evidence": "illness: Parno discusses experiencing school trauma"
-      },
-      {
        "negative_context": "illness",
        "source": "global_scene_tags",
        "scene": 10,
@@ -1787,53 +1923,6 @@
        "negative_context": "illness",
        "source": "llm_lead_in",
        "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
-      }
-     ]
-    },
-    {
-     "brand_id": "brand_d",
-     "relevance": 0.3,
-     "matched_contexts": [
-      "communication"
-     ],
-     "rationale": "While the characters are engaged in a conversation, there is no focus on mobile devices, internet connectivity, or telecom services.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 10,
-       "evidence": "illness: Parno discusses experiencing school trauma"
-      }
-     ]
-    },
-    {
-     "brand_id": "brand_e",
-     "relevance": 0.2,
-     "matched_contexts": [],
-     "rationale": "Although a food truck is visible in the background, the scene does not involve driving, commuting, or automotive travel.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 10,
-       "evidence": "illness: Parno discusses experiencing school trauma"
-      }
-     ]
-    },
-    {
-     "brand_id": "brand_b",
-     "relevance": 0.1,
-     "matched_contexts": [],
-     "rationale": "There is no connection to skincare, personal hygiene, or morning routines in the scenes surrounding the break.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 10,
-       "evidence": "illness: Parno discusses experiencing school trauma"
       }
      ]
     },
@@ -1851,52 +1940,16 @@
        "evidence": "illness: Parno discusses experiencing school trauma"
       },
       {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 10,
-       "evidence": "illness: Parno discusses experiencing school trauma"
-      },
-      {
        "negative_context": "illness",
        "source": "llm_lead_in",
        "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
       }
      ]
-    },
-    {
-     "brand_id": "brand_f",
-     "relevance": 0.1,
-     "matched_contexts": [],
-     "rationale": "The scenes do not depict any financial transactions, shopping, or digital payment activities.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 10,
-       "evidence": "illness: Parno discusses experiencing school trauma"
-      }
-     ]
-    },
-    {
-     "brand_id": "brand_h",
-     "relevance": 0.1,
-     "matched_contexts": [],
-     "rationale": "There is no connection to online shopping, deliveries, or e-commerce in the surrounding scenes.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 10,
-       "evidence": "illness: Parno discusses experiencing school trauma"
-      }
-     ]
     }
    ],
    "dominant_activity": "cooking in kitchen",
-   "quality": 0.715,
-   "selected": false
+   "quality": 0.76,
+   "selected": true
   },
   {
    "id": "c011",
@@ -1983,7 +2036,7 @@
     "scene_boundary"
    ],
    "rejections": [
-    "every brand is blocked by negative contexts here"
+    "break quality 0.44 below threshold 0.55"
    ],
    "t": 891.56,
    "scene_before": 14,
@@ -2104,6 +2157,40 @@
    },
    "brand_ranking": [
     {
+     "brand_id": "brand_d",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "family conversation"
+     ],
+     "rationale": "The scene involves conversation, but the primary focus is on cooking and food, making telecom only minimally relevant.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The automotive brand is completely irrelevant to the kitchen cooking scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no shopping or payment activities in the scene, making this brand irrelevant.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The online shopping brand has no relevance to the cooking and eating activities shown.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
      "brand_id": "brand_a",
      "relevance": 0.9,
      "matched_contexts": [
@@ -2118,12 +2205,6 @@
      "blocked": true,
      "blocks": [
       {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      },
-      {
        "negative_context": "illness",
        "source": "global_scene_tags",
        "scene": 13,
@@ -2137,35 +2218,12 @@
      ]
     },
     {
-     "brand_id": "brand_d",
-     "relevance": 0.3,
-     "matched_contexts": [
-      "family conversation"
-     ],
-     "rationale": "The scene involves conversation, but the primary focus is on cooking and food, making telecom only minimally relevant.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      }
-     ]
-    },
-    {
      "brand_id": "brand_g",
      "relevance": 0.1,
      "matched_contexts": [],
      "rationale": "The travel brand is irrelevant to the cooking scene, and the mention of an illness is a direct violation.",
      "blocked": true,
      "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      },
       {
        "negative_context": "illness",
        "source": "global_scene_tags",
@@ -2186,12 +2244,6 @@
      "rationale": "The brand's skincare focus is completely irrelevant to the cooking and eating activities in the scene, and eating is a negative context.",
      "blocked": true,
      "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      },
       {
        "negative_context": "eating",
        "source": "global_scene_tags",
@@ -2219,66 +2271,15 @@
        "evidence": "illness: Parno mentions her mother is bedridden and unwell"
       },
       {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      },
-      {
        "negative_context": "illness",
        "source": "llm_lead_in",
        "evidence": "Parno mentions her mother is bedridden and unwell in the conversation before the break."
       }
      ]
-    },
-    {
-     "brand_id": "brand_e",
-     "relevance": 0.0,
-     "matched_contexts": [],
-     "rationale": "The automotive brand is completely irrelevant to the kitchen cooking scene.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      }
-     ]
-    },
-    {
-     "brand_id": "brand_f",
-     "relevance": 0.0,
-     "matched_contexts": [],
-     "rationale": "There are no shopping or payment activities in the scene, making this brand irrelevant.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      }
-     ]
-    },
-    {
-     "brand_id": "brand_h",
-     "relevance": 0.0,
-     "matched_contexts": [],
-     "rationale": "The online shopping brand has no relevance to the cooking and eating activities shown.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      }
-     ]
     }
    ],
    "dominant_activity": "cooking in kitchen",
-   "quality": 0.439,
+   "quality": 0.484,
    "selected": false
   },
   {
@@ -2288,7 +2289,7 @@
     "scene_boundary"
    ],
    "rejections": [
-    "every brand is blocked by negative contexts here"
+    "break quality 0.39 below threshold 0.55"
    ],
    "t": 1035.0,
    "scene_before": 15,
@@ -2416,6 +2417,44 @@
    },
    "brand_ranking": [
     {
+     "brand_id": "brand_d",
+     "relevance": 0.7,
+     "matched_contexts": [
+      "phone",
+      "communication",
+      "family conversation"
+     ],
+     "rationale": "The scene features communication and Parno receiving a voice note on her phone, making telecom a moderately relevant fit.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "journey"
+     ],
+     "rationale": "While the characters are traveling to different destinations, the immediate scene is focused on eating and food preparation.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.2,
+     "matched_contexts": [],
+     "rationale": "There are no active financial transactions or shopping activities in this scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scene does not contain any elements related to online shopping or e-commerce.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
      "brand_id": "brand_a",
      "relevance": 0.9,
      "matched_contexts": [
@@ -2431,12 +2470,6 @@
      "blocked": true,
      "blocks": [
       {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      },
-      {
        "negative_context": "illness",
        "source": "global_scene_tags",
        "scene": 13,
@@ -2446,25 +2479,6 @@
        "negative_context": "illness",
        "source": "llm_lead_in",
        "evidence": "Parno talks about her passion for cooking and mentions cooking for her bedridden mother who can no longer cook."
-      }
-     ]
-    },
-    {
-     "brand_id": "brand_d",
-     "relevance": 0.7,
-     "matched_contexts": [
-      "phone",
-      "communication",
-      "family conversation"
-     ],
-     "rationale": "The scene features communication and Parno receiving a voice note on her phone, making telecom a moderately relevant fit.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
       }
      ]
     },
@@ -2478,12 +2492,6 @@
      "blocked": true,
      "blocks": [
       {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      },
-      {
        "negative_context": "illness",
        "source": "global_scene_tags",
        "scene": 13,
@@ -2493,38 +2501,6 @@
        "negative_context": "illness",
        "source": "llm_lead_in",
        "evidence": "Parno talks about her passion for cooking and mentions cooking for her bedridden mother who can no longer cook."
-      }
-     ]
-    },
-    {
-     "brand_id": "brand_e",
-     "relevance": 0.3,
-     "matched_contexts": [
-      "journey"
-     ],
-     "rationale": "While the characters are traveling to different destinations, the immediate scene is focused on eating and food preparation.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      }
-     ]
-    },
-    {
-     "brand_id": "brand_f",
-     "relevance": 0.2,
-     "matched_contexts": [],
-     "rationale": "There are no active financial transactions or shopping activities in this scene.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
       }
      ]
     },
@@ -2542,30 +2518,9 @@
        "evidence": "illness: Parno mentions her mother is bedridden and unwell"
       },
       {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      },
-      {
        "negative_context": "illness",
        "source": "llm_lead_in",
        "evidence": "Parno talks about her passion for cooking and mentions cooking for her bedridden mother who can no longer cook."
-      }
-     ]
-    },
-    {
-     "brand_id": "brand_h",
-     "relevance": 0.1,
-     "matched_contexts": [],
-     "rationale": "The scene does not contain any elements related to online shopping or e-commerce.",
-     "blocked": true,
-     "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
       }
      ]
     },
@@ -2576,12 +2531,6 @@
      "rationale": "This brand is highly unsuitable due to the negative context of eating being prominent in the scene.",
      "blocked": true,
      "blocks": [
-      {
-       "negative_context": "hospital",
-       "source": "global_scene_tags",
-       "scene": 13,
-       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
-      },
       {
        "negative_context": "eating",
        "source": "global_scene_tags",
@@ -2603,7 +2552,7 @@
     }
    ],
    "dominant_activity": "eating and food preparation",
-   "quality": 0.394,
+   "quality": 0.499,
    "selected": false
   },
   {
@@ -4177,10 +4126,8 @@
   }
  ],
  "timings_sec": {
-  "candidates": 27.5,
-  "brand_matching": 43.8,
-  "selection": 10.2,
-  "total_this_run": 81.5
+  "selection": 16.2,
+  "total_this_run": 16.2
  },
  "variant": "e1874d3194"
 }

@@ -128,7 +128,7 @@
   <form method="dialog">
     <h3>How Birati decides where, whether and what</h3>
     <ol class="how">
-      <li><b>Perception (deterministic, frame-precise).</b> Camera cuts (PySceneDetect), speech activity
+      <li><b>Perception (deterministic, frame-precise).</b> Camera cuts (ffmpeg scdet), speech activity
         (Silero VAD — language-agnostic, so Bengali/English code-switching doesn't matter), loudness, fades to black.</li>
       <li><b>Global understanding (Gemini, whole episode, audio + video).</b> Groups shots into semantically
         coherent scenes; for each: summary, dominant activity, mood, and sensitive topics — using a vocabulary

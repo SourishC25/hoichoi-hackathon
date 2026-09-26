@@ -241,7 +241,7 @@ function auditCard(r) {
 
 function renderBreaks() {
   const r = state.result, el = $("#tab-breaks");
-  if (!r.breaks.length) { el.innerHTML = auditCard(r) + '<div class="card muted">No ad breaks were placed — no boundary met the quality + brand-safety bar under the current pacing rules. That is a deliberate outcome, not a failure.</div>'; return; }
+  if (!r.breaks.length) { el.innerHTML = auditCard(r) + '<div class="card muted">No ad breaks were placed. ' + (r.summary.allowed_breaks === 0 ? `At ${r.rules.max_breaks_per_hour} breaks/hour a ${fmtShort(r.video.duration)} runtime allows 0 breaks — loosen the pacing rules in “Brands & pacing” to test.` : 'No boundary met the quality + brand-safety bar under the current pacing rules — a deliberate outcome, not a failure.') + '</div>'; return; }
   el.innerHTML = auditCard(r) + r.breaks.map((b, i) => {
     const c = r.candidates.find((x) => x.id === b.candidate_id) || {};
     const j = c.judge || {}, s = c.signals || {};
