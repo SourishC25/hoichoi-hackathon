@@ -5,6 +5,7 @@ Publishes, per episode, the default-catalogue run and the default + unseen 'Bran
 import argparse
 import json
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -63,9 +64,12 @@ for wd in sorted(p for p in run.WORK.iterdir() if p.is_dir()):
 (out / "api" / "videos.json").write_text(json.dumps(videos), encoding="utf-8")
 (out / "api" / "brands.json").write_text(json.dumps(default, ensure_ascii=False), encoding="utf-8")
 (out / "api" / "rules.json").write_text(json.dumps(pacing.DEFAULT_RULES), encoding="utf-8")
-for f in ("index.html", "app.js", "style.css"):
-    shutil.copy(run.WEB / f, out / f)
-(out / "config.js").write_text("window.BIRATI_STATIC = true;\n", encoding="utf-8")
+# UI: the Next.js static build (frontend/out), flagged as a static mirror via runtime.json
+front = ROOT / "frontend" / "out"
+if not (front / "index.html").exists():
+    subprocess.run("npm run build", cwd=ROOT / "frontend", shell=True, check=True)
+shutil.copytree(front, out, dirs_exist_ok=True)
+(out / "runtime.json").write_text(json.dumps({"static": True}), encoding="utf-8")
 shutil.copytree(run.WEB / "ads", out / "ads")
 cal = ROOT / "data" / "calibration_report.json"
 if cal.exists():

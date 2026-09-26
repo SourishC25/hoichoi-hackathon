@@ -21,3 +21,6 @@ data/work/*/clip_*.mp4
 data/work/*/match_*.mp4
 data/calibration*.json
 data/evaluation_report.json
+frontend/node_modules
+frontend/.next
+frontend/out

@@ -372,5 +372,13 @@ def health():
     return {"ok": True}
 
 
+@app.get("/runtime.json")
+def runtime():
+    """Tells the frontend it is talking to the live backend (the static mirror ships static: true)."""
+    return {"static": False, "llm": bool(os.getenv("GEMINI_API_KEY"))}
+
+
+# Next.js static export (frontend/out) when built; the legacy vanilla UI otherwise.
+FRONTEND = ROOT / "frontend" / "out"
 app.mount("/ads", StaticFiles(directory=WEB / "ads", check_dir=False), name="ads")
-app.mount("/", StaticFiles(directory=WEB, html=True), name="web")
+app.mount("/", StaticFiles(directory=FRONTEND if (FRONTEND / "index.html").exists() else WEB, html=True), name="web")
