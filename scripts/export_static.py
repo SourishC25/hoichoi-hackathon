@@ -1,7 +1,7 @@
 """Export the processed sample episodes + UI as a static site (free hosting, e.g. a static HF Space).
 
 usage: python scripts/export_static.py [--space user/name] [--out dist]
-Publishes, per episode, the default-catalogue run and the default + unseen 'Brand I' run."""
+Publishes, per episode, the default-catalogue plan and (where computed) the plan with the example advertiser added."""
 import argparse
 import json
 import os
@@ -30,7 +30,8 @@ if a.space:
     base = f"https://{user.lower()}-{name.lower().replace('_', '-')}.static.hf.space"
 
 default = json.loads((ROOT / "data" / "brands.json").read_text(encoding="utf-8"))
-plus9 = json.loads((ROOT / "data" / "brands_plus_unseen.json").read_text(encoding="utf-8"))
+example = json.loads((ROOT / "data" / "example_brand.json").read_text(encoding="utf-8"))
+plus9 = default + [example]  # default catalogue + the example advertiser
 variants = {"": run.result_variant(default, None), "plus9": run.result_variant(plus9, None)}
 ads.ensure_all(run.WEB, plus9)
 
@@ -72,10 +73,7 @@ if not (front / "index.html").exists():
     subprocess.run("npm run build", cwd=ROOT / "frontend", shell=True, check=True)
 shutil.copytree(front, out, dirs_exist_ok=True)
 (out / "runtime.json").write_text(json.dumps({"static": True, "live_url": a.live_url}), encoding="utf-8")
-known = {b["brand_id"] for b in default}
-extra = [b for b in plus9 if b["brand_id"] not in known]
-if extra:
-    (out / "api" / "example_brand.json").write_text(json.dumps(extra[0], ensure_ascii=False), encoding="utf-8")
+(out / "api" / "example_brand.json").write_text(json.dumps(example, ensure_ascii=False), encoding="utf-8")
 shutil.copytree(run.WEB / "ads", out / "ads")
 cal = ROOT / "data" / "calibration_report.json"
 if cal.exists():

@@ -1,13 +1,13 @@
 """Publish the static export (scripts/export_static.py) as a free *static* Hugging Face Space.
 
 usage: python scripts/deploy_space.py <hf-username>/<space-name>
-Requires `hf auth login` with a write token. Static Spaces are free; live processing runs locally."""
+Requires `hf auth login` with a write token. Static Spaces are free; set BIRATI_LIVE_URL to link the live app."""
 import subprocess
 import sys
 import tempfile
 from pathlib import Path
 
-from huggingface_hub import HfApi
+from huggingface_hub import CommitOperationDelete, HfApi
 
 ROOT = Path(__file__).resolve().parents[1]
 repo_id = sys.argv[1]
@@ -18,6 +18,13 @@ subprocess.run([sys.executable, str(ROOT / "scripts" / "export_static.py"), "--s
 api = HfApi()
 api.create_repo(repo_id, repo_type="space", space_sdk="static", exist_ok=True, private=False)
 api.upload_folder(repo_id=repo_id, repo_type="space", folder_path=str(dist), commit_message="Publish Birati static demo")
+# exact mirror: remove anything left over from earlier publishes (old episodes, old UI files)
+keep = {f.relative_to(dist).as_posix() for f in dist.rglob("*") if f.is_file()} | {".gitattributes"}
+stale = [f for f in api.list_repo_files(repo_id, repo_type="space") if f not in keep]
+if stale:
+    api.create_commit(repo_id=repo_id, repo_type="space", commit_message=f"Remove {len(stale)} stale files",
+                      operations=[CommitOperationDelete(path_in_repo=f) for f in stale])
+print(f"removed {len(stale)} stale files")
 user, name = repo_id.split("/")
 print(f"space: https://huggingface.co/spaces/{repo_id}")
 print(f"app:   https://{user.lower()}-{name.lower().replace('_', '-')}.static.hf.space")

@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements-server.txt     && pip install --n
 COPY --chown=user . .
 COPY --from=web --chown=user /web/out ./frontend/out
 # render the synthetic ad creatives at build time so the first viewer after a cold start never waits
-RUN python -c "import json; from pathlib import Path; from app.pipeline import ads; [ads.ensure_all(Path('web'), json.load(open(f, encoding='utf-8'))) for f in ('data/brands.json', 'data/brands_plus_unseen.json')]"     && mkdir -p data/uploads && chown -R user:user web data frontend/out && chmod -R u+rwX web data frontend/out
+RUN python -c "import json; from pathlib import Path; from app.pipeline import ads; ads.ensure_all(Path('web'), json.load(open('data/brands.json', encoding='utf-8')) + [json.load(open('data/example_brand.json', encoding='utf-8'))])"     && mkdir -p data/uploads && chown -R user:user web data frontend/out && chmod -R u+rwX web data frontend/out
 USER user
 # BIRATI_LOW_MEM: run perception stages sequentially and fewer parallel LLM clips (1 GB RAM hosts)
 ENV PYTHONUNBUFFERED=1 BIRATI_LOW_MEM=1

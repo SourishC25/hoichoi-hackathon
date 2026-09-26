@@ -240,13 +240,11 @@ def get_brands():
 
 @app.get("/api/example_brand")
 def example_brand():
-    """An example of a brand that is not in the default catalogue (used by 'Add a sample brand')."""
-    known = {b["brand_id"] for b in default_brands()}
-    extra = ROOT / "data" / "brands_plus_unseen.json"
-    extras = [b for b in json.loads(extra.read_text(encoding="utf-8")) if b["brand_id"] not in known] if extra.exists() else []
-    if not extras:
+    """An advertiser that is not in the default catalogue, offered by 'Add a sample brand'."""
+    p = ROOT / "data" / "example_brand.json"
+    if not p.exists():
         raise HTTPException(404, "no example brand configured")
-    return extras[0]
+    return json.loads(p.read_text(encoding="utf-8"))
 
 
 @app.get("/api/rules")

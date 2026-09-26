@@ -20,3 +20,5 @@ data/embed.log
 data/*.mp4
 data/work_archive/
 data/*.log
+docs/
+data/live_demo/
