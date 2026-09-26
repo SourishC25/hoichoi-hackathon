@@ -12,7 +12,7 @@ import uuid
 from pathlib import Path
 
 from fastapi import FastAPI, File, Form, HTTPException, Request, UploadFile
-from fastapi.responses import FileResponse, JSONResponse, RedirectResponse, Response
+from fastapi.responses import FileResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 
 from .pipeline import media, pacing, run
@@ -51,7 +51,7 @@ def ensure_sample_proxy(video_id: str, log=print) -> Path | None:
         return dst if dst.exists() else None
     with _dl_lock:
         if not dst.exists():
-            log(f"A · fetching sample video from mirror")
+            log("A · fetching sample video from mirror")
             tmp = dst.with_suffix(".part")
             with urllib.request.urlopen(f"{SAMPLE_MIRROR}/media/{video_id}.mp4", timeout=120) as r, tmp.open("wb") as f:
                 while chunk := r.read(1 << 20):
@@ -82,7 +82,7 @@ def _worker():
         job["status"] = "running"
         job["started"] = time.time()
         try:
-            res = fn(lambda m: job["log"].append(f"{time.strftime('%H:%M:%S')}  {m}"))
+            res = fn(lambda m, job=job: job["log"].append(f"{time.strftime('%H:%M:%S')}  {m}"))
             job["status"] = "done"
             job["variant"] = res.get("variant")
         except Exception as e:  # surface failures to the UI in plain language
@@ -238,6 +238,17 @@ def get_brands():
     return default_brands()
 
 
+@app.get("/api/example_brand")
+def example_brand():
+    """An example of a brand that is not in the default catalogue (used by 'Add a sample brand')."""
+    known = {b["brand_id"] for b in default_brands()}
+    extra = ROOT / "data" / "brands_plus_unseen.json"
+    extras = [b for b in json.loads(extra.read_text(encoding="utf-8")) if b["brand_id"] not in known] if extra.exists() else []
+    if not extras:
+        raise HTTPException(404, "no example brand configured")
+    return extras[0]
+
+
 @app.get("/api/rules")
 def get_rules():
     return pacing.DEFAULT_RULES
@@ -249,7 +260,7 @@ def _parse_brands(text: str | None) -> list[dict]:
     try:
         b = json.loads(text)
     except json.JSONDecodeError as e:
-        raise HTTPException(400, f"brand catalogue is not valid JSON: {e}")
+        raise HTTPException(400, f"brand catalogue is not valid JSON: {e}") from e
     if not isinstance(b, list) or not all(isinstance(x, dict) and "brand_id" in x for x in b):
         raise HTTPException(400, "brand catalogue must be a JSON array of objects with brand_id")
     for x in b:
@@ -381,7 +392,13 @@ def runtime():
     return {"static": False, "llm": bool(os.getenv("GEMINI_API_KEY"))}
 
 
-# Next.js static export (frontend/out) when built; the legacy vanilla UI otherwise.
+# UI: the Next.js static export (frontend/out). web/ads holds the rendered ad creatives.
 FRONTEND = ROOT / "frontend" / "out"
 app.mount("/ads", StaticFiles(directory=WEB / "ads", check_dir=False), name="ads")
-app.mount("/", StaticFiles(directory=FRONTEND if (FRONTEND / "index.html").exists() else WEB, html=True), name="web")
+if (FRONTEND / "index.html").exists():
+    app.mount("/", StaticFiles(directory=FRONTEND, html=True), name="ui")
+else:
+    @app.get("/")
+    def ui_not_built():
+        return Response("<h3>Birati API is running.</h3><p>Build the UI with <code>cd frontend &amp;&amp; npm ci &amp;&amp; npm run build</code>.</p>",
+                        media_type="text/html")

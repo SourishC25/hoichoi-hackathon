@@ -23,8 +23,11 @@ export function planSummary(r: Result): string {
   return `${s.breaks} ad break${s.breaks > 1 ? "s" : ""} placed in ${mins} minutes — ${s.ad_seconds} s of ads (${s.ad_load_pct} % of viewing time), ${s.allowed_breaks} allowed by the pacing rules.`;
 }
 
+/** Display name for a brand id, from the catalogue in use (falls back to the id). */
+export const brandName = (id: string, names: Record<string, string>) => names[id] || id;
+
 /** Three plain lines per break: why this moment, why this brand, who was kept out. */
-export function explainBreak(b: Break, c?: Candidate) {
+export function explainBreak(b: Break, c: Candidate | undefined, names: Record<string, string>) {
   const j = c?.judge || {};
   const s = c?.signals;
   const why = j.reason?.split(" Brand:")[0]?.trim() || "A clean scene change with nobody speaking across the cut.";
@@ -34,7 +37,7 @@ export function explainBreak(b: Break, c?: Candidate) {
     .filter((x) => x.blocked || x.verifier_blocked)
     .map((x) => {
       const ctx = [...new Set(x.blocks.map((y) => y.negative_context))].concat(x.verifier?.violated_contexts || []);
-      return `${x.brand_id.replace("brand_", "Brand ").toUpperCase().replace("BRAND ", "Brand ")} — ${ctx[0] ? `"${ctx[0]}" appears nearby` : "safety check failed"}`;
+      return `${brandName(x.brand_id, names)} — ${ctx[0] ? `"${ctx[0]}" appears nearby` : "safety check failed"}`;
     });
   return { why: `${why} ${silence}`.trim(), brandWhy, kept };
 }

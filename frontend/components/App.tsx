@@ -6,7 +6,7 @@ import { brandColor, cx, fmt, title } from "@/lib/format";
 import { planSummary, stageLabel } from "@/lib/plain";
 import type { AdBreak, Brand, Job, Result, Rules, VideoItem } from "@/lib/types";
 import { HowDialog, UploadDialog } from "./Dialogs";
-import { BreaksPanel, CandidatesPanel, ConfigPanel, ScenesPanel, UNSEEN_BRAND, VmapPanel } from "./Panels";
+import { BreaksPanel, CandidatesPanel, ConfigPanel, ScenesPanel, VmapPanel } from "./Panels";
 import Player, { type PlayerHandle } from "./Player";
 import Timeline from "./Timeline";
 import { Button, Chip } from "./ui";
@@ -27,6 +27,7 @@ export default function App() {
   const [time, setTime] = useState(0);
   const [tab, setTab] = useState<Tab>("breaks");
   const [defaults, setDefaults] = useState<Brand[]>([]);
+  const [example, setExample] = useState<Brand | null>(null);
   const [catalogue, setCatalogue] = useState("");
   const [rules, setRules] = useState<Rules>({});
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -59,8 +60,9 @@ export default function App() {
   useEffect(() => {
     (async () => {
       setStatic(await detectRuntime());
-      const [v, b] = await Promise.all([loadLibrary(), api.brands()]);
+      const [v, b, ex] = await Promise.all([loadLibrary(), api.brands(), api.exampleBrand()]);
       setDefaults(b);
+      setExample(ex);
       setCatalogue(JSON.stringify(b, null, 2));
       const [hid, hvar] = location.hash.replace(/^#\/?/, "").split("/");
       const pick = v.find((x) => x.id === hid && !x.processing) || v.find((x) => !x.processing);
@@ -94,7 +96,7 @@ export default function App() {
     try { brands = JSON.parse(catalogue); } catch (e) { alert("Catalogue JSON is invalid: " + (e as Error).message); return; }
     if (!id) return;
     if (isStatic) {
-      const plus9 = brands.some((b) => b.brand_id === UNSEEN_BRAND.brand_id);
+      const plus9 = !!example && brands.some((b) => b.brand_id === example.brand_id);
       await open(id, plus9 ? "plus9" : null).catch(() => alert("No precomputed run for this catalogue on the mirror — use the live app."));
       return;
     }
@@ -112,6 +114,8 @@ export default function App() {
   };
 
   if (!ready || !r || !id) return <Splash />;
+  const names: Record<string, string> = {};
+  try { for (const b of JSON.parse(catalogue) as Brand[]) names[b.brand_id] = b.display_name || b.brand_id; } catch { /* fall back to ids */ }
   const s = r.summary;
   const stats: [string, string][] = [
     [fmt(r.video.duration, false), "Runtime"], [String(s.scenes), "Story scenes"], [String(s.camera_cuts), "Shot changes"],
@@ -155,7 +159,7 @@ export default function App() {
           <section className="animate-fade-up">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div className="max-w-3xl">
-                <div className="mb-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-coral"><Film size={13} /> Ad plan{variant === "plus9" && " · with the sample tea brand"}</div>
+                <div className="mb-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-coral"><Film size={13} /> Ad plan{variant === "plus9" && " · with the sample brand"}</div>
                 <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{title(id)}</h1>
                 {r.synopsis && <p className="mt-3 text-[15px] leading-relaxed text-mist-300">{r.synopsis}</p>}
                 <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-mint/10 px-3.5 py-1.5 text-[13px] font-medium text-mint ring-1 ring-inset ring-mint/25">{planSummary(r)}</p>
@@ -214,10 +218,10 @@ export default function App() {
             ))}
           </nav>
           <section className="mt-5 animate-fade-in" key={tab}>
-            {tab === "breaks" && <BreaksPanel r={r} id={id} onWatch={watch} />}
+            {tab === "breaks" && <BreaksPanel r={r} id={id} onWatch={watch} names={names} />}
             {tab === "candidates" && <CandidatesPanel r={r} onSeek={seek} />}
-            {tab === "scenes" && <ScenesPanel r={r} onSeek={seek} />}
-            {tab === "config" && <ConfigPanel catalogue={catalogue} setCatalogue={setCatalogue} rules={rules} setRules={setRules} defaults={defaults} onRun={rerun} busy={busy} isStatic={isStatic} />}
+            {tab === "scenes" && <ScenesPanel r={r} onSeek={seek} names={names} />}
+            {tab === "config" && <ConfigPanel catalogue={catalogue} setCatalogue={setCatalogue} rules={rules} setRules={setRules} defaults={defaults} example={example} onRun={rerun} busy={busy} isStatic={isStatic} />}
             {tab === "vmap" && <VmapPanel xml={xml} href={U.vmapDownload(id, variant)} />}
           </section>
         </main>

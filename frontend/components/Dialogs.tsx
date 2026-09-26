@@ -1,6 +1,7 @@
 "use client";
 import { AudioLines, Clapperboard, FileVideo, Gauge, Link2, ListChecks, ScanEye, ShieldCheck, UploadCloud } from "lucide-react";
 import { useRef, useState } from "react";
+import { liveUrl } from "@/lib/api";
 import { cx } from "@/lib/format";
 import { Button, Modal } from "./ui";
 
@@ -31,8 +32,8 @@ export function UploadDialog({ open, onClose, onSubmit, isStatic }: {
     return (
       <Modal open={open} onClose={onClose} wide>
         <h3 className="text-xl font-semibold">Process your own episode</h3>
-        <p className="mt-2 text-sm text-mist-300">This mirror plays precomputed runs. The live app processes uploads end to end:</p>
-        <a href="https://hoichoi-hackathon-production.up.railway.app" className="bg-accent mt-5 inline-flex rounded-full px-5 py-2.5 text-sm font-semibold text-white">Open the live app →</a>
+        <p className="mt-2 text-sm text-mist-300">This mirror plays precomputed runs. The live app processes uploads end to end.</p>
+        {liveUrl() && <a href={liveUrl()} className="bg-accent mt-5 inline-flex rounded-full px-5 py-2.5 text-sm font-semibold text-white">Open the live app →</a>}
       </Modal>
     );
   }

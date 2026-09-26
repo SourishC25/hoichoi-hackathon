@@ -41,7 +41,7 @@ def upload_video(path: Path, log=print):
     return f
 
 
-def file_part(f, fps: float | None = None, low_res: bool = False) -> types.Part:
+def file_part(f, fps: float | None = None) -> types.Part:
     part = types.Part(file_data=types.FileData(file_uri=f.uri, mime_type="video/mp4"))
     if fps:
         part.video_metadata = types.VideoMetadata(fps=fps)

@@ -88,16 +88,6 @@ def black_segments(src: Path, min_dur: float = 0.25) -> list[dict]:
     return segs
 
 
-def cut_clip(src: Path, dst: Path, start: float, end: float, height: int = 360) -> Path:
-    """Re-encoded (frame-accurate) short clip for local LLM judgement."""
-    start = max(0.0, start)
-    run([
-        "ffmpeg", "-y", "-v", "error", "-ss", f"{start:.3f}", "-i", str(src), "-t", f"{end - start:.3f}",
-        "-vf", f"scale=-2:{height}", "-c:v", "libx264", "-preset", "ultrafast", "-crf", "30",
-        "-c:a", "aac", "-b:a", "64k", "-ac", "1", str(dst),
-    ])
-    return dst
-
 
 def cut_clip_marked(src: Path, dst: Path, start: float, cut: float, end: float, height: int = 360,
                     card_sec: float = 1.5, label: str = "AD BREAK") -> Path:

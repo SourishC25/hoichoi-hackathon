@@ -136,7 +136,7 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
         media.make_proxy(source, proxy)
     duration = perc["duration"]
     if ENGINE == "local":
-        from . import local_engine, local_models
+        from . import local_models
         import numpy as np
 
         if not (wd / "local_embeds.npz").exists():

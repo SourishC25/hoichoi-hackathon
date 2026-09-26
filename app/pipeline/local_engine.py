@@ -19,7 +19,7 @@ from pathlib import Path
 import numpy as np
 
 from . import local_models as lm
-from .understand import EXTRA_SENSITIVE, fmt
+from .understand import fmt
 
 GENERIC_VIS = [
     "people talking in a room", "a close-up of a person's face", "a city street", "an office",
@@ -27,8 +27,6 @@ GENERIC_VIS = [
     "a crowd of people", "a bedroom", "a corridor", "a dark night scene", "two people having a conversation",
     "a group of people standing", "a shop", "an outdoor scene in daylight",
 ]
-GENERIC_AUD = ["people talking", "a man speaking", "a woman speaking", "background music", "silence",
-               "quiet room ambience", "street traffic noise"]
 # acoustic evidence for abstract contexts (world knowledge; unknown contexts fall back to "the sound of X")
 AUDIO_CUES = {
     "grief": ["people crying", "sobbing and weeping", "mournful sad music"],
@@ -77,10 +75,6 @@ def calib() -> dict:
 
 # ---------------- zero-shot scoring ----------------
 
-def _unused_logsumexp(x: np.ndarray, axis: int) -> np.ndarray:
-    m = x.max(axis=axis, keepdims=True)
-    return (m + np.log(np.exp(x - m).sum(axis=axis, keepdims=True))).squeeze(axis)
-
 
 _zstats: dict = {}
 
@@ -111,7 +105,7 @@ def aud_z(audio_e: np.ndarray, concepts: list[str]) -> np.ndarray:
     for j, c in enumerate(concepts):
         cues = AUDIO_CUES.get(c.lower(), [c])
         E = lm.concept_bank(cues, lm.AUD_TEMPLATES, lm.clap_text)
-        mu, sd = _stats(("a", tuple(cues)), ref_bank()[1], lambda r: (r @ E.T).max(1))
+        mu, sd = _stats(("a", tuple(cues)), ref_bank()[1], lambda r, E=E: (r @ E.T).max(1))
         out[:, j] = ((audio_e @ E.T).max(1) - mu) / sd
     return out
 

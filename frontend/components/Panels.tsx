@@ -3,7 +3,7 @@ import { CheckCircle2, ChevronDown, Download, Play, Plus, RotateCcw, ShieldCheck
 import { useState } from "react";
 import { U } from "@/lib/api";
 import { brandColor, cx, fmt, pct } from "@/lib/format";
-import { explainBreak, RULE_HELP } from "@/lib/plain";
+import { brandName, explainBreak, RULE_HELP } from "@/lib/plain";
 import type { Brand, BrandRank, Result, Rules } from "@/lib/types";
 import { BrandBadge, Button, Chip, ScoreRing, SectionTitle } from "./ui";
 
@@ -43,7 +43,7 @@ export function AuditCard({ r }: { r: Result }) {
 }
 
 /* ---------------- the ad plan ---------------- */
-export function BreaksPanel({ r, id, onWatch }: { r: Result; id: string; onWatch: (i: number) => void }) {
+export function BreaksPanel({ r, id, onWatch, names }: { r: Result; id: string; onWatch: (i: number) => void; names: Record<string, string> }) {
   if (!r.breaks.length) {
     return (
       <>
@@ -63,7 +63,7 @@ export function BreaksPanel({ r, id, onWatch }: { r: Result; id: string; onWatch
       <div className="space-y-5">
         {r.breaks.map((b, i) => {
           const c = r.candidates.find((x) => x.id === b.candidate_id);
-          const ex = explainBreak(b, c);
+          const ex = explainBreak(b, c, names);
           return (
             <article key={b.candidate_id} className="glass group animate-fade-up overflow-hidden rounded-3xl" style={{ animationDelay: `${i * 80}ms` }}>
               <div className="grid gap-0 md:grid-cols-[280px_1fr]">
@@ -245,7 +245,7 @@ function Bar({ v }: { v: number }) {
   );
 }
 
-export function ScenesPanel({ r, onSeek }: { r: Result; onSeek: (t: number) => void }) {
+export function ScenesPanel({ r, onSeek, names }: { r: Result; onSeek: (t: number) => void; names: Record<string, string> }) {
   return (
     <div className="grid gap-3 md:grid-cols-2">
       {r.scenes.map((s) => {
@@ -263,7 +263,7 @@ export function ScenesPanel({ r, onSeek }: { r: Result; onSeek: (t: number) => v
               <Chip>{s.mood}</Chip>
               {(s.sensitive || []).filter((z) => z.confidence >= 0.3).map((z) => <Chip key={z.topic} tone="warn">{z.topic}</Chip>)}
             </div>
-            {blocks && <p className="mt-3 text-[12px] text-danger/90">Keeps out {s.blocks_brands?.map((b) => b.replace("brand_", "Brand ")).join(", ")} — {s.blocked_contexts?.join(", ")}</p>}
+            {blocks && <p className="mt-3 text-[12px] text-danger/90">Keeps out {s.blocks_brands?.map((b) => brandName(b, names)).join(", ")} — {s.blocked_contexts?.join(", ")}</p>}
           </button>
         );
       })}
@@ -272,16 +272,6 @@ export function ScenesPanel({ r, onSeek }: { r: Result; onSeek: (t: number) => v
 }
 
 /* ---------------- advertisers & rules ---------------- */
-export const UNSEEN_BRAND: Brand = {
-  brand_id: "brand_i", display_name: "Brand I", category: "beverages/tea",
-  target_contexts: ["tea", "drinking tea", "cha", "adda", "conversation over tea", "morning", "breakfast", "relaxing at home", "cafe", "guests at home", "restaurant", "office break"],
-  negative_contexts: ["funeral", "hospital", "violence", "grief", "illness"],
-  creatives: [
-    { id: "i_15s_bn", duration_sec: 15, language: "bn", url: "ads/brand_i/i_15s_bn.mp4" },
-    { id: "i_20s_bn", duration_sec: 20, language: "bn", url: "ads/brand_i/i_20s_bn.mp4" },
-  ],
-};
-
 const RULE_LABELS: Record<string, [string, number, number, number]> = {
   max_breaks_per_hour: ["Ad breaks per hour (max)", 1, 12, 1],
   min_gap_sec: ["Minimum gap between breaks (seconds)", 60, 900, 30],
@@ -295,9 +285,9 @@ const RULE_LABELS: Record<string, [string, number, number, number]> = {
 const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "") || "brand";
 const list = (s: string) => s.split(/[,;\n]/).map((x) => x.trim()).filter(Boolean);
 
-export function ConfigPanel({ catalogue, setCatalogue, rules, setRules, defaults, onRun, busy, isStatic }: {
+export function ConfigPanel({ catalogue, setCatalogue, rules, setRules, defaults, example, onRun, busy, isStatic }: {
   catalogue: string; setCatalogue: (s: string) => void; rules: Rules; setRules: (r: Rules) => void;
-  defaults: Brand[]; onRun: () => void; busy: boolean; isStatic: boolean;
+  defaults: Brand[]; example: Brand | null; onRun: () => void; busy: boolean; isStatic: boolean;
 }) {
   const [adv, setAdv] = useState(false);
   const [form, setForm] = useState({ name: "", category: "", targets: "", negatives: "", seconds: 20 });
@@ -305,7 +295,7 @@ export function ConfigPanel({ catalogue, setCatalogue, rules, setRules, defaults
   try { brands = JSON.parse(catalogue); } catch { /* shown in advanced */ }
 
   const write = (b: Brand[]) => setCatalogue(JSON.stringify(b, null, 2));
-  const addUnseen = () => write(brands.find((x) => x.brand_id === UNSEEN_BRAND.brand_id) ? brands : [...brands, UNSEEN_BRAND]);
+  const addExample = () => example && write(brands.find((x) => x.brand_id === example.brand_id) ? brands : [...brands, example]);
   const addBrand = () => {
     if (!form.name.trim()) return alert("Give the advertiser a name.");
     const id = slug(form.name);
@@ -323,7 +313,7 @@ export function ConfigPanel({ catalogue, setCatalogue, rules, setRules, defaults
     <div className="grid gap-5 lg:grid-cols-[1.35fr_1fr]">
       <div className="space-y-5">
         <div className="glass rounded-3xl p-5">
-          <SectionTitle icon={<Sparkles size={16} />} aside={<Button size="sm" onClick={addUnseen}><Plus size={14} /> Add a sample tea brand</Button>}>
+          <SectionTitle icon={<Sparkles size={16} />} aside={example && <Button size="sm" onClick={addExample}><Plus size={14} /> Add a sample brand ({example.category || example.display_name})</Button>}>
             Advertisers in this run
           </SectionTitle>
           <div className="grid gap-2 sm:grid-cols-2">
@@ -392,7 +382,7 @@ export function ConfigPanel({ catalogue, setCatalogue, rules, setRules, defaults
           </Button>
           <p className="mt-3 text-[12px] leading-relaxed text-mist-500">
             {isStatic
-              ? "This mirror holds precomputed plans for the default catalogue and the default + sample tea brand."
+              ? "This mirror holds precomputed plans for the default catalogue and for the default catalogue plus the sample brand."
               : "The episode is already understood — only advertiser matching and pacing re-run, so this takes about a minute."}
           </p>
         </div>

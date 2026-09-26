@@ -4,6 +4,7 @@ usage: python scripts/export_static.py [--space user/name] [--out dist]
 Publishes, per episode, the default-catalogue run and the default + unseen 'Brand I' run."""
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -16,6 +17,7 @@ ROOT = run.ROOT
 ap = argparse.ArgumentParser()
 ap.add_argument("--space", default="")
 ap.add_argument("--out", default=str(ROOT / "dist"))
+ap.add_argument("--live-url", default=os.getenv("BIRATI_LIVE_URL", ""), help="live app the static mirror points users to")
 a = ap.parse_args()
 out = Path(a.out)
 if out.exists():
@@ -69,7 +71,11 @@ front = ROOT / "frontend" / "out"
 if not (front / "index.html").exists():
     subprocess.run("npm run build", cwd=ROOT / "frontend", shell=True, check=True)
 shutil.copytree(front, out, dirs_exist_ok=True)
-(out / "runtime.json").write_text(json.dumps({"static": True}), encoding="utf-8")
+(out / "runtime.json").write_text(json.dumps({"static": True, "live_url": a.live_url}), encoding="utf-8")
+known = {b["brand_id"] for b in default}
+extra = [b for b in plus9 if b["brand_id"] not in known]
+if extra:
+    (out / "api" / "example_brand.json").write_text(json.dumps(extra[0], ensure_ascii=False), encoding="utf-8")
 shutil.copytree(run.WEB / "ads", out / "ads")
 cal = ROOT / "data" / "calibration_report.json"
 if cal.exists():

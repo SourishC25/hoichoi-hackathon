@@ -157,5 +157,5 @@ app/pipeline/local_*.py       offline CLIP + CLAP engine (BIRATI_ENGINE=local)
 app/main.py                   FastAPI: jobs, uploads, Drive-link ingest, re-runs, downloads
 scripts/                      batch processing, calibration/evaluation, static export + deploy
 frontend/                     Next.js UI: player (VMAP → frame-exact cut + resume), timeline, panels
-web/                          legacy vanilla UI (fallback when frontend/out is not built)
+web/ads/                      rendered synthetic ad creatives (generated at build/run time)
 ```

@@ -19,3 +19,4 @@ data/work/*/local_embeds.npz
 data/embed.log
 data/*.mp4
 data/work_archive/
+data/*.log

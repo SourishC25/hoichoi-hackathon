@@ -13,7 +13,6 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from . import gemini, media, signals
-from .understand import fmt
 
 SNAP_WINDOW = 6.0      # seconds to search around the LLM boundary for a clean cut
 GUARD_BEFORE = 0.45    # no speech allowed this long before the cut

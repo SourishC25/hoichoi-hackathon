@@ -3,12 +3,18 @@
 import type { AdBreak, Brand, Job, Result, Rules, VideoItem } from "./types";
 
 let STATIC = false;
+let LIVE_URL = "";
 export const isStatic = () => STATIC;
+export const liveUrl = () => LIVE_URL;
 
 export async function detectRuntime(): Promise<boolean> {
   try {
     const r = await fetch("runtime.json", { cache: "no-store" });
-    if (r.ok) STATIC = !!(await r.json()).static;
+    if (r.ok) {
+      const cfg = await r.json();
+      STATIC = !!cfg.static;
+      LIVE_URL = cfg.live_url || "";
+    }
   } catch {
     STATIC = false;
   }
@@ -32,6 +38,7 @@ export const U = {
     STATIC ? `thumbs/${id}/${t.toFixed(2)}.jpg` : `/api/thumb/${id}/${t.toFixed(2)}`,
   brands: () => (STATIC ? "api/brands.json" : "/api/brands"),
   rules: () => (STATIC ? "api/rules.json" : "/api/rules"),
+  exampleBrand: () => (STATIC ? "api/example_brand.json" : "/api/example_brand"),
   catalogue: (id: string, v?: string | null) =>
     STATIC ? `data/${id}/catalogue${v ? "_" + v : ""}.json` : `/api/videos/${id}/catalogue${q(v)}`,
 };
@@ -47,6 +54,7 @@ export const api = {
   result: (id: string, v?: string | null) => json<Result>(U.result(id, v)),
   brands: () => json<Brand[]>(U.brands()),
   rules: () => json<Rules>(U.rules()),
+  exampleBrand: () => json<Brand>(U.exampleBrand()).catch(() => null),
   catalogue: (id: string, v?: string | null) => json<Brand[]>(U.catalogue(id, v)),
   job: (id: string) => json<Job>(`/api/jobs/${id}`),
   async rerun(id: string, brands: Brand[], rules: Rules): Promise<Job> {
