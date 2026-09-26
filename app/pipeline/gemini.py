@@ -58,13 +58,16 @@ def clip_part(path: Path, fps: float = 2.0) -> types.Part:
 # Free tier: ~20 requests/day *per model*, so fall through a pool of free Flash models when one is
 # exhausted for the day (each has its own quota).
 MODEL_POOL = [m.strip() for m in os.getenv(
-    "GEMINI_MODEL_POOL", "gemini-3.5-flash,gemini-3-flash-preview,gemini-3.5-flash-lite").split(",") if m.strip()]
+    "GEMINI_MODEL_POOL",
+    "gemini-3.5-flash,gemini-3.8-flash,gemini-3.7-flash,gemini-3.6-flash,gemini-3-flash-preview,"
+    "gemini-3.5-flash-lite,gemini-3.1-flash-lite,gemini-flash-lite-latest").split(",") if m.strip()]
 _exhausted: set[str] = set()
 
 
-def _pick(model: str | None) -> str:
+def _pick(model: str | None, skip: set[str] | None = None) -> str:
+    """Preferred model first, then the pool; skips models exhausted for the day or overloaded right now."""
     for m in ([model] if model else []) + MODEL_POOL:
-        if m and m not in _exhausted:
+        if m and m not in _exhausted and m not in (skip or ()):
             return m
     raise RuntimeError("Today's free-tier LLM quota is used up (it resets at midnight Pacific time = 12:30 PM IST). "
                        "The sample episodes still work; please try your upload again after the reset.")
@@ -104,10 +107,11 @@ def generate_json(parts: list, prompt: str, schema: dict, model: str | None = No
         cfg.media_resolution = types.MediaResolution.MEDIA_RESOLUTION_LOW
     last = None
     use = model or MODEL_POOL[0]
+    overloaded: set[str] = set()
     for attempt in range(retries):
         _throttle()
         try:
-            use = _pick(model)
+            use = _pick(model, overloaded)
             resp = client().models.generate_content(model=use, contents=[*parts, prompt], config=cfg)
             um = getattr(resp, "usage_metadata", None)
             USAGE["calls"] += 1
@@ -119,9 +123,12 @@ def generate_json(parts: list, prompt: str, schema: dict, model: str | None = No
             msg = str(e)
             if any(code in msg[:40] for code in ("400", "401", "402", "403")):
                 raise RuntimeError(f"Gemini request rejected (not retryable): {msg[:300]}") from e
-            if "503" in msg[:40]:  # overloaded model: try the next one in the pool for this call
-                print(f"[gemini] {use} overloaded, retrying", flush=True)
-                time.sleep(5 + 5 * attempt)
+            if "503" in msg[:40]:  # overloaded model: rotate to the next free model for this call
+                overloaded.add(use)
+                print(f"[gemini] {use} overloaded, rotating", flush=True)
+                if len(overloaded) >= len(MODEL_POOL):
+                    overloaded.clear()
+                    time.sleep(10 + 5 * attempt)
                 continue
             if "429" in msg[:40]:  # free-tier rate limit: wait as instructed, then retry
                 if "PerDay" in msg or "per day" in msg.lower():

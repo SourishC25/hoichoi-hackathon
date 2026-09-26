@@ -85,9 +85,12 @@ def _worker():
             res = fn(lambda m: job["log"].append(f"{time.strftime('%H:%M:%S')}  {m}"))
             job["status"] = "done"
             job["variant"] = res.get("variant")
-        except Exception as e:  # surface failures to the UI
+        except Exception as e:  # surface failures to the UI in plain language
             job["status"] = "error"
-            job["log"].append(f"ERROR: {e}")
+            msg = str(e)
+            if "ffprobe" in msg or "ffmpeg" in msg:
+                msg = "This file isn't a readable video (the decoder could not parse it). Please upload an MP4, MKV or MOV."
+            job["log"].append(f"ERROR: {msg}")
         job["finished"] = time.time()
 
 
