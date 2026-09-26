@@ -12,3 +12,12 @@ data/work/*.mp4
 data/work/*.jpg
 data/*.log
 web/ads
+dist
+data/*.mp4
+data/work/*/local_embeds.npz
+data/reference_bank.npz
+data/work/*/verify_*.mp4
+data/work/*/clip_*.mp4
+data/work/*/match_*.mp4
+data/calibration*.json
+data/evaluation_report.json
