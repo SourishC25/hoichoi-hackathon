@@ -45,12 +45,11 @@ Keep the browser at full screen with the live demo link open. Target: **4:30–4
   every cut, pacing and ad-load respected, no negative-context violations."
 
 ## 3:20 – 3:50 · Generalises to an unseen brand (Brands & pacing tab)
-- Click **"+ Add an unseen 9th brand"** → **Show run with this catalogue**.
+- Click **"+ Add unseen 9th brand"** → **Re-run brand matching & pacing** and show the live log in the sidebar.
 > "The catalogue is data, not code. Here's a ninth brand — a tea brand — added with zero code changes;
 > it's scored in every slot and hard-blocked wherever its negative contexts appear."
 
-## 3:50 – 4:20 · Live processing (on your laptop: http://localhost:7860)
-- Start the local server beforehand (`.venv\Scripts\python -m uvicorn app.main:app --port 7860`).
+## 3:50 – 4:20 · Live processing (https://hoichoi-hackathon-production.up.railway.app)
 - Upload a short clip (5–8 min keeps it within the free Gemini quota) and show the live progress log:
 > "Any episode can be processed live — upload a file or paste a Google-Drive link. It runs on the free tier
 > of Gemini, with rate-limiting and automatic fall-back between free models."
@@ -70,8 +69,8 @@ Keep the browser at full screen with the live demo link open. Target: **4:30–4
 ---
 
 ### Checklist before recording
-- [ ] https://sourish25-birati.static.hf.space loads and the sample episodes appear
-- [ ] Local server running for the live-processing segment; have a 5–8 min clip ready
+- [ ] https://hoichoi-hackathon-production.up.railway.app loads and the sample episodes appear
+- [ ] Have a 5–8 min clip ready for the live-upload segment (free Gemini quota)
 - [ ] Play one break end to end once beforehand (so the video is cached)
 - [ ] Browser zoom ~90% so the timeline and cards fit
 - [ ] Close other tabs / notifications

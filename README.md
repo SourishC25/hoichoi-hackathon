@@ -2,7 +2,7 @@
 
 > hoichoi Hackathon'26 · Problem 1 — Context-Aware Video Segmentation & Intelligent Ad Placement
 
-**Live demo:** https://sourish25-birati.static.hf.space · **Code:** https://github.com/SourishC25/hoichoi-hackathon · **Explainer video:** _<add link>_
+**Live app:** https://hoichoi-hackathon-production.up.railway.app (upload your own episode) · **Static mirror:** https://sourish25-birati.static.hf.space · **Code:** https://github.com/SourishC25/hoichoi-hackathon · **Explainer video:** _<add link>_
 
 Birati ingests a long-form Bengali episode, segments it into semantically coherent scenes, decides
 **where** a break is natural, **whether** a break is warranted under pacing rules, and **what** brand
@@ -95,14 +95,23 @@ The catalogue references creative files that were not supplied, so Birati render
 **synthetic placeholder spots** for every creative (including brands added later). Only the synthetic brand
 names from the catalogue are used.
 
+## Architecture
+```
+frontend/   Next.js (App Router, TypeScript, Tailwind) — built to a static SPA, served by the backend
+app/        FastAPI backend: REST API, job queue, and the Python pipeline (ffmpeg, Silero VAD, Gemini)
+```
+One container, one URL (multi-stage Dockerfile: Node builds the UI, Python serves it). Deployed on Railway;
+the same UI build also runs as a free static mirror (`scripts/deploy_space.py`) that plays the samples.
+
 ## Run it
-The public demo is a free static export of the processed sample episodes. To process your own episodes
-(upload, Google-Drive link, live progress, catalogue/pacing re-runs):
+The live app accepts uploads (file or Google-Drive link) with live progress and catalogue/pacing re-runs.
+To run it yourself:
 ```bash
 python -m venv .venv
 .venv/Scripts/pip install torch --index-url https://download.pytorch.org/whl/cpu
 .venv/Scripts/pip install -r requirements.txt
 echo GEMINI_API_KEY=<free key from aistudio.google.com> > .env      # omit to use the offline local engine
+(cd frontend && npm ci && npm run build)                              # build the UI once
 .venv/Scripts/python -m uvicorn app.main:app --port 7860             # web app on http://localhost:7860
 .venv/Scripts/python -m app.pipeline.run episode.mp4 --brands data/brands_plus_unseen.json   # headless
 ```
@@ -125,5 +134,6 @@ app/pipeline/ads.py           synthetic creative renderer
 app/pipeline/local_*.py       offline CLIP + CLAP engine (BIRATI_ENGINE=local)
 app/main.py                   FastAPI: jobs, uploads, Drive-link ingest, re-runs, downloads
 scripts/                      batch processing, calibration/evaluation, static export + deploy
-web/                          demo UI (vanilla JS; same UI serves live and static modes)
+frontend/                     Next.js UI: player (VMAP → frame-exact cut + resume), timeline, panels
+web/                          legacy vanilla UI (fallback when frontend/out is not built)
 ```
