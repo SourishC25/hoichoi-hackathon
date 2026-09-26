@@ -1,0 +1,4813 @@
+{
+ "video_id": "feluda",
+ "generated_at": "2026-09-26T19:22:00+0530",
+ "engine": "gemini",
+ "models": {
+  "global": "gemini-3.5-flash",
+  "local": "gemini-3.5-flash"
+ },
+ "catalogue_hash": "a432bf550c",
+ "brands": [
+  "brand_a",
+  "brand_b",
+  "brand_c",
+  "brand_d",
+  "brand_e",
+  "brand_f",
+  "brand_g",
+  "brand_h",
+  "brand_i"
+ ],
+ "video": {
+  "duration": 1535.6,
+  "width": 854,
+  "height": 480,
+  "fps": 25.0
+ },
+ "rules": {
+  "max_breaks_per_hour": 6,
+  "min_gap_sec": 300,
+  "max_ad_load_pct": 12.0,
+  "no_break_first_sec": 120,
+  "no_break_last_sec": 90,
+  "min_break_score": 0.55,
+  "brand_relevance_weight": 0.15
+ },
+ "summary": {
+  "scenes": 13,
+  "camera_cuts": 349,
+  "candidates": 16,
+  "breaks": 1,
+  "ad_seconds": 30,
+  "ad_load_pct": 1.92,
+  "breaks_per_hour": 2.34,
+  "allowed_breaks": 2
+ },
+ "audit": [
+  {
+   "check": "No speech at any cut point (VAD)",
+   "pass": true,
+   "detail": "max speech overlap in ±guard window: 0.00s"
+  },
+  {
+   "check": "Every cut on a camera cut or black frame",
+   "pass": true,
+   "detail": "1/1 breaks frame-aligned"
+  },
+  {
+   "check": "Min gap between breaks",
+   "pass": true,
+   "detail": "single break or none"
+  },
+  {
+   "check": "Max breaks per hour",
+   "pass": true,
+   "detail": "1 placed, 2 allowed for 25.6 min"
+  },
+  {
+   "check": "Ad load within budget",
+   "pass": true,
+   "detail": "1.92% (max 12.0%)"
+  },
+  {
+   "check": "Protected opening/closing windows",
+   "pass": true,
+   "detail": "first 120s / last 90s untouched"
+  },
+  {
+   "check": "No negative-context brand placed (3 layers re-checked)",
+   "pass": true,
+   "detail": "violations: none"
+  },
+  {
+   "check": "Every placed brand passed the independent verifier",
+   "pass": true,
+   "detail": "1 verifier passes"
+  }
+ ],
+ "synopsis": "Feluda, Topshe, and Lalmohan Babu decide to take a vacation to Kashmir on the advice of an astrologer to cure Lalmohan's writer's block. Upon arriving in Srinagar, they meet a retired judge who harbors deep guilt over the death sentences he handed down during his career. The judge reveals his plan to use a planchette to contact the souls of the executed to find out if his judgments were correct.",
+ "breaks": [
+  {
+   "candidate_id": "c008",
+   "t": 854.4,
+   "quality": 0.847,
+   "where_score": 0.705,
+   "brand_id": "brand_g",
+   "brand_name": "Brand G",
+   "relevance": 0.95,
+   "matched_contexts": [
+    "travel",
+    "vacation",
+    "holiday",
+    "tourism",
+    "mountains",
+    "sightseeing"
+   ],
+   "dominant_activity": "sightseeing",
+   "creative": {
+    "id": "g_30s_bn",
+    "duration_sec": 30,
+    "language": "bn",
+    "url": "ads/brand_g/g_30s_bn.mp4"
+   },
+   "reason": "The conversation in the room concludes naturally with a transition line, followed by scenic establishing shots of Kashmir, making it an excellent and non-disruptive place for an ad break. Brand: The scene showcases a scenic Shikara boat ride with mountain landscapes in Srinagar, aligning perfectly with travel and tourism.",
+   "last_line_before_cut": "তাহলে আপনাদের সাথে আবার দেখা হচ্ছে ভূস্বর্গে।",
+   "first_line_after_cut": "",
+   "blocked_brands": []
+  }
+ ],
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 6.0,
+   "location": "studio intro",
+   "characters": [],
+   "summary": "The video opens with the production company's logo and brand introduction.",
+   "dominant_activity": "logo animation",
+   "contexts": [
+    "logo",
+    "brand intro",
+    "text"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "index": 0,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 6.0,
+   "end": 11.0,
+   "location": "disclaimer screen",
+   "characters": [],
+   "summary": "A standard disclaimer screen is displayed before the episode begins.",
+   "dominant_activity": "reading text",
+   "contexts": [
+    "disclaimer",
+    "text screen"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 6.0,
+   "index": 1,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 11.0,
+   "end": 80.48,
+   "location": "wooden cabin",
+   "characters": [
+    "Kashmiri Man"
+   ],
+   "summary": "A man in traditional Kashmiri attire watches a news broadcast about the recent assembly elections in Jammu and Kashmir before making a phone call to speak with a general.",
+   "dominant_activity": "watching television",
+   "contexts": [
+    "television",
+    "news broadcast",
+    "rotary phone",
+    "wooden cabin",
+    "political discussion"
+   ],
+   "mood": "serious",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": -5.0,
+   "llm_start": 11.0,
+   "index": 2,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 80.48,
+   "end": 84.84,
+   "location": "title card",
+   "characters": [],
+   "summary": "The title card for the original series is displayed.",
+   "dominant_activity": "title card display",
+   "contexts": [
+    "title card",
+    "text"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.48,
+   "llm_start": 80.0,
+   "index": 3,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 84.84,
+   "end": 302.0,
+   "location": "military tent",
+   "characters": [
+    "Pakistani Army Officers"
+   ],
+   "summary": "Inside a military tent in the snowy mountains, officers discuss the rigged elections and plan a proxy war in Kashmir, targeting Indian officials, before being surrounded by Indian forces.",
+   "dominant_activity": "heated argument",
+   "contexts": [
+    "military tent",
+    "soldiers",
+    "dartboard",
+    "map",
+    "conspiracy",
+    "insurgency planning",
+    "snowy mountains"
+   ],
+   "mood": "tense",
+   "emotional_intensity": 0.7,
+   "sensitive": [
+    {
+     "topic": "crime",
+     "evidence": "planning a proxy war and targeting government officials",
+     "confidence": 0.9
+    },
+    {
+     "topic": "weapon",
+     "evidence": "soldiers holding rifles",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "cliffhanger",
+   "snap_delta": 0.84,
+   "llm_start": 84.0,
+   "index": 4,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h",
+    "brand_i"
+   ],
+   "blocked_contexts": [
+    "violence"
+   ]
+  },
+  {
+   "start": 302.0,
+   "end": 389.08,
+   "location": "animated sequence",
+   "characters": [],
+   "summary": "The animated opening credits sequence plays, featuring sketches of the main characters and the theme song.",
+   "dominant_activity": "opening credits",
+   "contexts": [
+    "animation",
+    "theme song",
+    "sketches",
+    "credits"
+   ],
+   "mood": "mysterious",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 302.0,
+   "index": 5,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 389.08,
+   "end": 509.6,
+   "location": "astrologer's room",
+   "characters": [
+    "Feluda",
+    "Topshe",
+    "Lalmohan Babu",
+    "Madhusudan Sen"
+   ],
+   "summary": "An astrologer examines Lalmohan Babu's palm and suggests a trip to a place starting with the letter 'K' to cure his writer's block.",
+   "dominant_activity": "palm reading",
+   "contexts": [
+    "astrologer",
+    "magnifying glass",
+    "palmistry",
+    "scroll",
+    "living room",
+    "writer's block"
+   ],
+   "mood": "humorous",
+   "emotional_intensity": 0.3,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.08,
+   "llm_start": 389.0,
+   "index": 6,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 509.6,
+   "end": 545.84,
+   "location": "Kashmiri town square",
+   "characters": [
+    "Militants",
+    "Indian Soldiers"
+   ],
+   "summary": "A violent shootout erupts in a Kashmiri town square as militants on a motorcycle attack Indian security forces.",
+   "dominant_activity": "gunfight",
+   "contexts": [
+    "shootout",
+    "militants",
+    "soldiers",
+    "motorcycle",
+    "explosion",
+    "smoke",
+    "rifles"
+   ],
+   "mood": "action-packed",
+   "emotional_intensity": 0.9,
+   "sensitive": [
+    {
+     "topic": "violence",
+     "evidence": "militants shooting soldiers and a vehicle exploding",
+     "confidence": 0.95
+    },
+    {
+     "topic": "weapon",
+     "evidence": "rifles and guns being fired",
+     "confidence": 0.95
+    },
+    {
+     "topic": "injury",
+     "evidence": "soldiers falling after being shot",
+     "confidence": 0.85
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.6,
+   "llm_start": 509.0,
+   "index": 7,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h",
+    "brand_i"
+   ],
+   "blocked_contexts": [
+    "injury",
+    "violence"
+   ]
+  },
+  {
+   "start": 545.84,
+   "end": 684.6,
+   "location": "moving car",
+   "characters": [
+    "Feluda",
+    "Topshe",
+    "Lalmohan Babu",
+    "Driver"
+   ],
+   "summary": "While driving through the countryside, the trio discusses the astrologer's advice and decides to travel to Kashmir.",
+   "dominant_activity": "car ride",
+   "contexts": [
+    "ambassador car",
+    "driving",
+    "smoking",
+    "travel planning",
+    "scenic road"
+   ],
+   "mood": "cheerful",
+   "emotional_intensity": 0.4,
+   "sensitive": [
+    {
+     "topic": "smoking",
+     "evidence": "Feluda lights and smokes a cigarette",
+     "confidence": 0.95
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.84,
+   "llm_start": 545.0,
+   "index": 8,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 684.6,
+   "end": 851.56,
+   "location": "hotel lobby",
+   "characters": [
+    "Feluda",
+    "Topshe",
+    "Lalmohan Babu",
+    "Sushanto Som",
+    "Shidheshwar Mitter"
+   ],
+   "summary": "At their hotel in Srinagar, a young fan named Sushanto introduces himself and his boss, a retired judge named Mr. Mitter.",
+   "dominant_activity": "conversation",
+   "contexts": [
+    "hotel lobby",
+    "sofa",
+    "tea cups",
+    "retired judge",
+    "introductions",
+    "fan meeting"
+   ],
+   "mood": "polite",
+   "emotional_intensity": 0.3,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.6,
+   "llm_start": 684.0,
+   "index": 9,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 851.56,
+   "end": 1081.36,
+   "location": "Dal Lake",
+   "characters": [
+    "Feluda",
+    "Topshe",
+    "Lalmohan Babu"
+   ],
+   "summary": "The trio enjoys a scenic Shikara boat ride on Dal Lake, where Lalmohan Babu sings and recites poetry.",
+   "dominant_activity": "boat ride",
+   "contexts": [
+    "shikara boat",
+    "dal lake",
+    "mountains",
+    "singing",
+    "flowers",
+    "scenic views"
+   ],
+   "mood": "peaceful",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": -0.44,
+   "llm_start": 852.0,
+   "index": 10,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 1081.36,
+   "end": 1200.24,
+   "location": "houseboat",
+   "characters": [
+    "Feluda",
+    "Topshe",
+    "Lalmohan Babu",
+    "Sushanto Som"
+   ],
+   "summary": "They arrive at their houseboat, 'Miranda', and sit down for tea while Sushanto mentions some card players on board.",
+   "dominant_activity": "drinking tea",
+   "contexts": [
+    "houseboat",
+    "tea",
+    "lake",
+    "conversation",
+    "gamblers"
+   ],
+   "mood": "relaxed",
+   "emotional_intensity": 0.3,
+   "sensitive": [],
+   "ends_with": "conversation_continues",
+   "snap_delta": 0.36,
+   "llm_start": 1081.0,
+   "index": 11,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 1200.24,
+   "end": 1535.6,
+   "location": "houseboat study",
+   "characters": [
+    "Shidheshwar Mitter",
+    "Sushanto Som",
+    "Feluda"
+   ],
+   "summary": "In his study, the retired judge confesses his deep guilt over handing down death sentences and expresses his desire to perform a planchette to contact the executed souls.",
+   "dominant_activity": "confession",
+   "contexts": [
+    "study room",
+    "diaries",
+    "death penalty",
+    "guilt",
+    "planchette",
+    "seance",
+    "philosophical discussion"
+   ],
+   "mood": "somber",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "death",
+     "evidence": "discussion of capital punishment and executing people",
+     "confidence": 0.9
+    },
+    {
+     "topic": "smoking",
+     "evidence": "Feluda smoking a cigarette",
+     "confidence": 0.95
+    }
+   ],
+   "ends_with": "cliffhanger",
+   "snap_delta": 0.24,
+   "llm_start": 1200.0,
+   "index": 12,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h",
+    "brand_i"
+   ],
+   "blocked_contexts": [
+    "funeral",
+    "grief"
+   ]
+  }
+ ],
+ "candidates": [
+  {
+   "id": "c000",
+   "t0": 0.58,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 0.58,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.58,
+    "silence_after": 14.82,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c001",
+   "t0": 11.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 6.0,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": -5.0,
+    "silence_before": 6.0,
+    "silence_after": 9.4,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.06,
+    "loudness_dip_db": 17.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c002",
+   "t0": 80.48,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 84.72,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 4.24,
+    "silence_before": 4.32,
+    "silence_after": 102.78,
+    "speech_density_10s_before": 0.19,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.1,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c003",
+   "t0": 302.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 302.0,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 8.1,
+    "silence_after": 11.3,
+    "speech_density_10s_before": 0.19,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1,
+    "jarring": 0,
+    "suspense_hook": 0,
+    "natural_break_score": 0.95,
+    "reason": "The cut occurs at a perfect transition point between the end of the cold open/prologue and the start of the animated opening credits sequence."
+   },
+   "where_score": 0.834,
+   "match": {
+    "dominant_activity": "heated argument",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene involves military planning and aggression, which is a violent context unrelated to food products."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The military setting and discussion of conflict are negative contexts for a skincare brand."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The aggressive military environment is unsuitable for a beauty and cosmetics brand."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The context of military aggression and planning violent acts is a negative context for a telecom brand."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The focus on war and military strategy is a negative context for an automotive brand."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The violent context of war planning is inappropriate for a fintech brand."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "mountains"
+      ],
+      "rationale": "The scene is set in the mountains, but the context is a military conflict zone rather than a travel destination."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's focus on military aggression is a negative context for an e-commerce brand."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "drinking tea",
+       "conversation over tea"
+      ],
+      "rationale": "An officer is seen drinking from a mug during a conversation, but the violent context of planning a proxy war is a violation."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_i",
+     "relevance": 0.4,
+     "matched_contexts": [
+      "drinking tea",
+      "conversation over tea"
+     ],
+     "rationale": "An officer is seen drinking from a mug during a conversation, but the violent context of planning a proxy war is a violation.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 4,
+       "evidence": "weapon: soldiers holding rifles"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.2,
+     "matched_contexts": [
+      "mountains"
+     ],
+     "rationale": "The scene is set in the mountains, but the context is a military conflict zone rather than a travel destination.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 4,
+       "evidence": "weapon: soldiers holding rifles"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene involves military planning and aggression, which is a violent context unrelated to food products.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 4,
+       "evidence": "weapon: soldiers holding rifles"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The military setting and discussion of conflict are negative contexts for a skincare brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 4,
+       "evidence": "weapon: soldiers holding rifles"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The aggressive military environment is unsuitable for a beauty and cosmetics brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 4,
+       "evidence": "weapon: soldiers holding rifles"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The context of military aggression and planning violent acts is a negative context for a telecom brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 4,
+       "evidence": "weapon: soldiers holding rifles"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The focus on war and military strategy is a negative context for an automotive brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 4,
+       "evidence": "weapon: soldiers holding rifles"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The violent context of war planning is inappropriate for a fintech brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 4,
+       "evidence": "weapon: soldiers holding rifles"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's focus on military aggression is a negative context for an e-commerce brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 4,
+       "evidence": "weapon: soldiers holding rifles"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "heated argument",
+   "quality": 0.834,
+   "selected": false
+  },
+  {
+   "id": "c004",
+   "t0": 389.08,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 389.08,
+   "scene_before": 5,
+   "scene_after": 6,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 1.0,
+    "speech_density_10s_after": 0.74,
+    "loudness_dip_db": 10.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c005",
+   "t0": 509.6,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 509.6,
+   "scene_before": 6,
+   "scene_after": 7,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.7,
+    "silence_after": 38.1,
+    "speech_density_10s_before": 0.57,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 16.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "ক",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.1,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The scene in the astrologer's chamber concludes naturally with the clue 'K', and the cut transitions cleanly to a completely new location and sequence in Kashmir."
+   },
+   "where_score": 0.815,
+   "match": {
+    "dominant_activity": "palm reading",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Immediately after the ad break, militants initiate a violent shootout attacking security forces with automatic gunfire and explosives."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene revolves around an astrological consultation about travel and writer's block, offering no thematic connection to cooking or food."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Immediately after the ad break, armed militants on a motorcycle stage a violent shootout against military forces."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The sequence does not depict skincare, personal hygiene, or grooming routines."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene following the break features a violent militant ambush and gun battle against soldiers."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There is no alignment with cosmetics, beauty, or dressing up in this astrological consultation scene."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The post-break scene features violent militant gunfire and an ambush on security forces."
+       }
+      ],
+      "relevance": 0.25,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "Travel is discussed as a remedy by the astrologer, but telecom and connectivity devices are not featured or central."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Immediately after the break, militants attack armed forces in a violent street shootout."
+       },
+       {
+        "negative_context": "injury",
+        "evidence": "Soldiers are shot and fall injured during the militant shootout right after the break."
+       }
+      ],
+      "relevance": 0.35,
+      "matched_contexts": [
+       "journey"
+      ],
+      "rationale": "Vehicles like minibuses and ambassadors are briefly joked about during the travel consultation, but driving or automotive mobility is not the focus."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent militant gunfight and vehicle ambush occur immediately following the ad break."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene centers on astrology and travel advice, without any connection to digital payments or personal finance."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Directly after the ad break, a violent shootout erupts in Kashmir with militants firing automatic weapons."
+       }
+      ],
+      "relevance": 0.75,
+      "matched_contexts": [
+       "travel",
+       "vacation",
+       "holiday",
+       "mountains"
+      ],
+      "rationale": "The astrologer strongly advises taking a long travel vacation to hills or mountains starting with the letter 'K' to relieve mental fatigue."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene resuming after the ad break shows a violent armed militant ambush on security forces."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There is no representation of shopping, deliveries, or e-commerce transactions in the scene."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Immediately following the commercial break, armed militants launch a violent gun attack on security personnel."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "While the characters sit around a table in conversation, tea drinking or cafe culture is not present."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.75,
+     "matched_contexts": [
+      "travel",
+      "vacation",
+      "holiday",
+      "mountains"
+     ],
+     "rationale": "The astrologer strongly advises taking a long travel vacation to hills or mountains starting with the letter 'K' to relieve mental fatigue.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Directly after the ad break, a violent shootout erupts in Kashmir with militants firing automatic weapons."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.35,
+     "matched_contexts": [
+      "journey"
+     ],
+     "rationale": "Vehicles like minibuses and ambassadors are briefly joked about during the travel consultation, but driving or automotive mobility is not the focus.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "injury",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "injury: soldiers falling after being shot"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Immediately after the break, militants attack armed forces in a violent street shootout."
+      },
+      {
+       "negative_context": "injury",
+       "source": "llm_lead_in",
+       "evidence": "Soldiers are shot and fall injured during the militant shootout right after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.25,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "Travel is discussed as a remedy by the astrologer, but telecom and connectivity devices are not featured or central.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The post-break scene features violent militant gunfire and an ambush on security forces."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_i",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "While the characters sit around a table in conversation, tea drinking or cafe culture is not present.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Immediately following the commercial break, armed militants launch a violent gun attack on security personnel."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene revolves around an astrological consultation about travel and writer's block, offering no thematic connection to cooking or food.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Immediately after the ad break, militants initiate a violent shootout attacking security forces with automatic gunfire and explosives."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The sequence does not depict skincare, personal hygiene, or grooming routines.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Immediately after the ad break, armed militants on a motorcycle stage a violent shootout against military forces."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There is no alignment with cosmetics, beauty, or dressing up in this astrological consultation scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene following the break features a violent militant ambush and gun battle against soldiers."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene centers on astrology and travel advice, without any connection to digital payments or personal finance.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A violent militant gunfight and vehicle ambush occur immediately following the ad break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There is no representation of shopping, deliveries, or e-commerce transactions in the scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene resuming after the ad break shows a violent armed militant ambush on security forces."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "palm reading",
+   "quality": 0.815,
+   "selected": false
+  },
+  {
+   "id": "c006",
+   "t0": 544.86,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 544.86,
+   "scene_before": 7,
+   "scene_after": 8,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 35.96,
+    "silence_after": 2.84,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.64,
+    "loudness_dip_db": 29.7,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "আপনি যাই বলুন।",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.0,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.95,
+    "reason": "The cut occurs during a complete fade to black after a dramatic action sequence concludes, transitioning cleanly to a new scene in a different location."
+   },
+   "where_score": 0.938,
+   "match": {
+    "dominant_activity": "gunfight",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene is a violent shootout, which is a negative context for this brand."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The violent gunfight in the lead-in scene violates the brand's negative context."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene features intense violence and a shootout, which is unsuitable for a beauty brand."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       }
+      ],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "While travel is a theme in the episode, the immediate lead-in scene is a violent shootout."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       },
+       {
+        "negative_context": "injury",
+        "evidence": "soldiers falling after being shot"
+       }
+      ],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "motorcycle",
+       "car",
+       "driving",
+       "road trip",
+       "vehicle",
+       "road",
+       "journey",
+       "travel by car"
+      ],
+      "rationale": "Although vehicles are central to the action and the following scene, the violence and injuries in the lead-in are major violations."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The violent shootout in the lead-in scene is a direct violation of the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       }
+      ],
+      "relevance": 0.6,
+      "matched_contexts": [
+       "travel",
+       "mountains",
+       "sightseeing",
+       "road trip"
+      ],
+      "rationale": "The show's plot revolves around travel, but the lead-in scene's violence is a significant negative context."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene's violence and explosions are unsuitable for an e-commerce brand."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       }
+      ],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "adda",
+       "conversation over tea"
+      ],
+      "rationale": "The lead-in scene is a violent shootout, which is a negative context for a relaxing beverage brand."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.6,
+     "matched_contexts": [
+      "travel",
+      "mountains",
+      "sightseeing",
+      "road trip"
+     ],
+     "rationale": "The show's plot revolves around travel, but the lead-in scene's violence is a significant negative context.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "militants shooting soldiers in a town square"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "vehicle explosion during the shootout"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "motorcycle",
+      "car",
+      "driving",
+      "road trip",
+      "vehicle",
+      "road",
+      "journey",
+      "travel by car"
+     ],
+     "rationale": "Although vehicles are central to the action and the following scene, the violence and injuries in the lead-in are major violations.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "injury",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "injury: soldiers falling after being shot"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "militants shooting soldiers in a town square"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "vehicle explosion during the shootout"
+      },
+      {
+       "negative_context": "injury",
+       "source": "llm_lead_in",
+       "evidence": "soldiers falling after being shot"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.4,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "While travel is a theme in the episode, the immediate lead-in scene is a violent shootout.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "militants shooting soldiers in a town square"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_i",
+     "relevance": 0.2,
+     "matched_contexts": [
+      "adda",
+      "conversation over tea"
+     ],
+     "rationale": "The lead-in scene is a violent shootout, which is a negative context for a relaxing beverage brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "militants shooting soldiers in a town square"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene is a violent shootout, which is a negative context for this brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "militants shooting soldiers in a town square"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "vehicle explosion during the shootout"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The violent gunfight in the lead-in scene violates the brand's negative context.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "militants shooting soldiers in a town square"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "vehicle explosion during the shootout"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene features intense violence and a shootout, which is unsuitable for a beauty brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "militants shooting soldiers in a town square"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "vehicle explosion during the shootout"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The violent shootout in the lead-in scene is a direct violation of the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "militants shooting soldiers in a town square"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene's violence and explosions are unsuitable for an e-commerce brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "militants shooting soldiers in a town square"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "vehicle explosion during the shootout"
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "gunfight",
+   "quality": 0.938,
+   "selected": false
+  },
+  {
+   "id": "c007",
+   "t0": 684.6,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 684.6,
+   "scene_before": 8,
+   "scene_after": 9,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 2.5,
+    "silence_after": 3.9,
+    "speech_density_10s_before": 0.74,
+    "speech_density_10s_after": 0.43,
+    "loudness_dip_db": 2.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "আমাদের আইডিয়াটা চমৎকার লাগছে না?",
+    "first_line_after_cut": "আপনারা রেডি?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs during a clean transition from a car ride to a hotel room, with the previous conversation fully concluded."
+   },
+   "where_score": 0.607,
+   "match": {
+    "dominant_activity": "The characters are on a road trip in a car, discussing their travel plans to Kashmir.",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene focuses on travel and conversation in a car, with no connection to food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene involves a car journey and planning a trip, which does not align with skincare or personal care themes."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The content is about a road trip and travel planning, offering no relevance to beauty or cosmetics."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "travel",
+       "family conversation"
+      ],
+      "rationale": "While the characters are traveling and conversing, there is no direct use of telecommunications or mobile devices."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.9,
+      "matched_contexts": [
+       "car",
+       "automobile",
+       "driving",
+       "road trip",
+       "vehicle",
+       "road",
+       "journey",
+       "travel by car",
+       "family trip"
+      ],
+      "rationale": "The lead-in scene prominently features the characters on a road trip inside a car, making it highly relevant for an automotive brand."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "personal finance"
+      ],
+      "rationale": "The characters briefly discuss the cost of their trip, but there are no financial transactions or digital payment activities shown."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.9,
+      "matched_contexts": [
+       "travel",
+       "vacation",
+       "holiday",
+       "tourism",
+       "mountains",
+       "sightseeing",
+       "road trip",
+       "family vacation"
+      ],
+      "rationale": "The entire conversation revolves around planning a vacation and sightseeing in Kashmir, which is a perfect fit for a travel brand."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There is no mention or depiction of shopping or e-commerce activities in the lead-in or subsequent scenes."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "adda"
+      ],
+      "rationale": "The characters are engaged in a lively conversation (adda), but no tea or beverages are being consumed."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.9,
+     "matched_contexts": [
+      "car",
+      "automobile",
+      "driving",
+      "road trip",
+      "vehicle",
+      "road",
+      "journey",
+      "travel by car",
+      "family trip"
+     ],
+     "rationale": "The lead-in scene prominently features the characters on a road trip inside a car, making it highly relevant for an automotive brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "injury",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "injury: soldiers falling after being shot"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.9,
+     "matched_contexts": [
+      "travel",
+      "vacation",
+      "holiday",
+      "tourism",
+      "mountains",
+      "sightseeing",
+      "road trip",
+      "family vacation"
+     ],
+     "rationale": "The entire conversation revolves around planning a vacation and sightseeing in Kashmir, which is a perfect fit for a travel brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.4,
+     "matched_contexts": [
+      "travel",
+      "family conversation"
+     ],
+     "rationale": "While the characters are traveling and conversing, there is no direct use of telecommunications or mobile devices.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_i",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "adda"
+     ],
+     "rationale": "The characters are engaged in a lively conversation (adda), but no tea or beverages are being consumed.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.2,
+     "matched_contexts": [
+      "personal finance"
+     ],
+     "rationale": "The characters briefly discuss the cost of their trip, but there are no financial transactions or digital payment activities shown.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scene focuses on travel and conversation in a car, with no connection to food or cooking.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scene involves a car journey and planning a trip, which does not align with skincare or personal care themes.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The content is about a road trip and travel planning, offering no relevance to beauty or cosmetics.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There is no mention or depiction of shopping or e-commerce activities in the lead-in or subsequent scenes.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "violence: militants shooting soldiers and a vehicle exploding"
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "weapon: rifles and guns being fired"
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "The characters are on a road trip in a car, discussing their travel plans to Kashmir.",
+   "quality": 0.607,
+   "selected": false
+  },
+  {
+   "id": "c008",
+   "t0": 851.56,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 854.4,
+   "scene_before": 10,
+   "scene_after": 11,
+   "signals": {
+    "snap_delta": 2.84,
+    "silence_before": 2.2,
+    "silence_after": 15.9,
+    "speech_density_10s_before": 0.78,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 6.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "তাহলে আপনাদের সাথে আবার দেখা হচ্ছে ভূস্বর্গে।",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.85,
+    "reason": "The conversation in the room concludes naturally with a transition line, followed by scenic establishing shots of Kashmir, making it an excellent and non-disruptive place for an ad break."
+   },
+   "where_score": 0.705,
+   "match": {
+    "dominant_activity": "sightseeing",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene shows scenic outdoor views and boat riding, with no context related to food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene depicts outdoor travel and scenery, containing no personal care or skincare contexts."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene features a peaceful boat ride on a lake, which does not align with beauty or cosmetic contexts."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.6,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "The scenic travel setting provides a moderate relevance match for mobile connectivity while traveling."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "journey"
+      ],
+      "rationale": "The scene depicts travel across water rather than automotive or road travel."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "No shopping or digital payment activities are taking place in this nature scene."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.95,
+      "matched_contexts": [
+       "travel",
+       "vacation",
+       "holiday",
+       "tourism",
+       "mountains",
+       "sightseeing"
+      ],
+      "rationale": "The scene showcases a scenic Shikara boat ride with mountain landscapes in Srinagar, aligning perfectly with travel and tourism."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no e-commerce or shopping themes present in this scenic outdoor sequence."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "While the serene morning atmosphere is relaxing, there is no direct presence of tea or beverage consumption."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.95,
+     "matched_contexts": [
+      "travel",
+      "vacation",
+      "holiday",
+      "tourism",
+      "mountains",
+      "sightseeing"
+     ],
+     "rationale": "The scene showcases a scenic Shikara boat ride with mountain landscapes in Srinagar, aligning perfectly with travel and tourism.",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": false,
+      "violated_contexts": [],
+      "evidence": "The scenes directly before and after the ad break depict polite conversation about vacationing and sightseeing in Kashmir followed by scenic landscape shots of Dal Lake, with no references to funeral, hospital, violence, accident, illness, or grief.",
+      "confidence": 0.95
+     }
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.6,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "The scenic travel setting provides a moderate relevance match for mobile connectivity while traveling.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.2,
+     "matched_contexts": [
+      "journey"
+     ],
+     "rationale": "The scene depicts travel across water rather than automotive or road travel.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_i",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "While the serene morning atmosphere is relaxing, there is no direct presence of tea or beverage consumption.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene shows scenic outdoor views and boat riding, with no context related to food or cooking.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene depicts outdoor travel and scenery, containing no personal care or skincare contexts.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene features a peaceful boat ride on a lake, which does not align with beauty or cosmetic contexts.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "No shopping or digital payment activities are taking place in this nature scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no e-commerce or shopping themes present in this scenic outdoor sequence.",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "sightseeing",
+   "quality": 0.847,
+   "selected": true
+  },
+  {
+   "id": "c009",
+   "t0": 1081.36,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "break quality 0.41 below threshold 0.55"
+   ],
+   "t": 1081.36,
+   "scene_before": 10,
+   "scene_after": 11,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.96,
+    "silence_after": 37.34,
+    "speech_density_10s_before": 0.43,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.5,
+    "jarring": 0.4,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.55,
+    "reason": "The cut occurs during a scenic montage of the boat ride with continuous background music, making it a decent but slightly jarring place for a break as the sequence is still ongoing."
+   },
+   "where_score": 0.412,
+   "match": {
+    "dominant_activity": "boat ride",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "No food preparation, cooking, or eating occurs in this scenic boating scene."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene features sightseeing on a lake with no relevance to skincare or personal hygiene."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no cosmetics, grooming, or beauty routines depicted in this segment."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.35,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "The characters are traveling across Kashmir, but no mobile devices or connectivity services are shown."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "journey"
+      ],
+      "rationale": "The characters are on a scenic journey across the water, but no automobiles or road mobility are involved."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "No financial transactions, shopping, or digital payment activities take place."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.95,
+      "matched_contexts": [
+       "travel",
+       "vacation",
+       "holiday",
+       "tourism",
+       "mountains",
+       "sightseeing"
+      ],
+      "rationale": "The scene is a textbook travel and tourism showcase featuring a shikara boat ride, mountain views, and sightseeing on Dal Lake."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "No online shopping, deliveries, or e-commerce themes are present in the scene."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "adda"
+      ],
+      "rationale": "The characters share a relaxed adda and have tea on the houseboat after the break, but tea is not visible during the boat ride."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.95,
+     "matched_contexts": [
+      "travel",
+      "vacation",
+      "holiday",
+      "tourism",
+      "mountains",
+      "sightseeing"
+     ],
+     "rationale": "The scene is a textbook travel and tourism showcase featuring a shikara boat ride, mountain views, and sightseeing on Dal Lake.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.35,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "The characters are traveling across Kashmir, but no mobile devices or connectivity services are shown.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_i",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "adda"
+     ],
+     "rationale": "The characters share a relaxed adda and have tea on the houseboat after the break, but tea is not visible during the boat ride.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.2,
+     "matched_contexts": [
+      "journey"
+     ],
+     "rationale": "The characters are on a scenic journey across the water, but no automobiles or road mobility are involved.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "No food preparation, cooking, or eating occurs in this scenic boating scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene features sightseeing on a lake with no relevance to skincare or personal hygiene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no cosmetics, grooming, or beauty routines depicted in this segment.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "No financial transactions, shopping, or digital payment activities take place.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "No online shopping, deliveries, or e-commerce themes are present in the scene.",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "boat ride",
+   "quality": 0.554,
+   "selected": false
+  },
+  {
+   "id": "c010",
+   "t0": 1200.24,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "LLM: conversation continues across the cut"
+   ],
+   "t": 1204.28,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 4.04,
+    "silence_before": 1.08,
+    "silence_after": 3.42,
+    "speech_density_10s_before": 0.52,
+    "speech_density_10s_after": 0.26,
+    "loudness_dip_db": 12.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "শুকরিয়া",
+    "first_line_after_cut": "Thank you. শুকরিয়া।",
+    "dialogue_continues_across_cut": true,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.3,
+    "jarring": 0.6,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.35,
+    "reason": "The cut occurs mid-sequence while tea is being served to the guests, making it a bit jarring as the action resumes immediately after the break."
+   },
+   "where_score": 0.372,
+   "quality": 0.372,
+   "selected": false
+  },
+  {
+   "id": "c011",
+   "t0": 1478.1,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1478.1,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 7.6,
+    "silence_after": 5.1,
+    "speech_density_10s_before": 0.2,
+    "speech_density_10s_after": 0.45,
+    "loudness_dip_db": 1.2,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c012",
+   "t0": 1490.38,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1490.38,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.68,
+    "speech_density_10s_after": 0.93,
+    "loudness_dip_db": 12.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c013",
+   "t0": 1505.0,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1505.0,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.93,
+    "speech_density_10s_after": 0.94,
+    "loudness_dip_db": 5.5,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c014",
+   "t0": 1513.42,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1513.42,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.94,
+    "speech_density_10s_after": 0.93,
+    "loudness_dip_db": 15.2,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c015",
+   "t0": 1533.86,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1533.86,
+   "scene_before": 12,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 4.96,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.5,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 58.3,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  }
+ ],
+ "speech": [
+  {
+   "start": 15.4,
+   "end": 16.5
+  },
+  {
+   "start": 16.7,
+   "end": 23.6
+  },
+  {
+   "start": 23.8,
+   "end": 30.0
+  },
+  {
+   "start": 30.1,
+   "end": 34.1
+  },
+  {
+   "start": 34.3,
+   "end": 40.7
+  },
+  {
+   "start": 40.8,
+   "end": 45.0
+  },
+  {
+   "start": 45.2,
+   "end": 53.4
+  },
+  {
+   "start": 53.4,
+   "end": 56.9
+  },
+  {
+   "start": 57.0,
+   "end": 59.3
+  },
+  {
+   "start": 65.9,
+   "end": 66.3
+  },
+  {
+   "start": 78.5,
+   "end": 80.4
+  },
+  {
+   "start": 187.5,
+   "end": 190.8
+  },
+  {
+   "start": 191.6,
+   "end": 194.6
+  },
+  {
+   "start": 194.6,
+   "end": 195.4
+  },
+  {
+   "start": 195.6,
+   "end": 198.2
+  },
+  {
+   "start": 198.5,
+   "end": 199.4
+  },
+  {
+   "start": 200.0,
+   "end": 203.4
+  },
+  {
+   "start": 204.2,
+   "end": 205.6
+  },
+  {
+   "start": 205.7,
+   "end": 206.3
+  },
+  {
+   "start": 206.8,
+   "end": 207.9
+  },
+  {
+   "start": 208.5,
+   "end": 209.8
+  },
+  {
+   "start": 210.2,
+   "end": 216.0
+  },
+  {
+   "start": 216.2,
+   "end": 220.2
+  },
+  {
+   "start": 220.5,
+   "end": 222.3
+  },
+  {
+   "start": 222.4,
+   "end": 226.5
+  },
+  {
+   "start": 227.2,
+   "end": 230.3
+  },
+  {
+   "start": 230.8,
+   "end": 242.2
+  },
+  {
+   "start": 242.2,
+   "end": 244.3
+  },
+  {
+   "start": 244.5,
+   "end": 245.3
+  },
+  {
+   "start": 245.4,
+   "end": 252.8
+  },
+  {
+   "start": 254.0,
+   "end": 256.3
+  },
+  {
+   "start": 256.8,
+   "end": 258.0
+  },
+  {
+   "start": 258.1,
+   "end": 259.2
+  },
+  {
+   "start": 259.7,
+   "end": 260.9
+  },
+  {
+   "start": 262.0,
+   "end": 266.5
+  },
+  {
+   "start": 268.1,
+   "end": 270.5
+  },
+  {
+   "start": 271.5,
+   "end": 272.9
+  },
+  {
+   "start": 273.4,
+   "end": 274.5
+  },
+  {
+   "start": 275.7,
+   "end": 277.0
+  },
+  {
+   "start": 279.5,
+   "end": 280.6
+  },
+  {
+   "start": 281.9,
+   "end": 284.0
+  },
+  {
+   "start": 286.7,
+   "end": 287.6
+  },
+  {
+   "start": 288.8,
+   "end": 293.9
+  },
+  {
+   "start": 313.3,
+   "end": 314.2
+  },
+  {
+   "start": 314.6,
+   "end": 318.7
+  },
+  {
+   "start": 318.9,
+   "end": 322.7
+  },
+  {
+   "start": 323.0,
+   "end": 335.4
+  },
+  {
+   "start": 335.6,
+   "end": 341.8
+  },
+  {
+   "start": 342.0,
+   "end": 343.8
+  },
+  {
+   "start": 344.0,
+   "end": 348.0
+  },
+  {
+   "start": 348.3,
+   "end": 356.3
+  },
+  {
+   "start": 359.8,
+   "end": 394.2
+  },
+  {
+   "start": 396.2,
+   "end": 397.5
+  },
+  {
+   "start": 398.1,
+   "end": 399.8
+  },
+  {
+   "start": 399.9,
+   "end": 402.1
+  },
+  {
+   "start": 402.2,
+   "end": 403.2
+  },
+  {
+   "start": 403.4,
+   "end": 406.6
+  },
+  {
+   "start": 407.4,
+   "end": 410.0
+  },
+  {
+   "start": 410.7,
+   "end": 412.0
+  },
+  {
+   "start": 412.4,
+   "end": 413.8
+  },
+  {
+   "start": 414.3,
+   "end": 415.6
+  },
+  {
+   "start": 415.6,
+   "end": 416.5
+  },
+  {
+   "start": 416.6,
+   "end": 417.4
+  },
+  {
+   "start": 417.5,
+   "end": 418.4
+  },
+  {
+   "start": 418.9,
+   "end": 421.4
+  },
+  {
+   "start": 421.7,
+   "end": 422.4
+  },
+  {
+   "start": 422.7,
+   "end": 426.1
+  },
+  {
+   "start": 426.5,
+   "end": 427.8
+  },
+  {
+   "start": 428.5,
+   "end": 429.0
+  },
+  {
+   "start": 429.6,
+   "end": 437.1
+  },
+  {
+   "start": 437.2,
+   "end": 438.6
+  },
+  {
+   "start": 438.6,
+   "end": 439.3
+  },
+  {
+   "start": 439.6,
+   "end": 441.5
+  },
+  {
+   "start": 443.2,
+   "end": 444.7
+  },
+  {
+   "start": 449.7,
+   "end": 450.7
+  },
+  {
+   "start": 451.2,
+   "end": 452.1
+  },
+  {
+   "start": 452.6,
+   "end": 455.4
+  },
+  {
+   "start": 455.6,
+   "end": 456.7
+  },
+  {
+   "start": 457.1,
+   "end": 457.9
+  },
+  {
+   "start": 458.0,
+   "end": 462.0
+  },
+  {
+   "start": 462.1,
+   "end": 464.5
+  },
+  {
+   "start": 464.6,
+   "end": 466.2
+  },
+  {
+   "start": 466.4,
+   "end": 468.2
+  },
+  {
+   "start": 468.6,
+   "end": 471.0
+  },
+  {
+   "start": 471.5,
+   "end": 473.7
+  },
+  {
+   "start": 474.2,
+   "end": 475.8
+  },
+  {
+   "start": 476.3,
+   "end": 481.4
+  },
+  {
+   "start": 482.4,
+   "end": 482.9
+  },
+  {
+   "start": 483.3,
+   "end": 484.7
+  },
+  {
+   "start": 485.7,
+   "end": 487.8
+  },
+  {
+   "start": 488.5,
+   "end": 490.8
+  },
+  {
+   "start": 491.0,
+   "end": 491.9
+  },
+  {
+   "start": 491.9,
+   "end": 499.7
+  },
+  {
+   "start": 501.0,
+   "end": 502.6
+  },
+  {
+   "start": 503.1,
+   "end": 505.0
+  },
+  {
+   "start": 505.6,
+   "end": 507.2
+  },
+  {
+   "start": 508.4,
+   "end": 508.9
+  },
+  {
+   "start": 547.7,
+   "end": 548.7
+  },
+  {
+   "start": 549.5,
+   "end": 556.7
+  },
+  {
+   "start": 557.3,
+   "end": 559.6
+  },
+  {
+   "start": 559.8,
+   "end": 561.6
+  },
+  {
+   "start": 561.8,
+   "end": 562.7
+  },
+  {
+   "start": 562.9,
+   "end": 568.5
+  },
+  {
+   "start": 568.6,
+   "end": 574.9
+  },
+  {
+   "start": 575.0,
+   "end": 575.7
+  },
+  {
+   "start": 576.0,
+   "end": 578.3
+  },
+  {
+   "start": 578.7,
+   "end": 581.5
+  },
+  {
+   "start": 581.8,
+   "end": 586.2
+  },
+  {
+   "start": 586.3,
+   "end": 588.0
+  },
+  {
+   "start": 588.3,
+   "end": 589.7
+  },
+  {
+   "start": 589.9,
+   "end": 593.6
+  },
+  {
+   "start": 593.8,
+   "end": 596.4
+  },
+  {
+   "start": 597.5,
+   "end": 601.7
+  },
+  {
+   "start": 602.0,
+   "end": 606.3
+  },
+  {
+   "start": 606.3,
+   "end": 613.7
+  },
+  {
+   "start": 614.1,
+   "end": 616.8
+  },
+  {
+   "start": 617.6,
+   "end": 623.7
+  },
+  {
+   "start": 623.8,
+   "end": 635.6
+  },
+  {
+   "start": 635.9,
+   "end": 639.1
+  },
+  {
+   "start": 639.6,
+   "end": 644.5
+  },
+  {
+   "start": 645.4,
+   "end": 649.7
+  },
+  {
+   "start": 650.0,
+   "end": 650.8
+  },
+  {
+   "start": 651.3,
+   "end": 652.3
+  },
+  {
+   "start": 652.4,
+   "end": 657.4
+  },
+  {
+   "start": 657.5,
+   "end": 661.1
+  },
+  {
+   "start": 661.8,
+   "end": 665.1
+  },
+  {
+   "start": 665.2,
+   "end": 665.8
+  },
+  {
+   "start": 666.5,
+   "end": 668.9
+  },
+  {
+   "start": 668.9,
+   "end": 671.3
+  },
+  {
+   "start": 671.8,
+   "end": 673.4
+  },
+  {
+   "start": 674.1,
+   "end": 675.3
+  },
+  {
+   "start": 675.4,
+   "end": 677.5
+  },
+  {
+   "start": 677.5,
+   "end": 682.1
+  },
+  {
+   "start": 688.5,
+   "end": 689.6
+  },
+  {
+   "start": 690.0,
+   "end": 692.3
+  },
+  {
+   "start": 693.1,
+   "end": 693.7
+  },
+  {
+   "start": 694.3,
+   "end": 695.4
+  },
+  {
+   "start": 695.5,
+   "end": 696.2
+  },
+  {
+   "start": 696.8,
+   "end": 698.1
+  },
+  {
+   "start": 700.6,
+   "end": 701.3
+  },
+  {
+   "start": 702.0,
+   "end": 703.2
+  },
+  {
+   "start": 703.2,
+   "end": 709.0
+  },
+  {
+   "start": 709.2,
+   "end": 712.5
+  },
+  {
+   "start": 712.7,
+   "end": 718.9
+  },
+  {
+   "start": 719.0,
+   "end": 721.1
+  },
+  {
+   "start": 721.1,
+   "end": 725.0
+  },
+  {
+   "start": 725.3,
+   "end": 726.6
+  },
+  {
+   "start": 726.7,
+   "end": 729.8
+  },
+  {
+   "start": 729.8,
+   "end": 731.5
+  },
+  {
+   "start": 734.8,
+   "end": 735.2
+  },
+  {
+   "start": 745.4,
+   "end": 746.2
+  },
+  {
+   "start": 752.3,
+   "end": 753.8
+  },
+  {
+   "start": 754.2,
+   "end": 755.0
+  },
+  {
+   "start": 755.2,
+   "end": 756.7
+  },
+  {
+   "start": 757.4,
+   "end": 759.0
+  },
+  {
+   "start": 760.0,
+   "end": 761.4
+  },
+  {
+   "start": 762.4,
+   "end": 769.1
+  },
+  {
+   "start": 769.6,
+   "end": 771.7
+  },
+  {
+   "start": 772.2,
+   "end": 773.9
+  },
+  {
+   "start": 774.5,
+   "end": 775.0
+  },
+  {
+   "start": 775.1,
+   "end": 777.4
+  },
+  {
+   "start": 778.2,
+   "end": 784.9
+  },
+  {
+   "start": 785.3,
+   "end": 787.7
+  },
+  {
+   "start": 788.0,
+   "end": 793.0
+  },
+  {
+   "start": 793.6,
+   "end": 797.6
+  },
+  {
+   "start": 798.3,
+   "end": 799.1
+  },
+  {
+   "start": 799.3,
+   "end": 800.0
+  },
+  {
+   "start": 800.1,
+   "end": 802.2
+  },
+  {
+   "start": 802.7,
+   "end": 804.0
+  },
+  {
+   "start": 804.3,
+   "end": 807.9
+  },
+  {
+   "start": 807.9,
+   "end": 814.0
+  },
+  {
+   "start": 814.3,
+   "end": 818.3
+  },
+  {
+   "start": 818.4,
+   "end": 825.4
+  },
+  {
+   "start": 825.4,
+   "end": 832.1
+  },
+  {
+   "start": 832.1,
+   "end": 833.8
+  },
+  {
+   "start": 834.2,
+   "end": 835.0
+  },
+  {
+   "start": 835.2,
+   "end": 837.4
+  },
+  {
+   "start": 837.5,
+   "end": 839.9
+  },
+  {
+   "start": 840.0,
+   "end": 852.2
+  },
+  {
+   "start": 870.3,
+   "end": 872.2
+  },
+  {
+   "start": 942.0,
+   "end": 942.8
+  },
+  {
+   "start": 944.8,
+   "end": 949.6
+  },
+  {
+   "start": 950.3,
+   "end": 964.5
+  },
+  {
+   "start": 965.2,
+   "end": 971.9
+  },
+  {
+   "start": 972.0,
+   "end": 974.5
+  },
+  {
+   "start": 974.7,
+   "end": 982.3
+  },
+  {
+   "start": 983.0,
+   "end": 986.6
+  },
+  {
+   "start": 987.2,
+   "end": 988.4
+  },
+  {
+   "start": 988.9,
+   "end": 993.0
+  },
+  {
+   "start": 993.2,
+   "end": 996.9
+  },
+  {
+   "start": 997.1,
+   "end": 1000.4
+  },
+  {
+   "start": 1000.6,
+   "end": 1002.6
+  },
+  {
+   "start": 1002.7,
+   "end": 1003.2
+  },
+  {
+   "start": 1004.7,
+   "end": 1013.9
+  },
+  {
+   "start": 1014.6,
+   "end": 1016.1
+  },
+  {
+   "start": 1016.6,
+   "end": 1019.0
+  },
+  {
+   "start": 1019.5,
+   "end": 1022.6
+  },
+  {
+   "start": 1023.2,
+   "end": 1026.7
+  },
+  {
+   "start": 1026.7,
+   "end": 1029.1
+  },
+  {
+   "start": 1029.3,
+   "end": 1030.8
+  },
+  {
+   "start": 1031.2,
+   "end": 1032.0
+  },
+  {
+   "start": 1032.4,
+   "end": 1034.8
+  },
+  {
+   "start": 1034.9,
+   "end": 1040.5
+  },
+  {
+   "start": 1042.1,
+   "end": 1044.1
+  },
+  {
+   "start": 1044.4,
+   "end": 1046.9
+  },
+  {
+   "start": 1050.0,
+   "end": 1051.3
+  },
+  {
+   "start": 1052.1,
+   "end": 1055.2
+  },
+  {
+   "start": 1055.3,
+   "end": 1058.1
+  },
+  {
+   "start": 1058.5,
+   "end": 1061.1
+  },
+  {
+   "start": 1061.3,
+   "end": 1062.2
+  },
+  {
+   "start": 1063.3,
+   "end": 1066.5
+  },
+  {
+   "start": 1066.7,
+   "end": 1070.6
+  },
+  {
+   "start": 1071.0,
+   "end": 1072.4
+  },
+  {
+   "start": 1073.8,
+   "end": 1075.3
+  },
+  {
+   "start": 1075.6,
+   "end": 1077.4
+  },
+  {
+   "start": 1118.7,
+   "end": 1120.9
+  },
+  {
+   "start": 1120.9,
+   "end": 1121.4
+  },
+  {
+   "start": 1121.9,
+   "end": 1124.5
+  },
+  {
+   "start": 1124.7,
+   "end": 1125.1
+  },
+  {
+   "start": 1127.6,
+   "end": 1128.5
+  },
+  {
+   "start": 1129.1,
+   "end": 1132.3
+  },
+  {
+   "start": 1132.7,
+   "end": 1133.6
+  },
+  {
+   "start": 1133.8,
+   "end": 1134.8
+  },
+  {
+   "start": 1135.8,
+   "end": 1137.5
+  },
+  {
+   "start": 1147.8,
+   "end": 1148.3
+  },
+  {
+   "start": 1148.8,
+   "end": 1149.4
+  },
+  {
+   "start": 1152.6,
+   "end": 1153.4
+  },
+  {
+   "start": 1153.8,
+   "end": 1154.4
+  },
+  {
+   "start": 1155.4,
+   "end": 1156.8
+  },
+  {
+   "start": 1157.3,
+   "end": 1158.3
+  },
+  {
+   "start": 1158.4,
+   "end": 1160.1
+  },
+  {
+   "start": 1160.1,
+   "end": 1164.8
+  },
+  {
+   "start": 1164.9,
+   "end": 1167.0
+  },
+  {
+   "start": 1167.1,
+   "end": 1168.8
+  },
+  {
+   "start": 1169.5,
+   "end": 1173.7
+  },
+  {
+   "start": 1174.0,
+   "end": 1178.5
+  },
+  {
+   "start": 1179.7,
+   "end": 1181.5
+  },
+  {
+   "start": 1181.9,
+   "end": 1185.7
+  },
+  {
+   "start": 1185.8,
+   "end": 1188.8
+  },
+  {
+   "start": 1188.8,
+   "end": 1190.1
+  },
+  {
+   "start": 1190.2,
+   "end": 1191.7
+  },
+  {
+   "start": 1191.9,
+   "end": 1193.0
+  },
+  {
+   "start": 1193.0,
+   "end": 1194.7
+  },
+  {
+   "start": 1195.8,
+   "end": 1197.6
+  },
+  {
+   "start": 1197.6,
+   "end": 1198.3
+  },
+  {
+   "start": 1199.4,
+   "end": 1201.1
+  },
+  {
+   "start": 1202.6,
+   "end": 1203.2
+  },
+  {
+   "start": 1207.7,
+   "end": 1208.9
+  },
+  {
+   "start": 1212.1,
+   "end": 1212.5
+  },
+  {
+   "start": 1213.3,
+   "end": 1214.4
+  },
+  {
+   "start": 1214.9,
+   "end": 1216.9
+  },
+  {
+   "start": 1217.0,
+   "end": 1219.0
+  },
+  {
+   "start": 1219.4,
+   "end": 1220.2
+  },
+  {
+   "start": 1220.6,
+   "end": 1221.4
+  },
+  {
+   "start": 1221.8,
+   "end": 1222.6
+  },
+  {
+   "start": 1223.0,
+   "end": 1223.7
+  },
+  {
+   "start": 1223.7,
+   "end": 1225.4
+  },
+  {
+   "start": 1225.4,
+   "end": 1227.5
+  },
+  {
+   "start": 1228.5,
+   "end": 1230.6
+  },
+  {
+   "start": 1231.1,
+   "end": 1231.9
+  },
+  {
+   "start": 1233.3,
+   "end": 1234.4
+  },
+  {
+   "start": 1235.3,
+   "end": 1235.9
+  },
+  {
+   "start": 1236.9,
+   "end": 1237.8
+  },
+  {
+   "start": 1238.2,
+   "end": 1238.8
+  },
+  {
+   "start": 1239.6,
+   "end": 1241.8
+  },
+  {
+   "start": 1241.9,
+   "end": 1243.3
+  },
+  {
+   "start": 1243.5,
+   "end": 1244.2
+  },
+  {
+   "start": 1244.5,
+   "end": 1246.3
+  },
+  {
+   "start": 1246.9,
+   "end": 1254.4
+  },
+  {
+   "start": 1254.9,
+   "end": 1257.3
+  },
+  {
+   "start": 1257.8,
+   "end": 1259.3
+  },
+  {
+   "start": 1261.6,
+   "end": 1263.1
+  },
+  {
+   "start": 1263.5,
+   "end": 1266.0
+  },
+  {
+   "start": 1266.2,
+   "end": 1266.9
+  },
+  {
+   "start": 1267.2,
+   "end": 1268.8
+  },
+  {
+   "start": 1269.0,
+   "end": 1271.8
+  },
+  {
+   "start": 1272.8,
+   "end": 1273.5
+  },
+  {
+   "start": 1275.0,
+   "end": 1277.7
+  },
+  {
+   "start": 1278.3,
+   "end": 1280.5
+  },
+  {
+   "start": 1282.6,
+   "end": 1284.5
+  },
+  {
+   "start": 1285.5,
+   "end": 1286.1
+  },
+  {
+   "start": 1286.1,
+   "end": 1286.6
+  },
+  {
+   "start": 1288.4,
+   "end": 1289.0
+  },
+  {
+   "start": 1290.9,
+   "end": 1292.5
+  },
+  {
+   "start": 1295.5,
+   "end": 1296.7
+  },
+  {
+   "start": 1297.4,
+   "end": 1299.0
+  },
+  {
+   "start": 1300.6,
+   "end": 1301.4
+  },
+  {
+   "start": 1302.0,
+   "end": 1303.4
+  },
+  {
+   "start": 1303.5,
+   "end": 1305.4
+  },
+  {
+   "start": 1305.9,
+   "end": 1311.5
+  },
+  {
+   "start": 1312.0,
+   "end": 1314.1
+  },
+  {
+   "start": 1314.4,
+   "end": 1315.2
+  },
+  {
+   "start": 1316.6,
+   "end": 1318.2
+  },
+  {
+   "start": 1318.6,
+   "end": 1319.3
+  },
+  {
+   "start": 1320.1,
+   "end": 1322.2
+  },
+  {
+   "start": 1322.3,
+   "end": 1323.8
+  },
+  {
+   "start": 1325.6,
+   "end": 1330.1
+  },
+  {
+   "start": 1330.6,
+   "end": 1333.6
+  },
+  {
+   "start": 1333.8,
+   "end": 1336.9
+  },
+  {
+   "start": 1337.2,
+   "end": 1339.7
+  },
+  {
+   "start": 1341.2,
+   "end": 1342.7
+  },
+  {
+   "start": 1343.7,
+   "end": 1345.6
+  },
+  {
+   "start": 1346.7,
+   "end": 1348.4
+  },
+  {
+   "start": 1349.3,
+   "end": 1350.2
+  },
+  {
+   "start": 1350.9,
+   "end": 1354.9
+  },
+  {
+   "start": 1357.2,
+   "end": 1358.5
+  },
+  {
+   "start": 1359.1,
+   "end": 1361.0
+  },
+  {
+   "start": 1361.2,
+   "end": 1361.8
+  },
+  {
+   "start": 1366.8,
+   "end": 1371.8
+  },
+  {
+   "start": 1372.2,
+   "end": 1374.7
+  },
+  {
+   "start": 1376.9,
+   "end": 1379.1
+  },
+  {
+   "start": 1381.5,
+   "end": 1383.5
+  },
+  {
+   "start": 1389.4,
+   "end": 1393.5
+  },
+  {
+   "start": 1393.8,
+   "end": 1394.2
+  },
+  {
+   "start": 1395.0,
+   "end": 1397.3
+  },
+  {
+   "start": 1397.8,
+   "end": 1399.7
+  },
+  {
+   "start": 1400.1,
+   "end": 1401.9
+  },
+  {
+   "start": 1402.3,
+   "end": 1403.8
+  },
+  {
+   "start": 1404.7,
+   "end": 1406.8
+  },
+  {
+   "start": 1407.6,
+   "end": 1410.6
+  },
+  {
+   "start": 1411.2,
+   "end": 1411.7
+  },
+  {
+   "start": 1411.9,
+   "end": 1414.8
+  },
+  {
+   "start": 1415.3,
+   "end": 1419.0
+  },
+  {
+   "start": 1419.1,
+   "end": 1420.8
+  },
+  {
+   "start": 1422.4,
+   "end": 1424.0
+  },
+  {
+   "start": 1424.4,
+   "end": 1425.4
+  },
+  {
+   "start": 1425.5,
+   "end": 1426.9
+  },
+  {
+   "start": 1427.0,
+   "end": 1429.6
+  },
+  {
+   "start": 1429.7,
+   "end": 1431.1
+  },
+  {
+   "start": 1431.4,
+   "end": 1432.2
+  },
+  {
+   "start": 1432.3,
+   "end": 1434.8
+  },
+  {
+   "start": 1435.1,
+   "end": 1436.3
+  },
+  {
+   "start": 1439.3,
+   "end": 1440.7
+  },
+  {
+   "start": 1441.0,
+   "end": 1442.2
+  },
+  {
+   "start": 1442.5,
+   "end": 1445.9
+  },
+  {
+   "start": 1446.1,
+   "end": 1447.4
+  },
+  {
+   "start": 1447.5,
+   "end": 1449.2
+  },
+  {
+   "start": 1449.8,
+   "end": 1451.9
+  },
+  {
+   "start": 1455.7,
+   "end": 1458.4
+  },
+  {
+   "start": 1462.1,
+   "end": 1464.7
+  },
+  {
+   "start": 1467.3,
+   "end": 1469.1
+  },
+  {
+   "start": 1469.5,
+   "end": 1470.5
+  },
+  {
+   "start": 1483.2,
+   "end": 1486.7
+  },
+  {
+   "start": 1487.1,
+   "end": 1491.1
+  },
+  {
+   "start": 1491.4,
+   "end": 1495.2
+  },
+  {
+   "start": 1495.4,
+   "end": 1497.5
+  },
+  {
+   "start": 1497.6,
+   "end": 1499.6
+  },
+  {
+   "start": 1499.7,
+   "end": 1503.6
+  },
+  {
+   "start": 1503.9,
+   "end": 1507.9
+  },
+  {
+   "start": 1508.1,
+   "end": 1512.2
+  },
+  {
+   "start": 1512.3,
+   "end": 1514.2
+  },
+  {
+   "start": 1514.5,
+   "end": 1516.2
+  },
+  {
+   "start": 1516.6,
+   "end": 1528.9
+  }
+ ],
+ "shots": [
+  1.64,
+  6.0,
+  44.84,
+  47.72,
+  56.84,
+  59.76,
+  63.96,
+  67.28,
+  75.56,
+  80.48,
+  84.84,
+  191.08,
+  194.64,
+  197.92,
+  199.92,
+  203.08,
+  205.68,
+  209.08,
+  212.12,
+  215.96,
+  217.32,
+  223.8,
+  224.92,
+  225.8,
+  229.28,
+  234.48,
+  236.4,
+  239.04,
+  241.4,
+  242.28,
+  242.76,
+  243.16,
+  243.72,
+  244.32,
+  248.08,
+  249.44,
+  250.72,
+  258.04,
+  260.6,
+  261.92,
+  263.08,
+  265.12,
+  267.0,
+  270.16,
+  271.48,
+  274.56,
+  302.0,
+  310.56,
+  349.4,
+  350.44,
+  351.52,
+  352.52,
+  389.08,
+  395.96,
+  411.68,
+  414.0,
+  415.52,
+  416.64,
+  420.08,
+  421.32,
+  424.08,
+  424.96,
+  425.72,
+  427.28,
+  429.72,
+  431.24,
+  433.16,
+  434.64,
+  436.12,
+  437.28,
+  438.64,
+  440.96,
+  443.4,
+  444.44,
+  446.08,
+  453.44,
+  454.32,
+  455.48,
+  460.16,
+  461.84,
+  464.24,
+  465.84,
+  468.16,
+  470.24,
+  472.68,
+  475.84,
+  480.08,
+  481.48,
+  483.08,
+  485.12,
+  489.72,
+  490.88,
+  494.88,
+  499.16,
+  502.72,
+  506.72,
+  509.6,
+  511.08,
+  514.4,
+  518.72,
+  520.64,
+  522.72,
+  523.28,
+  524.36,
+  525.72,
+  527.4,
+  528.0,
+  528.88,
+  530.64,
+  532.04,
+  532.92,
+  536.44,
+  537.12,
+  538.24,
+  543.72,
+  545.84,
+  549.0,
+  554.32,
+  562.24,
+  563.88,
+  566.6,
+  567.96,
+  569.4,
+  574.4,
+  578.68,
+  581.48,
+  586.08,
+  587.72,
+  592.84,
+  597.28,
+  603.84,
+  607.28,
+  609.08,
+  612.04,
+  613.32,
+  620.52,
+  621.92,
+  623.6,
+  626.44,
+  629.12,
+  631.32,
+  635.8,
+  638.04,
+  643.48,
+  649.88,
+  652.76,
+  656.76,
+  659.88,
+  662.52,
+  664.04,
+  669.8,
+  677.12,
+  680.68,
+  684.6,
+  686.48,
+  689.16,
+  691.64,
+  693.52,
+  695.8,
+  702.84,
+  703.92,
+  706.8,
+  710.88,
+  712.48,
+  715.48,
+  716.96,
+  722.28,
+  723.64,
+  728.84,
+  730.04,
+  746.48,
+  754.16,
+  755.76,
+  757.24,
+  764.68,
+  768.36,
+  769.64,
+  771.6,
+  773.52,
+  775.2,
+  779.08,
+  780.12,
+  782.08,
+  782.72,
+  785.08,
+  788.04,
+  792.96,
+  794.68,
+  798.92,
+  802.24,
+  808.68,
+  813.52,
+  814.56,
+  816.6,
+  818.28,
+  819.88,
+  820.96,
+  825.84,
+  830.88,
+  833.0,
+  834.04,
+  837.12,
+  839.64,
+  840.56,
+  843.24,
+  847.04,
+  848.64,
+  851.56,
+  854.4,
+  856.72,
+  857.92,
+  860.4,
+  861.48,
+  863.08,
+  866.32,
+  882.64,
+  886.8,
+  890.44,
+  896.24,
+  898.52,
+  901.04,
+  924.72,
+  948.84,
+  957.32,
+  962.44,
+  963.32,
+  966.44,
+  967.12,
+  969.44,
+  974.64,
+  977.08,
+  985.92,
+  987.08,
+  991.4,
+  992.92,
+  994.64,
+  997.56,
+  1000.2,
+  1002.0,
+  1003.12,
+  1008.64,
+  1010.44,
+  1026.48,
+  1033.36,
+  1040.16,
+  1044.2,
+  1047.04,
+  1049.56,
+  1053.48,
+  1056.32,
+  1061.96,
+  1064.08,
+  1066.28,
+  1071.68,
+  1072.52,
+  1073.8,
+  1074.44,
+  1075.72,
+  1081.36,
+  1087.96,
+  1090.0,
+  1092.04,
+  1099.4,
+  1103.76,
+  1111.64,
+  1117.32,
+  1123.64,
+  1137.8,
+  1142.64,
+  1145.72,
+  1151.2,
+  1153.48,
+  1156.8,
+  1168.24,
+  1172.2,
+  1173.52,
+  1178.52,
+  1179.56,
+  1182.36,
+  1187.8,
+  1189.4,
+  1194.36,
+  1196.76,
+  1199.6,
+  1200.24,
+  1204.28,
+  1207.88,
+  1211.08,
+  1217.92,
+  1218.72,
+  1220.36,
+  1221.64,
+  1224.48,
+  1227.56,
+  1234.16,
+  1237.88,
+  1247.92,
+  1252.08,
+  1259.12,
+  1260.52,
+  1267.84,
+  1269.36,
+  1270.88,
+  1272.64,
+  1279.56,
+  1281.44,
+  1285.0,
+  1286.0,
+  1292.44,
+  1296.76,
+  1300.16,
+  1310.16,
+  1310.52,
+  1312.04,
+  1314.08,
+  1316.68,
+  1317.68,
+  1320.24,
+  1323.0,
+  1326.52,
+  1330.16,
+  1334.44,
+  1336.12,
+  1336.96,
+  1350.04,
+  1352.08,
+  1355.36,
+  1362.0,
+  1371.4,
+  1375.52,
+  1392.2,
+  1396.04,
+  1418.04,
+  1420.12,
+  1421.0,
+  1425.32,
+  1427.44,
+  1430.76,
+  1432.92,
+  1435.88,
+  1438.44,
+  1452.04,
+  1457.4,
+  1458.48,
+  1460.96,
+  1464.72,
+  1467.28,
+  1470.32,
+  1474.56
+ ],
+ "blacks": [
+  {
+   "start": 0.04,
+   "end": 1.12
+  },
+  {
+   "start": 84.52,
+   "end": 84.92
+  },
+  {
+   "start": 543.76,
+   "end": 545.96
+  },
+  {
+   "start": 1474.6,
+   "end": 1481.6
+  },
+  {
+   "start": 1483.64,
+   "end": 1483.92
+  },
+  {
+   "start": 1485.84,
+   "end": 1486.16
+  },
+  {
+   "start": 1487.84,
+   "end": 1488.12
+  },
+  {
+   "start": 1490.16,
+   "end": 1490.6
+  },
+  {
+   "start": 1492.24,
+   "end": 1492.6
+  },
+  {
+   "start": 1494.64,
+   "end": 1494.92
+  },
+  {
+   "start": 1496.8,
+   "end": 1497.16
+  },
+  {
+   "start": 1499.2,
+   "end": 1499.56
+  },
+  {
+   "start": 1501.28,
+   "end": 1501.64
+  },
+  {
+   "start": 1503.64,
+   "end": 1506.36
+  },
+  {
+   "start": 1508.4,
+   "end": 1508.68
+  },
+  {
+   "start": 1513.2,
+   "end": 1513.64
+  },
+  {
+   "start": 1515.44,
+   "end": 1515.8
+  },
+  {
+   "start": 1522.8,
+   "end": 1523.08
+  },
+  {
+   "start": 1527.32,
+   "end": 1527.6
+  },
+  {
+   "start": 1529.8,
+   "end": 1530.08
+  },
+  {
+   "start": 1532.16,
+   "end": 1535.56
+  }
+ ],
+ "timings_sec": {
+  "brand_matching": 151.8,
+  "selection": 10.4,
+  "total_this_run": 162.3
+ },
+ "variant": "gemini-1701086b74"
+}

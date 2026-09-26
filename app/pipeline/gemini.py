@@ -59,8 +59,8 @@ def clip_part(path: Path, fps: float = 2.0) -> types.Part:
 # exhausted for the day (each has its own quota).
 MODEL_POOL = [m.strip() for m in os.getenv(
     "GEMINI_MODEL_POOL",
-    "gemini-3.5-flash,gemini-3.8-flash,gemini-3.7-flash,gemini-3.6-flash,gemini-3-flash-preview,"
-    "gemini-3.5-flash-lite,gemini-3.1-flash-lite,gemini-flash-lite-latest").split(",") if m.strip()]
+    "gemini-3.5-flash,gemini-3-flash-preview,"
+    "gemini-3.5-flash-lite,gemini-3.1-flash-lite,gemini-flash-lite-latest,gemini-3.8-flash,gemini-3.7-flash,gemini-3.6-flash").split(",") if m.strip()]
 _exhausted: set[str] = set()
 
 

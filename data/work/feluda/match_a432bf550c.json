@@ -1,0 +1,927 @@
+{
+ "catalogue_hash": "a432bf550c",
+ "items": {
+  "c003": {
+   "id": "c003",
+   "t0": 302.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 302.0,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 8.1,
+    "silence_after": 11.3,
+    "speech_density_10s_before": 0.19,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1,
+    "jarring": 0,
+    "suspense_hook": 0,
+    "natural_break_score": 0.95,
+    "reason": "The cut occurs at a perfect transition point between the end of the cold open/prologue and the start of the animated opening credits sequence."
+   },
+   "where_score": 0.834,
+   "match": {
+    "dominant_activity": "heated argument",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene involves military planning and aggression, which is a violent context unrelated to food products."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The military setting and discussion of conflict are negative contexts for a skincare brand."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The aggressive military environment is unsuitable for a beauty and cosmetics brand."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The context of military aggression and planning violent acts is a negative context for a telecom brand."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The focus on war and military strategy is a negative context for an automotive brand."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The violent context of war planning is inappropriate for a fintech brand."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "mountains"
+      ],
+      "rationale": "The scene is set in the mountains, but the context is a military conflict zone rather than a travel destination."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's focus on military aggression is a negative context for an e-commerce brand."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene depicts military officers planning a proxy war and targeting government officials, with armed soldiers visible."
+       }
+      ],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "drinking tea",
+       "conversation over tea"
+      ],
+      "rationale": "An officer is seen drinking from a mug during a conversation, but the violent context of planning a proxy war is a violation."
+     }
+    ]
+   }
+  },
+  "c005": {
+   "id": "c005",
+   "t0": 509.6,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 509.6,
+   "scene_before": 6,
+   "scene_after": 7,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.7,
+    "silence_after": 38.1,
+    "speech_density_10s_before": 0.57,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 16.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "ক",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.1,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The scene in the astrologer's chamber concludes naturally with the clue 'K', and the cut transitions cleanly to a completely new location and sequence in Kashmir."
+   },
+   "where_score": 0.815,
+   "match": {
+    "dominant_activity": "palm reading",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Immediately after the ad break, militants initiate a violent shootout attacking security forces with automatic gunfire and explosives."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene revolves around an astrological consultation about travel and writer's block, offering no thematic connection to cooking or food."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Immediately after the ad break, armed militants on a motorcycle stage a violent shootout against military forces."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The sequence does not depict skincare, personal hygiene, or grooming routines."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene following the break features a violent militant ambush and gun battle against soldiers."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There is no alignment with cosmetics, beauty, or dressing up in this astrological consultation scene."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The post-break scene features violent militant gunfire and an ambush on security forces."
+       }
+      ],
+      "relevance": 0.25,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "Travel is discussed as a remedy by the astrologer, but telecom and connectivity devices are not featured or central."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Immediately after the break, militants attack armed forces in a violent street shootout."
+       },
+       {
+        "negative_context": "injury",
+        "evidence": "Soldiers are shot and fall injured during the militant shootout right after the break."
+       }
+      ],
+      "relevance": 0.35,
+      "matched_contexts": [
+       "journey"
+      ],
+      "rationale": "Vehicles like minibuses and ambassadors are briefly joked about during the travel consultation, but driving or automotive mobility is not the focus."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A violent militant gunfight and vehicle ambush occur immediately following the ad break."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene centers on astrology and travel advice, without any connection to digital payments or personal finance."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Directly after the ad break, a violent shootout erupts in Kashmir with militants firing automatic weapons."
+       }
+      ],
+      "relevance": 0.75,
+      "matched_contexts": [
+       "travel",
+       "vacation",
+       "holiday",
+       "mountains"
+      ],
+      "rationale": "The astrologer strongly advises taking a long travel vacation to hills or mountains starting with the letter 'K' to relieve mental fatigue."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The scene resuming after the ad break shows a violent armed militant ambush on security forces."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There is no representation of shopping, deliveries, or e-commerce transactions in the scene."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Immediately following the commercial break, armed militants launch a violent gun attack on security personnel."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "While the characters sit around a table in conversation, tea drinking or cafe culture is not present."
+     }
+    ]
+   }
+  },
+  "c006": {
+   "id": "c006",
+   "t0": 544.86,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 544.86,
+   "scene_before": 7,
+   "scene_after": 8,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 35.96,
+    "silence_after": 2.84,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.64,
+    "loudness_dip_db": 29.7,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "আপনি যাই বলুন।",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.0,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.95,
+    "reason": "The cut occurs during a complete fade to black after a dramatic action sequence concludes, transitioning cleanly to a new scene in a different location."
+   },
+   "where_score": 0.938,
+   "match": {
+    "dominant_activity": "gunfight",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene is a violent shootout, which is a negative context for this brand."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The violent gunfight in the lead-in scene violates the brand's negative context."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene features intense violence and a shootout, which is unsuitable for a beauty brand."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       }
+      ],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "While travel is a theme in the episode, the immediate lead-in scene is a violent shootout."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       },
+       {
+        "negative_context": "injury",
+        "evidence": "soldiers falling after being shot"
+       }
+      ],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "motorcycle",
+       "car",
+       "driving",
+       "road trip",
+       "vehicle",
+       "road",
+       "journey",
+       "travel by car"
+      ],
+      "rationale": "Although vehicles are central to the action and the following scene, the violence and injuries in the lead-in are major violations."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The violent shootout in the lead-in scene is a direct violation of the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       }
+      ],
+      "relevance": 0.6,
+      "matched_contexts": [
+       "travel",
+       "mountains",
+       "sightseeing",
+       "road trip"
+      ],
+      "rationale": "The show's plot revolves around travel, but the lead-in scene's violence is a significant negative context."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       },
+       {
+        "negative_context": "accident",
+        "evidence": "vehicle explosion during the shootout"
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene's violence and explosions are unsuitable for an e-commerce brand."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "militants shooting soldiers in a town square"
+       }
+      ],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "adda",
+       "conversation over tea"
+      ],
+      "rationale": "The lead-in scene is a violent shootout, which is a negative context for a relaxing beverage brand."
+     }
+    ]
+   }
+  },
+  "c007": {
+   "id": "c007",
+   "t0": 684.6,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 684.6,
+   "scene_before": 8,
+   "scene_after": 9,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 2.5,
+    "silence_after": 3.9,
+    "speech_density_10s_before": 0.74,
+    "speech_density_10s_after": 0.43,
+    "loudness_dip_db": 2.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "আমাদের আইডিয়াটা চমৎকার লাগছে না?",
+    "first_line_after_cut": "আপনারা রেডি?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs during a clean transition from a car ride to a hotel room, with the previous conversation fully concluded."
+   },
+   "where_score": 0.607,
+   "match": {
+    "dominant_activity": "The characters are on a road trip in a car, discussing their travel plans to Kashmir.",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene focuses on travel and conversation in a car, with no connection to food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene involves a car journey and planning a trip, which does not align with skincare or personal care themes."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The content is about a road trip and travel planning, offering no relevance to beauty or cosmetics."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "travel",
+       "family conversation"
+      ],
+      "rationale": "While the characters are traveling and conversing, there is no direct use of telecommunications or mobile devices."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.9,
+      "matched_contexts": [
+       "car",
+       "automobile",
+       "driving",
+       "road trip",
+       "vehicle",
+       "road",
+       "journey",
+       "travel by car",
+       "family trip"
+      ],
+      "rationale": "The lead-in scene prominently features the characters on a road trip inside a car, making it highly relevant for an automotive brand."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "personal finance"
+      ],
+      "rationale": "The characters briefly discuss the cost of their trip, but there are no financial transactions or digital payment activities shown."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.9,
+      "matched_contexts": [
+       "travel",
+       "vacation",
+       "holiday",
+       "tourism",
+       "mountains",
+       "sightseeing",
+       "road trip",
+       "family vacation"
+      ],
+      "rationale": "The entire conversation revolves around planning a vacation and sightseeing in Kashmir, which is a perfect fit for a travel brand."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There is no mention or depiction of shopping or e-commerce activities in the lead-in or subsequent scenes."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The wider context of the episode includes a violent shootout in a Kashmiri town square with militants and explosions."
+       }
+      ],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "adda"
+      ],
+      "rationale": "The characters are engaged in a lively conversation (adda), but no tea or beverages are being consumed."
+     }
+    ]
+   }
+  },
+  "c008": {
+   "id": "c008",
+   "t0": 851.56,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 854.4,
+   "scene_before": 10,
+   "scene_after": 11,
+   "signals": {
+    "snap_delta": 2.84,
+    "silence_before": 2.2,
+    "silence_after": 15.9,
+    "speech_density_10s_before": 0.78,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 6.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "তাহলে আপনাদের সাথে আবার দেখা হচ্ছে ভূস্বর্গে।",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.85,
+    "reason": "The conversation in the room concludes naturally with a transition line, followed by scenic establishing shots of Kashmir, making it an excellent and non-disruptive place for an ad break."
+   },
+   "where_score": 0.705,
+   "match": {
+    "dominant_activity": "sightseeing",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene shows scenic outdoor views and boat riding, with no context related to food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene depicts outdoor travel and scenery, containing no personal care or skincare contexts."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene features a peaceful boat ride on a lake, which does not align with beauty or cosmetic contexts."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.6,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "The scenic travel setting provides a moderate relevance match for mobile connectivity while traveling."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "journey"
+      ],
+      "rationale": "The scene depicts travel across water rather than automotive or road travel."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "No shopping or digital payment activities are taking place in this nature scene."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.95,
+      "matched_contexts": [
+       "travel",
+       "vacation",
+       "holiday",
+       "tourism",
+       "mountains",
+       "sightseeing"
+      ],
+      "rationale": "The scene showcases a scenic Shikara boat ride with mountain landscapes in Srinagar, aligning perfectly with travel and tourism."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no e-commerce or shopping themes present in this scenic outdoor sequence."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "While the serene morning atmosphere is relaxing, there is no direct presence of tea or beverage consumption."
+     }
+    ]
+   }
+  },
+  "c009": {
+   "id": "c009",
+   "t0": 1081.36,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1081.36,
+   "scene_before": 10,
+   "scene_after": 11,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.96,
+    "silence_after": 37.34,
+    "speech_density_10s_before": 0.43,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.5,
+    "jarring": 0.4,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.55,
+    "reason": "The cut occurs during a scenic montage of the boat ride with continuous background music, making it a decent but slightly jarring place for a break as the sequence is still ongoing."
+   },
+   "where_score": 0.412,
+   "match": {
+    "dominant_activity": "boat ride",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "No food preparation, cooking, or eating occurs in this scenic boating scene."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene features sightseeing on a lake with no relevance to skincare or personal hygiene."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no cosmetics, grooming, or beauty routines depicted in this segment."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.35,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "The characters are traveling across Kashmir, but no mobile devices or connectivity services are shown."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "journey"
+      ],
+      "rationale": "The characters are on a scenic journey across the water, but no automobiles or road mobility are involved."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "No financial transactions, shopping, or digital payment activities take place."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.95,
+      "matched_contexts": [
+       "travel",
+       "vacation",
+       "holiday",
+       "tourism",
+       "mountains",
+       "sightseeing"
+      ],
+      "rationale": "The scene is a textbook travel and tourism showcase featuring a shikara boat ride, mountain views, and sightseeing on Dal Lake."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "No online shopping, deliveries, or e-commerce themes are present in the scene."
+     },
+     {
+      "brand_id": "brand_i",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "adda"
+      ],
+      "rationale": "The characters share a relaxed adda and have tea on the houseboat after the break, but tea is not visible during the boat ride."
+     }
+    ]
+   }
+  }
+ },
+ "verify": {
+  "c008:brand_g": {
+   "violation": false,
+   "violated_contexts": [],
+   "evidence": "The scenes directly before and after the ad break depict polite conversation about vacationing and sightseeing in Kashmir followed by scenic landscape shots of Dal Lake, with no references to funeral, hospital, violence, accident, illness, or grief.",
+   "confidence": 0.95
+  }
+ }
+}
