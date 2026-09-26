@@ -1,0 +1,15 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+.claude/
+data/videos/
+data/uploads/
+data/batch.log
+data/work/*/audio.wav
+data/work/*/thumbs/
+data/work/*/*.mp4
+data/work/*.mp4
+data/work/*.jpg
+web/ads/
+*.tmp.mp4

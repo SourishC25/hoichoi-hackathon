@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Birati · Contextual Ad Breaks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo">বি</span>
+    <div>
+      <h1>Birati <span class="bn">বিরতি</span></h1>
+      <p>AI-native ad-break placement for long-form Bengali drama</p>
+    </div>
+  </div>
+  <nav class="top-actions">
+    <button class="btn ghost" id="btn-how">How it works</button>
+    <button class="btn primary" id="btn-upload">Upload episode</button>
+  </nav>
+</header>
+
+<main class="layout">
+  <aside class="library">
+    <h2>Episodes</h2>
+    <div id="library" class="lib-list"><div class="muted">Loading…</div></div>
+    <div id="jobs"></div>
+  </aside>
+
+  <section class="stage">
+    <div id="empty" class="empty">Pick an episode on the left, or upload your own.</div>
+    <div id="episode" hidden>
+      <div class="ep-head">
+        <div>
+          <h2 id="ep-title"></h2>
+          <p id="ep-synopsis" class="muted"></p>
+        </div>
+        <div class="ep-downloads">
+          <a class="btn ghost sm" id="dl-vmap" target="_blank">VMAP ↓</a>
+          <a class="btn ghost sm" id="dl-debug" target="_blank">Debug JSON ↓</a>
+        </div>
+      </div>
+
+      <div class="kpis" id="kpis"></div>
+
+      <div class="player-wrap">
+        <div class="player" id="player">
+          <video id="content" controls playsinline preload="metadata"></video>
+          <div class="ad-layer" id="ad-layer" hidden>
+            <video id="ad" playsinline></video>
+            <div class="ad-badge"><span id="ad-label">Ad</span> · <span id="ad-count"></span></div>
+            <div class="ad-why" id="ad-why"></div>
+          </div>
+        </div>
+        <div class="break-nav" id="break-nav"></div>
+      </div>
+
+      <div class="timeline-card">
+        <div class="tl-legend">
+          <span><i class="lg scene"></i>Scene</span>
+          <span><i class="lg sens"></i>Scene with brand-blocking context</span>
+          <span><i class="lg speech"></i>Speech (VAD)</span>
+          <span><i class="lg cut"></i>Camera cut</span>
+          <span><i class="lg c-sel"></i>Ad break</span>
+          <span><i class="lg c-ok"></i>Eligible, not chosen</span>
+          <span><i class="lg c-rej"></i>Rejected</span>
+        </div>
+        <div id="timeline" class="timeline"></div>
+        <div id="tooltip" class="tooltip" hidden></div>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="breaks">Ad breaks</button>
+        <button class="tab" data-tab="candidates">All candidates</button>
+        <button class="tab" data-tab="scenes">Scenes</button>
+        <button class="tab" data-tab="config">Brands &amp; pacing</button>
+        <button class="tab" data-tab="manifest">VMAP</button>
+      </div>
+      <div class="tab-body" id="tab-breaks"></div>
+      <div class="tab-body" id="tab-candidates" hidden></div>
+      <div class="tab-body" id="tab-scenes" hidden></div>
+      <div class="tab-body" id="tab-config" hidden>
+        <div class="config-grid">
+          <div>
+            <h3>Brand catalogue <span class="muted sm">(JSON — edit, add a brand, re-run)</span></h3>
+            <textarea id="brands-json" spellcheck="false"></textarea>
+            <div class="row">
+              <button class="btn ghost sm" id="btn-add-brand">+ Add an unseen 9th brand</button>
+              <button class="btn ghost sm" id="btn-reset-brands">Reset to default</button>
+            </div>
+          </div>
+          <div>
+            <h3>Pacing rules</h3>
+            <form id="rules-form" class="rules"></form>
+            <button class="btn primary" id="btn-rerun">Re-run brand matching &amp; pacing</button>
+            <p class="muted sm">Scene analysis and cut judgement are cached; only the catalogue-dependent
+              stages re-run, so a new brand is evaluated against every slot with zero code changes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-body" id="tab-manifest" hidden><pre id="vmap-view" class="code"></pre></div>
+    </div>
+  </section>
+</main>
+
+<dialog id="dlg-upload" class="dlg">
+  <form method="dialog" id="upload-form">
+    <h3>Upload an episode</h3>
+    <p class="muted sm">MP4, any length. The full pipeline runs live: proxy transcode → camera cuts → speech
+      detection → Gemini scene analysis → cut judgement → brand matching → pacing → VMAP.
+      A 20-minute episode takes a few minutes.</p>
+    <input type="file" id="upload-file" accept="video/mp4,video/*">
+    <div class="or">— or paste a public link (Google Drive share link or direct .mp4) —</div>
+    <input type="url" id="upload-url" class="url-in" placeholder="https://drive.google.com/file/d/…/view">
+    <label class="chk"><input type="checkbox" id="upload-use-cat"> Use the catalogue from the "Brands &amp; pacing" tab</label>
+    <div class="row end">
+      <button class="btn ghost" value="cancel" formnovalidate>Cancel</button>
+      <button class="btn primary" id="upload-go" value="default">Upload &amp; process</button>
+    </div>
+    <div class="progress" id="upload-progress" hidden><div></div></div>
+  </form>
+</dialog>
+
+<dialog id="dlg-how" class="dlg wide">
+  <form method="dialog">
+    <h3>How Birati decides where, whether and what</h3>
+    <ol class="how">
+      <li><b>Perception (deterministic, frame-precise).</b> Camera cuts (PySceneDetect), speech activity
+        (Silero VAD — language-agnostic, so Bengali/English code-switching doesn't matter), loudness, fades to black.</li>
+      <li><b>Global understanding (Gemini, whole episode, audio + video).</b> Groups shots into semantically
+        coherent scenes; for each: summary, dominant activity, mood, and sensitive topics — using a vocabulary
+        built at runtime from every brand's <code>negative_contexts</code>.</li>
+      <li><b>WHERE.</b> Each scene boundary / fade is snapped to a frame-exact camera cut inside a speech-free gap.
+        No clean cut nearby → rejected. Mid-sentence cuts are structurally impossible. Gemini then re-watches
+        a 42-second clip around every cut as a broadcast editor: is dialogue continuing? is the beat complete?</li>
+      <li><b>WHAT.</b> Gemini scores every brand for the slot (dominant activity wins) and lists violations.
+        Negative contexts are a hard, fail-closed block from three independent layers: global scene tags,
+        lead-in clip review, and an adversarial verifier on the final pick.</li>
+      <li><b>WHETHER.</b> An exact dynamic programme picks the best set of breaks under max breaks/hour,
+        min gap, and the ad-load budget. Weak moments get no break at all.</li>
+      <li><b>Output.</b> IAB VMAP 1.0 with inline VAST 3.0, a debug JSON explaining every decision, and this
+        player, which reads the VMAP, cuts on the exact frame, plays the ad and resumes.</li>
+    </ol>
+    <div class="row end"><button class="btn primary">Got it</button></div>
+  </form>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

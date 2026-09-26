@@ -1,0 +1,657 @@
+{
+ "synopsis": "In this episode of Mahanagar Season 2, DB Officer Sukumar Borua arrives in Dhaka to track down a missing girl named Zara Hayat Khan, leading him to confront the powerful Afnan Chowdhury. Meanwhile, Officer Harun navigates political pressure and police corruption surrounding the hasty arrest of an innocent man, Masum, whose tragic fate in custody threatens to unravel a larger conspiracy.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.0,
+   "summary": "A disclaimer card is displayed on screen warning viewers about the fictional nature of the program and mature themes.",
+   "dominant_activity": "reading text on screen",
+   "contexts": [
+    "disclaimer",
+    "warning",
+    "text"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "index": 0
+  },
+  {
+   "start": 5.0,
+   "end": 9.0,
+   "summary": "The Hoichoi Originals title card is shown.",
+   "dominant_activity": "reading text on screen",
+   "contexts": [
+    "logo",
+    "title card",
+    "production company"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 5.0,
+   "index": 1
+  },
+  {
+   "start": 9.0,
+   "end": 138.0,
+   "location": "Dark Alleyway",
+   "characters": [
+    "Harun",
+    "Reporter"
+   ],
+   "summary": "Officer Harun meets a reporter in a dark alleyway at night to discuss a sensitive news report on his phone, warning him to be extremely cautious.",
+   "dominant_activity": "heated argument",
+   "contexts": [
+    "alley",
+    "night",
+    "police officer",
+    "reporter",
+    "phone",
+    "warning"
+   ],
+   "mood": "tense",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "crime",
+     "evidence": "Harun warns the reporter about the dangers of investigating police matters.",
+     "confidence": 0.8
+    },
+    {
+     "topic": "heated argument",
+     "evidence": "Harun and the reporter have a tense, confrontational exchange.",
+     "confidence": 0.7
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 9.0,
+   "index": 2
+  },
+  {
+   "start": 138.0,
+   "end": 198.04,
+   "summary": "The opening credits sequence plays over a montage of Dhaka's streets and monuments at night.",
+   "dominant_activity": "montage",
+   "contexts": [
+    "dhaka",
+    "night",
+    "streets",
+    "monuments",
+    "credits",
+    "music"
+   ],
+   "mood": "dramatic",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 138.0,
+   "index": 3
+  },
+  {
+   "start": 198.04,
+   "end": 266.48,
+   "location": "Dhaka Street",
+   "characters": [
+    "Sukumar Borua",
+    "Ratan Mia"
+   ],
+   "summary": "Sukumar Borua gets out of a rickshaw and questions the driver, Ratan Mia, showing him a photo of a girl he is searching for.",
+   "dominant_activity": "conversation",
+   "contexts": [
+    "cng",
+    "street",
+    "night",
+    "photo",
+    "phone",
+    "search"
+   ],
+   "mood": "curious",
+   "emotional_intensity": 0.4,
+   "sensitive": [
+    {
+     "topic": "smoking",
+     "evidence": "The CNG driver is seen smoking a cigarette.",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.04,
+   "llm_start": 198.0,
+   "index": 4
+  },
+  {
+   "start": 266.48,
+   "end": 310.36,
+   "location": "Brothel Area",
+   "characters": [
+    "Sukumar Borua",
+    "Ratan Mia"
+   ],
+   "summary": "Ratan Mia takes Sukumar to a local brothel area, suggesting there are better options there, but Sukumar remains focused on finding the girl in the photo.",
+   "dominant_activity": "conversation",
+   "contexts": [
+    "brothel",
+    "red-light district",
+    "women",
+    "alley",
+    "night",
+    "search"
+   ],
+   "mood": "uncomfortable",
+   "emotional_intensity": 0.5,
+   "sensitive": [
+    {
+     "topic": "sexual content",
+     "evidence": "The scene takes place in a red-light district with sex workers sitting outside.",
+     "confidence": 0.8
+    },
+    {
+     "topic": "poverty",
+     "evidence": "The setting depicts a run-down, impoverished urban alleyway.",
+     "confidence": 0.6
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.48,
+   "llm_start": 266.0,
+   "index": 5
+  },
+  {
+   "start": 310.36,
+   "end": 439.0,
+   "location": "Mayor's Office",
+   "characters": [
+    "Mayor",
+    "Titu Saheb",
+    "Assistant"
+   ],
+   "summary": "The Mayor meets with MP's PS Titu Saheb in her office to discuss a public toilet project, hawker evictions, and an upcoming foundation stone ceremony.",
+   "dominant_activity": "heated argument",
+   "contexts": [
+    "office",
+    "mayor",
+    "assistant",
+    "politician",
+    "files",
+    "public toilet",
+    "hawkers"
+   ],
+   "mood": "professional",
+   "emotional_intensity": 0.5,
+   "sensitive": [
+    {
+     "topic": "heated argument",
+     "evidence": "The Mayor and Titu Saheb have a sharp disagreement over hawker evictions and project approvals.",
+     "confidence": 0.7
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.36,
+   "llm_start": 310.0,
+   "index": 6
+  },
+  {
+   "start": 439.0,
+   "end": 597.36,
+   "location": "Restaurant",
+   "characters": [
+    "Sukumar Borua",
+    "Afnan Chowdhury"
+   ],
+   "summary": "Sukumar Borua confronts Afnan Chowdhury at a restaurant, leading to a tense exchange about the previous night's events at the Kotwali police station.",
+   "dominant_activity": "eating",
+   "contexts": [
+    "restaurant",
+    "food",
+    "dinner",
+    "threat",
+    "police officer",
+    "phone call"
+   ],
+   "mood": "tense",
+   "emotional_intensity": 0.7,
+   "sensitive": [
+    {
+     "topic": "eating",
+     "evidence": "Afnan is eating dinner during the confrontation.",
+     "confidence": 0.9
+    },
+    {
+     "topic": "crime",
+     "evidence": "Sukumar questions Afnan about his illegal detention and political influence.",
+     "confidence": 0.8
+    },
+    {
+     "topic": "heated argument",
+     "evidence": "The conversation is highly confrontational and filled with veiled threats.",
+     "confidence": 0.8
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 439.0,
+   "index": 7
+  },
+  {
+   "start": 597.36,
+   "end": 610.6,
+   "location": "Afnan's Car",
+   "characters": [
+    "Afnan Chowdhury"
+   ],
+   "summary": "Afnan drives through the city streets at night, looking visibly worried and anxious.",
+   "dominant_activity": "car ride",
+   "contexts": [
+    "car",
+    "driving",
+    "night",
+    "street",
+    "worried"
+   ],
+   "mood": "anxious",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.36,
+   "llm_start": 597.0,
+   "index": 8
+  },
+  {
+   "start": 610.6,
+   "end": 638.0,
+   "location": "Phone Booth / Street",
+   "characters": [
+    "Harun",
+    "Sukumar Borua"
+   ],
+   "summary": "Harun calls Sukumar from a phone booth, demanding that he find the missing girl quickly, while Sukumar complains about the difficulty of the task.",
+   "dominant_activity": "phone call",
+   "contexts": [
+    "phone booth",
+    "night",
+    "search",
+    "police officer",
+    "urgency"
+   ],
+   "mood": "urgent",
+   "emotional_intensity": 0.6,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.6,
+   "llm_start": 610.0,
+   "index": 9
+  },
+  {
+   "start": 638.0,
+   "end": 685.92,
+   "location": "Police Station Corridor",
+   "characters": [
+    "Harun",
+    "Officer"
+   ],
+   "summary": "Harun walks down the police station corridor and makes excuses about his frequent toilet visits, claiming he has diabetes.",
+   "dominant_activity": "conversation",
+   "contexts": [
+    "police station",
+    "corridor",
+    "diabetes",
+    "toilet",
+    "officers"
+   ],
+   "mood": "suspicious",
+   "emotional_intensity": 0.4,
+   "sensitive": [
+    {
+     "topic": "bathroom",
+     "evidence": "Harun discusses his frequent trips to the toilet.",
+     "confidence": 0.9
+    },
+    {
+     "topic": "illness",
+     "evidence": "Harun claims to suffer from diabetes.",
+     "confidence": 0.8
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 638.0,
+   "index": 10
+  },
+  {
+   "start": 685.92,
+   "end": 702.48,
+   "location": "Dhaka Street",
+   "characters": [
+    "Sukumar Borua"
+   ],
+   "summary": "Sukumar makes a phone call to track the call records of Zara Hayat Khan's phone number.",
+   "dominant_activity": "phone call",
+   "contexts": [
+    "phone",
+    "street",
+    "night",
+    "tracking",
+    "call records"
+   ],
+   "mood": "focused",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": -0.08,
+   "llm_start": 686.0,
+   "index": 11
+  },
+  {
+   "start": 702.48,
+   "end": 740.56,
+   "location": "Hotel Room",
+   "characters": [
+    "Zara Hayat Khan",
+    "Afnan Chowdhury"
+   ],
+   "summary": "Zara stands distressed in her hotel room as she experiences terrifying flashbacks of a violent physical struggle with Afnan.",
+   "dominant_activity": "hallucination",
+   "contexts": [
+    "hotel room",
+    "distress",
+    "flashback",
+    "violence",
+    "struggle",
+    "fear"
+   ],
+   "mood": "terrified",
+   "emotional_intensity": 0.9,
+   "sensitive": [
+    {
+     "topic": "violence",
+     "evidence": "Zara has a flashback of Afnan grabbing her violently and hitting her.",
+     "confidence": 0.9
+    },
+    {
+     "topic": "fight",
+     "evidence": "The flashback depicts a physical struggle between Zara and Afnan.",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.48,
+   "llm_start": 702.0,
+   "index": 12
+  },
+  {
+   "start": 740.56,
+   "end": 876.16,
+   "location": "Alleyway",
+   "characters": [
+    "Sukumar Borua",
+    "Mohon"
+   ],
+   "summary": "Sukumar corners a local drug dealer, Mohon, threatening him with severe consequences unless he reveals Zara's location.",
+   "dominant_activity": "heated argument",
+   "contexts": [
+    "alley",
+    "night",
+    "drug dealer",
+    "threat",
+    "police officer",
+    "information"
+   ],
+   "mood": "threatening",
+   "emotional_intensity": 0.7,
+   "sensitive": [
+    {
+     "topic": "drugs",
+     "evidence": "Mohon is identified as a local drug dealer, and Sukumar threatens to ruin his drug business.",
+     "confidence": 0.9
+    },
+    {
+     "topic": "crime",
+     "evidence": "Sukumar uses illegal threats of violence and planting evidence to extract information.",
+     "confidence": 0.8
+    },
+    {
+     "topic": "heated argument",
+     "evidence": "Sukumar aggressively threatens Mohon in a dark alley.",
+     "confidence": 0.8
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.56,
+   "llm_start": 740.0,
+   "index": 13
+  },
+  {
+   "start": 876.16,
+   "end": 911.28,
+   "location": "Dhaka Street",
+   "summary": "A brief transition shot of a CNG traveling through the city streets at night.",
+   "dominant_activity": "car ride",
+   "contexts": [
+    "cng",
+    "night",
+    "street",
+    "transition"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.3,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.16,
+   "llm_start": 876.0,
+   "index": 14
+  },
+  {
+   "start": 911.28,
+   "end": 1001.44,
+   "location": "Police Station Alley",
+   "characters": [
+    "Harun",
+    "Dipu"
+   ],
+   "summary": "Harun and Dipu smoke together outside, discussing the political motivations behind Masum's arrest and Harun's guaranteed promotion.",
+   "dominant_activity": "smoking",
+   "contexts": [
+    "alley",
+    "night",
+    "police officers",
+    "cigarette",
+    "promotion",
+    "arrest",
+    "conspiracy"
+   ],
+   "mood": "cynical",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "smoking",
+     "evidence": "Both officers are smoking cigarettes throughout the scene.",
+     "confidence": 0.9
+    },
+    {
+     "topic": "crime",
+     "evidence": "They discuss framing an innocent man to satisfy political higher-ups before the election.",
+     "confidence": 0.8
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.28,
+   "llm_start": 911.0,
+   "index": 15
+  },
+  {
+   "start": 1001.44,
+   "end": 1143.08,
+   "location": "Jail Cell",
+   "characters": [
+    "Masum",
+    "Masum's Sister"
+   ],
+   "summary": "Masum's sister visits him in his cell, where a severely beaten Masum breaks down crying, explaining that the police forced him to sign a false confession.",
+   "dominant_activity": "conversation",
+   "contexts": [
+    "jail cell",
+    "police station",
+    "sister",
+    "brother",
+    "crying",
+    "torture",
+    "confession",
+    "comfort"
+   ],
+   "mood": "devastating",
+   "emotional_intensity": 0.9,
+   "sensitive": [
+    {
+     "topic": "crying",
+     "evidence": "Both Masum and his sister cry intensely during their meeting.",
+     "confidence": 0.9
+    },
+    {
+     "topic": "violence",
+     "evidence": "Masum shows physical signs of severe police torture and describes being beaten.",
+     "confidence": 0.9
+    },
+    {
+     "topic": "police arrest",
+     "evidence": "Masum is locked inside a police station jail cell.",
+     "confidence": 0.9
+    },
+    {
+     "topic": "grief",
+     "evidence": "The sister experiences intense emotional distress seeing her brother's broken state.",
+     "confidence": 0.8
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.44,
+   "llm_start": 1001.0,
+   "index": 16
+  },
+  {
+   "start": 1143.08,
+   "end": 1214.48,
+   "location": "Police Station Office",
+   "characters": [
+    "Harun",
+    "Officer"
+   ],
+   "summary": "Harun sits in his office looking deeply troubled before other officers arrive and ask him to accompany them.",
+   "dominant_activity": "conversation",
+   "contexts": [
+    "office",
+    "police station",
+    "sofa",
+    "officers",
+    "arrest",
+    "custody"
+   ],
+   "mood": "tense",
+   "emotional_intensity": 0.7,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.08,
+   "llm_start": 1143.0,
+   "index": 17
+  },
+  {
+   "start": 1214.48,
+   "end": 1271.12,
+   "location": "Jail Cell / Balcony",
+   "characters": [
+    "Masum",
+    "Guard Karim",
+    "Harun",
+    "Dipu"
+   ],
+   "summary": "Masum begs for water in his cell but is ignored. Later, guards carry his limp body out of the cell, and Dipu informs a shocked Harun that Masum is missing.",
+   "dominant_activity": "phone call",
+   "contexts": [
+    "jail cell",
+    "guard",
+    "unconscious",
+    "cover-up",
+    "balcony",
+    "phone call",
+    "shock"
+   ],
+   "mood": "shocking",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "death",
+     "evidence": "Masum appears to have died in custody, and the guards carry his limp body out.",
+     "confidence": 0.8
+    },
+    {
+     "topic": "dead body",
+     "evidence": "Masum's unresponsive, limp body is carried out of the cell.",
+     "confidence": 0.8
+    },
+    {
+     "topic": "crime",
+     "evidence": "The police attempt to cover up a custodial death by claiming the prisoner is 'missing'.",
+     "confidence": 0.8
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.48,
+   "llm_start": 1214.0,
+   "index": 18
+  },
+  {
+   "start": 1271.12,
+   "end": 1396.629,
+   "summary": "The end credits roll on a black screen with background music.",
+   "dominant_activity": "reading text on screen",
+   "contexts": [
+    "credits",
+    "music",
+    "black screen"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": -0.88,
+   "llm_start": 1272.0,
+   "index": 19
+  }
+ ],
+ "sensitive_vocab": [
+  "funeral",
+  "hospital",
+  "violence",
+  "illness",
+  "bathroom",
+  "accident",
+  "grief",
+  "eating",
+  "medical emergency",
+  "injury",
+  "financial distress",
+  "death",
+  "dead body",
+  "mourning",
+  "crying",
+  "blood",
+  "fight",
+  "weapon",
+  "crime",
+  "police arrest",
+  "alcohol",
+  "smoking",
+  "drugs",
+  "sexual content",
+  "poverty",
+  "suicide",
+  "religious ritual",
+  "heated argument"
+ ],
+ "model": "gemini-3.5-flash"
+}

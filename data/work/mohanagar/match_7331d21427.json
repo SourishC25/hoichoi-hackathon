@@ -1,0 +1,4536 @@
+{
+ "catalogue_hash": "7331d21427",
+ "items": {
+  "c001": {
+   "id": "c001",
+   "t0": 138.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 142.52,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 4.52,
+    "silence_before": 3.62,
+    "silence_after": 71.78,
+    "speech_density_10s_before": 0.44,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.5,
+    "jarring": 0.6,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.45,
+    "reason": "The cut occurs in the middle of the opening credits montage and its accompanying theme music, making it a somewhat jarring interruption."
+   },
+   "where_score": 0.35,
+   "match": {
+    "dominant_activity": "montage",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [],
+      "rationale": "The montage briefly shows street food preparation, but it is not the main focus of the scene."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene does not feature any personal care, skincare, or grooming activities."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene does not feature any cosmetics, makeup, or beauty-related activities."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "Although a phone is mentioned in the wider context, the immediate scene is a city montage with no focus on telecommunications."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.8,
+      "matched_contexts": [
+       "car",
+       "driving",
+       "commuting",
+       "traffic",
+       "road"
+      ],
+      "rationale": "The montage prominently features city traffic, cars driving, and roads at night, making it highly relevant for an automotive brand."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [],
+      "rationale": "The montage shows busy markets and shops, but there is no focus on financial transactions or digital payments."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "The montage depicts traveling through the city at night, which has minor relevance to general travel."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene does not feature any online shopping, deliveries, or e-commerce activities."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.8,
+     "matched_contexts": [
+      "car",
+      "driving",
+      "commuting",
+      "traffic",
+      "road"
+     ],
+     "rationale": "The montage prominently features city traffic, cars driving, and roads at night, making it highly relevant for an automotive brand.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "The montage depicts traveling through the city at night, which has minor relevance to general travel.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.2,
+     "matched_contexts": [],
+     "rationale": "The montage briefly shows street food preparation, but it is not the main focus of the scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.2,
+     "matched_contexts": [],
+     "rationale": "The montage shows busy markets and shops, but there is no focus on financial transactions or digital payments.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "Although a phone is mentioned in the wider context, the immediate scene is a city montage with no focus on telecommunications.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene does not feature any personal care, skincare, or grooming activities.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene does not feature any cosmetics, makeup, or beauty-related activities.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene does not feature any online shopping, deliveries, or e-commerce activities.",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "montage"
+  },
+  "c002": {
+   "id": "c002",
+   "t0": 198.04,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 198.04,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 59.14,
+    "silence_after": 16.26,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 8.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1,
+    "jarring": 0,
+    "suspense_hook": 0,
+    "natural_break_score": 0.95,
+    "reason": "The cut is placed perfectly at the end of the opening credits and title card, before the first narrative scene begins, with no overlapping music or dialogue."
+   },
+   "where_score": 0.886,
+   "match": {
+    "dominant_activity": "montage",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The montage shows city streets and monuments, and the post-break scene is on a street, which does not relate to cooking or eating."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenes focus on a city montage and a street scene, with no relevance to personal care or skincare routines."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The content consists of a city montage and a man walking on a street, which does not align with beauty or cosmetics."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "phone"
+      ],
+      "rationale": "Although a phone is briefly held by the man in the post-break scene, communication or connectivity is not a central theme of the montage."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.7,
+      "matched_contexts": [
+       "road",
+       "traffic",
+       "vehicle",
+       "commuting"
+      ],
+      "rationale": "The montage heavily features Dhaka's traffic, roads, and vehicles, making automotive and mobility themes highly relevant."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [],
+      "rationale": "While a street-side shop is visible, there are no active shopping or payment transactions depicted."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "sightseeing"
+      ],
+      "rationale": "The montage showcases prominent landmarks of Dhaka, which has some mild relevance to sightseeing or urban travel."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenes do not depict any form of shopping, delivery, or e-commerce activity."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.7,
+     "matched_contexts": [
+      "road",
+      "traffic",
+      "vehicle",
+      "commuting"
+     ],
+     "rationale": "The montage heavily features Dhaka's traffic, roads, and vehicles, making automotive and mobility themes highly relevant.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.4,
+     "matched_contexts": [
+      "sightseeing"
+     ],
+     "rationale": "The montage showcases prominent landmarks of Dhaka, which has some mild relevance to sightseeing or urban travel.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "phone"
+     ],
+     "rationale": "Although a phone is briefly held by the man in the post-break scene, communication or connectivity is not a central theme of the montage.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.2,
+     "matched_contexts": [],
+     "rationale": "While a street-side shop is visible, there are no active shopping or payment transactions depicted.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The montage shows city streets and monuments, and the post-break scene is on a street, which does not relate to cooking or eating.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenes focus on a city montage and a street scene, with no relevance to personal care or skincare routines.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The content consists of a city montage and a man walking on a street, which does not align with beauty or cosmetics.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenes do not depict any form of shopping, delivery, or e-commerce activity.",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "montage"
+  },
+  "c003": {
+   "id": "c003",
+   "t0": 266.48,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 266.48,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 4.68,
+    "silence_after": 3.72,
+    "speech_density_10s_before": 0.45,
+    "speech_density_10s_after": 0.63,
+    "loudness_dip_db": 11.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "তাড়াতাড়ি চলো, তাড়াতাড়ি চলো। চলো চলো।",
+    "first_line_after_cut": "এ তুমি আমারে কই নিয়া আসলা রতন মিয়া?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1,
+    "jarring": 0,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The scene concludes cleanly as the characters drive off in the auto-rickshaw, and the program resumes in a completely new location with a different set of characters, making it an excellent and non-jarring place for an ad break."
+   },
+   "where_score": 0.795,
+   "match": {
+    "dominant_activity": "conversation",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene involves a conversation on a street and a visit to a red-light district, which has no relevance to cooking, food, or family meals."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The characters are commuting and searching for someone at night, which does not align with skincare or personal hygiene routines."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [],
+      "rationale": "Although women in the post-break scene are wearing makeup, the setting is a brothel, making it inappropriate for a beauty or cosmetics brand."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.8,
+      "matched_contexts": [
+       "phone",
+       "mobile",
+       "communication"
+      ],
+      "rationale": "The lead-in scene centers around the characters using a mobile phone to share a photo and communicate, making it highly relevant for a telecom brand."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.7,
+      "matched_contexts": [
+       "vehicle",
+       "road",
+       "commuting"
+      ],
+      "rationale": "The characters use a CNG auto-rickshaw to commute along the road, which fits the mobility and vehicle theme of the brand."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There are no financial transactions, shopping, or digital payments depicted in either scene."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [],
+      "rationale": "The local commute in a dark alleyway to a brothel does not fit the positive travel, vacation, or tourism themes of the brand."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scenes do not depict any form of shopping, delivery, or e-commerce activity."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.8,
+     "matched_contexts": [
+      "phone",
+      "mobile",
+      "communication"
+     ],
+     "rationale": "The lead-in scene centers around the characters using a mobile phone to share a photo and communicate, making it highly relevant for a telecom brand.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.7,
+     "matched_contexts": [
+      "vehicle",
+      "road",
+      "commuting"
+     ],
+     "rationale": "The characters use a CNG auto-rickshaw to commute along the road, which fits the mobility and vehicle theme of the brand.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.3,
+     "matched_contexts": [],
+     "rationale": "Although women in the post-break scene are wearing makeup, the setting is a brothel, making it inappropriate for a beauty or cosmetics brand.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.2,
+     "matched_contexts": [],
+     "rationale": "The local commute in a dark alleyway to a brothel does not fit the positive travel, vacation, or tourism themes of the brand.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There are no financial transactions, shopping, or digital payments depicted in either scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene involves a conversation on a street and a visit to a red-light district, which has no relevance to cooking, food, or family meals.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The characters are commuting and searching for someone at night, which does not align with skincare or personal hygiene routines.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scenes do not depict any form of shopping, delivery, or e-commerce activity.",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "conversation"
+  },
+  "c005": {
+   "id": "c005",
+   "t0": 439.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 439.0,
+   "scene_before": 6,
+   "scene_after": 7,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 1.2,
+    "silence_after": 19.0,
+    "speech_density_10s_before": 0.63,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "যাবো না।",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1,
+    "jarring": 0,
+    "suspense_hook": 0,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs at a clean scene transition after the Mayor concludes her conversation and refuses the invitation, moving to a completely different scene at a restaurant."
+   },
+   "where_score": 0.769,
+   "match": {
+    "dominant_activity": "heated argument",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "bathroom",
+        "evidence": "The characters in the lead-in scene discuss a public toilet project."
+       }
+      ],
+      "relevance": 0.8,
+      "matched_contexts": [
+       "eating",
+       "dinner"
+      ],
+      "rationale": "The scene immediately after the break features a character eating at a restaurant, which aligns well with the brand's focus on eating and meals, though the lead-in scene discusses a public toilet."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "The scene immediately after the break shows a character eating at a restaurant."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The brand has a violation due to the eating scene immediately after the break, and the dominant activity of a heated argument does not align with skincare."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand's cosmetics-focused target contexts do not match the political argument or restaurant confrontation scenes."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "communication"
+      ],
+      "rationale": "While the scenes involve communication, they are tense face-to-face arguments rather than digital or telecom-based interactions."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "There are no automotive or travel-related elements in either the office meeting or the restaurant scene."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [],
+      "rationale": "The scenes do not depict shopping or financial transactions directly, making the relevance low."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The tense office and restaurant settings do not align with travel or leisure themes."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The content of the scenes does not relate to shopping or e-commerce activities."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "communication"
+     ],
+     "rationale": "While the scenes involve communication, they are tense face-to-face arguments rather than digital or telecom-based interactions.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.2,
+     "matched_contexts": [],
+     "rationale": "The scenes do not depict shopping or financial transactions directly, making the relevance low.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand's cosmetics-focused target contexts do not match the political argument or restaurant confrontation scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no automotive or travel-related elements in either the office meeting or the restaurant scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The tense office and restaurant settings do not align with travel or leisure themes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The content of the scenes does not relate to shopping or e-commerce activities.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.8,
+     "matched_contexts": [
+      "eating",
+      "dinner"
+     ],
+     "rationale": "The scene immediately after the break features a character eating at a restaurant, which aligns well with the brand's focus on eating and meals, though the lead-in scene discusses a public toilet.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "bathroom",
+       "source": "llm_lead_in",
+       "evidence": "The characters in the lead-in scene discuss a public toilet project."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The brand has a violation due to the eating scene immediately after the break, and the dominant activity of a heated argument does not align with skincare.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "eating: Afnan is eating dinner during the confrontation."
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "The scene immediately after the break shows a character eating at a restaurant."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "heated argument"
+  },
+  "c006": {
+   "id": "c006",
+   "t0": 597.36,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 597.36,
+   "scene_before": 7,
+   "scene_after": 8,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 16.16,
+    "silence_after": 18.64,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 5.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "মাদারচোদ",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.7,
+    "natural_break_score": 0.8,
+    "reason": "The scene transitions cleanly from the restaurant to a night driving sequence, with the dialogue fully concluded, though the tense background score continues across the cut."
+   },
+   "where_score": 0.709,
+   "match": {
+    "dominant_activity": "eating",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.9,
+      "matched_contexts": [
+       "eating",
+       "dinner"
+      ],
+      "rationale": "The lead-in scene features characters eating dinner at a restaurant, which directly aligns with the brand's target contexts of eating and dinner."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "The characters are shown eating dinner at a restaurant table during the lead-in scene."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The brand has a negative context violation for eating, which is the dominant activity in the lead-in scene."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There are no cosmetics, make-up, or getting ready contexts in either the lead-in or the post-break scenes."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.85,
+      "matched_contexts": [
+       "phone",
+       "mobile",
+       "calling",
+       "communication"
+      ],
+      "rationale": "The lead-in scene features a character receiving and answering a phone call, which strongly aligns with the brand's focus on mobile communication."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.8,
+      "matched_contexts": [
+       "car",
+       "driving",
+       "road",
+       "travel by car"
+      ],
+      "rationale": "The scene immediately following the ad break features a character driving a car, making it highly relevant for an automotive brand."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There are no shopping, payment, or financial transaction contexts in the scenes around the break."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [],
+      "rationale": "The driving scene after the break is a tense city commute rather than a leisure travel or vacation context."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There are no shopping or e-commerce activities depicted in the scenes around the break."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.9,
+     "matched_contexts": [
+      "eating",
+      "dinner"
+     ],
+     "rationale": "The lead-in scene features characters eating dinner at a restaurant, which directly aligns with the brand's target contexts of eating and dinner.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.85,
+     "matched_contexts": [
+      "phone",
+      "mobile",
+      "calling",
+      "communication"
+     ],
+     "rationale": "The lead-in scene features a character receiving and answering a phone call, which strongly aligns with the brand's focus on mobile communication.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.8,
+     "matched_contexts": [
+      "car",
+      "driving",
+      "road",
+      "travel by car"
+     ],
+     "rationale": "The scene immediately following the ad break features a character driving a car, making it highly relevant for an automotive brand.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.3,
+     "matched_contexts": [],
+     "rationale": "The driving scene after the break is a tense city commute rather than a leisure travel or vacation context.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There are no cosmetics, make-up, or getting ready contexts in either the lead-in or the post-break scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There are no shopping, payment, or financial transaction contexts in the scenes around the break.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There are no shopping or e-commerce activities depicted in the scenes around the break.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand has a negative context violation for eating, which is the dominant activity in the lead-in scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "eating: Afnan is eating dinner during the confrontation."
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "The characters are shown eating dinner at a restaurant table during the lead-in scene."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "eating"
+  },
+  "c007": {
+   "id": "c007",
+   "t0": 610.6,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 610.6,
+   "scene_before": 8,
+   "scene_after": 9,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 29.4,
+    "silence_after": 5.4,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.33,
+    "loudness_dip_db": 9.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "হ্যালো অপূর্ব",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs during a clean transition from Afnan driving anxiously to Harun making a phone call from a booth, with no active dialogue being interrupted."
+   },
+   "where_score": 0.709,
+   "match": {
+    "dominant_activity": "driving",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Harun claims to suffer from diabetes in the wider context after the break."
+       },
+       {
+        "negative_context": "bathroom",
+        "evidence": "Harun discusses his frequent trips to the toilet in the wider context after the break."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The dominant activity is driving, which does not align with food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "Afnan is eating dinner during the confrontation in the wider context before the break."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenes focus on driving and making a phone call, which are unrelated to personal care or skincare."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Harun claims to suffer from diabetes in the wider context after the break."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The driving and phone call scenes do not relate to beauty, cosmetics, or getting ready."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.85,
+      "matched_contexts": [
+       "phone",
+       "calling",
+       "communication"
+      ],
+      "rationale": "The scene immediately after the break features a character making an urgent phone call, making telecom highly relevant."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.9,
+      "matched_contexts": [
+       "car",
+       "driving",
+       "road",
+       "vehicle"
+      ],
+      "rationale": "The lead-in scene features a character driving a car, which is a perfect match for automotive and mobility branding."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenes involve driving and a phone call, with no connection to digital payments or finance."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Harun claims to suffer from diabetes in the wider context after the break."
+       }
+      ],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "While driving is shown, it is a tense city drive rather than a leisure travel or vacation context."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The driving and phone call scenes do not feature any shopping, delivery, or e-commerce elements."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.9,
+     "matched_contexts": [
+      "car",
+      "driving",
+      "road",
+      "vehicle"
+     ],
+     "rationale": "The lead-in scene features a character driving a car, which is a perfect match for automotive and mobility branding.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.85,
+     "matched_contexts": [
+      "phone",
+      "calling",
+      "communication"
+     ],
+     "rationale": "The scene immediately after the break features a character making an urgent phone call, making telecom highly relevant.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "While driving is shown, it is a tense city drive rather than a leisure travel or vacation context.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Harun claims to suffer from diabetes in the wider context after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The dominant activity is driving, which does not align with food or cooking.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "bathroom",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "bathroom: Harun discusses his frequent trips to the toilet."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Harun claims to suffer from diabetes in the wider context after the break."
+      },
+      {
+       "negative_context": "bathroom",
+       "source": "llm_lead_in",
+       "evidence": "Harun discusses his frequent trips to the toilet in the wider context after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenes focus on driving and making a phone call, which are unrelated to personal care or skincare.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "eating: Afnan is eating dinner during the confrontation."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "Afnan is eating dinner during the confrontation in the wider context before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The driving and phone call scenes do not relate to beauty, cosmetics, or getting ready.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Harun claims to suffer from diabetes in the wider context after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenes involve driving and a phone call, with no connection to digital payments or finance.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The driving and phone call scenes do not feature any shopping, delivery, or e-commerce elements.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "driving"
+  },
+  "c008": {
+   "id": "c008",
+   "t0": 638.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 638.0,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.8,
+    "silence_after": 19.1,
+    "speech_density_10s_before": 0.81,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 9.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "তাড়াতাড়ি খুঁজে বের করো।",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.1,
+    "suspense_hook": 0.3,
+    "natural_break_score": 0.85,
+    "reason": "The phone conversation concludes naturally, and the cut transitions cleanly to a new scene in a police station corridor with a fresh music cue."
+   },
+   "where_score": 0.75,
+   "match": {
+    "dominant_activity": "phone call",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Harun claims to suffer from diabetes in the scene after the break."
+       },
+       {
+        "negative_context": "bathroom",
+        "evidence": "Harun discusses his frequent trips to the toilet in the scene after the break."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene is a phone call, which does not match the brand's food-related target contexts, and the scene after contains references to illness and bathroom visits."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "Afnan is eating dinner during the confrontation in the wider context before the break."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene is a phone call, which does not align with skincare, and the wider context contains eating."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Harun claims to suffer from diabetes in the scene after the break."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene is a phone call, which is irrelevant to cosmetics, and the scene after mentions illness."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.9,
+      "matched_contexts": [
+       "phone",
+       "mobile",
+       "calling",
+       "communication"
+      ],
+      "rationale": "The lead-in scene features a prominent phone call between two characters, making it highly relevant for a telecom brand."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene is a phone call, which does not match the automotive theme."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene is a phone call, which has no relevance to digital payments."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Harun claims to suffer from diabetes in the scene after the break."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene is a phone call, which is not relevant to travel, and the scene after mentions illness."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene is a phone call, which does not match online shopping."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.9,
+     "matched_contexts": [
+      "phone",
+      "mobile",
+      "calling",
+      "communication"
+     ],
+     "rationale": "The lead-in scene features a prominent phone call between two characters, making it highly relevant for a telecom brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene is a phone call, which does not match the brand's food-related target contexts, and the scene after contains references to illness and bathroom visits.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "bathroom",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "bathroom: Harun discusses his frequent trips to the toilet."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Harun claims to suffer from diabetes in the scene after the break."
+      },
+      {
+       "negative_context": "bathroom",
+       "source": "llm_lead_in",
+       "evidence": "Harun discusses his frequent trips to the toilet in the scene after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene is a phone call, which does not align with skincare, and the wider context contains eating.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "eating: Afnan is eating dinner during the confrontation."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "Afnan is eating dinner during the confrontation in the wider context before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene is a phone call, which is irrelevant to cosmetics, and the scene after mentions illness.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Harun claims to suffer from diabetes in the scene after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene is a phone call, which does not match the automotive theme.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene is a phone call, which has no relevance to digital payments.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene is a phone call, which is not relevant to travel, and the scene after mentions illness.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Harun claims to suffer from diabetes in the scene after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene is a phone call, which does not match online shopping.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "phone call"
+  },
+  "c009": {
+   "id": "c009",
+   "t0": 685.92,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 681.4,
+   "scene_before": 10,
+   "scene_after": 11,
+   "signals": {
+    "snap_delta": -4.52,
+    "silence_before": 2.3,
+    "silence_after": 4.7,
+    "speech_density_10s_before": 0.35,
+    "speech_density_10s_after": 0.49,
+    "loudness_dip_db": 4.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "যান",
+    "first_line_after_cut": "আমি তোমাকে একটা নাম্বার পাঠাচ্ছি।",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.4,
+    "natural_break_score": 0.75,
+    "reason": "The conversation between Harun and the officer concludes naturally before the cut, and the program resumes with a brief continuation of the corridor shot before transitioning to a new scene."
+   },
+   "where_score": 0.546,
+   "match": {
+    "dominant_activity": "conversation",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Harun claims to suffer from diabetes during his conversation with the other officer."
+       },
+       {
+        "negative_context": "bathroom",
+        "evidence": "Harun discusses his frequent trips to the toilet/bathroom."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene contains discussions of diabetes and frequent toilet visits, violating the brand's negative contexts of illness and bathroom, with no matching target contexts."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+       }
+      ],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "bathroom"
+      ],
+      "rationale": "The brand matches the bathroom context discussed in the lead-in scene, but violates the negative context of violence due to the flashback scene after the break."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Harun claims to suffer from diabetes during his conversation with the other officer."
+       },
+       {
+        "negative_context": "violence",
+        "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scenes around the break violate the brand's negative contexts of illness and violence, with no matching target contexts."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+       }
+      ],
+      "relevance": 0.8,
+      "matched_contexts": [
+       "phone",
+       "calling",
+       "communication"
+      ],
+      "rationale": "The brand strongly matches the phone call and communication activities around the break, but violates the negative context of violence due to the flashback scene after the break."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "There are no matching target contexts, and the brand violates the negative context of violence due to the flashback scene after the break."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "There are no matching target contexts, and the brand violates the negative context of violence due to the flashback scene after the break."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Harun claims to suffer from diabetes during his conversation with the other officer."
+       },
+       {
+        "negative_context": "violence",
+        "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+       }
+      ],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "hotel"
+      ],
+      "rationale": "The brand matches the hotel context of the scene after the break, but violates the negative contexts of illness and violence."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "There are no matching target contexts, and the brand violates the negative context of violence due to the flashback scene after the break."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.8,
+     "matched_contexts": [
+      "phone",
+      "calling",
+      "communication"
+     ],
+     "rationale": "The brand strongly matches the phone call and communication activities around the break, but violates the negative context of violence due to the flashback scene after the break.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "bathroom"
+     ],
+     "rationale": "The brand matches the bathroom context discussed in the lead-in scene, but violates the negative context of violence due to the flashback scene after the break.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "eating: Afnan is eating dinner during the confrontation."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "hotel"
+     ],
+     "rationale": "The brand matches the hotel context of the scene after the break, but violates the negative contexts of illness and violence.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Harun claims to suffer from diabetes during his conversation with the other officer."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene contains discussions of diabetes and frequent toilet visits, violating the brand's negative contexts of illness and bathroom, with no matching target contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "bathroom",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "bathroom: Harun discusses his frequent trips to the toilet."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Harun claims to suffer from diabetes during his conversation with the other officer."
+      },
+      {
+       "negative_context": "bathroom",
+       "source": "llm_lead_in",
+       "evidence": "Harun discusses his frequent trips to the toilet/bathroom."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scenes around the break violate the brand's negative contexts of illness and violence, with no matching target contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Harun claims to suffer from diabetes during his conversation with the other officer."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no matching target contexts, and the brand violates the negative context of violence due to the flashback scene after the break.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no matching target contexts, and the brand violates the negative context of violence due to the flashback scene after the break.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no matching target contexts, and the brand violates the negative context of violence due to the flashback scene after the break.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara experiences terrifying flashbacks of a violent physical struggle with Afnan in the scene after the break."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "conversation"
+  },
+  "c011": {
+   "id": "c011",
+   "t0": 740.56,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 740.56,
+   "scene_before": 12,
+   "scene_after": 13,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 36.86,
+    "silence_after": 4.34,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.48,
+    "loudness_dip_db": 4.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "ঐ মোহন",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs at a clean scene transition, moving from Zara's panic in her room to a completely different storyline on the street with Sukumar, making it a highly natural break."
+   },
+   "where_score": 0.738,
+   "match": {
+    "dominant_activity": "hallucination",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+       },
+       {
+        "negative_context": "illness",
+        "evidence": "Zara is shown coughing and vomiting in distress in her hotel room."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene depicts a distressed woman having violent flashbacks, which violates the brand's negative contexts of violence and illness, and has no relevance to food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene contains violent flashbacks, violating the brand's negative context of violence, and does not feature any personal care or skincare activities."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+       },
+       {
+        "negative_context": "illness",
+        "evidence": "Zara is shown coughing and vomiting in distress in her hotel room."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene features violent flashbacks and physical distress, violating the brand's negative contexts of violence and illness, with no relevance to beauty or cosmetics."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene contains violent flashbacks, violating the brand's negative context of violence, and does not feature any communication or telecom activities."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene features violent flashbacks, violating the brand's negative context of violence, and has no relevance to automotive or driving activities."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene contains violent flashbacks, violating the brand's negative context of violence, and has no connection to financial transactions or digital payments."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+       },
+       {
+        "negative_context": "illness",
+        "evidence": "Zara is shown coughing and vomiting in distress in her hotel room."
+       }
+      ],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "hotel"
+      ],
+      "rationale": "Although the scene is set in a hotel room, the violent flashbacks and physical distress violate the brand's negative contexts of violence and illness."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene features violent flashbacks, violating the brand's negative context of violence, and has no relevance to online shopping or e-commerce."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "hotel"
+     ],
+     "rationale": "Although the scene is set in a hotel room, the violent flashbacks and physical distress violate the brand's negative contexts of violence and illness.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Zara is shown coughing and vomiting in distress in her hotel room."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene depicts a distressed woman having violent flashbacks, which violates the brand's negative contexts of violence and illness, and has no relevance to food or cooking.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "bathroom",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "bathroom: Harun discusses his frequent trips to the toilet."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Zara is shown coughing and vomiting in distress in her hotel room."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene contains violent flashbacks, violating the brand's negative context of violence, and does not feature any personal care or skincare activities.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "eating: Afnan is eating dinner during the confrontation."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene features violent flashbacks and physical distress, violating the brand's negative contexts of violence and illness, with no relevance to beauty or cosmetics.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Zara is shown coughing and vomiting in distress in her hotel room."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene contains violent flashbacks, violating the brand's negative context of violence, and does not feature any communication or telecom activities.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene features violent flashbacks, violating the brand's negative context of violence, and has no relevance to automotive or driving activities.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene contains violent flashbacks, violating the brand's negative context of violence, and has no connection to financial transactions or digital payments.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene features violent flashbacks, violating the brand's negative context of violence, and has no relevance to online shopping or e-commerce.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "hospital",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Harun claims to suffer from diabetes."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Zara has a terrifying flashback of a violent physical struggle where a man grabs her and hits her."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "hallucination"
+  },
+  "c012": {
+   "id": "c012",
+   "t0": 876.16,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 876.16,
+   "scene_before": 13,
+   "scene_after": 14,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 8.96,
+    "silence_after": 26.14,
+    "speech_density_10s_before": 0.08,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 4.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "জি স্যার।",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.7,
+    "natural_break_score": 0.85,
+    "reason": "The confrontation between Sukumar and Mohon concludes cleanly as Sukumar walks away, making this an excellent and natural point for an ad break before transitioning to the next sequence."
+   },
+   "where_score": 0.742,
+   "match": {
+    "dominant_activity": "heated argument",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene involves a tense confrontation and threats, which does not align with cooking or food preparation."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The tense, threatening atmosphere of the scene is completely unrelated to personal care or skincare routines."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene features a hostile interrogation in a dark alley, which is not relevant to beauty or cosmetics."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+       }
+      ],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "phone",
+       "calling"
+      ],
+      "rationale": "Although phone communication is mentioned as a warning, the overall threatening tone and violence violation make it unsuitable."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+       }
+      ],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "car",
+       "road",
+       "journey"
+      ],
+      "rationale": "The post-break scene features a vehicle traveling on a street, but the lead-in scene contains violent threats."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene focuses on a hostile confrontation and threats, with no connection to financial transactions or digital payments."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+       }
+      ],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "hotel"
+      ],
+      "rationale": "A hotel is mentioned as a location, but the context of a drug dealer revealing a hideout under threat of violence is highly negative."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "There is no connection to online shopping or e-commerce in this tense, threatening scene."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "phone",
+      "calling"
+     ],
+     "rationale": "Although phone communication is mentioned as a warning, the overall threatening tone and violence violation make it unsuitable.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "hotel"
+     ],
+     "rationale": "A hotel is mentioned as a location, but the context of a drug dealer revealing a hideout under threat of violence is highly negative.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.4,
+     "matched_contexts": [
+      "car",
+      "road",
+      "journey"
+     ],
+     "rationale": "The post-break scene features a vehicle traveling on a street, but the lead-in scene contains violent threats.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene involves a tense confrontation and threats, which does not align with cooking or food preparation.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The tense, threatening atmosphere of the scene is completely unrelated to personal care or skincare routines.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene features a hostile interrogation in a dark alley, which is not relevant to beauty or cosmetics.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene focuses on a hostile confrontation and threats, with no connection to financial transactions or digital payments.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There is no connection to online shopping or e-commerce in this tense, threatening scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "violence: Zara has a flashback of Afnan grabbing her violently and hitting her."
+      },
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "fight: The flashback depicts a physical struggle between Zara and Afnan."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Sukumar aggressively threatens Mohon with physical harm, and the wider context involves Zara's violent flashbacks."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "heated argument"
+  },
+  "c015": {
+   "id": "c015",
+   "t0": 1143.08,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 1143.08,
+   "scene_before": 16,
+   "scene_after": 17,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.78,
+    "silence_after": 3.82,
+    "speech_density_10s_before": 0.64,
+    "speech_density_10s_after": 0.29,
+    "loudness_dip_db": 3.7,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "আমার ওপর একটু ভরসা রাখ",
+    "first_line_after_cut": "Sorry",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1,
+    "jarring": 0,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The emotional scene between Masum and his sister concludes and fades to black, allowing for a clean transition to a completely new scene with Harun."
+   },
+   "where_score": 0.748,
+   "match": {
+    "dominant_activity": "conversation",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "The scene features intense crying and emotional distress as a sister visits her brother in a jail cell."
+       },
+       {
+        "negative_context": "violence",
+        "evidence": "The prisoner shows signs of physical abuse and discusses being forced to sign a confession."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene depicts intense grief and implied violence in a jail cell, which violates the brand's negative contexts, and there is no relevance to food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Both characters are crying intensely and experiencing severe emotional distress."
+       },
+       {
+        "negative_context": "violence",
+        "evidence": "The prisoner has been beaten and subjected to police torture."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene's heavy themes of grief and violence in a prison cell violate the brand's negative contexts and have no connection to skincare."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "The characters are crying and in deep emotional distress during the jail visit."
+       },
+       {
+        "negative_context": "violence",
+        "evidence": "The scene involves a prisoner who has been beaten by the police."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The devastating scene of a sister visiting her tortured brother in jail violates the brand's negative contexts of grief and violence."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "The prisoner shows physical signs of police torture and discusses being forced to sign a confession."
+       }
+      ],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "family conversation"
+      ],
+      "rationale": "Although it is a family conversation, the scene contains strong themes of police violence and torture, violating the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "The characters are crying intensely and experiencing severe emotional distress."
+       },
+       {
+        "negative_context": "violence",
+        "evidence": "The prisoner has been physically beaten and tortured by the police."
+       },
+       {
+        "negative_context": "injury",
+        "evidence": "The prisoner shows physical signs of severe police torture."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene features severe grief, injury, and violence in a jail cell, which directly violates the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "The characters are crying and in deep emotional distress during the jail visit."
+       },
+       {
+        "negative_context": "violence",
+        "evidence": "The prisoner has been beaten and subjected to police torture."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene's depiction of grief and police violence violates the brand's negative contexts, with no relevance to financial transactions."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "The characters are crying intensely and experiencing severe emotional distress."
+       },
+       {
+        "negative_context": "violence",
+        "evidence": "The prisoner has been physically beaten and tortured by the police."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene's setting in a jail cell with themes of grief and violence violates the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "The characters are crying and in deep emotional distress during the jail visit."
+       },
+       {
+        "negative_context": "violence",
+        "evidence": "The prisoner has been beaten and subjected to police torture."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene depicts a highly emotional jail visit involving grief and violence, violating the brand's negative contexts."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "family conversation"
+     ],
+     "rationale": "Although it is a family conversation, the scene contains strong themes of police violence and torture, violating the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The prisoner shows physical signs of police torture and discusses being forced to sign a confession."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene depicts intense grief and implied violence in a jail cell, which violates the brand's negative contexts, and there is no relevance to food or cooking.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The scene features intense crying and emotional distress as a sister visits her brother in a jail cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The prisoner shows signs of physical abuse and discusses being forced to sign a confession."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's heavy themes of grief and violence in a prison cell violate the brand's negative contexts and have no connection to skincare.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Both characters are crying intensely and experiencing severe emotional distress."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The prisoner has been beaten and subjected to police torture."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The devastating scene of a sister visiting her tortured brother in jail violates the brand's negative contexts of grief and violence.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The characters are crying and in deep emotional distress during the jail visit."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The scene involves a prisoner who has been beaten by the police."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene features severe grief, injury, and violence in a jail cell, which directly violates the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The characters are crying intensely and experiencing severe emotional distress."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The prisoner has been physically beaten and tortured by the police."
+      },
+      {
+       "negative_context": "injury",
+       "source": "llm_lead_in",
+       "evidence": "The prisoner shows physical signs of severe police torture."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's depiction of grief and police violence violates the brand's negative contexts, with no relevance to financial transactions.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The characters are crying and in deep emotional distress during the jail visit."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The prisoner has been beaten and subjected to police torture."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's setting in a jail cell with themes of grief and violence violates the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The characters are crying intensely and experiencing severe emotional distress."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The prisoner has been physically beaten and tortured by the police."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene depicts a highly emotional jail visit involving grief and violence, violating the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The characters are crying and in deep emotional distress during the jail visit."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "The prisoner has been beaten and subjected to police torture."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "conversation"
+  },
+  "c016": {
+   "id": "c016",
+   "t0": 1214.48,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 1214.48,
+   "scene_before": 17,
+   "scene_after": 18,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 25.78,
+    "silence_after": 4.32,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.34,
+    "loudness_dip_db": 2.7,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "Please save me!",
+    "first_line_after_cut": "আমার হয়ে গেছে ভাই একটু পরিষ্কার করব",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.7,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs during a transition from Harun being led away by other officers to a different scene showing Masum in his cell, making it a natural scene break."
+   },
+   "where_score": 0.665,
+   "match": {
+    "dominant_activity": "police arrest",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense emotional distress and the death of a character in custody."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene involves police arrest, distress, and custodial death, which violates the brand's negative contexts of violence and grief, and has no relevance to cooking or food."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense emotional distress and the death of a character in custody."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The brand's negative contexts of violence and grief are violated by the arrest and custodial death scenes, making it highly unsuitable."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense emotional distress and the death of a character in custody."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The tense police arrest and subsequent custodial death scenes violate the brand's negative contexts of violence and grief."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+       }
+      ],
+      "relevance": 0.2,
+      "matched_contexts": [],
+      "rationale": "The brand's negative context of violence is violated by the forcible arrest and the custodial death of a prisoner."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+       },
+       {
+        "negative_context": "injury",
+        "evidence": "The prisoner Masum is severely beaten and injured, leading to his death in custody."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense emotional distress and the death of a character in custody."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scenes depict a distressing police arrest and custodial death, violating the brand's negative contexts of violence, injury, and grief."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense emotional distress and the death of a character in custody."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand's negative contexts of violence and grief are violated by the arrest and custodial death scenes."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense emotional distress and the death of a character in custody."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The distressing arrest and custodial death scenes violate the brand's negative contexts of violence and grief."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense emotional distress and the death of a character in custody."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand's negative contexts of violence and grief are violated by the arrest and custodial death scenes."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.2,
+     "matched_contexts": [],
+     "rationale": "The brand's negative context of violence is violated by the forcible arrest and the custodial death of a prisoner.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The brand's negative contexts of violence and grief are violated by the arrest and custodial death scenes, making it highly unsuitable.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense emotional distress and the death of a character in custody."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene involves police arrest, distress, and custodial death, which violates the brand's negative contexts of violence and grief, and has no relevance to cooking or food.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense emotional distress and the death of a character in custody."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The tense police arrest and subsequent custodial death scenes violate the brand's negative contexts of violence and grief.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense emotional distress and the death of a character in custody."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scenes depict a distressing police arrest and custodial death, violating the brand's negative contexts of violence, injury, and grief.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+      },
+      {
+       "negative_context": "injury",
+       "source": "llm_lead_in",
+       "evidence": "The prisoner Masum is severely beaten and injured, leading to his death in custody."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense emotional distress and the death of a character in custody."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand's negative contexts of violence and grief are violated by the arrest and custodial death scenes.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense emotional distress and the death of a character in custody."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The distressing arrest and custodial death scenes violate the brand's negative contexts of violence and grief.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense emotional distress and the death of a character in custody."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand's negative contexts of violence and grief are violated by the arrest and custodial death scenes.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "A man is forcibly dragged away by police while screaming for help, and the subsequent scene involves a prisoner dying in custody."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense emotional distress and the death of a character in custody."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "police arrest"
+  },
+  "c017": {
+   "id": "c017",
+   "t0": 1271.12,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 1271.12,
+   "scene_before": 18,
+   "scene_after": 19,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 18.82,
+    "silence_after": 0.38,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.52,
+    "loudness_dip_db": 9.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "উনাকে বাইরে থেকে পরিষ্কার করে নিয়ে আসেন।",
+    "first_line_after_cut": "আচ্ছা আচ্ছা ঠিক আছে ভাই।",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition between two distinct scenes, moving from the guards carrying the prisoner out of his cell to an officer on a phone call outside at night."
+   },
+   "where_score": 0.748,
+   "match": {
+    "dominant_activity": "conversation",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Masum shows physical signs of severe police torture and is carried out limp after collapsing in his cell."
+       },
+       {
+        "negative_context": "bathroom",
+        "evidence": "Masum mentions he could not hold it in and the guards note the cell smells bad, requiring him to be cleaned up."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The scene carries a devastating mood with Masum's sister experiencing intense grief over his tortured state."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene involves a prisoner in a jail cell who has soiled himself and is being carried out limp, which violates negative contexts like violence and bathroom, and has no relevance to food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Masum is shown in a severely beaten state from police torture and is carried out limp."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The overall context involves intense grief and emotional distress from Masum's sister."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand's focus on personal hygiene and skincare is completely inappropriate due to the depiction of severe police violence, custodial abuse, and grief."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Masum is severely beaten and tortured in police custody."
+       },
+       {
+        "negative_context": "illness",
+        "evidence": "Masum collapses in his cell, unable to hold himself, and is carried out limp."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense grief and emotional distress from Masum's sister."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "A cosmetics brand is highly irrelevant and violates negative contexts of violence, illness, and grief depicted in the jail cell scene."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Masum is severely beaten and tortured in police custody, leading to his limp body being carried out."
+       }
+      ],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "phone",
+       "calling",
+       "communication"
+      ],
+      "rationale": "Although the post-break scene features a phone call, the brand is associated with a scene depicting severe police violence and custodial death, violating its negative context."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Masum is severely beaten and tortured in police custody."
+       },
+       {
+        "negative_context": "injury",
+        "evidence": "Masum shows physical signs of severe injuries from police torture."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense grief and emotional distress from Masum's sister."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene contains severe violence, physical injury, and grief, which are direct violations for an automotive brand."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Masum is severely beaten and tortured in police custody."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense grief and emotional distress from Masum's sister."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's heavy themes of police violence and grief violate the brand's negative contexts, and there is no relevance to digital payments."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Masum is severely beaten and tortured in police custody."
+       },
+       {
+        "negative_context": "illness",
+        "evidence": "Masum collapses in his cell, unable to hold himself, and is carried out limp."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense grief and emotional distress from Masum's sister."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand's travel and leisure theme is completely mismatched with the grim jail setting, and it violates negative contexts of violence, illness, and grief."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "violence",
+        "evidence": "Masum is severely beaten and tortured in police custody."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context involves intense grief and emotional distress from Masum's sister."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's depiction of severe police violence and grief violates the brand's negative contexts, with no relevance to online shopping."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.4,
+     "matched_contexts": [
+      "phone",
+      "calling",
+      "communication"
+     ],
+     "rationale": "Although the post-break scene features a phone call, the brand is associated with a scene depicting severe police violence and custodial death, violating its negative context.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Masum is severely beaten and tortured in police custody, leading to his limp body being carried out."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene involves a prisoner in a jail cell who has soiled himself and is being carried out limp, which violates negative contexts like violence and bathroom, and has no relevance to food or cooking.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Masum shows physical signs of severe police torture and is carried out limp after collapsing in his cell."
+      },
+      {
+       "negative_context": "bathroom",
+       "source": "llm_lead_in",
+       "evidence": "Masum mentions he could not hold it in and the guards note the cell smells bad, requiring him to be cleaned up."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The scene carries a devastating mood with Masum's sister experiencing intense grief over his tortured state."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand's focus on personal hygiene and skincare is completely inappropriate due to the depiction of severe police violence, custodial abuse, and grief.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Masum is shown in a severely beaten state from police torture and is carried out limp."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The overall context involves intense grief and emotional distress from Masum's sister."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "A cosmetics brand is highly irrelevant and violates negative contexts of violence, illness, and grief depicted in the jail cell scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Masum is severely beaten and tortured in police custody."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Masum collapses in his cell, unable to hold himself, and is carried out limp."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense grief and emotional distress from Masum's sister."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene contains severe violence, physical injury, and grief, which are direct violations for an automotive brand.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Masum is severely beaten and tortured in police custody."
+      },
+      {
+       "negative_context": "injury",
+       "source": "llm_lead_in",
+       "evidence": "Masum shows physical signs of severe injuries from police torture."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense grief and emotional distress from Masum's sister."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's heavy themes of police violence and grief violate the brand's negative contexts, and there is no relevance to digital payments.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Masum is severely beaten and tortured in police custody."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense grief and emotional distress from Masum's sister."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand's travel and leisure theme is completely mismatched with the grim jail setting, and it violates negative contexts of violence, illness, and grief.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Masum is severely beaten and tortured in police custody."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Masum collapses in his cell, unable to hold himself, and is carried out limp."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense grief and emotional distress from Masum's sister."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's depiction of severe police violence and grief violates the brand's negative contexts, with no relevance to online shopping.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "violence",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "violence: Masum shows physical signs of severe police torture and describes being beaten."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "grief: The sister experiences intense emotional distress seeing her brother's broken state."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "death: Masum appears to have died in custody, and the guards carry his limp body out."
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 18,
+       "evidence": "dead body: Masum's unresponsive, limp body is carried out of the cell."
+      },
+      {
+       "negative_context": "violence",
+       "source": "llm_lead_in",
+       "evidence": "Masum is severely beaten and tortured in police custody."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context involves intense grief and emotional distress from Masum's sister."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "conversation"
+  }
+ },
+ "verify": {
+  "c002:brand_e": {
+   "violation": false,
+   "violated_contexts": [],
+   "evidence": "The scenes immediately preceding and following the ad break do not contain, discuss, or imply any of the forbidden contexts (funeral, hospital, violence, accident, injury, or grief). The preceding scene is a tense conversation/warning between a police officer and a reporter, followed by the show's title sequence, and the succeeding scene shows a man questioning a rickshaw driver about a missing person.",
+   "confidence": 0.95
+  },
+  "c006:brand_a": {
+   "violation": false,
+   "violated_contexts": [],
+   "evidence": "The scenes preceding and following the ad break depict a tense conversation in a restaurant and a subsequent phone call regarding a missing person, with no depiction or discussion of funerals, hospitals, violence, illness, bathrooms, accidents, or grief.",
+   "confidence": 0.95
+  }
+ }
+}
