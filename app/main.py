@@ -135,8 +135,10 @@ def _result_path(video_id: str, variant: str | None) -> Path:
         if p.exists():
             return p
         raise HTTPException(404, "unknown variant")
-    v = run.result_variant(default_brands(), None)
-    for p in (wd / f"result_{v}.json", wd / "result.json"):
+    # Prefer the LLM-verified result for the default catalogue whatever engine this server runs,
+    # so the samples never depend on a key being configured.
+    v = run.variant_id(default_brands(), None)
+    for p in (wd / f"result_gemini-{v}.json", wd / f"result_{run.result_variant(default_brands(), None)}.json", wd / "result.json"):
         if p.exists():
             return p
     # fall back to most recent variant (e.g. uploads processed with a custom catalogue)
@@ -215,7 +217,8 @@ def get_thumb(video_id: str, t: float):
     video_id = _safe_id(video_id)
     proxy = work_dir(video_id) / "proxy.mp4"
     if not proxy.exists():
-        if _is_sample(video_id):  # break thumbnails are pre-rendered on the mirror
+        if _is_sample(video_id):  # break thumbnails are pre-rendered on the mirror; fetch the video for the rest
+            threading.Thread(target=lambda: ensure_sample_proxy(video_id, log=lambda m: None), daemon=True).start()
             return RedirectResponse(f"{SAMPLE_MIRROR}/thumbs/{video_id}/{t:.2f}.jpg", status_code=307)
         raise HTTPException(404)
     d = work_dir(video_id) / "thumbs"
