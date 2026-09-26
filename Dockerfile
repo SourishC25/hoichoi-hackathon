@@ -12,4 +12,5 @@ RUN python -c "import json; from pathlib import Path; from app.pipeline import a
 # BIRATI_LOW_MEM: run perception stages sequentially and fewer parallel LLM clips (1 GB RAM hosts)
 ENV PYTHONUNBUFFERED=1 BIRATI_LOW_MEM=1
 EXPOSE 7860
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-7860}"]
+# behind a TLS-terminating proxy (Railway, HF): trust X-Forwarded-Proto so generated URLs are https
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-7860} --proxy-headers --forwarded-allow-ips='*'"]

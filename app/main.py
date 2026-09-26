@@ -189,6 +189,9 @@ def get_vmap(video_id: str, request: Request, variant: str | None = None, downlo
     if not p.exists():
         p = wd / "vmap.xml"
     base = str(request.base_url).rstrip("/")
+    proto = request.headers.get("x-forwarded-proto")
+    if proto == "https" and base.startswith("http://"):
+        base = "https://" + base[len("http://"):]
     xml = p.read_text(encoding="utf-8").replace("{BASE}", base)
     headers = {"Content-Disposition": f'attachment; filename="{video_id}_vmap.xml"'} if download else {}
     return Response(xml, media_type="application/xml", headers=headers)
