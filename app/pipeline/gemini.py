@@ -66,7 +66,8 @@ def _pick(model: str | None) -> str:
     for m in ([model] if model else []) + MODEL_POOL:
         if m and m not in _exhausted:
             return m
-    raise RuntimeError("All free-tier Gemini models reached today's quota; retry tomorrow or use BIRATI_ENGINE=local")
+    raise RuntimeError("Today's free-tier LLM quota is used up (it resets at midnight Pacific time = 12:30 PM IST). "
+                       "The sample episodes still work; please try your upload again after the reset.")
 
 
 # Free-tier friendly: a process-wide request limiter (requests/minute) shared by all threads.
