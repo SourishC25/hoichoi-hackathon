@@ -6,9 +6,14 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const mono = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"] });
 const bengali = Noto_Serif_Bengali({ variable: "--font-bengali-serif", subsets: ["bengali"], weight: ["400", "600", "700"] });
 
+const DESCRIPTION = "Finds the safe moments to pause a Bengali drama for an ad, picks the right advertiser for each, and never places a brand next to a topic it forbids.";
+
 export const metadata: Metadata = {
   title: "Birati · Contextual Ad Breaks",
-  description: "AI-native ad-break placement for long-form Bengali drama — scenes, safe cuts, brand matching, VMAP.",
+  description: DESCRIPTION,
+  applicationName: "Birati",
+  openGraph: { title: "Birati · Contextual Ad Breaks", description: DESCRIPTION, type: "website" },
+  twitter: { card: "summary", title: "Birati · Contextual Ad Breaks", description: DESCRIPTION },
 };
 
 export const viewport: Viewport = { themeColor: "#05060b" };

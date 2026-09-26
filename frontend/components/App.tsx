@@ -16,6 +16,8 @@ type Tab = (typeof TABS)[number][0];
 
 export default function App() {
   const [ready, setReady] = useState(false);
+  const [failed, setFailed] = useState<string | null>(null);
+  const [attempt, setAttempt] = useState(0);
   const [isStatic, setStatic] = useState(false);
   const [videos, setVideos] = useState<VideoItem[]>([]);
   const [id, setId] = useState<string | null>(null);
@@ -59,17 +61,27 @@ export default function App() {
 
   useEffect(() => {
     (async () => {
-      setStatic(await detectRuntime());
-      const [v, b, ex] = await Promise.all([loadLibrary(), api.brands(), api.exampleBrand()]);
-      setDefaults(b);
-      setExample(ex);
-      setCatalogue(JSON.stringify(b, null, 2));
-      const [hid, hvar] = location.hash.replace(/^#\/?/, "").split("/");
-      const pick = v.find((x) => x.id === hid && !x.processing) || v.find((x) => !x.processing);
-      if (pick) await open(pick.id, hid === pick.id ? hvar || null : null);
-      setReady(true);
+      try {
+        setFailed(null);
+        setStatic(await detectRuntime());
+        const [v, b, ex] = await Promise.all([loadLibrary(), api.brands(), api.exampleBrand()]);
+        setDefaults(b);
+        setExample(ex);
+        setCatalogue(JSON.stringify(b, null, 2));
+        const [hid, hvar] = location.hash.replace(/^#\/?/, "").split("/");
+        const pick = v.find((x) => x.id === hid && !x.processing) || v.find((x) => !x.processing);
+        if (!pick) throw new Error("No processed episodes yet.");
+        await open(pick.id, hid === pick.id ? hvar || null : null);
+        setReady(true);
+      } catch (e) {
+        setFailed(String((e as Error).message || e));
+      }
     })();
-  }, [loadLibrary, open]);
+  }, [loadLibrary, open, attempt]);
+
+  useEffect(() => {
+    if (id) document.title = `${title(id)} · Birati`;
+  }, [id]);
 
   const watch = (i: number) => {
     player.current?.jumpBefore(i);
@@ -113,6 +125,7 @@ export default function App() {
     track(job, async (j) => { await loadLibrary(); await open(j.video_id, j.variant); });
   };
 
+  if (failed) return <Unavailable message={failed} onRetry={() => setAttempt((a) => a + 1)} />;
   if (!ready || !r || !id) return <Splash />;
   const names: Record<string, string> = {};
   try { for (const b of JSON.parse(catalogue) as Brand[]) names[b.brand_id] = b.display_name || b.brand_id; } catch { /* fall back to ids */ }
@@ -273,6 +286,17 @@ function Jobs({ jobs }: { jobs: Job[] }) {
           </ol>
         </div>
       ))}
+    </div>
+  );
+}
+
+function Unavailable({ message, onRetry }: { message: string; onRetry: () => void }) {
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center gap-4 px-6 text-center">
+      <span className="bg-accent flex size-14 items-center justify-center rounded-full font-bengali text-2xl font-bold text-white">বি</span>
+      <h1 className="text-xl font-semibold">The ad-planning service is waking up</h1>
+      <p className="max-w-md text-sm text-mist-500">We couldn&apos;t reach it just now ({message}). This usually clears in a few seconds.</p>
+      <Button variant="primary" onClick={onRetry}>Try again</Button>
     </div>
   );
 }
