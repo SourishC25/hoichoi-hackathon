@@ -4,13 +4,15 @@ usage: python scripts/deploy_space.py <hf-username>/<space-name>
 Requires `hf auth login` with a write token. Static Spaces are free; live processing runs locally."""
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 from huggingface_hub import HfApi
 
 ROOT = Path(__file__).resolve().parents[1]
 repo_id = sys.argv[1]
-dist = ROOT / "dist"
+# build outside the repo (synced folders such as OneDrive can lock files and break re-exports)
+dist = Path(tempfile.mkdtemp(prefix="birati_static_")) / "dist"
 subprocess.run([sys.executable, str(ROOT / "scripts" / "export_static.py"), "--space", repo_id, "--out", str(dist)], check=True)
 
 api = HfApi()
