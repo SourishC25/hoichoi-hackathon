@@ -55,6 +55,20 @@ def clip_part(path: Path, fps: float = 2.0) -> types.Part:
     )
 
 
+# Free tier: ~20 requests/day *per model*, so fall through a pool of free Flash models when one is
+# exhausted for the day (each has its own quota).
+MODEL_POOL = [m.strip() for m in os.getenv(
+    "GEMINI_MODEL_POOL", "gemini-3.5-flash,gemini-3-flash-preview,gemini-3.5-flash-lite").split(",") if m.strip()]
+_exhausted: set[str] = set()
+
+
+def _pick(model: str | None) -> str:
+    for m in ([model] if model else []) + MODEL_POOL:
+        if m and m not in _exhausted:
+            return m
+    raise RuntimeError("All free-tier Gemini models reached today's quota; retry tomorrow or use BIRATI_ENGINE=local")
+
+
 # Free-tier friendly: a process-wide request limiter (requests/minute) shared by all threads.
 RPM = float(os.getenv("GEMINI_RPM", "8"))
 _rl_lock = threading.Lock()
@@ -88,12 +102,12 @@ def generate_json(parts: list, prompt: str, schema: dict, model: str | None = No
     if low_res:
         cfg.media_resolution = types.MediaResolution.MEDIA_RESOLUTION_LOW
     last = None
+    use = model or MODEL_POOL[0]
     for attempt in range(retries):
         _throttle()
         try:
-            resp = client().models.generate_content(
-                model=model or MODEL_LOCAL, contents=[*parts, prompt], config=cfg
-            )
+            use = _pick(model)
+            resp = client().models.generate_content(model=use, contents=[*parts, prompt], config=cfg)
             um = getattr(resp, "usage_metadata", None)
             USAGE["calls"] += 1
             USAGE["input_tokens"] += getattr(um, "prompt_token_count", 0) or 0
@@ -104,9 +118,16 @@ def generate_json(parts: list, prompt: str, schema: dict, model: str | None = No
             msg = str(e)
             if any(code in msg[:40] for code in ("400", "401", "402", "403")):
                 raise RuntimeError(f"Gemini request rejected (not retryable): {msg[:300]}") from e
+            if "503" in msg[:40]:  # overloaded model: try the next one in the pool for this call
+                print(f"[gemini] {use} overloaded, retrying", flush=True)
+                time.sleep(5 + 5 * attempt)
+                continue
             if "429" in msg[:40]:  # free-tier rate limit: wait as instructed, then retry
                 if "PerDay" in msg or "per day" in msg.lower():
-                    raise RuntimeError("Gemini free-tier daily quota reached; try again tomorrow or use BIRATI_ENGINE=local") from e
+                    _exhausted.add(use)
+                    print(f"[gemini] {use} daily quota reached, falling back to the next free model", flush=True)
+                    _pick(None)  # raises if the whole pool is exhausted
+                    continue
                 delay = _retry_delay(msg)
                 print(f"[gemini] rate-limited, waiting {delay:.0f}s", flush=True)
                 time.sleep(delay)

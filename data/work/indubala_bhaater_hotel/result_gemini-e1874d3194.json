@@ -1,0 +1,6672 @@
+{
+ "video_id": "indubala_bhaater_hotel",
+ "generated_at": "2026-09-26T14:31:16+0530",
+ "engine": "gemini",
+ "models": {
+  "global": "gemini-3.5-flash",
+  "local": "gemini-3.5-flash"
+ },
+ "catalogue_hash": "7331d21427",
+ "brands": [
+  "brand_a",
+  "brand_b",
+  "brand_c",
+  "brand_d",
+  "brand_e",
+  "brand_f",
+  "brand_g",
+  "brand_h"
+ ],
+ "video": {
+  "duration": 1553.92,
+  "width": 854,
+  "height": 480,
+  "fps": 25.0
+ },
+ "rules": {
+  "max_breaks_per_hour": 6,
+  "min_gap_sec": 300,
+  "max_ad_load_pct": 12.0,
+  "no_break_first_sec": 120,
+  "no_break_last_sec": 90,
+  "min_break_score": 0.55,
+  "brand_relevance_weight": 0.15
+ },
+ "summary": {
+  "scenes": 25,
+  "camera_cuts": 187,
+  "candidates": 27,
+  "breaks": 1,
+  "ad_seconds": 30,
+  "ad_load_pct": 1.89,
+  "breaks_per_hour": 2.32,
+  "allowed_breaks": 2
+ },
+ "audit": [
+  {
+   "check": "No speech at any cut point (VAD)",
+   "pass": true,
+   "detail": "max speech overlap in ±guard window: 0.00s"
+  },
+  {
+   "check": "Every cut on a camera cut or black frame",
+   "pass": true,
+   "detail": "1/1 breaks frame-aligned"
+  },
+  {
+   "check": "Min gap between breaks",
+   "pass": true,
+   "detail": "single break or none"
+  },
+  {
+   "check": "Max breaks per hour",
+   "pass": true,
+   "detail": "1 placed, 2 allowed for 25.9 min"
+  },
+  {
+   "check": "Ad load within budget",
+   "pass": true,
+   "detail": "1.89% (max 12.0%)"
+  },
+  {
+   "check": "Protected opening/closing windows",
+   "pass": true,
+   "detail": "first 120s / last 90s untouched"
+  },
+  {
+   "check": "No negative-context brand placed (3 layers re-checked)",
+   "pass": true,
+   "detail": "violations: none"
+  },
+  {
+   "check": "Every placed brand passed the independent verifier",
+   "pass": true,
+   "detail": "1 verifier passes"
+  }
+ ],
+ "synopsis": "In this poignant episode, Indubala prepares a special taro paste recipe at her hotel, bringing back memories of her childhood and her close bond with Lachmi. The narrative takes a tragic turn as a sudden train accident claims Lachmi's life, leaving Indubala devastated. In the present, despite winning the legal battle for her house, Indubala is consumed by grief as she performs the final rituals for her departed friend.",
+ "breaks": [
+  {
+   "candidate_id": "c007",
+   "t": 426.56,
+   "quality": 0.974,
+   "where_score": 0.824,
+   "brand_id": "brand_a",
+   "brand_name": "Brand A",
+   "relevance": 1.0,
+   "matched_contexts": [
+    "cooking",
+    "kitchen",
+    "eating",
+    "food preparation",
+    "homemade food"
+   ],
+   "dominant_activity": "food preparation",
+   "creative": {
+    "id": "a_30s_bn",
+    "duration_sec": 30,
+    "language": "bn",
+    "url": "ads/brand_a/a_30s_bn.mp4"
+   },
+   "reason": "The cut occurs during a clean transition between a reflective scene of preparing food and a later scene of serving it to customers, with no overlapping dialogue or music. Brand: The scene features characters preparing, mixing, and tasting homemade food in a kitchen setting, which perfectly aligns with the brand's focus on cooking and food preparation.",
+   "last_line_before_cut": "",
+   "first_line_after_cut": "আর দিদি",
+   "blocked_brands": [
+    {
+     "brand_id": "brand_b",
+     "why": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "eating: customers eating rice and curry"
+      },
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 9,
+       "evidence": "eating: tasting the taro paste with rice"
+      },
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "eating: customers eating vlogger's food"
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "The characters are tasting the taro paste with rice in the lead-in scene, and customers are eating in the restaurant in the surrounding context."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.04,
+   "summary": "The production company's logo animation is displayed.",
+   "dominant_activity": "logo animation",
+   "contexts": [
+    "logo",
+    "animation",
+    "red background"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "index": 0,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 5.04,
+   "end": 10.04,
+   "summary": "A disclaimer screen is shown, stating that the program is a work of fiction and contains warnings about tobacco and alcohol consumption.",
+   "dominant_activity": "text on screen",
+   "contexts": [
+    "disclaimer",
+    "text",
+    "warning"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.04,
+   "llm_start": 5.0,
+   "index": 1,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 10.04,
+   "end": 20.04,
+   "summary": "The opening credits of the series are displayed on a black background.",
+   "dominant_activity": "text on screen",
+   "contexts": [
+    "credits",
+    "opening credits",
+    "black background"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.04,
+   "llm_start": 10.0,
+   "index": 2,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 20.04,
+   "end": 65.96,
+   "summary": "In a dreamlike flashback, a young girl and her brother run through a lush, rain-drenched taro field as she searches for him.",
+   "dominant_activity": "running in field",
+   "contexts": [
+    "taro field",
+    "rain",
+    "children",
+    "flashback",
+    "dream"
+   ],
+   "mood": "mysterious",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.04,
+   "llm_start": 20.0,
+   "index": 3,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 65.96,
+   "end": 162.2,
+   "summary": "An elderly Indubala receives a video call from her son and granddaughter, who share updates about their lives and discuss visiting her.",
+   "dominant_activity": "phone call",
+   "contexts": [
+    "elderly woman",
+    "video call",
+    "smartphone",
+    "family conversation",
+    "night"
+   ],
+   "mood": "warm",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "conversation_continues",
+   "snap_delta": 0.96,
+   "llm_start": 65.0,
+   "index": 4,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 162.2,
+   "end": 198.0,
+   "summary": "Lachmi enters the room to discuss the next day's menu with Indubala, warning her about a girl who might come asking for taro paste.",
+   "dominant_activity": "conversation in bedroom",
+   "contexts": [
+    "bedroom",
+    "night",
+    "elderly woman",
+    "helper",
+    "menu planning"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.3,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.2,
+   "llm_start": 162.0,
+   "index": 5,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 198.0,
+   "end": 202.0,
+   "summary": "The \"hoichoi Originals\" title card is shown on screen.",
+   "dominant_activity": "title card",
+   "contexts": [
+    "title card",
+    "logo",
+    "branding"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 198.0,
+   "index": 6,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 202.0,
+   "end": 281.92,
+   "summary": "Customers enjoy their meals at Indubala's hotel, praising the authentic home-cooked food, while Lachmi arrives with a fresh taro root.",
+   "dominant_activity": "eating in restaurant",
+   "contexts": [
+    "hotel",
+    "restaurant",
+    "customers",
+    "eating",
+    "taro root",
+    "serving food"
+   ],
+   "mood": "cheerful",
+   "emotional_intensity": 0.5,
+   "sensitive": [
+    {
+     "topic": "eating",
+     "evidence": "customers eating rice and curry",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 202.0,
+   "index": 7,
+   "blocks_brands": [
+    "brand_b"
+   ],
+   "blocked_contexts": [
+    "eating"
+   ]
+  },
+  {
+   "start": 281.92,
+   "end": 326.92,
+   "summary": "Indubala buys fresh vegetables from a street vendor, and later prepares taro with Lachmi while reminiscing about her childhood village.",
+   "dominant_activity": "cooking preparation",
+   "contexts": [
+    "vegetable vendor",
+    "taro root",
+    "kitchen",
+    "reminiscing",
+    "grinding stone"
+   ],
+   "mood": "nostalgic",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.92,
+   "llm_start": 281.0,
+   "index": 8,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 326.92,
+   "end": 426.56,
+   "summary": "Intercut with memories of her childhood in the taro fields, Indubala and Lachmi grind the taro paste and taste the delicious preparation together.",
+   "dominant_activity": "grinding paste",
+   "contexts": [
+    "grinding stone",
+    "taro paste",
+    "flashback",
+    "rain",
+    "tasting food"
+   ],
+   "mood": "nostalgic",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "eating",
+     "evidence": "tasting the taro paste with rice",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.92,
+   "llm_start": 326.0,
+   "index": 9,
+   "blocks_brands": [
+    "brand_b"
+   ],
+   "blocked_contexts": [
+    "eating"
+   ]
+  },
+  {
+   "start": 426.56,
+   "end": 513.4,
+   "summary": "Indubala serves the freshly prepared taro paste to her delighted customers, who capture the moment on their phones.",
+   "dominant_activity": "serving food",
+   "contexts": [
+    "restaurant",
+    "customers",
+    "taro paste",
+    "vlogging",
+    "eating",
+    "banana leaf"
+   ],
+   "mood": "joyful",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "eating",
+     "evidence": "customers eating vlogger's food",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.56,
+   "llm_start": 426.0,
+   "index": 10,
+   "blocks_brands": [
+    "brand_b"
+   ],
+   "blocked_contexts": [
+    "eating"
+   ]
+  },
+  {
+   "start": 513.4,
+   "end": 613.84,
+   "summary": "In a tragic flashback, Daya arrives at Indubala's house in tears to deliver the devastating news that Lachmi was killed by a train.",
+   "dominant_activity": "receiving bad news",
+   "contexts": [
+    "rain",
+    "crying",
+    "devastating news",
+    "accident",
+    "grief",
+    "shock"
+   ],
+   "mood": "tragic",
+   "emotional_intensity": 0.9,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "daya crying and telling indubala about lachmi's death",
+     "confidence": 1.0
+    },
+    {
+     "topic": "death",
+     "evidence": "discussion of lachmi being run over by a train",
+     "confidence": 1.0
+    },
+    {
+     "topic": "accident",
+     "evidence": "train accident mentioned",
+     "confidence": 1.0
+    },
+    {
+     "topic": "crying",
+     "evidence": "daya crying hysterically",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.4,
+   "llm_start": 513.0,
+   "index": 11,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h"
+   ],
+   "blocked_contexts": [
+    "accident",
+    "funeral",
+    "grief"
+   ]
+  },
+  {
+   "start": 613.84,
+   "end": 631.2,
+   "summary": "A cart carrying body bags is wheeled away from the railway tracks under the supervision of the police.",
+   "dominant_activity": "transporting bodies",
+   "contexts": [
+    "railway tracks",
+    "body bags",
+    "police",
+    "cart",
+    "gloomy weather"
+   ],
+   "mood": "somber",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "dead body",
+     "evidence": "body bags on a cart",
+     "confidence": 0.9
+    },
+    {
+     "topic": "death",
+     "evidence": "aftermath of train accident",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.84,
+   "llm_start": 613.0,
+   "index": 12,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h"
+   ],
+   "blocked_contexts": [
+    "funeral",
+    "grief"
+   ]
+  },
+  {
+   "start": 631.2,
+   "end": 639.2,
+   "summary": "The title card for \"Indubala Bhaater Hotel\" is displayed on screen.",
+   "dominant_activity": "title card",
+   "contexts": [
+    "title card",
+    "bengali text",
+    "black background"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.2,
+   "llm_start": 631.0,
+   "index": 13,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 639.2,
+   "end": 665.08,
+   "summary": "During a stormy night, Indubala comforts her children in bed when they hear a sudden knock at the door.",
+   "dominant_activity": "resting in bed",
+   "contexts": [
+    "bedroom",
+    "storm",
+    "children",
+    "knocking",
+    "night"
+   ],
+   "mood": "tense",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.2,
+   "llm_start": 639.0,
+   "index": 14,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 665.08,
+   "end": 735.28,
+   "summary": "A drenched Lachmi enters the house with her child, explaining that she had to walk because the trains were suspended due to the storm.",
+   "dominant_activity": "welcoming guest",
+   "contexts": [
+    "rain",
+    "drenched",
+    "mother and child",
+    "hospitality",
+    "night"
+   ],
+   "mood": "relieved",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.08,
+   "llm_start": 665.0,
+   "index": 15,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 735.28,
+   "end": 766.96,
+   "summary": "In a cold morgue, workers prepare stretchers and arrange ice blocks around the remains of the deceased.",
+   "dominant_activity": "preparing bodies in morgue",
+   "contexts": [
+    "morgue",
+    "ice blocks",
+    "stretchers",
+    "body bags",
+    "workers"
+   ],
+   "mood": "grim",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "dead body",
+     "evidence": "body bags and remains in a morgue",
+     "confidence": 1.0
+    },
+    {
+     "topic": "death",
+     "evidence": "morgue setting",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.28,
+   "llm_start": 735.0,
+   "index": 16,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h"
+   ],
+   "blocked_contexts": [
+    "funeral",
+    "grief"
+   ]
+  },
+  {
+   "start": 766.96,
+   "end": 851.64,
+   "summary": "Indubala looks at herself in the mirror, overwhelmed by grief, before visiting the morgue to stand beside Lachmi's body.",
+   "dominant_activity": "grieving",
+   "contexts": [
+    "mirror",
+    "morgue",
+    "dead body",
+    "grief",
+    "silent crying"
+   ],
+   "mood": "sorrowful",
+   "emotional_intensity": 0.9,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "indubala grieving over lachmi's body",
+     "confidence": 1.0
+    },
+    {
+     "topic": "dead body",
+     "evidence": "lachmi's body on a stretcher",
+     "confidence": 1.0
+    },
+    {
+     "topic": "death",
+     "evidence": "morgue visit",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.96,
+   "llm_start": 766.0,
+   "index": 17,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h"
+   ],
+   "blocked_contexts": [
+    "funeral",
+    "grief"
+   ]
+  },
+  {
+   "start": 851.64,
+   "end": 905.32,
+   "summary": "In a warm memory, Indubala and Lachmi share tea at night as Lachmi talks about her childhood village and her first love, Arjun.",
+   "dominant_activity": "drinking tea and talking",
+   "contexts": [
+    "tea cups",
+    "night",
+    "friendship",
+    "reminiscing",
+    "first love"
+   ],
+   "mood": "tender",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.64,
+   "llm_start": 851.0,
+   "index": 18,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 905.32,
+   "end": 1055.16,
+   "summary": "Standing by Lachmi's bandaged face in the morgue, Indubala remembers their intimate conversation about love and relationships.",
+   "dominant_activity": "grieving in morgue",
+   "contexts": [
+    "morgue",
+    "bandaged face",
+    "flashback",
+    "conversation",
+    "grief"
+   ],
+   "mood": "melancholic",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "standing by deceased friend",
+     "confidence": 1.0
+    },
+    {
+     "topic": "dead body",
+     "evidence": "bandaged face of deceased",
+     "confidence": 1.0
+    },
+    {
+     "topic": "death",
+     "evidence": "morgue scene",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": -3.68,
+   "llm_start": 909.0,
+   "index": 19,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h"
+   ],
+   "blocked_contexts": [
+    "funeral",
+    "grief"
+   ]
+  },
+  {
+   "start": 1055.16,
+   "end": 1138.4,
+   "summary": "Indubala continues to stand in silent sorrow next to her deceased friend in the dimly lit morgue.",
+   "dominant_activity": "silent mourning",
+   "contexts": [
+    "morgue",
+    "stretcher",
+    "dim light",
+    "grief",
+    "silence"
+   ],
+   "mood": "somber",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "mourning deceased friend",
+     "confidence": 1.0
+    },
+    {
+     "topic": "dead body",
+     "evidence": "body on stretcher",
+     "confidence": 1.0
+    },
+    {
+     "topic": "death",
+     "evidence": "morgue",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.16,
+   "llm_start": 1055.0,
+   "index": 20,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h"
+   ],
+   "blocked_contexts": [
+    "funeral",
+    "grief"
+   ]
+  },
+  {
+   "start": 1138.4,
+   "end": 1223.8,
+   "summary": "Indubala signs the official release papers at the morgue, identifying herself as Lachmi's sister, and then steps out into the pouring rain.",
+   "dominant_activity": "signing papers",
+   "contexts": [
+    "morgue office",
+    "release papers",
+    "signature",
+    "rain",
+    "grief"
+   ],
+   "mood": "sorrowful",
+   "emotional_intensity": 0.7,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "signing release papers for deceased friend",
+     "confidence": 0.9
+    },
+    {
+     "topic": "death",
+     "evidence": "morgue release process",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.4,
+   "llm_start": 1138.0,
+   "index": 21,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h"
+   ],
+   "blocked_contexts": [
+    "funeral",
+    "grief"
+   ]
+  },
+  {
+   "start": 1223.8,
+   "end": 1345.84,
+   "summary": "In the present day, Nikhil Babu arrives to deliver the news that Indubala has won the court case for the house, but is saddened to learn of Lachmi's passing.",
+   "dominant_activity": "delivering news",
+   "contexts": [
+    "hotel courtyard",
+    "lawyer",
+    "court case victory",
+    "sad news",
+    "grief"
+   ],
+   "mood": "bittersweet",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "learning about lachmi's death",
+     "confidence": 0.9
+    },
+    {
+     "topic": "death",
+     "evidence": "mention of lachmi's passing",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.8,
+   "llm_start": 1223.0,
+   "index": 22,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h"
+   ],
+   "blocked_contexts": [
+    "funeral",
+    "grief"
+   ]
+  },
+  {
+   "start": 1345.84,
+   "end": 1478.92,
+   "summary": "Indubala prepares a traditional food offering and lights a lamp for Lachmi's soul on the day of her shraddh, mourning her deeply.",
+   "dominant_activity": "preparing ritual offering",
+   "contexts": [
+    "hotel",
+    "diya",
+    "food offering",
+    "shraddh",
+    "grief",
+    "mourning"
+   ],
+   "mood": "sorrowful",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "mourning lachmi and preparing offering",
+     "confidence": 1.0
+    },
+    {
+     "topic": "mourning",
+     "evidence": "shraddh ritual preparation",
+     "confidence": 1.0
+    },
+    {
+     "topic": "religious ritual",
+     "evidence": "lighting lamp and offering food for the soul",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.84,
+   "llm_start": 1345.0,
+   "index": 23,
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h"
+   ],
+   "blocked_contexts": [
+    "funeral",
+    "grief"
+   ]
+  },
+  {
+   "start": 1478.92,
+   "end": 1553.92,
+   "summary": "The closing credits of the episode roll on a black screen.",
+   "dominant_activity": "text on screen",
+   "contexts": [
+    "credits",
+    "closing credits",
+    "black background"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.92,
+   "llm_start": 1478.0,
+   "index": 24,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  }
+ ],
+ "candidates": [
+  {
+   "id": "c000",
+   "t0": 5.04,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 5.04,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 5.04,
+    "silence_after": 13.66,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c001",
+   "t0": 17.52,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 17.52,
+   "scene_before": 2,
+   "scene_after": 3,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 17.52,
+    "silence_after": 1.18,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.45,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c002",
+   "t0": 65.96,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 65.96,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.26,
+    "silence_after": 10.94,
+    "speech_density_10s_before": 0.29,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 15.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c003",
+   "t0": 162.2,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "not chosen: pacing rules (min gap / max breaks) favoured a better nearby break"
+   ],
+   "t": 159.4,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": -2.8,
+    "silence_before": 2.8,
+    "silence_after": 2.1,
+    "speech_density_10s_before": 0.5,
+    "speech_density_10s_after": 0.75,
+    "loudness_dip_db": 12.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "Sure, good night.",
+    "first_line_after_cut": "মা",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.8,
+    "reason": "The phone call concludes naturally and the phone is locked before the cut, making it a clean transition before the next character enters the room."
+   },
+   "where_score": 0.666,
+   "match": {
+    "dominant_activity": "video call on a mobile phone",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.7,
+      "matched_contexts": [
+       "cooking",
+       "food preparation",
+       "recipe"
+      ],
+      "rationale": "The characters discuss cooking a recipe during the video call, and the post-break scene focuses on planning the next day's menu."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There are no skincare, personal hygiene, or morning routine elements in the scenes around the break."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenes do not feature any makeup, beauty routines, or preparation for special occasions."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.95,
+      "matched_contexts": [
+       "phone",
+       "mobile",
+       "calling",
+       "video call",
+       "internet",
+       "communication",
+       "family conversation"
+      ],
+      "rationale": "The lead-in scene prominently features a family video call on a smartphone, making it highly relevant for a telecom brand."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There are no vehicles, driving, or road travel elements in the scenes."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenes do not involve any shopping, payments, or financial transactions."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "travel",
+       "vacation",
+       "holiday"
+      ],
+      "rationale": "The son discusses planning a long holiday to visit his mother, which touches upon travel and vacation themes."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There is no online shopping or product delivery depicted in the scenes."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.95,
+     "matched_contexts": [
+      "phone",
+      "mobile",
+      "calling",
+      "video call",
+      "internet",
+      "communication",
+      "family conversation"
+     ],
+     "rationale": "The lead-in scene prominently features a family video call on a smartphone, making it highly relevant for a telecom brand.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.7,
+     "matched_contexts": [
+      "cooking",
+      "food preparation",
+      "recipe"
+     ],
+     "rationale": "The characters discuss cooking a recipe during the video call, and the post-break scene focuses on planning the next day's menu.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.4,
+     "matched_contexts": [
+      "travel",
+      "vacation",
+      "holiday"
+     ],
+     "rationale": "The son discusses planning a long holiday to visit his mother, which touches upon travel and vacation themes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There are no skincare, personal hygiene, or morning routine elements in the scenes around the break.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenes do not feature any makeup, beauty routines, or preparation for special occasions.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There are no vehicles, driving, or road travel elements in the scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenes do not involve any shopping, payments, or financial transactions.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There is no online shopping or product delivery depicted in the scenes.",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "video call on a mobile phone",
+   "quality": 0.808,
+   "selected": false
+  },
+  {
+   "id": "c004",
+   "t0": 198.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "not chosen: pacing rules (min gap / max breaks) favoured a better nearby break"
+   ],
+   "t": 198.0,
+   "scene_before": 5,
+   "scene_after": 6,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 16.2,
+    "silence_after": 3.4,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.66,
+    "loudness_dip_db": 6.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "সত্যি, উচ্ছে ভাজা যে এত ভালো খেতে হয়, এটা কে জানত!",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition from an atmospheric scene of a girl in the rain to a bustling dining hall scene, marked by a title card, making it an excellent natural break."
+   },
+   "where_score": 0.736,
+   "match": {
+    "dominant_activity": "running in field",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.8,
+      "matched_contexts": [
+       "eating",
+       "homemade food",
+       "food preparation"
+      ],
+      "rationale": "The scene after the break features customers eating and enjoying homemade food at a restaurant, which aligns perfectly with the brand's focus."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "Customers are shown eating rice and curry in the restaurant scene after the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand has a violation due to the presence of eating in the post-break scene."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "None of the target contexts match the activities in the lead-in or post-break scenes."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "There are no telecom-related activities like phone calls or internet usage in the immediate scenes surrounding the ad break."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "No automotive or travel-by-car themes are present in the scenes around the ad break."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "There are no financial transactions or shopping activities depicted in the scenes."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "hotel"
+      ],
+      "rationale": "The scene after the break is set in Indubala's hotel/eatery, which matches the brand's hospitality theme."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "No online shopping or delivery activities are shown in the scenes."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.8,
+     "matched_contexts": [
+      "eating",
+      "homemade food",
+      "food preparation"
+     ],
+     "rationale": "The scene after the break features customers eating and enjoying homemade food at a restaurant, which aligns perfectly with the brand's focus.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "hotel"
+     ],
+     "rationale": "The scene after the break is set in Indubala's hotel/eatery, which matches the brand's hospitality theme.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "None of the target contexts match the activities in the lead-in or post-break scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no telecom-related activities like phone calls or internet usage in the immediate scenes surrounding the ad break.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "No automotive or travel-by-car themes are present in the scenes around the ad break.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no financial transactions or shopping activities depicted in the scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "No online shopping or delivery activities are shown in the scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand has a violation due to the presence of eating in the post-break scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "eating: customers eating rice and curry"
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "Customers are shown eating rice and curry in the restaurant scene after the break."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "running in field",
+   "quality": 0.856,
+   "selected": false
+  },
+  {
+   "id": "c005",
+   "t0": 281.92,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 281.92,
+   "scene_before": 7,
+   "scene_after": 8,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.96,
+    "speech_density_10s_after": 0.88,
+    "loudness_dip_db": 18.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c006",
+   "t0": 326.92,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 326.92,
+   "scene_before": 8,
+   "scene_after": 9,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.42,
+    "silence_after": 0.08,
+    "speech_density_10s_before": 0.52,
+    "speech_density_10s_after": 0.99,
+    "loudness_dip_db": 20.6,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c007",
+   "t0": 426.56,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 426.56,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 37.86,
+    "silence_after": 1.84,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.71,
+    "loudness_dip_db": 11.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "আর দিদি",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.0,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition between a reflective scene of preparing food and a later scene of serving it to customers, with no overlapping dialogue or music."
+   },
+   "where_score": 0.824,
+   "match": {
+    "dominant_activity": "food preparation",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 1.0,
+      "matched_contexts": [
+       "cooking",
+       "kitchen",
+       "eating",
+       "food preparation",
+       "homemade food"
+      ],
+      "rationale": "The scene features characters preparing, mixing, and tasting homemade food in a kitchen setting, which perfectly aligns with the brand's focus on cooking and food preparation."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "The characters are tasting the taro paste with rice in the lead-in scene, and customers are eating in the restaurant in the surrounding context."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The brand is not relevant to the scene, and there is a violation due to the presence of eating and tasting food in the scene."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene focuses on traditional food preparation and has no connection to makeup, beauty, or getting ready."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "family conversation"
+      ],
+      "rationale": "While there is a warm conversation between the characters, the scene does not feature any mobile devices or connectivity themes."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene is set entirely indoors in a kitchen/home environment and has no relevance to vehicles or travel."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene depicts food preparation and tasting at home, with no financial transactions or shopping activities taking place."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "hotel"
+      ],
+      "rationale": "Although the setting is technically Indubala's hotel, the scene focuses on intimate food preparation rather than travel or tourism."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no elements of shopping, delivery, or e-commerce in this traditional cooking scene."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_a",
+     "relevance": 1.0,
+     "matched_contexts": [
+      "cooking",
+      "kitchen",
+      "eating",
+      "food preparation",
+      "homemade food"
+     ],
+     "rationale": "The scene features characters preparing, mixing, and tasting homemade food in a kitchen setting, which perfectly aligns with the brand's focus on cooking and food preparation.",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": false,
+      "violated_contexts": [],
+      "evidence": "The scenes immediately preceding and following the ad break depict traditional food preparation (grinding taro paste) and customers happily eating in a restaurant setting. There are no depictions, discussions, or implications of funerals, hospitals, violence, illness, bathrooms, accidents, or grief.",
+      "confidence": 0.95
+     }
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "family conversation"
+     ],
+     "rationale": "While there is a warm conversation between the characters, the scene does not feature any mobile devices or connectivity themes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "hotel"
+     ],
+     "rationale": "Although the setting is technically Indubala's hotel, the scene focuses on intimate food preparation rather than travel or tourism.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scene focuses on traditional food preparation and has no connection to makeup, beauty, or getting ready.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scene depicts food preparation and tasting at home, with no financial transactions or shopping activities taking place.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene is set entirely indoors in a kitchen/home environment and has no relevance to vehicles or travel.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no elements of shopping, delivery, or e-commerce in this traditional cooking scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand is not relevant to the scene, and there is a violation due to the presence of eating and tasting food in the scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 7,
+       "evidence": "eating: customers eating rice and curry"
+      },
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 9,
+       "evidence": "eating: tasting the taro paste with rice"
+      },
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "eating: customers eating vlogger's food"
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "The characters are tasting the taro paste with rice in the lead-in scene, and customers are eating in the restaurant in the surrounding context."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "food preparation",
+   "quality": 0.974,
+   "selected": true
+  },
+  {
+   "id": "c008",
+   "t0": 513.4,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "LLM heard a sentence cut: “তাইতো হে মন”"
+   ],
+   "t": 516.28,
+   "scene_before": 11,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 2.88,
+    "silence_before": 2.48,
+    "silence_after": 3.02,
+    "speech_density_10s_before": 0.4,
+    "speech_density_10s_after": 0.48,
+    "loudness_dip_db": 9.7,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "তাইতো হে মন",
+    "first_line_after_cut": "কী রে ধনা?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": true,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.3,
+    "jarring": 0.6,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.35,
+    "reason": "The cut is placed mid-sequence and splits a continuous song lyric, making it a jarring transition."
+   },
+   "where_score": 0.3,
+   "quality": 0.3,
+   "selected": false
+  },
+  {
+   "id": "c009",
+   "t0": 613.84,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 613.84,
+   "scene_before": 11,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.52,
+    "speech_density_10s_after": 0.5,
+    "loudness_dip_db": 30.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c010",
+   "t0": 631.2,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 631.2,
+   "scene_before": 12,
+   "scene_after": 13,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 11.3,
+    "silence_after": 5.3,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.45,
+    "loudness_dip_db": 7.8,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "এত রাত্রে দরজায় ধাক্কা দিচ্ছে কে?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs at a natural transition point between the end of a dramatic sequence and the show's title card, with only the background music carrying over."
+   },
+   "where_score": 0.762,
+   "match": {
+    "dominant_activity": "transporting dead bodies",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber scene of transporting dead bodies from a train accident violates the negative contexts of accident and grief, and has no relevance to food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       },
+       {
+        "negative_context": "eating",
+        "evidence": "The context mentions customers eating food in the scene prior to the flashback."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene involves transporting dead bodies from an accident, violating negative contexts of accident, grief, and eating, with no relevance to skincare."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber scene of transporting dead bodies from an accident violates the negative contexts of accident and grief, and is completely unrelated to beauty or cosmetics."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene shows transporting dead bodies, which has no relevance to telecom or mobile connectivity."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene depicts the aftermath of a fatal train accident, violating the negative contexts of accident and grief."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber scene of transporting dead bodies violates the negative context of grief and has no connection to digital payments."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "train journey"
+      ],
+      "rationale": "Although railway tracks are shown, the scene depicts the aftermath of a fatal train accident, which directly violates the negative contexts of accident and grief."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber scene of transporting dead bodies from an accident violates the negative contexts of accident and grief, and has no relevance to online shopping."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.2,
+     "matched_contexts": [
+      "train journey"
+     ],
+     "rationale": "Although railway tracks are shown, the scene depicts the aftermath of a fatal train accident, which directly violates the negative contexts of accident and grief.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "grief: daya crying and telling indubala about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "accident",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "accident: train accident mentioned"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The lead-in scene shows transporting dead bodies, which has no relevance to telecom or mobile connectivity.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scene depicts the aftermath of a fatal train accident, violating the negative contexts of accident and grief.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "grief: daya crying and telling indubala about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "accident",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "accident: train accident mentioned"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The somber scene of transporting dead bodies from a train accident violates the negative contexts of accident and grief, and has no relevance to food or cooking.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "grief: daya crying and telling indubala about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "accident",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "accident: train accident mentioned"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene involves transporting dead bodies from an accident, violating negative contexts of accident, grief, and eating, with no relevance to skincare.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "eating: customers eating vlogger's food"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "grief: daya crying and telling indubala about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "accident",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "accident: train accident mentioned"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "The context mentions customers eating food in the scene prior to the flashback."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The somber scene of transporting dead bodies from an accident violates the negative contexts of accident and grief, and is completely unrelated to beauty or cosmetics.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "grief: daya crying and telling indubala about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "accident",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "accident: train accident mentioned"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The somber scene of transporting dead bodies violates the negative context of grief and has no connection to digital payments.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "grief: daya crying and telling indubala about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The somber scene of transporting dead bodies from an accident violates the negative contexts of accident and grief, and has no relevance to online shopping.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "grief: daya crying and telling indubala about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "death: discussion of lachmi being run over by a train"
+      },
+      {
+       "negative_context": "accident",
+       "source": "global_scene_tags",
+       "scene": 11,
+       "evidence": "accident: train accident mentioned"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "dead body: body bags on a cart"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 12,
+       "evidence": "death: aftermath of train accident"
+      },
+      {
+       "negative_context": "accident",
+       "source": "llm_lead_in",
+       "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "transporting dead bodies",
+   "quality": 0.762,
+   "selected": false
+  },
+  {
+   "id": "c011",
+   "t0": 639.2,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 639.2,
+   "scene_before": 13,
+   "scene_after": 14,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.27,
+    "speech_density_10s_after": 0.79,
+    "loudness_dip_db": 2.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c012",
+   "t0": 665.08,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 665.08,
+   "scene_before": 14,
+   "scene_after": 15,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.28,
+    "silence_after": 1.92,
+    "speech_density_10s_before": 0.72,
+    "speech_density_10s_after": 0.8,
+    "loudness_dip_db": 3.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c013",
+   "t0": 735.28,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 735.28,
+   "scene_before": 15,
+   "scene_after": 16,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.59,
+    "speech_density_10s_after": 0.78,
+    "loudness_dip_db": 8.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c014",
+   "t0": 766.96,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "LLM heard a sentence cut: “”"
+   ],
+   "t": 766.96,
+   "scene_before": 16,
+   "scene_after": 17,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 7.36,
+    "silence_after": 4.94,
+    "speech_density_10s_before": 0.26,
+    "speech_density_10s_after": 0.51,
+    "loudness_dip_db": 20.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": true,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.7,
+    "jarring": 0.4,
+    "suspense_hook": 0.3,
+    "natural_break_score": 0.6,
+    "reason": "The cut occurs during a scene transition from the morgue to Indubala's room, but it interrupts a continuous background song mid-phrase, making it slightly jarring."
+   },
+   "where_score": 0.585,
+   "quality": 0.585,
+   "selected": false
+  },
+  {
+   "id": "c015",
+   "t0": 851.64,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 851.64,
+   "scene_before": 17,
+   "scene_after": 18,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 8.04,
+    "silence_after": 24.36,
+    "speech_density_10s_before": 0.16,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 12.5,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "মাঝি, মাঝি আপ যাইয়ে না",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.9,
+    "reason": "The scene fades to black naturally after a somber moment in the hospital corridor, transitioning cleanly to a flashback sequence at home."
+   },
+   "where_score": 0.924,
+   "match": {
+    "dominant_activity": "grieving in a hospital corridor",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a hospital corridor where characters are waiting."
+       },
+       {
+        "negative_context": "illness",
+        "evidence": "Lachmi is shown dying on her bed before the scene shifts to the hospital."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown sitting in the hospital corridor, deeply grieving."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's setting in a hospital corridor and the heavy theme of grief and illness directly violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The characters are waiting in a hospital corridor."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown in deep grief over Lachmi's critical condition or death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The hospital setting and the depiction of intense grief violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a hospital corridor."
+       },
+       {
+        "negative_context": "illness",
+        "evidence": "Lachmi is shown in a critical, dying state."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is visibly grieving in the hospital."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's focus on illness, grief, and its hospital setting violates the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The characters are waiting outside a hospital room."
+       },
+       {
+        "negative_context": "medical emergency",
+        "evidence": "Lachmi is dying, leading to an urgent hospital situation."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene depicts a medical emergency and takes place in a hospital, violating the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a hospital corridor."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown grieving in the hospital."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The hospital setting and the theme of grief violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a hospital corridor."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown in a state of deep grief."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's hospital setting and depiction of grief violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The characters are in a hospital corridor."
+       },
+       {
+        "negative_context": "illness",
+        "evidence": "Lachmi is shown in a terminal or critical state."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown grieving."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The hospital setting, illness, and grief depicted in the scene violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a hospital corridor."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown grieving."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's hospital setting and the heavy emotional grief violate the brand's negative contexts."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's setting in a hospital corridor and the heavy theme of grief and illness directly violate the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "grief: indubala grieving over lachmi's body"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene is set in a hospital corridor where characters are waiting."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Lachmi is shown dying on her bed before the scene shifts to the hospital."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is shown sitting in the hospital corridor, deeply grieving."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The hospital setting and the depiction of intense grief violate the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "grief: indubala grieving over lachmi's body"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The characters are waiting in a hospital corridor."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is shown in deep grief over Lachmi's critical condition or death."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's focus on illness, grief, and its hospital setting violates the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "grief: indubala grieving over lachmi's body"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene takes place in a hospital corridor."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Lachmi is shown in a critical, dying state."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is visibly grieving in the hospital."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene depicts a medical emergency and takes place in a hospital, violating the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The characters are waiting outside a hospital room."
+      },
+      {
+       "negative_context": "medical emergency",
+       "source": "llm_lead_in",
+       "evidence": "Lachmi is dying, leading to an urgent hospital situation."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The hospital setting and the theme of grief violate the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "grief: indubala grieving over lachmi's body"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene is set in a hospital corridor."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is shown grieving in the hospital."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's hospital setting and depiction of grief violate the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "grief: indubala grieving over lachmi's body"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene takes place in a hospital corridor."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is shown in a state of deep grief."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The hospital setting, illness, and grief depicted in the scene violate the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "grief: indubala grieving over lachmi's body"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The characters are in a hospital corridor."
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Lachmi is shown in a terminal or critical state."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is shown grieving."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's hospital setting and the heavy emotional grief violate the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "dead body: body bags and remains in a morgue"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "death: morgue setting"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "grief: indubala grieving over lachmi's body"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "dead body: lachmi's body on a stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 17,
+       "evidence": "death: morgue visit"
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene is set in a hospital corridor."
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is shown grieving."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "grieving in a hospital corridor",
+   "quality": 0.924,
+   "selected": false
+  },
+  {
+   "id": "c016",
+   "t0": 905.32,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 905.32,
+   "scene_before": 18,
+   "scene_after": 19,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.79,
+    "speech_density_10s_after": 0.06,
+    "loudness_dip_db": 1.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c017",
+   "t0": 1055.16,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "break quality 0.26 below threshold 0.55"
+   ],
+   "t": 1055.16,
+   "scene_before": 19,
+   "scene_after": 20,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 4.86,
+    "silence_after": 1.14,
+    "speech_density_10s_before": 0.2,
+    "speech_density_10s_after": 0.88,
+    "loudness_dip_db": 11.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.2,
+    "jarring": 0.7,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.3,
+    "reason": "The cut is highly jarring as it interrupts a single continuous shot of a character looking up, while the background song continues directly across the break."
+   },
+   "where_score": 0.255,
+   "quality": 0.255,
+   "selected": false
+  },
+  {
+   "id": "c018",
+   "t0": 1138.4,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 1134.8,
+   "scene_before": 20,
+   "scene_after": 21,
+   "signals": {
+    "snap_delta": -3.6,
+    "silence_before": 1.6,
+    "silence_after": 2.5,
+    "speech_density_10s_before": 0.81,
+    "speech_density_10s_after": 0.52,
+    "loudness_dip_db": 7.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "हम लोग वही ना चीकी ना",
+    "first_line_after_cut": "এই চল চল হট হট",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.3,
+    "suspense_hook": 0.2,
+    "natural_break_score": 0.75,
+    "reason": "The cut occurs at a clean scene transition from a happy flashback in the rain to the grim present-day morgue, although the background song continues across the break."
+   },
+   "where_score": 0.613,
+   "match": {
+    "dominant_activity": "grieving in a morgue",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning the death of her friend Lachmi in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene depicts intense grief and mourning in a morgue, which violates the brand's negative context of grief."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend in a somber morgue setting."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a morgue, which is a hospital-adjacent medical facility."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber morgue setting and themes of grief violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is grieving the loss of her friend Lachmi."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The characters are inside a morgue, a medical facility."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "A beauty brand is highly inappropriate for a scene centered around grief and a morgue."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a morgue where Indubala has to sign release papers."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The morgue setting violates the brand's negative context of hospital environments."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown in deep sorrow and mourning."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's heavy focus on grief and the morgue setting violates the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber atmosphere of grief and the morgue setting are direct violations of the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is grieving the death of her friend."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "A travel brand cannot be advertised during a scene of intense grief in a morgue."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her friend's death."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's focus on grief and the morgue setting violates the brand's negative contexts."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene depicts intense grief and mourning in a morgue, which violates the brand's negative context of grief.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "grief: standing by deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is mourning the death of her friend Lachmi in a morgue."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The somber morgue setting and themes of grief violate the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "grief: standing by deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is mourning her deceased friend in a somber morgue setting."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene takes place in a morgue, which is a hospital-adjacent medical facility."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "A beauty brand is highly inappropriate for a scene centered around grief and a morgue.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "grief: standing by deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is grieving the loss of her friend Lachmi."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The characters are inside a morgue, a medical facility."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The morgue setting violates the brand's negative context of hospital environments.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene is set in a morgue where Indubala has to sign release papers."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's heavy focus on grief and the morgue setting violates the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "grief: standing by deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is shown in deep sorrow and mourning."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene takes place in a morgue."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The somber atmosphere of grief and the morgue setting are direct violations of the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "grief: standing by deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is mourning her deceased friend."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene is set in a morgue."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "A travel brand cannot be advertised during a scene of intense grief in a morgue.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "grief: standing by deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is grieving the death of her friend."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene takes place in a morgue."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's focus on grief and the morgue setting violates the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "grief: standing by deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "dead body: bandaged face of deceased"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 19,
+       "evidence": "death: morgue scene"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is mourning her friend's death."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene is set in a morgue."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "grieving in a morgue",
+   "quality": 0.613,
+   "selected": false
+  },
+  {
+   "id": "c019",
+   "t0": 1223.8,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 1223.8,
+   "scene_before": 21,
+   "scene_after": 22,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 41.0,
+    "silence_after": 3.3,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.59,
+    "loudness_dip_db": 25.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "কাটেনা হাজারো দুঃখ মোর",
+    "first_line_after_cut": "মা কই?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition between a poignant scene in the past and a new scene in the present day, making it a highly natural break."
+   },
+   "where_score": 0.78,
+   "match": {
+    "dominant_activity": "signing papers",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend and signing release papers at the morgue, and later Nikhil Babu is saddened to learn of her death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's heavy focus on grief and mourning a deceased friend violates the brand's negative context, with no relevance to food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown in deep grief signing release papers for her deceased friend at the morgue."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place inside a morgue, which is a hospital-related facility."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber morgue setting and themes of grief violate the brand's negative contexts of hospital and grief."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend at the morgue, and the overall tone is highly sorrowful."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The characters are inside a morgue signing official release papers."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's focus on grief and the morgue setting directly violates the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place inside a morgue where Indubala is signing release papers."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The morgue setting violates the brand's negative context of hospital, and there is no telecom-related activity."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is grieving the loss of her friend, and Nikhil Babu is later saddened by the news of her passing."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set inside a morgue where official papers are being signed."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber scene of signing release papers at a morgue violates the brand's negative contexts of grief and hospital."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend, and the post-break scene mentions her death."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene involves mourning and signing papers at a morgue, violating the brand's negative contexts of grief and hospital."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is in deep sorrow over her friend's death, and the characters discuss the passing after the break."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The heavy themes of grief and the morgue setting violate the brand's negative contexts of grief and hospital."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend, and the post-break scene deals with the sadness of her passing."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place inside a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's focus on grief and the morgue setting violates the brand's negative contexts of grief and hospital."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's heavy focus on grief and mourning a deceased friend violates the brand's negative context, with no relevance to food or cooking.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "grief: learning about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is mourning her deceased friend and signing release papers at the morgue, and later Nikhil Babu is saddened to learn of her death."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The somber morgue setting and themes of grief violate the brand's negative contexts of hospital and grief.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "grief: learning about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is shown in deep grief signing release papers for her deceased friend at the morgue."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene takes place inside a morgue, which is a hospital-related facility."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's focus on grief and the morgue setting directly violates the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "grief: learning about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is mourning her deceased friend at the morgue, and the overall tone is highly sorrowful."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The characters are inside a morgue signing official release papers."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The morgue setting violates the brand's negative context of hospital, and there is no telecom-related activity.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene takes place inside a morgue where Indubala is signing release papers."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The somber scene of signing release papers at a morgue violates the brand's negative contexts of grief and hospital.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "grief: learning about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is grieving the loss of her friend, and Nikhil Babu is later saddened by the news of her passing."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene is set inside a morgue where official papers are being signed."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene involves mourning and signing papers at a morgue, violating the brand's negative contexts of grief and hospital.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "grief: learning about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is mourning her deceased friend, and the post-break scene mentions her death."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene takes place in a morgue."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The heavy themes of grief and the morgue setting violate the brand's negative contexts of grief and hospital.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "grief: learning about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is in deep sorrow over her friend's death, and the characters discuss the passing after the break."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene is set in a morgue."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene's focus on grief and the morgue setting violates the brand's negative contexts of grief and hospital.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "grief: mourning deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "dead body: body on stretcher"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 20,
+       "evidence": "death: morgue"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "grief: signing release papers for deceased friend"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 21,
+       "evidence": "death: morgue release process"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "grief: learning about lachmi's death"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 22,
+       "evidence": "death: mention of lachmi's passing"
+      },
+      {
+       "negative_context": "grief",
+       "source": "llm_lead_in",
+       "evidence": "Indubala is mourning her deceased friend, and the post-break scene deals with the sadness of her passing."
+      },
+      {
+       "negative_context": "hospital",
+       "source": "llm_lead_in",
+       "evidence": "The scene takes place inside a morgue."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "signing papers",
+   "quality": 0.78,
+   "selected": false
+  },
+  {
+   "id": "c020",
+   "t0": 1345.84,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1345.84,
+   "scene_before": 22,
+   "scene_after": 23,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.53,
+    "speech_density_10s_after": 0.39,
+    "loudness_dip_db": 5.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c021",
+   "t0": 1478.92,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1478.92,
+   "scene_before": 23,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 101.92,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 4.6,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c022",
+   "t0": 1491.74,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1491.74,
+   "scene_before": 24,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 114.74,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 13.2,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c023",
+   "t0": 1503.86,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1503.86,
+   "scene_before": 24,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 126.86,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 11.9,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c024",
+   "t0": 1515.18,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1515.18,
+   "scene_before": 24,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 138.18,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 8.5,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c025",
+   "t0": 1535.96,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1535.96,
+   "scene_before": 24,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 158.96,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 13.9,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c026",
+   "t0": 1545.46,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1545.46,
+   "scene_before": 24,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 168.46,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 3.7,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  }
+ ],
+ "speech": [
+  {
+   "start": 18.7,
+   "end": 19.1
+  },
+  {
+   "start": 19.4,
+   "end": 20.1
+  },
+  {
+   "start": 20.3,
+   "end": 22.6
+  },
+  {
+   "start": 24.4,
+   "end": 25.5
+  },
+  {
+   "start": 40.1,
+   "end": 41.1
+  },
+  {
+   "start": 43.0,
+   "end": 43.8
+  },
+  {
+   "start": 44.1,
+   "end": 45.1
+  },
+  {
+   "start": 45.4,
+   "end": 58.0
+  },
+  {
+   "start": 60.3,
+   "end": 60.8
+  },
+  {
+   "start": 62.3,
+   "end": 62.7
+  },
+  {
+   "start": 76.9,
+   "end": 79.4
+  },
+  {
+   "start": 79.9,
+   "end": 87.4
+  },
+  {
+   "start": 88.2,
+   "end": 90.8
+  },
+  {
+   "start": 91.0,
+   "end": 92.2
+  },
+  {
+   "start": 92.9,
+   "end": 93.9
+  },
+  {
+   "start": 94.2,
+   "end": 94.7
+  },
+  {
+   "start": 95.1,
+   "end": 97.2
+  },
+  {
+   "start": 97.5,
+   "end": 98.7
+  },
+  {
+   "start": 99.1,
+   "end": 105.9
+  },
+  {
+   "start": 106.3,
+   "end": 108.8
+  },
+  {
+   "start": 109.2,
+   "end": 112.0
+  },
+  {
+   "start": 112.1,
+   "end": 117.2
+  },
+  {
+   "start": 117.4,
+   "end": 120.3
+  },
+  {
+   "start": 120.4,
+   "end": 125.4
+  },
+  {
+   "start": 125.8,
+   "end": 128.9
+  },
+  {
+   "start": 129.2,
+   "end": 129.9
+  },
+  {
+   "start": 130.3,
+   "end": 135.7
+  },
+  {
+   "start": 136.4,
+   "end": 137.4
+  },
+  {
+   "start": 138.6,
+   "end": 139.4
+  },
+  {
+   "start": 140.2,
+   "end": 144.1
+  },
+  {
+   "start": 144.7,
+   "end": 146.1
+  },
+  {
+   "start": 147.1,
+   "end": 148.6
+  },
+  {
+   "start": 149.2,
+   "end": 150.5
+  },
+  {
+   "start": 151.2,
+   "end": 153.2
+  },
+  {
+   "start": 153.5,
+   "end": 155.0
+  },
+  {
+   "start": 156.2,
+   "end": 156.6
+  },
+  {
+   "start": 161.5,
+   "end": 162.2
+  },
+  {
+   "start": 162.5,
+   "end": 165.2
+  },
+  {
+   "start": 165.3,
+   "end": 171.0
+  },
+  {
+   "start": 172.5,
+   "end": 174.4
+  },
+  {
+   "start": 175.0,
+   "end": 175.9
+  },
+  {
+   "start": 176.2,
+   "end": 177.0
+  },
+  {
+   "start": 181.1,
+   "end": 181.8
+  },
+  {
+   "start": 201.4,
+   "end": 219.9
+  },
+  {
+   "start": 220.2,
+   "end": 229.2
+  },
+  {
+   "start": 229.6,
+   "end": 234.3
+  },
+  {
+   "start": 234.5,
+   "end": 239.6
+  },
+  {
+   "start": 239.9,
+   "end": 242.4
+  },
+  {
+   "start": 242.9,
+   "end": 243.5
+  },
+  {
+   "start": 244.0,
+   "end": 244.9
+  },
+  {
+   "start": 245.1,
+   "end": 253.0
+  },
+  {
+   "start": 254.1,
+   "end": 254.9
+  },
+  {
+   "start": 255.1,
+   "end": 258.9
+  },
+  {
+   "start": 259.8,
+   "end": 260.7
+  },
+  {
+   "start": 261.1,
+   "end": 276.6
+  },
+  {
+   "start": 277.0,
+   "end": 280.7
+  },
+  {
+   "start": 280.7,
+   "end": 288.3
+  },
+  {
+   "start": 288.8,
+   "end": 291.2
+  },
+  {
+   "start": 293.4,
+   "end": 296.2
+  },
+  {
+   "start": 296.6,
+   "end": 297.5
+  },
+  {
+   "start": 298.4,
+   "end": 299.6
+  },
+  {
+   "start": 301.8,
+   "end": 305.3
+  },
+  {
+   "start": 305.9,
+   "end": 308.0
+  },
+  {
+   "start": 308.5,
+   "end": 309.5
+  },
+  {
+   "start": 310.1,
+   "end": 313.2
+  },
+  {
+   "start": 314.2,
+   "end": 315.6
+  },
+  {
+   "start": 316.2,
+   "end": 317.1
+  },
+  {
+   "start": 317.6,
+   "end": 319.6
+  },
+  {
+   "start": 320.3,
+   "end": 322.9
+  },
+  {
+   "start": 323.1,
+   "end": 323.5
+  },
+  {
+   "start": 327.0,
+   "end": 338.8
+  },
+  {
+   "start": 338.9,
+   "end": 342.0
+  },
+  {
+   "start": 342.2,
+   "end": 343.6
+  },
+  {
+   "start": 343.7,
+   "end": 350.5
+  },
+  {
+   "start": 351.3,
+   "end": 367.2
+  },
+  {
+   "start": 367.8,
+   "end": 372.9
+  },
+  {
+   "start": 373.3,
+   "end": 388.7
+  },
+  {
+   "start": 428.4,
+   "end": 430.7
+  },
+  {
+   "start": 430.8,
+   "end": 432.8
+  },
+  {
+   "start": 433.8,
+   "end": 444.8
+  },
+  {
+   "start": 444.9,
+   "end": 445.3
+  },
+  {
+   "start": 446.2,
+   "end": 448.7
+  },
+  {
+   "start": 449.6,
+   "end": 450.2
+  },
+  {
+   "start": 451.0,
+   "end": 457.0
+  },
+  {
+   "start": 457.1,
+   "end": 457.5
+  },
+  {
+   "start": 457.9,
+   "end": 462.7
+  },
+  {
+   "start": 463.1,
+   "end": 470.5
+  },
+  {
+   "start": 471.0,
+   "end": 472.3
+  },
+  {
+   "start": 472.8,
+   "end": 473.6
+  },
+  {
+   "start": 474.8,
+   "end": 477.5
+  },
+  {
+   "start": 485.3,
+   "end": 486.0
+  },
+  {
+   "start": 486.3,
+   "end": 487.4
+  },
+  {
+   "start": 488.2,
+   "end": 489.8
+  },
+  {
+   "start": 489.9,
+   "end": 491.3
+  },
+  {
+   "start": 492.0,
+   "end": 493.8
+  },
+  {
+   "start": 494.9,
+   "end": 495.8
+  },
+  {
+   "start": 496.0,
+   "end": 500.2
+  },
+  {
+   "start": 500.5,
+   "end": 501.3
+  },
+  {
+   "start": 501.5,
+   "end": 502.3
+  },
+  {
+   "start": 502.7,
+   "end": 503.9
+  },
+  {
+   "start": 504.6,
+   "end": 505.4
+  },
+  {
+   "start": 505.5,
+   "end": 506.5
+  },
+  {
+   "start": 507.7,
+   "end": 510.5
+  },
+  {
+   "start": 512.8,
+   "end": 513.8
+  },
+  {
+   "start": 519.3,
+   "end": 520.2
+  },
+  {
+   "start": 521.7,
+   "end": 523.4
+  },
+  {
+   "start": 523.8,
+   "end": 525.8
+  },
+  {
+   "start": 526.1,
+   "end": 527.7
+  },
+  {
+   "start": 528.0,
+   "end": 533.2
+  },
+  {
+   "start": 533.4,
+   "end": 534.1
+  },
+  {
+   "start": 534.3,
+   "end": 556.4
+  },
+  {
+   "start": 558.3,
+   "end": 558.9
+  },
+  {
+   "start": 559.8,
+   "end": 561.0
+  },
+  {
+   "start": 561.5,
+   "end": 562.2
+  },
+  {
+   "start": 562.3,
+   "end": 563.2
+  },
+  {
+   "start": 563.7,
+   "end": 564.5
+  },
+  {
+   "start": 565.9,
+   "end": 567.6
+  },
+  {
+   "start": 571.2,
+   "end": 572.4
+  },
+  {
+   "start": 574.1,
+   "end": 582.2
+  },
+  {
+   "start": 582.6,
+   "end": 583.7
+  },
+  {
+   "start": 583.8,
+   "end": 597.2
+  },
+  {
+   "start": 598.8,
+   "end": 600.5
+  },
+  {
+   "start": 607.5,
+   "end": 611.8
+  },
+  {
+   "start": 612.9,
+   "end": 615.7
+  },
+  {
+   "start": 616.8,
+   "end": 619.9
+  },
+  {
+   "start": 636.5,
+   "end": 639.9
+  },
+  {
+   "start": 640.0,
+   "end": 641.0
+  },
+  {
+   "start": 641.1,
+   "end": 643.1
+  },
+  {
+   "start": 643.8,
+   "end": 644.5
+  },
+  {
+   "start": 645.4,
+   "end": 648.2
+  },
+  {
+   "start": 648.5,
+   "end": 655.3
+  },
+  {
+   "start": 655.5,
+   "end": 658.9
+  },
+  {
+   "start": 659.8,
+   "end": 662.2
+  },
+  {
+   "start": 663.6,
+   "end": 664.8
+  },
+  {
+   "start": 667.0,
+   "end": 668.1
+  },
+  {
+   "start": 668.2,
+   "end": 696.0
+  },
+  {
+   "start": 696.5,
+   "end": 708.5
+  },
+  {
+   "start": 710.9,
+   "end": 713.7
+  },
+  {
+   "start": 715.6,
+   "end": 717.4
+  },
+  {
+   "start": 718.4,
+   "end": 719.7
+  },
+  {
+   "start": 720.2,
+   "end": 722.6
+  },
+  {
+   "start": 724.5,
+   "end": 726.1
+  },
+  {
+   "start": 726.4,
+   "end": 728.8
+  },
+  {
+   "start": 730.7,
+   "end": 731.8
+  },
+  {
+   "start": 733.1,
+   "end": 734.1
+  },
+  {
+   "start": 734.7,
+   "end": 735.5
+  },
+  {
+   "start": 737.4,
+   "end": 745.0
+  },
+  {
+   "start": 745.7,
+   "end": 746.3
+  },
+  {
+   "start": 746.5,
+   "end": 752.3
+  },
+  {
+   "start": 752.6,
+   "end": 756.0
+  },
+  {
+   "start": 756.6,
+   "end": 759.6
+  },
+  {
+   "start": 771.9,
+   "end": 777.4
+  },
+  {
+   "start": 777.9,
+   "end": 783.4
+  },
+  {
+   "start": 784.7,
+   "end": 790.0
+  },
+  {
+   "start": 790.8,
+   "end": 796.5
+  },
+  {
+   "start": 797.0,
+   "end": 799.2
+  },
+  {
+   "start": 799.3,
+   "end": 801.3
+  },
+  {
+   "start": 805.5,
+   "end": 807.4
+  },
+  {
+   "start": 808.1,
+   "end": 808.8
+  },
+  {
+   "start": 811.5,
+   "end": 813.7
+  },
+  {
+   "start": 814.5,
+   "end": 815.9
+  },
+  {
+   "start": 817.3,
+   "end": 818.7
+  },
+  {
+   "start": 820.5,
+   "end": 821.9
+  },
+  {
+   "start": 828.4,
+   "end": 830.5
+  },
+  {
+   "start": 836.8,
+   "end": 839.0
+  },
+  {
+   "start": 839.8,
+   "end": 841.1
+  },
+  {
+   "start": 842.0,
+   "end": 843.6
+  },
+  {
+   "start": 876.0,
+   "end": 877.0
+  },
+  {
+   "start": 877.5,
+   "end": 879.8
+  },
+  {
+   "start": 881.5,
+   "end": 883.4
+  },
+  {
+   "start": 884.6,
+   "end": 887.4
+  },
+  {
+   "start": 889.5,
+   "end": 892.2
+  },
+  {
+   "start": 894.1,
+   "end": 895.0
+  },
+  {
+   "start": 895.1,
+   "end": 896.2
+  },
+  {
+   "start": 896.5,
+   "end": 898.0
+  },
+  {
+   "start": 898.6,
+   "end": 901.5
+  },
+  {
+   "start": 902.4,
+   "end": 903.4
+  },
+  {
+   "start": 903.7,
+   "end": 905.9
+  },
+  {
+   "start": 919.7,
+   "end": 925.2
+  },
+  {
+   "start": 925.7,
+   "end": 930.2
+  },
+  {
+   "start": 930.7,
+   "end": 933.0
+  },
+  {
+   "start": 934.4,
+   "end": 936.4
+  },
+  {
+   "start": 936.7,
+   "end": 939.3
+  },
+  {
+   "start": 940.3,
+   "end": 941.9
+  },
+  {
+   "start": 942.8,
+   "end": 943.7
+  },
+  {
+   "start": 944.1,
+   "end": 945.0
+  },
+  {
+   "start": 945.2,
+   "end": 946.4
+  },
+  {
+   "start": 946.8,
+   "end": 949.8
+  },
+  {
+   "start": 950.9,
+   "end": 952.4
+  },
+  {
+   "start": 954.2,
+   "end": 956.1
+  },
+  {
+   "start": 956.5,
+   "end": 957.8
+  },
+  {
+   "start": 957.8,
+   "end": 958.2
+  },
+  {
+   "start": 958.8,
+   "end": 959.5
+  },
+  {
+   "start": 960.9,
+   "end": 961.5
+  },
+  {
+   "start": 962.1,
+   "end": 962.7
+  },
+  {
+   "start": 964.4,
+   "end": 965.7
+  },
+  {
+   "start": 968.8,
+   "end": 970.7
+  },
+  {
+   "start": 972.6,
+   "end": 974.8
+  },
+  {
+   "start": 975.1,
+   "end": 978.0
+  },
+  {
+   "start": 978.5,
+   "end": 981.4
+  },
+  {
+   "start": 982.7,
+   "end": 983.8
+  },
+  {
+   "start": 985.6,
+   "end": 986.6
+  },
+  {
+   "start": 988.2,
+   "end": 989.7
+  },
+  {
+   "start": 989.8,
+   "end": 991.4
+  },
+  {
+   "start": 991.6,
+   "end": 994.0
+  },
+  {
+   "start": 995.0,
+   "end": 997.7
+  },
+  {
+   "start": 998.9,
+   "end": 1001.8
+  },
+  {
+   "start": 1002.3,
+   "end": 1006.7
+  },
+  {
+   "start": 1008.6,
+   "end": 1011.3
+  },
+  {
+   "start": 1011.4,
+   "end": 1013.2
+  },
+  {
+   "start": 1015.4,
+   "end": 1016.8
+  },
+  {
+   "start": 1018.0,
+   "end": 1019.5
+  },
+  {
+   "start": 1020.8,
+   "end": 1023.5
+  },
+  {
+   "start": 1023.9,
+   "end": 1028.0
+  },
+  {
+   "start": 1029.2,
+   "end": 1030.0
+  },
+  {
+   "start": 1030.4,
+   "end": 1036.5
+  },
+  {
+   "start": 1036.7,
+   "end": 1041.2
+  },
+  {
+   "start": 1045.0,
+   "end": 1046.6
+  },
+  {
+   "start": 1049.7,
+   "end": 1050.3
+  },
+  {
+   "start": 1056.3,
+   "end": 1061.5
+  },
+  {
+   "start": 1061.6,
+   "end": 1072.8
+  },
+  {
+   "start": 1072.9,
+   "end": 1077.4
+  },
+  {
+   "start": 1078.5,
+   "end": 1082.6
+  },
+  {
+   "start": 1083.4,
+   "end": 1084.3
+  },
+  {
+   "start": 1084.4,
+   "end": 1092.8
+  },
+  {
+   "start": 1095.2,
+   "end": 1097.3
+  },
+  {
+   "start": 1099.0,
+   "end": 1100.7
+  },
+  {
+   "start": 1102.2,
+   "end": 1103.8
+  },
+  {
+   "start": 1104.5,
+   "end": 1106.7
+  },
+  {
+   "start": 1107.0,
+   "end": 1110.6
+  },
+  {
+   "start": 1112.7,
+   "end": 1115.4
+  },
+  {
+   "start": 1117.9,
+   "end": 1118.8
+  },
+  {
+   "start": 1119.9,
+   "end": 1121.2
+  },
+  {
+   "start": 1122.0,
+   "end": 1123.7
+  },
+  {
+   "start": 1123.9,
+   "end": 1125.8
+  },
+  {
+   "start": 1125.8,
+   "end": 1129.4
+  },
+  {
+   "start": 1129.7,
+   "end": 1133.2
+  },
+  {
+   "start": 1137.3,
+   "end": 1141.0
+  },
+  {
+   "start": 1142.9,
+   "end": 1144.4
+  },
+  {
+   "start": 1145.0,
+   "end": 1146.2
+  },
+  {
+   "start": 1147.7,
+   "end": 1148.3
+  },
+  {
+   "start": 1148.7,
+   "end": 1149.8
+  },
+  {
+   "start": 1150.9,
+   "end": 1152.2
+  },
+  {
+   "start": 1152.4,
+   "end": 1156.3
+  },
+  {
+   "start": 1156.4,
+   "end": 1156.9
+  },
+  {
+   "start": 1158.1,
+   "end": 1162.5
+  },
+  {
+   "start": 1163.2,
+   "end": 1164.0
+  },
+  {
+   "start": 1164.9,
+   "end": 1167.7
+  },
+  {
+   "start": 1169.5,
+   "end": 1170.7
+  },
+  {
+   "start": 1170.7,
+   "end": 1172.5
+  },
+  {
+   "start": 1172.7,
+   "end": 1174.1
+  },
+  {
+   "start": 1175.2,
+   "end": 1177.9
+  },
+  {
+   "start": 1180.3,
+   "end": 1182.8
+  },
+  {
+   "start": 1227.1,
+   "end": 1227.9
+  },
+  {
+   "start": 1228.3,
+   "end": 1229.2
+  },
+  {
+   "start": 1229.3,
+   "end": 1233.3
+  },
+  {
+   "start": 1233.6,
+   "end": 1238.1
+  },
+  {
+   "start": 1241.0,
+   "end": 1243.2
+  },
+  {
+   "start": 1244.2,
+   "end": 1245.3
+  },
+  {
+   "start": 1245.5,
+   "end": 1249.6
+  },
+  {
+   "start": 1249.7,
+   "end": 1251.4
+  },
+  {
+   "start": 1251.5,
+   "end": 1258.0
+  },
+  {
+   "start": 1258.5,
+   "end": 1259.4
+  },
+  {
+   "start": 1260.0,
+   "end": 1262.9
+  },
+  {
+   "start": 1263.7,
+   "end": 1269.2
+  },
+  {
+   "start": 1269.6,
+   "end": 1271.4
+  },
+  {
+   "start": 1271.9,
+   "end": 1273.2
+  },
+  {
+   "start": 1273.8,
+   "end": 1275.8
+  },
+  {
+   "start": 1276.6,
+   "end": 1277.8
+  },
+  {
+   "start": 1278.2,
+   "end": 1281.5
+  },
+  {
+   "start": 1281.9,
+   "end": 1284.1
+  },
+  {
+   "start": 1284.7,
+   "end": 1285.4
+  },
+  {
+   "start": 1285.8,
+   "end": 1286.6
+  },
+  {
+   "start": 1300.0,
+   "end": 1301.1
+  },
+  {
+   "start": 1302.0,
+   "end": 1304.1
+  },
+  {
+   "start": 1306.4,
+   "end": 1307.9
+  },
+  {
+   "start": 1308.5,
+   "end": 1309.2
+  },
+  {
+   "start": 1310.9,
+   "end": 1312.5
+  },
+  {
+   "start": 1313.0,
+   "end": 1313.8
+  },
+  {
+   "start": 1316.6,
+   "end": 1318.0
+  },
+  {
+   "start": 1319.4,
+   "end": 1321.5
+  },
+  {
+   "start": 1323.6,
+   "end": 1324.4
+  },
+  {
+   "start": 1324.6,
+   "end": 1326.0
+  },
+  {
+   "start": 1327.6,
+   "end": 1328.8
+  },
+  {
+   "start": 1330.0,
+   "end": 1332.5
+  },
+  {
+   "start": 1332.7,
+   "end": 1334.8
+  },
+  {
+   "start": 1335.1,
+   "end": 1336.9
+  },
+  {
+   "start": 1337.9,
+   "end": 1339.6
+  },
+  {
+   "start": 1342.2,
+   "end": 1343.9
+  },
+  {
+   "start": 1345.0,
+   "end": 1348.6
+  },
+  {
+   "start": 1349.4,
+   "end": 1350.5
+  },
+  {
+   "start": 1374.2,
+   "end": 1374.9
+  },
+  {
+   "start": 1376.2,
+   "end": 1377.0
+  }
+ ],
+ "shots": [
+  0.6,
+  1.52,
+  5.04,
+  10.04,
+  20.04,
+  36.72,
+  38.76,
+  65.96,
+  74.6,
+  76.76,
+  83.08,
+  87.12,
+  90.6,
+  100.2,
+  103.4,
+  113.6,
+  120.12,
+  126.88,
+  131.04,
+  135.36,
+  143.0,
+  146.24,
+  153.0,
+  158.64,
+  159.4,
+  162.2,
+  164.96,
+  178.84,
+  190.76,
+  198.0,
+  202.0,
+  206.44,
+  210.08,
+  213.64,
+  216.52,
+  219.8,
+  237.04,
+  242.16,
+  249.48,
+  252.52,
+  256.2,
+  262.24,
+  264.2,
+  266.88,
+  269.56,
+  271.4,
+  273.24,
+  276.24,
+  277.08,
+  278.32,
+  281.92,
+  304.08,
+  312.64,
+  326.92,
+  334.92,
+  337.24,
+  339.12,
+  342.64,
+  350.84,
+  352.96,
+  355.16,
+  359.24,
+  361.08,
+  362.16,
+  363.88,
+  366.64,
+  368.4,
+  371.0,
+  375.08,
+  378.92,
+  380.96,
+  383.08,
+  384.4,
+  385.84,
+  391.08,
+  393.04,
+  394.92,
+  402.16,
+  410.24,
+  426.56,
+  445.28,
+  451.56,
+  455.0,
+  458.44,
+  459.56,
+  462.92,
+  466.12,
+  470.52,
+  473.88,
+  476.88,
+  481.28,
+  483.52,
+  487.16,
+  490.04,
+  493.24,
+  499.84,
+  506.32,
+  513.4,
+  516.28,
+  533.04,
+  538.44,
+  549.76,
+  563.08,
+  569.24,
+  583.52,
+  589.2,
+  593.76,
+  599.88,
+  613.84,
+  623.04,
+  631.2,
+  639.2,
+  646.32,
+  665.08,
+  670.68,
+  674.8,
+  678.4,
+  683.12,
+  687.6,
+  695.6,
+  707.16,
+  735.28,
+  766.96,
+  819.8,
+  841.4,
+  851.64,
+  881.04,
+  881.72,
+  882.16,
+  904.44,
+  904.88,
+  905.32,
+  914.32,
+  919.12,
+  925.24,
+  932.76,
+  941.12,
+  957.08,
+  961.92,
+  1022.44,
+  1022.88,
+  1047.0,
+  1047.68,
+  1048.12,
+  1055.16,
+  1056.68,
+  1061.6,
+  1072.88,
+  1077.68,
+  1080.84,
+  1085.96,
+  1094.08,
+  1106.04,
+  1112.12,
+  1116.28,
+  1117.24,
+  1126.0,
+  1126.68,
+  1133.16,
+  1134.8,
+  1138.4,
+  1146.12,
+  1152.96,
+  1155.76,
+  1169.04,
+  1170.64,
+  1171.32,
+  1171.76,
+  1174.56,
+  1175.24,
+  1176.12,
+  1200.44,
+  1205.92,
+  1223.8,
+  1228.0,
+  1249.32,
+  1251.28,
+  1255.48,
+  1256.52,
+  1270.88,
+  1286.56,
+  1297.12,
+  1321.8,
+  1328.96,
+  1345.84,
+  1417.52,
+  1478.92
+ ],
+ "blacks": [
+  {
+   "start": 10.04,
+   "end": 15.44
+  },
+  {
+   "start": 17.28,
+   "end": 17.76
+  },
+  {
+   "start": 631.2,
+   "end": 631.68
+  },
+  {
+   "start": 851.64,
+   "end": 852.64
+  },
+  {
+   "start": 1488.04,
+   "end": 1495.44
+  },
+  {
+   "start": 1497.2,
+   "end": 1501.12
+  },
+  {
+   "start": 1502.84,
+   "end": 1504.88
+  },
+  {
+   "start": 1510.32,
+   "end": 1512.48
+  },
+  {
+   "start": 1514.12,
+   "end": 1516.24
+  },
+  {
+   "start": 1529.2,
+   "end": 1529.48
+  },
+  {
+   "start": 1531.04,
+   "end": 1531.32
+  },
+  {
+   "start": 1533.0,
+   "end": 1538.92
+  },
+  {
+   "start": 1540.48,
+   "end": 1542.8
+  },
+  {
+   "start": 1544.4,
+   "end": 1546.52
+  },
+  {
+   "start": 1548.2,
+   "end": 1550.28
+  },
+  {
+   "start": 1551.96,
+   "end": 1553.88
+  }
+ ],
+ "timings_sec": {
+  "selection": 0.0,
+  "total_this_run": 0.0
+ },
+ "variant": "gemini-e1874d3194"
+}

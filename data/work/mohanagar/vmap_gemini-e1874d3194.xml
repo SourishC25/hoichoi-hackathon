@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
+  <vmap:AdBreak timeOffset="00:03:18.040" breakType="linear" breakId="midroll-1">
+    <vmap:AdSource id="midroll-1-src" allowMultipleAds="false" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST version="3.0">
+          <Ad id="brand_e-e_30s_bn" sequence="1">
+            <InLine>
+              <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
+              <AdTitle>Brand E — e_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=e_30s_bn&ev=impression]]></Impression>
+              <Creatives>
+                <Creative id="e_30s_bn" sequence="1">
+                  <Linear>
+                    <Duration>00:00:30.000</Duration>
+                    <TrackingEvents>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=e_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=e_30s_bn&ev=complete]]></Tracking>
+                    </TrackingEvents>
+                    <MediaFiles>
+                      <MediaFile id="e_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_e/e_30s_bn.mp4]]></MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+              <Extensions>
+                <Extension type="contextual-targeting"><Brand>brand_e</Brand><BreakScore>0.991</BreakScore><Relevance>0.700</Relevance><DominantActivity>montage</DominantActivity><Reason>The cut is placed perfectly at the end of the opening credits and title card, before the first narrative scene begins, with no overlapping music or dialogue. Brand: The montage heavily features Dhaka's traffic, roads, and vehicles, making automotive and mobility themes highly relevant.</Reason></Extension>
+              </Extensions>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+    <vmap:TrackingEvents>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=e_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=e_30s_bn&ev=breakEnd]]></vmap:Tracking>
+    </vmap:TrackingEvents>
+  </vmap:AdBreak>
+  <vmap:AdBreak timeOffset="00:10:38.000" breakType="linear" breakId="midroll-2">
+    <vmap:AdSource id="midroll-2-src" allowMultipleAds="false" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST version="3.0">
+          <Ad id="brand_d-d_30s_bn" sequence="1">
+            <InLine>
+              <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
+              <AdTitle>Brand D — d_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-2&creative=d_30s_bn&ev=impression]]></Impression>
+              <Creatives>
+                <Creative id="d_30s_bn" sequence="1">
+                  <Linear>
+                    <Duration>00:00:30.000</Duration>
+                    <TrackingEvents>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-2&creative=d_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-2&creative=d_30s_bn&ev=complete]]></Tracking>
+                    </TrackingEvents>
+                    <MediaFiles>
+                      <MediaFile id="d_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_d/d_30s_bn.mp4]]></MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+              <Extensions>
+                <Extension type="contextual-targeting"><Brand>brand_d</Brand><BreakScore>0.885</BreakScore><Relevance>0.900</Relevance><DominantActivity>phone call</DominantActivity><Reason>The phone conversation concludes naturally, and the cut transitions cleanly to a new scene in a police station corridor with a fresh music cue. Brand: The lead-in scene features a prominent phone call between two characters, making it highly relevant for a telecom brand.</Reason></Extension>
+              </Extensions>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+    <vmap:TrackingEvents>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-2&creative=d_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-2&creative=d_30s_bn&ev=breakEnd]]></vmap:Tracking>
+    </vmap:TrackingEvents>
+  </vmap:AdBreak>
+</vmap:VMAP>

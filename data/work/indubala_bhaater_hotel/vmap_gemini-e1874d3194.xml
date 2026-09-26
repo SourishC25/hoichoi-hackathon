@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
+  <vmap:AdBreak timeOffset="00:07:06.560" breakType="linear" breakId="midroll-1">
+    <vmap:AdSource id="midroll-1-src" allowMultipleAds="false" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST version="3.0">
+          <Ad id="brand_a-a_30s_bn" sequence="1">
+            <InLine>
+              <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
+              <AdTitle>Brand A — a_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=indubala_bhaater_hotel&break=midroll-1&creative=a_30s_bn&ev=impression]]></Impression>
+              <Creatives>
+                <Creative id="a_30s_bn" sequence="1">
+                  <Linear>
+                    <Duration>00:00:30.000</Duration>
+                    <TrackingEvents>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=indubala_bhaater_hotel&break=midroll-1&creative=a_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=indubala_bhaater_hotel&break=midroll-1&creative=a_30s_bn&ev=complete]]></Tracking>
+                    </TrackingEvents>
+                    <MediaFiles>
+                      <MediaFile id="a_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_a/a_30s_bn.mp4]]></MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+              <Extensions>
+                <Extension type="contextual-targeting"><Brand>brand_a</Brand><BreakScore>0.974</BreakScore><Relevance>1.000</Relevance><DominantActivity>food preparation</DominantActivity><Reason>The cut occurs during a clean transition between a reflective scene of preparing food and a later scene of serving it to customers, with no overlapping dialogue or music. Brand: The scene features characters preparing, mixing, and tasting homemade food in a kitchen setting, which perfectly aligns with the brand's focus on cooking and food preparation.</Reason></Extension>
+              </Extensions>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+    <vmap:TrackingEvents>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=indubala_bhaater_hotel&break=midroll-1&creative=a_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=indubala_bhaater_hotel&break=midroll-1&creative=a_30s_bn&ev=breakEnd]]></vmap:Tracking>
+    </vmap:TrackingEvents>
+  </vmap:AdBreak>
+</vmap:VMAP>

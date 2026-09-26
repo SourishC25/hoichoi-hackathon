@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
+  <vmap:AdBreak timeOffset="00:14:14.400" breakType="linear" breakId="midroll-1">
+    <vmap:AdSource id="midroll-1-src" allowMultipleAds="false" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST version="3.0">
+          <Ad id="brand_d-d_30s_bn" sequence="1">
+            <InLine>
+              <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
+              <AdTitle>Brand D — d_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=d_30s_bn&ev=impression]]></Impression>
+              <Creatives>
+                <Creative id="d_30s_bn" sequence="1">
+                  <Linear>
+                    <Duration>00:00:30.000</Duration>
+                    <TrackingEvents>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=d_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=d_30s_bn&ev=complete]]></Tracking>
+                    </TrackingEvents>
+                    <MediaFiles>
+                      <MediaFile id="d_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_d/d_30s_bn.mp4]]></MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+              <Extensions>
+                <Extension type="contextual-targeting"><Brand>brand_d</Brand><BreakScore>0.840</BreakScore><Relevance>0.500</Relevance><DominantActivity>conversation</DominantActivity><Reason>The conversation in the room concludes naturally with a transition line, followed by scenic establishing shots of Kashmir, making it an excellent and non-disruptive place for an ad break. Brand: The scene features a conversation and travel/sightseeing in Srinagar, which moderately aligns with communication and travel contexts.</Reason></Extension>
+              </Extensions>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+    <vmap:TrackingEvents>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=d_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=d_30s_bn&ev=breakEnd]]></vmap:Tracking>
+    </vmap:TrackingEvents>
+  </vmap:AdBreak>
+</vmap:VMAP>

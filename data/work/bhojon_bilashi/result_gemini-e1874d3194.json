@@ -1,0 +1,4134 @@
+{
+ "video_id": "bhojon_bilashi",
+ "generated_at": "2026-09-26T14:31:16+0530",
+ "engine": "gemini",
+ "models": {
+  "global": "gemini-3.5-flash",
+  "local": "gemini-3.5-flash"
+ },
+ "catalogue_hash": "7331d21427",
+ "brands": [
+  "brand_a",
+  "brand_b",
+  "brand_c",
+  "brand_d",
+  "brand_e",
+  "brand_f",
+  "brand_g",
+  "brand_h"
+ ],
+ "video": {
+  "duration": 1227.413,
+  "width": 854,
+  "height": 480,
+  "fps": 25.0
+ },
+ "rules": {
+  "max_breaks_per_hour": 6,
+  "min_gap_sec": 300,
+  "max_ad_load_pct": 12.0,
+  "no_break_first_sec": 120,
+  "no_break_last_sec": 90,
+  "min_break_score": 0.55,
+  "brand_relevance_weight": 0.15
+ },
+ "summary": {
+  "scenes": 17,
+  "camera_cuts": 433,
+  "candidates": 18,
+  "breaks": 2,
+  "ad_seconds": 60,
+  "ad_load_pct": 4.66,
+  "breaks_per_hour": 5.87,
+  "allowed_breaks": 2
+ },
+ "audit": [
+  {
+   "check": "No speech at any cut point (VAD)",
+   "pass": true,
+   "detail": "max speech overlap in ±guard window: 0.00s"
+  },
+  {
+   "check": "Every cut on a camera cut or black frame",
+   "pass": true,
+   "detail": "2/2 breaks frame-aligned"
+  },
+  {
+   "check": "Min gap between breaks",
+   "pass": true,
+   "detail": "smallest gap 369s (rule ≥ 300s)"
+  },
+  {
+   "check": "Max breaks per hour",
+   "pass": true,
+   "detail": "2 placed, 2 allowed for 20.5 min"
+  },
+  {
+   "check": "Ad load within budget",
+   "pass": true,
+   "detail": "4.66% (max 12.0%)"
+  },
+  {
+   "check": "Protected opening/closing windows",
+   "pass": true,
+   "detail": "first 120s / last 90s untouched"
+  },
+  {
+   "check": "No negative-context brand placed (3 layers re-checked)",
+   "pass": true,
+   "detail": "violations: none"
+  },
+  {
+   "check": "Every placed brand passed the independent verifier",
+   "pass": true,
+   "detail": "2 verifier passes"
+  }
+ ],
+ "synopsis": "In this episode of Sunrise Pure Bhojon Bilashi Season 2, host Somak Ghosh travels to the historic town of Serampore, a former Danish colony on the banks of the Hooghly River. He meets actress Parno Mittra, who shares stories of her early acting career, personal life, and love for cooking. Together, they play a guessing game and enjoy delicious local dishes prepared by Chef Prasanta Dawn, before receiving a mysterious clue about their next destination.",
+ "breaks": [
+  {
+   "candidate_id": "c004",
+   "t": 211.88,
+   "quality": 1.029,
+   "where_score": 0.909,
+   "brand_id": "brand_e",
+   "brand_name": "Brand E",
+   "relevance": 0.8,
+   "matched_contexts": [
+    "car",
+    "driving",
+    "road",
+    "journey",
+    "vehicle"
+   ],
+   "dominant_activity": "title sequence featuring a driving montage",
+   "creative": {
+    "id": "e_30s_bn",
+    "duration_sec": 30,
+    "language": "bn",
+    "url": "ads/brand_e/e_30s_bn.mp4"
+   },
+   "reason": "The cut is placed perfectly between the end of the show's title sequence and the beginning of the episode's first scene. Brand: The prominent use of the food truck driving through the town in both the title sequence and the post-break scene makes automotive/mobility highly relevant.",
+   "last_line_before_cut": "",
+   "first_line_after_cut": "ভারতবর্ষে শুধু ব্রিটিশরাই উপনিবেশ তৈরি",
+   "blocked_brands": [
+    {
+     "brand_id": "brand_b",
+     "why": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 1,
+       "evidence": "eating: Parno Mittra eats a snack on a boat"
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "Parno Mittra is shown eating a snack on a boat in the wider context before the break."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "candidate_id": "c010",
+   "t": 581.16,
+   "quality": 0.76,
+   "where_score": 0.715,
+   "brand_id": "brand_d",
+   "brand_name": "Brand D",
+   "relevance": 0.3,
+   "matched_contexts": [
+    "communication"
+   ],
+   "dominant_activity": "cooking in kitchen",
+   "creative": {
+    "id": "d_30s_bn",
+    "duration_sec": 30,
+    "language": "bn",
+    "url": "ads/brand_d/d_30s_bn.mp4"
+   },
+   "reason": "The cut is placed cleanly between the end of a cooking demonstration montage and the start of a new conversation segment, with no overlapping dialogue or music. Brand: While the characters are engaged in a conversation, there is no focus on mobile devices, internet connectivity, or telecom services.",
+   "last_line_before_cut": "",
+   "first_line_after_cut": "আচ্ছা, এই যে আমরা একটা...",
+   "blocked_brands": [
+    {
+     "brand_id": "brand_a",
+     "why": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Parno discusses experiencing school trauma"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "why": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Parno discusses experiencing school trauma"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "why": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Parno discusses experiencing school trauma"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 15.0,
+   "location": "Studio",
+   "characters": [],
+   "summary": "Opening title cards and disclaimer for the show 'hoichoi series'.",
+   "dominant_activity": "title cards",
+   "contexts": [
+    "logo",
+    "disclaimer",
+    "text",
+    "black screen"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "index": 0,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 15.0,
+   "end": 100.72,
+   "location": "Street / Boat / Garden",
+   "characters": [
+    "Somak Ghosh",
+    "Parno Mittra"
+   ],
+   "summary": "Somak Ghosh reads a clue on a piece of paper to guess his next destination, while Parno Mittra introduces herself and the charm of the city.",
+   "dominant_activity": "monologue / introduction",
+   "contexts": [
+    "street",
+    "colorful wall",
+    "paper clue",
+    "boat",
+    "bridge",
+    "garden",
+    "pink saree",
+    "eating snack"
+   ],
+   "mood": "cheerful",
+   "emotional_intensity": 0.4,
+   "sensitive": [
+    {
+     "topic": "eating",
+     "evidence": "Parno Mittra eats a snack on a boat",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 15.0,
+   "index": 1,
+   "blocks_brands": [
+    "brand_b"
+   ],
+   "blocked_contexts": [
+    "eating"
+   ]
+  },
+  {
+   "start": 100.72,
+   "end": 173.72,
+   "location": "Street",
+   "characters": [
+    "Somak Ghosh"
+   ],
+   "summary": "Somak stands next to the red food truck and deciphers the clues, realizing that his destination is Serampore.",
+   "dominant_activity": "monologue / puzzle solving",
+   "contexts": [
+    "red food truck",
+    "street",
+    "paper clue",
+    "thinking",
+    "serampore"
+   ],
+   "mood": "excited",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": -0.28,
+   "llm_start": 101.0,
+   "index": 2,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 173.72,
+   "end": 211.88,
+   "location": "Serampore",
+   "characters": [],
+   "summary": "Title sequence of the show featuring aerial shots of Serampore's landmarks and the food truck driving through the town.",
+   "dominant_activity": "title sequence / montage",
+   "contexts": [
+    "aerial view",
+    "river",
+    "church",
+    "temple",
+    "food truck",
+    "credits",
+    "music"
+   ],
+   "mood": "energetic",
+   "emotional_intensity": 0.6,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.72,
+   "llm_start": 173.0,
+   "index": 3,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 211.88,
+   "end": 265.16,
+   "location": "St. Olav's Church",
+   "characters": [
+    "Somak Ghosh"
+   ],
+   "summary": "Somak arrives at St. Olav's Church and explains the history of Serampore as a former Danish colony and printing hub.",
+   "dominant_activity": "travelogue / historical explanation",
+   "contexts": [
+    "church",
+    "food truck",
+    "serampore",
+    "danish colony",
+    "history"
+   ],
+   "mood": "informative",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.88,
+   "llm_start": 211.0,
+   "index": 4,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 265.16,
+   "end": 317.96,
+   "location": "Serampore Streets",
+   "characters": [
+    "Somak Ghosh"
+   ],
+   "summary": "Somak walks around the streets asking locals for clues and meets an enthusiastic fan who takes a selfie with him.",
+   "dominant_activity": "street interviews / fan interaction",
+   "contexts": [
+    "street",
+    "microphone",
+    "fan",
+    "selfie",
+    "smartphone",
+    "local people"
+   ],
+   "mood": "humorous",
+   "emotional_intensity": 0.6,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.16,
+   "llm_start": 265.0,
+   "index": 5,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 317.96,
+   "end": 374.08,
+   "location": "Historic Building",
+   "characters": [
+    "Somak Ghosh",
+    "Parno Mittra"
+   ],
+   "summary": "Somak reaches a historic building where Parno Mittra teases him from the balcony before they warmly greet each other.",
+   "dominant_activity": "reunion / conversation",
+   "contexts": [
+    "historic building",
+    "balcony",
+    "pink saree",
+    "greeting",
+    "detective talk"
+   ],
+   "mood": "playful",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.96,
+   "llm_start": 317.0,
+   "index": 6,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 374.08,
+   "end": 435.16,
+   "location": "Serampore College",
+   "characters": [
+    "Somak Ghosh",
+    "Parno Mittra"
+   ],
+   "summary": "Somak and Parno sit outside Serampore College and discuss its history as one of the oldest colleges in India.",
+   "dominant_activity": "conversation / travelogue",
+   "contexts": [
+    "serampore college",
+    "table",
+    "chairs",
+    "food truck",
+    "history",
+    "river bank"
+   ],
+   "mood": "relaxed",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "conversation_continues",
+   "snap_delta": 0.08,
+   "llm_start": 374.0,
+   "index": 7,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 435.16,
+   "end": 546.8,
+   "location": "Serampore College",
+   "characters": [
+    "Somak Ghosh",
+    "Parno Mittra",
+    "Chef Prasanta Dawn"
+   ],
+   "summary": "Chef Prasanta is introduced, and Parno challenges Somak to guess the first dish using clues, which is revealed to be Chanar Paturi.",
+   "dominant_activity": "guessing game / food discussion",
+   "contexts": [
+    "chef",
+    "spices",
+    "guessing game",
+    "chanar paturi",
+    "banana leaf",
+    "cottage cheese"
+   ],
+   "mood": "playful",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.16,
+   "llm_start": 435.0,
+   "index": 8,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 546.8,
+   "end": 581.16,
+   "location": "Food Truck Kitchen",
+   "characters": [
+    "Chef Prasanta Dawn"
+   ],
+   "summary": "Chef Prasanta prepares Chanar Paturi inside the food truck, wrapping the spiced cottage cheese in banana leaves.",
+   "dominant_activity": "cooking in kitchen",
+   "contexts": [
+    "food truck kitchen",
+    "chef",
+    "cottage cheese",
+    "banana leaf",
+    "mustard oil",
+    "frying pan",
+    "spices"
+   ],
+   "mood": "focused",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.8,
+   "llm_start": 546.0,
+   "index": 9,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 581.16,
+   "end": 647.72,
+   "location": "Serampore College",
+   "characters": [
+    "Somak Ghosh",
+    "Parno Mittra"
+   ],
+   "summary": "Parno talks about starting her acting career at a very young age and moving to Mumbai due to school-related trauma.",
+   "dominant_activity": "personal interview / conversation",
+   "contexts": [
+    "table",
+    "conversation",
+    "acting career",
+    "school trauma",
+    "mumbai",
+    "personal story"
+   ],
+   "mood": "reflective",
+   "emotional_intensity": 0.5,
+   "sensitive": [
+    {
+     "topic": "illness",
+     "evidence": "Parno discusses experiencing school trauma",
+     "confidence": 0.7
+    }
+   ],
+   "ends_with": "conversation_continues",
+   "snap_delta": 0.16,
+   "llm_start": 581.0,
+   "index": 10,
+   "blocks_brands": [
+    "brand_a",
+    "brand_c",
+    "brand_g"
+   ],
+   "blocked_contexts": [
+    "illness"
+   ]
+  },
+  {
+   "start": 647.72,
+   "end": 768.52,
+   "location": "Serampore College",
+   "characters": [
+    "Somak Ghosh",
+    "Parno Mittra"
+   ],
+   "summary": "Parno shares details about her early acting training, and they play a guessing game for the second dish, which Somak correctly identifies as Railway Mutton Curry.",
+   "dominant_activity": "guessing game / conversation",
+   "contexts": [
+    "table",
+    "acting training",
+    "parents support",
+    "guessing game",
+    "railway mutton curry",
+    "spices"
+   ],
+   "mood": "cheerful",
+   "emotional_intensity": 0.6,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": -1.28,
+   "llm_start": 649.0,
+   "index": 11,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 768.52,
+   "end": 811.24,
+   "location": "Food Truck Kitchen",
+   "characters": [
+    "Chef Prasanta Dawn"
+   ],
+   "summary": "Chef Prasanta prepares the Railway Mutton Curry inside the food truck kitchen.",
+   "dominant_activity": "cooking in kitchen",
+   "contexts": [
+    "food truck kitchen",
+    "chef",
+    "mutton",
+    "onions",
+    "spices",
+    "cooking pan",
+    "curry"
+   ],
+   "mood": "focused",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": -0.48,
+   "llm_start": 769.0,
+   "index": 12,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "start": 811.24,
+   "end": 890.28,
+   "location": "Serampore College",
+   "characters": [
+    "Somak Ghosh",
+    "Parno Mittra"
+   ],
+   "summary": "Parno talks about her passion for cooking and mentions cooking for her bedridden mother who can no longer cook.",
+   "dominant_activity": "conversation / personal story",
+   "contexts": [
+    "table",
+    "cooking talk",
+    "ganesh puja",
+    "mother's illness",
+    "bedridden mother"
+   ],
+   "mood": "warm",
+   "emotional_intensity": 0.5,
+   "sensitive": [
+    {
+     "topic": "illness",
+     "evidence": "Parno mentions her mother is bedridden and unwell",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.24,
+   "llm_start": 811.0,
+   "index": 13,
+   "blocks_brands": [
+    "brand_a",
+    "brand_c",
+    "brand_g"
+   ],
+   "blocked_contexts": [
+    "illness"
+   ]
+  },
+  {
+   "start": 890.28,
+   "end": 1033.0,
+   "location": "Serampore College",
+   "characters": [
+    "Somak Ghosh",
+    "Parno Mittra",
+    "Chef Prasanta Dawn"
+   ],
+   "summary": "Chef Prasanta serves the dishes, and Somak and Parno enjoy eating the Chanar Paturi and Railway Mutton Curry.",
+   "dominant_activity": "eating / food tasting",
+   "contexts": [
+    "table",
+    "food plates",
+    "rice",
+    "chanar paturi",
+    "railway mutton curry",
+    "eating",
+    "tasting",
+    "praising food"
+   ],
+   "mood": "satisfied",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "eating",
+     "evidence": "Somak and Parno eat the prepared meal",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "conversation_continues",
+   "snap_delta": 0.28,
+   "llm_start": 890.0,
+   "index": 14,
+   "blocks_brands": [
+    "brand_b"
+   ],
+   "blocked_contexts": [
+    "eating"
+   ]
+  },
+  {
+   "start": 1033.0,
+   "end": 1192.32,
+   "location": "Serampore College",
+   "characters": [
+    "Somak Ghosh",
+    "Parno Mittra"
+   ],
+   "summary": "Parno receives a mysterious voice note on her phone that gives a clue about their next destination, leaving Somak intrigued.",
+   "dominant_activity": "phone call / cliffhanger",
+   "contexts": [
+    "table",
+    "smartphone",
+    "voice note",
+    "mysterious message",
+    "surprise",
+    "next destination"
+   ],
+   "mood": "mysterious",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "eating",
+     "evidence": "They finish their meal at the table",
+     "confidence": 0.8
+    }
+   ],
+   "ends_with": "cliffhanger",
+   "snap_delta": 0.0,
+   "llm_start": 1033.0,
+   "index": 15,
+   "blocks_brands": [
+    "brand_b"
+   ],
+   "blocked_contexts": [
+    "eating"
+   ]
+  },
+  {
+   "start": 1192.32,
+   "end": 1227.413,
+   "location": "Studio",
+   "characters": [],
+   "summary": "Closing credits of the episode with production details and sponsor logos.",
+   "dominant_activity": "closing credits",
+   "contexts": [
+    "scrolling text",
+    "black background",
+    "sponsor logos",
+    "music"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.32,
+   "llm_start": 1192.0,
+   "index": 16,
+   "blocks_brands": [],
+   "blocked_contexts": []
+  }
+ ],
+ "candidates": [
+  {
+   "id": "c000",
+   "t0": 0.84,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 0.84,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.84,
+    "silence_after": 14.46,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c001",
+   "t0": 15.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 11.0,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": -4.0,
+    "silence_before": 11.0,
+    "silence_after": 4.3,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.29,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c002",
+   "t0": 100.72,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 100.72,
+   "scene_before": 1,
+   "scene_after": 2,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.84,
+    "speech_density_10s_after": 0.96,
+    "loudness_dip_db": 35.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c003",
+   "t0": 173.72,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "not chosen: pacing rules (min gap / max breaks) favoured a better nearby break"
+   ],
+   "t": 176.16,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 2.44,
+    "silence_before": 1.56,
+    "silence_after": 45.54,
+    "speech_density_10s_before": 0.47,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 12.7,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "এটা তো শ্রীরামপুর",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.3,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.75,
+    "reason": "The cut occurs during an establishing aerial montage of Serampore, right after the protagonist's realization, making it a relatively natural transition point despite the continuing music and sequence."
+   },
+   "where_score": 0.609,
+   "match": {
+    "dominant_activity": "title sequence / montage",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The title sequence features aerial shots of landmarks and a food truck, which does not directly relate to cooking or food preparation."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "Parno Mittra eats a snack on a boat in the wider context."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The title sequence showing aerial views of a town has no relevance to skincare, and there is a violation due to eating in the wider context."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenic aerial montage of Serampore does not align with cosmetics or beauty products."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "The travel theme of the show's introduction has some minor relevance to telecom services for staying connected while traveling."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.7,
+      "matched_contexts": [
+       "driving",
+       "vehicle",
+       "road",
+       "journey"
+      ],
+      "rationale": "The title sequence prominently features a food truck driving through the streets of Serampore, making it a good fit for automotive brands."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There are no financial transactions or shopping activities depicted in the aerial title sequence."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.85,
+      "matched_contexts": [
+       "travel",
+       "tourism",
+       "sightseeing",
+       "road trip"
+      ],
+      "rationale": "The title sequence serves as a tourism showcase of Serampore's landmarks, making it highly relevant for a travel brand."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenic montage of town landmarks does not relate to online shopping or e-commerce."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.85,
+     "matched_contexts": [
+      "travel",
+      "tourism",
+      "sightseeing",
+      "road trip"
+     ],
+     "rationale": "The title sequence serves as a tourism showcase of Serampore's landmarks, making it highly relevant for a travel brand.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.7,
+     "matched_contexts": [
+      "driving",
+      "vehicle",
+      "road",
+      "journey"
+     ],
+     "rationale": "The title sequence prominently features a food truck driving through the streets of Serampore, making it a good fit for automotive brands.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.4,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "The travel theme of the show's introduction has some minor relevance to telecom services for staying connected while traveling.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The title sequence features aerial shots of landmarks and a food truck, which does not directly relate to cooking or food preparation.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenic aerial montage of Serampore does not align with cosmetics or beauty products.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There are no financial transactions or shopping activities depicted in the aerial title sequence.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenic montage of town landmarks does not relate to online shopping or e-commerce.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The title sequence showing aerial views of a town has no relevance to skincare, and there is a violation due to eating in the wider context.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 1,
+       "evidence": "eating: Parno Mittra eats a snack on a boat"
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "Parno Mittra eats a snack on a boat in the wider context."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "title sequence / montage",
+   "quality": 0.736,
+   "selected": false
+  },
+  {
+   "id": "c004",
+   "t0": 211.88,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 211.88,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 37.28,
+    "silence_after": 9.82,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.02,
+    "loudness_dip_db": 18.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "ভারতবর্ষে শুধু ব্রিটিশরাই উপনিবেশ তৈরি",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1,
+    "jarring": 0,
+    "suspense_hook": 0,
+    "natural_break_score": 0.95,
+    "reason": "The cut is placed perfectly between the end of the show's title sequence and the beginning of the episode's first scene."
+   },
+   "where_score": 0.909,
+   "match": {
+    "dominant_activity": "title sequence featuring a driving montage",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.6,
+      "matched_contexts": [
+       "eating"
+      ],
+      "rationale": "The show is a food and travel series, making a food and spice brand highly relevant to the overall theme."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "Parno Mittra is shown eating a snack on a boat in the wider context before the break."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There is a violation due to eating in the wider context, and the brand has no relevance to the travel or food theme of the show."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "Cosmetics have no relevance to the travel, history, or food themes presented in the scenes around the break."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "The travel theme of the show matches the brand's target context of travel and connectivity on the go."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.8,
+      "matched_contexts": [
+       "car",
+       "driving",
+       "road",
+       "journey",
+       "vehicle"
+      ],
+      "rationale": "The prominent use of the food truck driving through the town in both the title sequence and the post-break scene makes automotive/mobility highly relevant."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "Digital payments have no relevance to the travel, history, or food themes of the scenes."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.8,
+      "matched_contexts": [
+       "travel",
+       "tourism",
+       "sightseeing",
+       "road trip"
+      ],
+      "rationale": "The show's core theme is travel, tourism, and sightseeing in Serampore, making a travel brand highly relevant."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "E-commerce has no relevance to the travel, history, or food themes of the scenes."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.8,
+     "matched_contexts": [
+      "car",
+      "driving",
+      "road",
+      "journey",
+      "vehicle"
+     ],
+     "rationale": "The prominent use of the food truck driving through the town in both the title sequence and the post-break scene makes automotive/mobility highly relevant.",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": false,
+      "violated_contexts": [],
+      "evidence": "",
+      "confidence": 0.95
+     }
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.8,
+     "matched_contexts": [
+      "travel",
+      "tourism",
+      "sightseeing",
+      "road trip"
+     ],
+     "rationale": "The show's core theme is travel, tourism, and sightseeing in Serampore, making a travel brand highly relevant.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.6,
+     "matched_contexts": [
+      "eating"
+     ],
+     "rationale": "The show is a food and travel series, making a food and spice brand highly relevant to the overall theme.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "The travel theme of the show matches the brand's target context of travel and connectivity on the go.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "Cosmetics have no relevance to the travel, history, or food themes presented in the scenes around the break.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "Digital payments have no relevance to the travel, history, or food themes of the scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "E-commerce has no relevance to the travel, history, or food themes of the scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There is a violation due to eating in the wider context, and the brand has no relevance to the travel or food theme of the show.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 1,
+       "evidence": "eating: Parno Mittra eats a snack on a boat"
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "Parno Mittra is shown eating a snack on a boat in the wider context before the break."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "title sequence featuring a driving montage",
+   "quality": 1.029,
+   "selected": true
+  },
+  {
+   "id": "c005",
+   "t0": 265.16,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "not chosen: pacing rules (min gap / max breaks) favoured a better nearby break"
+   ],
+   "t": 265.16,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.36,
+    "silence_after": 1.24,
+    "speech_density_10s_before": 0.35,
+    "speech_density_10s_after": 0.63,
+    "loudness_dip_db": 11.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "বেরিয়ে পড়ি",
+    "first_line_after_cut": "দাদা দাদা দাদা",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The presenter finishes his introduction and walks out of the frame, making it a clean and natural transition to an ad break before he begins interacting with the locals."
+   },
+   "where_score": 0.774,
+   "match": {
+    "dominant_activity": "travelogue / historical explanation",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [],
+      "rationale": "The scene is a travelogue about Serampore's history, which does not directly feature cooking, eating, or food preparation."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The travelogue and historical explanation do not relate to personal care or skincare routines."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene focuses on historical explanation and travel, with no connection to beauty, cosmetics, or getting ready."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "The travelogue context matches the travel target context of the brand."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.6,
+      "matched_contexts": [
+       "vehicle",
+       "journey"
+      ],
+      "rationale": "The host arrives in a red van/food truck, which aligns with the vehicle and journey themes."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no financial transactions, shopping, or payment activities in the historical travelogue."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.8,
+      "matched_contexts": [
+       "travel",
+       "tourism",
+       "sightseeing"
+      ],
+      "rationale": "The host is sightseeing and presenting a travelogue about Serampore, which strongly matches the travel and tourism theme."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene does not involve any shopping, delivery, or e-commerce activities."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.8,
+     "matched_contexts": [
+      "travel",
+      "tourism",
+      "sightseeing"
+     ],
+     "rationale": "The host is sightseeing and presenting a travelogue about Serampore, which strongly matches the travel and tourism theme.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.6,
+     "matched_contexts": [
+      "vehicle",
+      "journey"
+     ],
+     "rationale": "The host arrives in a red van/food truck, which aligns with the vehicle and journey themes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "The travelogue context matches the travel target context of the brand.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.2,
+     "matched_contexts": [],
+     "rationale": "The scene is a travelogue about Serampore's history, which does not directly feature cooking, eating, or food preparation.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The travelogue and historical explanation do not relate to personal care or skincare routines.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene focuses on historical explanation and travel, with no connection to beauty, cosmetics, or getting ready.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no financial transactions, shopping, or payment activities in the historical travelogue.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The scene does not involve any shopping, delivery, or e-commerce activities.",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "travelogue / historical explanation",
+   "quality": 0.894,
+   "selected": false
+  },
+  {
+   "id": "c006",
+   "t0": 317.96,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 317.96,
+   "scene_before": 5,
+   "scene_after": 6,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 6.66,
+    "silence_after": 0.04,
+    "speech_density_10s_before": 0.33,
+    "speech_density_10s_after": 0.75,
+    "loudness_dip_db": 11.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c007",
+   "t0": 374.08,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "not chosen: pacing rules (min gap / max breaks) favoured a better nearby break"
+   ],
+   "t": 374.08,
+   "scene_before": 6,
+   "scene_after": 7,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 1.68,
+    "silence_after": 5.12,
+    "speech_density_10s_before": 0.64,
+    "speech_density_10s_after": 0.43,
+    "loudness_dip_db": 0.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "Welcome to Srirampur.",
+    "first_line_after_cut": "দারুণ জায়গা সিলেক্ট করেছ।",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.85,
+    "reason": "The ad break is placed during an aerial transition shot between two distinct locations, making it a very clean and natural scene change."
+   },
+   "where_score": 0.646,
+   "match": {
+    "dominant_activity": "reunion / conversation",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.8,
+      "matched_contexts": [
+       "eating",
+       "spices"
+      ],
+      "rationale": "The characters discuss food and a food show, and a food truck is featured right after the break, making food and spices highly relevant."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "Parno promises to feed Somak two great dishes during their conversation."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene focuses on a reunion and discussion about food, which does not align with skincare, and eating is discussed as a future activity."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [],
+      "rationale": "While the female lead is dressed in traditional attire, the primary theme is travel and food, not cosmetics."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "travel",
+       "communication"
+      ],
+      "rationale": "The characters are traveling and communicating, which moderately aligns with telecom services."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "journey",
+       "vehicle"
+      ],
+      "rationale": "The travelogue nature of the show and the presence of a food truck vehicle make mobility brands somewhat relevant."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There are no transactions or shopping activities in this segment to make digital payments relevant."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.85,
+      "matched_contexts": [
+       "travel",
+       "tourism",
+       "sightseeing"
+      ],
+      "rationale": "The show is a travelogue exploring historic sites in Serampore, making travel and tourism highly relevant."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "No shopping or e-commerce elements are present in this travel and food-focused scene."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.85,
+     "matched_contexts": [
+      "travel",
+      "tourism",
+      "sightseeing"
+     ],
+     "rationale": "The show is a travelogue exploring historic sites in Serampore, making travel and tourism highly relevant.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.8,
+     "matched_contexts": [
+      "eating",
+      "spices"
+     ],
+     "rationale": "The characters discuss food and a food show, and a food truck is featured right after the break, making food and spices highly relevant.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "travel",
+      "communication"
+     ],
+     "rationale": "The characters are traveling and communicating, which moderately aligns with telecom services.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.4,
+     "matched_contexts": [
+      "journey",
+      "vehicle"
+     ],
+     "rationale": "The travelogue nature of the show and the presence of a food truck vehicle make mobility brands somewhat relevant.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.3,
+     "matched_contexts": [],
+     "rationale": "While the female lead is dressed in traditional attire, the primary theme is travel and food, not cosmetics.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There are no transactions or shopping activities in this segment to make digital payments relevant.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "No shopping or e-commerce elements are present in this travel and food-focused scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scene focuses on a reunion and discussion about food, which does not align with skincare, and eating is discussed as a future activity.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "Parno promises to feed Somak two great dishes during their conversation."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "reunion / conversation",
+   "quality": 0.774,
+   "selected": false
+  },
+  {
+   "id": "c008",
+   "t0": 435.16,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 435.16,
+   "scene_before": 7,
+   "scene_after": 8,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.98,
+    "speech_density_10s_after": 0.81,
+    "loudness_dip_db": 26.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c009",
+   "t0": 546.8,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "LLM: conversation continues across the cut"
+   ],
+   "t": 548.84,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 2.04,
+    "silence_before": 1.84,
+    "silence_after": 4.66,
+    "speech_density_10s_before": 0.67,
+    "speech_density_10s_after": 0.51,
+    "loudness_dip_db": 13.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "ছানার পাতুড়ি",
+    "first_line_after_cut": "ডিশটা তো ভুল বললি",
+    "dialogue_continues_across_cut": true,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.4,
+    "jarring": 0.6,
+    "suspense_hook": 0.2,
+    "natural_break_score": 0.4,
+    "reason": "The cut occurs mid-sequence during a cooking montage of the revealed dish, interrupting the ongoing conversation and music which resume immediately after the break."
+   },
+   "where_score": 0.331,
+   "quality": 0.331,
+   "selected": false
+  },
+  {
+   "id": "c010",
+   "t0": 581.16,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 581.16,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 19.06,
+    "silence_after": 0.44,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.96,
+    "loudness_dip_db": 11.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "আচ্ছা, এই যে আমরা একটা...",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.8,
+    "reason": "The cut is placed cleanly between the end of a cooking demonstration montage and the start of a new conversation segment, with no overlapping dialogue or music."
+   },
+   "where_score": 0.715,
+   "match": {
+    "dominant_activity": "cooking in kitchen",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
+       }
+      ],
+      "relevance": 0.95,
+      "matched_contexts": [
+       "cooking",
+       "kitchen",
+       "food preparation",
+       "spices",
+       "seasoning",
+       "recipe"
+      ],
+      "rationale": "The lead-in scene directly features a chef preparing food and using spices, which perfectly aligns with the brand's focus on cooking and seasoning."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There is no connection to skincare, personal hygiene, or morning routines in the scenes surrounding the break."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenes focus on cooking and personal conversation rather than cosmetics, makeup, or beauty routines."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "communication"
+      ],
+      "rationale": "While the characters are engaged in a conversation, there is no focus on mobile devices, internet connectivity, or telecom services."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [],
+      "rationale": "Although a food truck is visible in the background, the scene does not involve driving, commuting, or automotive travel."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenes do not depict any financial transactions, shopping, or digital payment activities."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
+       }
+      ],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "travel",
+       "sightseeing"
+      ],
+      "rationale": "The show has a travelogue element as they visit Serampore College, but the immediate scene focuses on cooking and personal conversation."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There is no connection to online shopping, deliveries, or e-commerce in the surrounding scenes."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "communication"
+     ],
+     "rationale": "While the characters are engaged in a conversation, there is no focus on mobile devices, internet connectivity, or telecom services.",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": false,
+      "violated_contexts": [],
+      "evidence": "The scenes immediately preceding and following the ad break consist of a lighthearted cooking segment and a reflective personal interview about starting a career early. There is no depiction or discussion of funerals, hospitals, medical emergencies, or violence.",
+      "confidence": 0.95
+     }
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.2,
+     "matched_contexts": [],
+     "rationale": "Although a food truck is visible in the background, the scene does not involve driving, commuting, or automotive travel.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There is no connection to skincare, personal hygiene, or morning routines in the scenes surrounding the break.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenes do not depict any financial transactions, shopping, or digital payment activities.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There is no connection to online shopping, deliveries, or e-commerce in the surrounding scenes.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.95,
+     "matched_contexts": [
+      "cooking",
+      "kitchen",
+      "food preparation",
+      "spices",
+      "seasoning",
+      "recipe"
+     ],
+     "rationale": "The lead-in scene directly features a chef preparing food and using spices, which perfectly aligns with the brand's focus on cooking and seasoning.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Parno discusses experiencing school trauma"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.5,
+     "matched_contexts": [
+      "travel",
+      "sightseeing"
+     ],
+     "rationale": "The show has a travelogue element as they visit Serampore College, but the immediate scene focuses on cooking and personal conversation.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Parno discusses experiencing school trauma"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scenes focus on cooking and personal conversation rather than cosmetics, makeup, or beauty routines.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 10,
+       "evidence": "illness: Parno discusses experiencing school trauma"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno discusses experiencing school-related trauma in the scene immediately following the ad break."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "cooking in kitchen",
+   "quality": 0.76,
+   "selected": true
+  },
+  {
+   "id": "c011",
+   "t0": 647.72,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 647.72,
+   "scene_before": 10,
+   "scene_after": 11,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 1.0,
+    "speech_density_10s_after": 0.99,
+    "loudness_dip_db": 23.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c012",
+   "t0": 768.52,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 768.52,
+   "scene_before": 11,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 1.0,
+    "speech_density_10s_after": 0.96,
+    "loudness_dip_db": 26.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c013",
+   "t0": 811.24,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 811.24,
+   "scene_before": 12,
+   "scene_after": 13,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.04,
+    "silence_after": 0.16,
+    "speech_density_10s_before": 0.78,
+    "speech_density_10s_after": 0.74,
+    "loudness_dip_db": 4.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c014",
+   "t0": 890.28,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "break quality 0.44 below threshold 0.55"
+   ],
+   "t": 891.56,
+   "scene_before": 14,
+   "scene_after": 15,
+   "signals": {
+    "snap_delta": 1.28,
+    "silence_before": 1.36,
+    "silence_after": 10.14,
+    "speech_density_10s_before": 0.81,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 7.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "আমাদের আজকের সেকেন্ড ডিশ হলো রেলওয়ে মাটন কারি।",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.5,
+    "jarring": 0.4,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.6,
+    "reason": "The cut occurs during a transition in a cooking montage, splitting the introduction of the dish from its preparation while the background music continues seamlessly."
+   },
+   "where_score": 0.439,
+   "match": {
+    "dominant_activity": "cooking in kitchen",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Parno mentions her mother is bedridden and unwell in the conversation before the break."
+       }
+      ],
+      "relevance": 0.9,
+      "matched_contexts": [
+       "cooking",
+       "kitchen",
+       "eating",
+       "food preparation",
+       "spices",
+       "frying"
+      ],
+      "rationale": "The scene features cooking, food preparation, and spices, which perfectly align with the brand's target contexts, though there is a minor violation due to the mention of an unwell mother."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "Somak and Parno are shown eating the prepared meal in the scene before the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand's skincare focus is completely irrelevant to the cooking and eating activities in the scene, and eating is a negative context."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Parno mentions her mother is bedridden and unwell in the conversation before the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The cosmetics brand has no relevance to the cooking and food preparation activities in the scene."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "family conversation"
+      ],
+      "rationale": "The scene involves conversation, but the primary focus is on cooking and food, making telecom only minimally relevant."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The automotive brand is completely irrelevant to the kitchen cooking scene."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "There are no shopping or payment activities in the scene, making this brand irrelevant."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Parno mentions her mother is bedridden and unwell in the conversation before the break."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The travel brand is irrelevant to the cooking scene, and the mention of an illness is a direct violation."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The online shopping brand has no relevance to the cooking and eating activities shown."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "family conversation"
+     ],
+     "rationale": "The scene involves conversation, but the primary focus is on cooking and food, making telecom only minimally relevant.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The automotive brand is completely irrelevant to the kitchen cooking scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "There are no shopping or payment activities in the scene, making this brand irrelevant.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The online shopping brand has no relevance to the cooking and eating activities shown.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.9,
+     "matched_contexts": [
+      "cooking",
+      "kitchen",
+      "eating",
+      "food preparation",
+      "spices",
+      "frying"
+     ],
+     "rationale": "The scene features cooking, food preparation, and spices, which perfectly align with the brand's target contexts, though there is a minor violation due to the mention of an unwell mother.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 13,
+       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno mentions her mother is bedridden and unwell in the conversation before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The travel brand is irrelevant to the cooking scene, and the mention of an illness is a direct violation.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 13,
+       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno mentions her mother is bedridden and unwell in the conversation before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The brand's skincare focus is completely irrelevant to the cooking and eating activities in the scene, and eating is a negative context.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 14,
+       "evidence": "eating: Somak and Parno eat the prepared meal"
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "Somak and Parno are shown eating the prepared meal in the scene before the break."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "The cosmetics brand has no relevance to the cooking and food preparation activities in the scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 13,
+       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno mentions her mother is bedridden and unwell in the conversation before the break."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "cooking in kitchen",
+   "quality": 0.484,
+   "selected": false
+  },
+  {
+   "id": "c015",
+   "t0": 1033.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "break quality 0.39 below threshold 0.55"
+   ],
+   "t": 1035.0,
+   "scene_before": 15,
+   "scene_after": 16,
+   "signals": {
+    "snap_delta": 2.0,
+    "silence_before": 0.7,
+    "silence_after": 13.3,
+    "speech_density_10s_before": 0.76,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 10.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "ঠিক আছে দিয়ে এসো তাহলে",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.5,
+    "jarring": 0.4,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.45,
+    "reason": "The cut occurs mid-montage during the preparation of a food platter, interrupting the continuous background music and visual flow of the dish being assembled."
+   },
+   "where_score": 0.394,
+   "match": {
+    "dominant_activity": "eating and food preparation",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Parno talks about her passion for cooking and mentions cooking for her bedridden mother who can no longer cook."
+       }
+      ],
+      "relevance": 0.9,
+      "matched_contexts": [
+       "cooking",
+       "eating",
+       "food preparation",
+       "spices",
+       "seasoning",
+       "lunch",
+       "dinner"
+      ],
+      "rationale": "The scene heavily features food preparation, serving, and eating, which perfectly aligns with a food and spices brand, though there is a brief mention of an ill mother."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "Chef Prasanta serves the dishes, and Somak and Parno enjoy eating the Chanar Paturi and Railway Mutton Curry."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "This brand is highly unsuitable due to the negative context of eating being prominent in the scene."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Parno talks about her passion for cooking and mentions cooking for her bedridden mother who can no longer cook."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There are no beauty or cosmetic contexts in this food-focused scene, and the mention of an ill mother violates its negative contexts."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.7,
+      "matched_contexts": [
+       "phone",
+       "communication",
+       "family conversation"
+      ],
+      "rationale": "The scene features communication and Parno receiving a voice note on her phone, making telecom a moderately relevant fit."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "journey"
+      ],
+      "rationale": "While the characters are traveling to different destinations, the immediate scene is focused on eating and food preparation."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.2,
+      "matched_contexts": [],
+      "rationale": "There are no active financial transactions or shopping activities in this scene."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "illness",
+        "evidence": "Parno talks about her passion for cooking and mentions cooking for her bedridden mother who can no longer cook."
+       }
+      ],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "travel"
+      ],
+      "rationale": "The travel theme is present via the next destination clue, but the mention of an ill mother violates the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene does not contain any elements related to online shopping or e-commerce."
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.7,
+     "matched_contexts": [
+      "phone",
+      "communication",
+      "family conversation"
+     ],
+     "rationale": "The scene features communication and Parno receiving a voice note on her phone, making telecom a moderately relevant fit.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.3,
+     "matched_contexts": [
+      "journey"
+     ],
+     "rationale": "While the characters are traveling to different destinations, the immediate scene is focused on eating and food preparation.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.2,
+     "matched_contexts": [],
+     "rationale": "There are no active financial transactions or shopping activities in this scene.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "The scene does not contain any elements related to online shopping or e-commerce.",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.9,
+     "matched_contexts": [
+      "cooking",
+      "eating",
+      "food preparation",
+      "spices",
+      "seasoning",
+      "lunch",
+      "dinner"
+     ],
+     "rationale": "The scene heavily features food preparation, serving, and eating, which perfectly aligns with a food and spices brand, though there is a brief mention of an ill mother.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 13,
+       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno talks about her passion for cooking and mentions cooking for her bedridden mother who can no longer cook."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.4,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "The travel theme is present via the next destination clue, but the mention of an ill mother violates the brand's negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 13,
+       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno talks about her passion for cooking and mentions cooking for her bedridden mother who can no longer cook."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.1,
+     "matched_contexts": [],
+     "rationale": "There are no beauty or cosmetic contexts in this food-focused scene, and the mention of an ill mother violates its negative contexts.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "illness",
+       "source": "global_scene_tags",
+       "scene": 13,
+       "evidence": "illness: Parno mentions her mother is bedridden and unwell"
+      },
+      {
+       "negative_context": "illness",
+       "source": "llm_lead_in",
+       "evidence": "Parno talks about her passion for cooking and mentions cooking for her bedridden mother who can no longer cook."
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.0,
+     "matched_contexts": [],
+     "rationale": "This brand is highly unsuitable due to the negative context of eating being prominent in the scene.",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 14,
+       "evidence": "eating: Somak and Parno eat the prepared meal"
+      },
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 15,
+       "evidence": "eating: They finish their meal at the table"
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "Chef Prasanta serves the dishes, and Somak and Parno enjoy eating the Chanar Paturi and Railway Mutton Curry."
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "eating and food preparation",
+   "quality": 0.499,
+   "selected": false
+  },
+  {
+   "id": "c016",
+   "t0": 1192.32,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1192.32,
+   "scene_before": 15,
+   "scene_after": 16,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.68,
+    "speech_density_10s_after": 0.19,
+    "loudness_dip_db": 13.3,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c017",
+   "t0": 1224.22,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1224.22,
+   "scene_before": 16,
+   "scene_after": 16,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 29.72,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  }
+ ],
+ "speech": [
+  {
+   "start": 15.3,
+   "end": 15.7
+  },
+  {
+   "start": 16.1,
+   "end": 16.5
+  },
+  {
+   "start": 18.7,
+   "end": 20.0
+  },
+  {
+   "start": 20.2,
+   "end": 21.8
+  },
+  {
+   "start": 22.3,
+   "end": 22.9
+  },
+  {
+   "start": 24.6,
+   "end": 28.2
+  },
+  {
+   "start": 28.6,
+   "end": 29.0
+  },
+  {
+   "start": 29.4,
+   "end": 30.0
+  },
+  {
+   "start": 34.5,
+   "end": 37.7
+  },
+  {
+   "start": 41.7,
+   "end": 45.0
+  },
+  {
+   "start": 46.9,
+   "end": 49.9
+  },
+  {
+   "start": 50.5,
+   "end": 53.8
+  },
+  {
+   "start": 53.9,
+   "end": 55.2
+  },
+  {
+   "start": 55.4,
+   "end": 57.3
+  },
+  {
+   "start": 57.8,
+   "end": 61.5
+  },
+  {
+   "start": 62.0,
+   "end": 63.7
+  },
+  {
+   "start": 64.2,
+   "end": 67.7
+  },
+  {
+   "start": 67.8,
+   "end": 69.8
+  },
+  {
+   "start": 70.4,
+   "end": 75.3
+  },
+  {
+   "start": 75.6,
+   "end": 78.0
+  },
+  {
+   "start": 78.7,
+   "end": 80.3
+  },
+  {
+   "start": 80.5,
+   "end": 84.1
+  },
+  {
+   "start": 84.3,
+   "end": 87.3
+  },
+  {
+   "start": 87.4,
+   "end": 89.1
+  },
+  {
+   "start": 89.8,
+   "end": 91.3
+  },
+  {
+   "start": 91.7,
+   "end": 96.3
+  },
+  {
+   "start": 97.2,
+   "end": 98.1
+  },
+  {
+   "start": 98.2,
+   "end": 99.2
+  },
+  {
+   "start": 99.4,
+   "end": 100.8
+  },
+  {
+   "start": 100.9,
+   "end": 102.5
+  },
+  {
+   "start": 102.8,
+   "end": 110.7
+  },
+  {
+   "start": 115.2,
+   "end": 117.4
+  },
+  {
+   "start": 118.7,
+   "end": 119.8
+  },
+  {
+   "start": 120.0,
+   "end": 122.2
+  },
+  {
+   "start": 125.8,
+   "end": 128.3
+  },
+  {
+   "start": 130.6,
+   "end": 131.6
+  },
+  {
+   "start": 133.1,
+   "end": 133.6
+  },
+  {
+   "start": 134.6,
+   "end": 135.1
+  },
+  {
+   "start": 136.1,
+   "end": 137.0
+  },
+  {
+   "start": 138.3,
+   "end": 139.1
+  },
+  {
+   "start": 140.2,
+   "end": 141.1
+  },
+  {
+   "start": 142.1,
+   "end": 144.2
+  },
+  {
+   "start": 144.9,
+   "end": 146.0
+  },
+  {
+   "start": 146.2,
+   "end": 147.5
+  },
+  {
+   "start": 147.9,
+   "end": 148.9
+  },
+  {
+   "start": 149.4,
+   "end": 150.7
+  },
+  {
+   "start": 151.1,
+   "end": 152.6
+  },
+  {
+   "start": 153.6,
+   "end": 156.3
+  },
+  {
+   "start": 157.9,
+   "end": 160.0
+  },
+  {
+   "start": 161.9,
+   "end": 163.6
+  },
+  {
+   "start": 164.2,
+   "end": 164.9
+  },
+  {
+   "start": 165.6,
+   "end": 167.3
+  },
+  {
+   "start": 168.0,
+   "end": 168.6
+  },
+  {
+   "start": 169.1,
+   "end": 169.9
+  },
+  {
+   "start": 171.7,
+   "end": 173.3
+  },
+  {
+   "start": 174.0,
+   "end": 174.6
+  },
+  {
+   "start": 221.7,
+   "end": 224.5
+  },
+  {
+   "start": 224.7,
+   "end": 228.2
+  },
+  {
+   "start": 228.7,
+   "end": 230.1
+  },
+  {
+   "start": 230.3,
+   "end": 234.6
+  },
+  {
+   "start": 234.7,
+   "end": 237.8
+  },
+  {
+   "start": 237.9,
+   "end": 241.2
+  },
+  {
+   "start": 241.4,
+   "end": 247.6
+  },
+  {
+   "start": 247.7,
+   "end": 249.8
+  },
+  {
+   "start": 250.0,
+   "end": 252.2
+  },
+  {
+   "start": 253.1,
+   "end": 254.5
+  },
+  {
+   "start": 255.5,
+   "end": 257.6
+  },
+  {
+   "start": 258.2,
+   "end": 258.9
+  },
+  {
+   "start": 261.1,
+   "end": 261.8
+  },
+  {
+   "start": 266.4,
+   "end": 272.7
+  },
+  {
+   "start": 276.4,
+   "end": 277.6
+  },
+  {
+   "start": 277.9,
+   "end": 278.8
+  },
+  {
+   "start": 279.0,
+   "end": 279.4
+  },
+  {
+   "start": 280.6,
+   "end": 281.1
+  },
+  {
+   "start": 282.3,
+   "end": 298.2
+  },
+  {
+   "start": 298.8,
+   "end": 304.0
+  },
+  {
+   "start": 304.2,
+   "end": 305.5
+  },
+  {
+   "start": 307.0,
+   "end": 311.3
+  },
+  {
+   "start": 318.0,
+   "end": 318.6
+  },
+  {
+   "start": 318.7,
+   "end": 319.8
+  },
+  {
+   "start": 320.3,
+   "end": 322.2
+  },
+  {
+   "start": 322.9,
+   "end": 323.6
+  },
+  {
+   "start": 324.3,
+   "end": 327.3
+  },
+  {
+   "start": 327.8,
+   "end": 330.4
+  },
+  {
+   "start": 330.9,
+   "end": 331.3
+  },
+  {
+   "start": 333.8,
+   "end": 334.5
+  },
+  {
+   "start": 335.4,
+   "end": 338.1
+  },
+  {
+   "start": 338.4,
+   "end": 339.1
+  },
+  {
+   "start": 339.3,
+   "end": 341.4
+  },
+  {
+   "start": 341.9,
+   "end": 350.2
+  },
+  {
+   "start": 350.4,
+   "end": 353.2
+  },
+  {
+   "start": 353.8,
+   "end": 355.4
+  },
+  {
+   "start": 355.8,
+   "end": 364.9
+  },
+  {
+   "start": 365.1,
+   "end": 368.4
+  },
+  {
+   "start": 368.5,
+   "end": 370.3
+  },
+  {
+   "start": 371.9,
+   "end": 372.4
+  },
+  {
+   "start": 379.2,
+   "end": 380.3
+  },
+  {
+   "start": 380.6,
+   "end": 381.3
+  },
+  {
+   "start": 381.6,
+   "end": 388.2
+  },
+  {
+   "start": 389.0,
+   "end": 391.8
+  },
+  {
+   "start": 392.0,
+   "end": 393.0
+  },
+  {
+   "start": 393.1,
+   "end": 395.6
+  },
+  {
+   "start": 396.0,
+   "end": 433.1
+  },
+  {
+   "start": 433.3,
+   "end": 435.4
+  },
+  {
+   "start": 435.8,
+   "end": 436.5
+  },
+  {
+   "start": 436.6,
+   "end": 442.0
+  },
+  {
+   "start": 442.5,
+   "end": 443.3
+  },
+  {
+   "start": 443.9,
+   "end": 444.8
+  },
+  {
+   "start": 445.1,
+   "end": 449.6
+  },
+  {
+   "start": 449.7,
+   "end": 450.3
+  },
+  {
+   "start": 450.8,
+   "end": 453.7
+  },
+  {
+   "start": 454.3,
+   "end": 454.8
+  },
+  {
+   "start": 458.3,
+   "end": 463.3
+  },
+  {
+   "start": 463.5,
+   "end": 465.2
+  },
+  {
+   "start": 465.4,
+   "end": 468.1
+  },
+  {
+   "start": 468.3,
+   "end": 470.5
+  },
+  {
+   "start": 470.8,
+   "end": 473.3
+  },
+  {
+   "start": 473.8,
+   "end": 474.5
+  },
+  {
+   "start": 474.7,
+   "end": 478.3
+  },
+  {
+   "start": 478.7,
+   "end": 480.7
+  },
+  {
+   "start": 481.7,
+   "end": 482.8
+  },
+  {
+   "start": 483.2,
+   "end": 484.5
+  },
+  {
+   "start": 485.6,
+   "end": 486.6
+  },
+  {
+   "start": 486.7,
+   "end": 487.5
+  },
+  {
+   "start": 489.0,
+   "end": 492.0
+  },
+  {
+   "start": 492.5,
+   "end": 493.8
+  },
+  {
+   "start": 494.3,
+   "end": 496.2
+  },
+  {
+   "start": 496.9,
+   "end": 498.7
+  },
+  {
+   "start": 499.7,
+   "end": 502.5
+  },
+  {
+   "start": 503.3,
+   "end": 504.4
+  },
+  {
+   "start": 504.9,
+   "end": 507.9
+  },
+  {
+   "start": 508.8,
+   "end": 509.8
+  },
+  {
+   "start": 510.6,
+   "end": 511.7
+  },
+  {
+   "start": 511.9,
+   "end": 512.9
+  },
+  {
+   "start": 515.6,
+   "end": 516.3
+  },
+  {
+   "start": 516.4,
+   "end": 518.0
+  },
+  {
+   "start": 518.1,
+   "end": 522.5
+  },
+  {
+   "start": 522.8,
+   "end": 524.3
+  },
+  {
+   "start": 525.1,
+   "end": 526.6
+  },
+  {
+   "start": 527.2,
+   "end": 528.5
+  },
+  {
+   "start": 528.7,
+   "end": 531.4
+  },
+  {
+   "start": 531.9,
+   "end": 537.5
+  },
+  {
+   "start": 537.7,
+   "end": 539.1
+  },
+  {
+   "start": 539.8,
+   "end": 541.8
+  },
+  {
+   "start": 542.1,
+   "end": 542.6
+  },
+  {
+   "start": 542.9,
+   "end": 545.3
+  },
+  {
+   "start": 545.5,
+   "end": 547.0
+  },
+  {
+   "start": 553.5,
+   "end": 558.5
+  },
+  {
+   "start": 558.7,
+   "end": 562.1
+  },
+  {
+   "start": 581.6,
+   "end": 597.1
+  },
+  {
+   "start": 597.5,
+   "end": 600.5
+  },
+  {
+   "start": 600.8,
+   "end": 603.8
+  },
+  {
+   "start": 604.0,
+   "end": 622.5
+  },
+  {
+   "start": 622.7,
+   "end": 630.4
+  },
+  {
+   "start": 630.4,
+   "end": 634.6
+  },
+  {
+   "start": 634.8,
+   "end": 656.2
+  },
+  {
+   "start": 656.3,
+   "end": 669.4
+  },
+  {
+   "start": 669.5,
+   "end": 685.1
+  },
+  {
+   "start": 685.2,
+   "end": 691.4
+  },
+  {
+   "start": 691.6,
+   "end": 693.3
+  },
+  {
+   "start": 693.5,
+   "end": 696.4
+  },
+  {
+   "start": 696.4,
+   "end": 703.8
+  },
+  {
+   "start": 703.9,
+   "end": 707.8
+  },
+  {
+   "start": 708.7,
+   "end": 718.1
+  },
+  {
+   "start": 718.2,
+   "end": 722.4
+  },
+  {
+   "start": 722.5,
+   "end": 723.1
+  },
+  {
+   "start": 723.4,
+   "end": 746.6
+  },
+  {
+   "start": 746.8,
+   "end": 773.0
+  },
+  {
+   "start": 773.1,
+   "end": 774.6
+  },
+  {
+   "start": 774.9,
+   "end": 785.4
+  },
+  {
+   "start": 785.4,
+   "end": 801.1
+  },
+  {
+   "start": 801.4,
+   "end": 802.9
+  },
+  {
+   "start": 803.8,
+   "end": 804.3
+  },
+  {
+   "start": 804.5,
+   "end": 806.6
+  },
+  {
+   "start": 807.5,
+   "end": 811.2
+  },
+  {
+   "start": 811.4,
+   "end": 813.0
+  },
+  {
+   "start": 813.1,
+   "end": 814.0
+  },
+  {
+   "start": 814.5,
+   "end": 816.8
+  },
+  {
+   "start": 818.5,
+   "end": 820.1
+  },
+  {
+   "start": 820.2,
+   "end": 822.0
+  },
+  {
+   "start": 822.7,
+   "end": 824.9
+  },
+  {
+   "start": 825.1,
+   "end": 825.8
+  },
+  {
+   "start": 826.1,
+   "end": 826.9
+  },
+  {
+   "start": 827.2,
+   "end": 828.5
+  },
+  {
+   "start": 828.7,
+   "end": 832.1
+  },
+  {
+   "start": 833.7,
+   "end": 834.6
+  },
+  {
+   "start": 835.6,
+   "end": 836.9
+  },
+  {
+   "start": 838.3,
+   "end": 845.0
+  },
+  {
+   "start": 845.4,
+   "end": 847.7
+  },
+  {
+   "start": 847.8,
+   "end": 857.1
+  },
+  {
+   "start": 857.8,
+   "end": 860.6
+  },
+  {
+   "start": 860.7,
+   "end": 862.6
+  },
+  {
+   "start": 862.8,
+   "end": 863.5
+  },
+  {
+   "start": 864.0,
+   "end": 865.6
+  },
+  {
+   "start": 865.7,
+   "end": 869.3
+  },
+  {
+   "start": 869.8,
+   "end": 879.1
+  },
+  {
+   "start": 879.8,
+   "end": 881.2
+  },
+  {
+   "start": 881.9,
+   "end": 884.2
+  },
+  {
+   "start": 884.4,
+   "end": 890.2
+  },
+  {
+   "start": 901.7,
+   "end": 904.9
+  },
+  {
+   "start": 906.2,
+   "end": 911.0
+  },
+  {
+   "start": 911.2,
+   "end": 914.2
+  },
+  {
+   "start": 924.1,
+   "end": 926.4
+  },
+  {
+   "start": 926.4,
+   "end": 958.2
+  },
+  {
+   "start": 958.7,
+   "end": 973.7
+  },
+  {
+   "start": 973.8,
+   "end": 977.3
+  },
+  {
+   "start": 977.7,
+   "end": 982.4
+  },
+  {
+   "start": 982.7,
+   "end": 1008.0
+  },
+  {
+   "start": 1008.1,
+   "end": 1029.9
+  },
+  {
+   "start": 1030.0,
+   "end": 1030.7
+  },
+  {
+   "start": 1031.8,
+   "end": 1033.4
+  },
+  {
+   "start": 1033.9,
+   "end": 1034.3
+  },
+  {
+   "start": 1048.3,
+   "end": 1049.0
+  },
+  {
+   "start": 1049.1,
+   "end": 1049.5
+  },
+  {
+   "start": 1050.7,
+   "end": 1052.2
+  },
+  {
+   "start": 1055.9,
+   "end": 1057.8
+  },
+  {
+   "start": 1060.8,
+   "end": 1062.1
+  },
+  {
+   "start": 1062.7,
+   "end": 1063.4
+  },
+  {
+   "start": 1063.9,
+   "end": 1065.5
+  },
+  {
+   "start": 1065.9,
+   "end": 1066.4
+  },
+  {
+   "start": 1066.5,
+   "end": 1067.7
+  },
+  {
+   "start": 1067.8,
+   "end": 1069.1
+  },
+  {
+   "start": 1070.7,
+   "end": 1071.2
+  },
+  {
+   "start": 1074.5,
+   "end": 1075.4
+  },
+  {
+   "start": 1076.1,
+   "end": 1078.3
+  },
+  {
+   "start": 1079.0,
+   "end": 1081.6
+  },
+  {
+   "start": 1082.4,
+   "end": 1083.2
+  },
+  {
+   "start": 1089.5,
+   "end": 1091.5
+  },
+  {
+   "start": 1091.7,
+   "end": 1093.4
+  },
+  {
+   "start": 1094.1,
+   "end": 1096.3
+  },
+  {
+   "start": 1096.9,
+   "end": 1098.4
+  },
+  {
+   "start": 1098.6,
+   "end": 1102.2
+  },
+  {
+   "start": 1102.8,
+   "end": 1106.3
+  },
+  {
+   "start": 1106.6,
+   "end": 1109.6
+  },
+  {
+   "start": 1109.8,
+   "end": 1110.7
+  },
+  {
+   "start": 1114.1,
+   "end": 1115.9
+  },
+  {
+   "start": 1116.6,
+   "end": 1118.5
+  },
+  {
+   "start": 1118.7,
+   "end": 1119.2
+  },
+  {
+   "start": 1119.6,
+   "end": 1121.8
+  },
+  {
+   "start": 1122.1,
+   "end": 1123.1
+  },
+  {
+   "start": 1123.5,
+   "end": 1126.6
+  },
+  {
+   "start": 1127.8,
+   "end": 1128.8
+  },
+  {
+   "start": 1129.5,
+   "end": 1131.2
+  },
+  {
+   "start": 1132.4,
+   "end": 1134.5
+  },
+  {
+   "start": 1134.6,
+   "end": 1137.0
+  },
+  {
+   "start": 1137.7,
+   "end": 1141.1
+  },
+  {
+   "start": 1141.3,
+   "end": 1142.8
+  },
+  {
+   "start": 1143.7,
+   "end": 1147.3
+  },
+  {
+   "start": 1148.6,
+   "end": 1149.3
+  },
+  {
+   "start": 1150.5,
+   "end": 1152.4
+  },
+  {
+   "start": 1152.9,
+   "end": 1155.1
+  },
+  {
+   "start": 1155.9,
+   "end": 1158.2
+  },
+  {
+   "start": 1158.6,
+   "end": 1164.2
+  },
+  {
+   "start": 1164.4,
+   "end": 1165.4
+  },
+  {
+   "start": 1166.1,
+   "end": 1166.7
+  },
+  {
+   "start": 1169.3,
+   "end": 1170.1
+  },
+  {
+   "start": 1170.4,
+   "end": 1172.3
+  },
+  {
+   "start": 1172.7,
+   "end": 1173.4
+  },
+  {
+   "start": 1177.3,
+   "end": 1178.2
+  },
+  {
+   "start": 1182.0,
+   "end": 1186.0
+  },
+  {
+   "start": 1186.3,
+   "end": 1187.5
+  },
+  {
+   "start": 1189.0,
+   "end": 1189.6
+  },
+  {
+   "start": 1190.7,
+   "end": 1191.6
+  },
+  {
+   "start": 1191.9,
+   "end": 1192.5
+  },
+  {
+   "start": 1192.6,
+   "end": 1193.2
+  },
+  {
+   "start": 1193.4,
+   "end": 1194.5
+  }
+ ],
+ "shots": [
+  1.16,
+  4.88,
+  6.0,
+  11.0,
+  15.0,
+  21.4,
+  28.4,
+  37.32,
+  41.88,
+  47.96,
+  49.76,
+  51.48,
+  53.76,
+  56.92,
+  58.32,
+  64.2,
+  67.32,
+  69.72,
+  71.84,
+  73.6,
+  75.6,
+  78.36,
+  80.28,
+  84.04,
+  86.76,
+  89.72,
+  91.6,
+  100.72,
+  110.68,
+  117.36,
+  118.76,
+  122.16,
+  124.84,
+  127.2,
+  128.24,
+  129.72,
+  131.2,
+  134.0,
+  139.4,
+  144.32,
+  150.84,
+  156.2,
+  165.52,
+  173.72,
+  176.16,
+  181.0,
+  184.24,
+  187.44,
+  190.08,
+  193.36,
+  197.84,
+  200.92,
+  204.32,
+  206.84,
+  211.88,
+  215.32,
+  220.96,
+  228.2,
+  233.6,
+  237.72,
+  241.28,
+  243.96,
+  247.52,
+  252.52,
+  255.64,
+  260.2,
+  262.48,
+  265.16,
+  269.88,
+  271.88,
+  273.28,
+  276.48,
+  277.88,
+  281.08,
+  285.44,
+  286.88,
+  290.04,
+  291.48,
+  293.48,
+  296.24,
+  303.04,
+  305.16,
+  306.76,
+  308.16,
+  311.52,
+  317.96,
+  320.2,
+  322.8,
+  327.36,
+  330.64,
+  334.96,
+  341.68,
+  347.76,
+  350.32,
+  353.52,
+  357.2,
+  361.2,
+  364.96,
+  374.08,
+  375.88,
+  378.84,
+  381.4,
+  384.52,
+  388.48,
+  391.72,
+  393.68,
+  399.44,
+  405.08,
+  407.4,
+  410.28,
+  411.32,
+  414.32,
+  416.76,
+  420.0,
+  425.44,
+  429.56,
+  431.32,
+  433.12,
+  435.16,
+  435.8,
+  436.52,
+  442.24,
+  447.04,
+  448.48,
+  450.32,
+  451.88,
+  454.44,
+  456.04,
+  457.44,
+  462.32,
+  465.28,
+  468.04,
+  470.68,
+  473.16,
+  474.32,
+  476.2,
+  477.08,
+  478.24,
+  481.56,
+  482.88,
+  485.16,
+  487.64,
+  490.0,
+  492.16,
+  493.24,
+  494.24,
+  495.88,
+  499.44,
+  501.32,
+  504.12,
+  505.64,
+  507.44,
+  508.76,
+  510.08,
+  513.28,
+  518.08,
+  520.4,
+  522.6,
+  524.0,
+  525.12,
+  526.72,
+  530.32,
+  533.2,
+  535.68,
+  542.76,
+  546.8,
+  548.84,
+  549.72,
+  551.44,
+  552.72,
+  554.24,
+  554.8,
+  556.2,
+  557.24,
+  561.64,
+  562.44,
+  563.28,
+  564.72,
+  566.8,
+  568.56,
+  570.04,
+  571.32,
+  572.0,
+  573.2,
+  575.16,
+  577.32,
+  578.84,
+  581.16,
+  585.2,
+  585.8,
+  587.4,
+  589.12,
+  591.16,
+  592.92,
+  593.56,
+  594.44,
+  597.12,
+  600.56,
+  603.8,
+  607.72,
+  610.68,
+  614.0,
+  615.52,
+  617.36,
+  621.52,
+  626.28,
+  630.4,
+  631.72,
+  634.52,
+  635.28,
+  639.04,
+  641.04,
+  643.56,
+  644.72,
+  646.4,
+  647.0,
+  647.72,
+  653.2,
+  657.12,
+  659.36,
+  665.6,
+  667.52,
+  670.88,
+  673.2,
+  677.6,
+  679.64,
+  686.0,
+  687.88,
+  696.44,
+  700.6,
+  702.04,
+  705.04,
+  705.96,
+  707.44,
+  708.6,
+  712.36,
+  716.6,
+  721.28,
+  723.4,
+  727.64,
+  729.6,
+  731.12,
+  734.28,
+  737.72,
+  739.72,
+  742.6,
+  745.12,
+  746.48,
+  748.32,
+  750.4,
+  754.76,
+  757.4,
+  758.84,
+  764.0,
+  764.64,
+  765.72,
+  766.16,
+  767.12,
+  768.52,
+  770.84,
+  771.84,
+  773.0,
+  776.28,
+  778.68,
+  780.6,
+  782.48,
+  784.2,
+  785.48,
+  786.88,
+  787.8,
+  788.64,
+  791.16,
+  793.96,
+  794.64,
+  795.52,
+  796.12,
+  798.56,
+  800.48,
+  801.12,
+  803.0,
+  807.92,
+  811.24,
+  812.88,
+  814.08,
+  817.16,
+  818.4,
+  820.12,
+  824.68,
+  831.88,
+  834.92,
+  837.8,
+  840.76,
+  843.24,
+  845.28,
+  847.64,
+  850.0,
+  853.28,
+  854.88,
+  857.32,
+  860.52,
+  862.84,
+  863.68,
+  869.64,
+  874.8,
+  876.96,
+  877.76,
+  879.4,
+  883.44,
+  884.32,
+  886.0,
+  890.28,
+  891.56,
+  891.88,
+  892.8,
+  893.56,
+  894.92,
+  896.28,
+  897.08,
+  897.96,
+  899.24,
+  899.68,
+  900.56,
+  901.68,
+  902.64,
+  904.96,
+  906.32,
+  908.28,
+  910.84,
+  913.16,
+  917.0,
+  919.52,
+  920.92,
+  924.16,
+  926.2,
+  929.48,
+  931.0,
+  933.28,
+  934.44,
+  936.4,
+  937.44,
+  940.08,
+  941.8,
+  945.12,
+  947.56,
+  950.32,
+  953.04,
+  954.68,
+  957.28,
+  959.76,
+  961.64,
+  964.76,
+  966.24,
+  968.16,
+  969.96,
+  972.16,
+  975.72,
+  978.56,
+  981.64,
+  982.36,
+  985.64,
+  987.44,
+  988.76,
+  994.72,
+  996.0,
+  996.84,
+  999.08,
+  1001.28,
+  1004.84,
+  1006.36,
+  1008.16,
+  1009.44,
+  1013.4,
+  1014.32,
+  1017.6,
+  1021.84,
+  1024.68,
+  1026.68,
+  1027.52,
+  1028.52,
+  1031.56,
+  1033.0,
+  1035.0,
+  1036.08,
+  1037.44,
+  1039.32,
+  1043.44,
+  1048.2,
+  1052.08,
+  1057.32,
+  1063.76,
+  1067.76,
+  1069.8,
+  1074.12,
+  1075.52,
+  1078.76,
+  1081.4,
+  1084.4,
+  1086.0,
+  1091.52,
+  1093.6,
+  1096.52,
+  1100.44,
+  1102.56,
+  1105.24,
+  1106.64,
+  1109.08,
+  1110.84,
+  1118.44,
+  1119.36,
+  1121.36,
+  1123.32,
+  1126.52,
+  1131.52,
+  1134.44,
+  1137.68,
+  1142.76,
+  1144.48,
+  1147.16,
+  1148.52,
+  1151.84,
+  1154.16,
+  1157.96,
+  1159.76,
+  1161.6,
+  1163.08,
+  1165.44,
+  1167.88,
+  1169.4,
+  1172.48,
+  1173.72,
+  1175.96,
+  1177.04,
+  1192.32
+ ],
+ "blacks": [
+  {
+   "start": 0.0,
+   "end": 1.68
+  },
+  {
+   "start": 1192.32,
+   "end": 1194.8
+  },
+  {
+   "start": 1221.12,
+   "end": 1227.32
+  }
+ ],
+ "timings_sec": {
+  "selection": 0.0,
+  "total_this_run": 0.0
+ },
+ "variant": "gemini-e1874d3194"
+}

@@ -151,14 +151,14 @@ function checkBreaks(t) {
 
 function setupPlayer() {
   const content = $("#content");
-  // frame-accurate break detection where supported, rAF fallback otherwise
+  // Frame-accurate detection via requestVideoFrameCallback where the browser composites frames,
+  // plus an always-on 40 ms poll (rVFC can stop firing for off-screen/occluded video). Either path
+  // triggers at most once per break; startAd() seeks back to the exact cut frame.
   if ("requestVideoFrameCallback" in HTMLVideoElement.prototype) {
     const onFrame = (_, meta) => { checkBreaks(meta.mediaTime); content.requestVideoFrameCallback(onFrame); };
     content.requestVideoFrameCallback(onFrame);
-  } else {
-    const loop = () => { if (!content.paused) checkBreaks(content.currentTime); requestAnimationFrame(loop); };
-    loop();
   }
+  setInterval(() => { if (!content.paused && !content.seeking) checkBreaks(content.currentTime); }, 40);
   content.addEventListener("seeking", () => { state.lastT = content.currentTime; });
   content.addEventListener("timeupdate", updatePlayhead);
   $("#ad-layer").addEventListener("click", () => { const ad = $("#ad"); if (ad.paused) ad.play(); });

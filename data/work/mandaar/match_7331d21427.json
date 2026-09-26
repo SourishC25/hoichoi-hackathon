@@ -2867,6 +2867,51 @@
    ],
    "evidence": "In the segment before the ad break, a man is shown groaning and being helped into a car as if injured or ill. Shortly after, a woman is shown crying and screaming on the phone, urgently demanding that a doctor be called ('ডাক্তার ডেকে আইসবি কিনা'), which strongly indicates a medical emergency.",
    "confidence": 0.95
+  },
+  "c014:brand_d": {
+   "violation": false,
+   "violated_contexts": [],
+   "evidence": "The scenes preceding and following the ad break depict a conversation about managing a fishery and a group of men playing cards on a rooftop. There is no mention or depiction of funerals, hospitals, medical emergencies, or violence.",
+   "confidence": 0.95
+  },
+  "c024:brand_c": {
+   "violation": true,
+   "violated_contexts": [
+    "grief",
+    "illness",
+    "hospital"
+   ],
+   "evidence": "Just before the ad break, a woman is shown crying hysterically on the phone, demanding a doctor ('ডাক্তার') and threatening to turn into a corpse ('লাশ'), which directly touches upon themes of grief, illness, and hospital/medical emergencies.",
+   "confidence": 0.95
+  },
+  "c005:brand_a": {
+   "violation": true,
+   "violated_contexts": [
+    "grief",
+    "funeral"
+   ],
+   "evidence": "The scene immediately following the ad break shows a gathering of people holding memorial signs for a deceased person ('Mokai Das lives forever'), which is directly associated with grief and mourning.",
+   "confidence": 0.95
+  },
+  "c005:brand_c": {
+   "violation": true,
+   "violated_contexts": [
+    "grief"
+   ],
+   "evidence": "The scene immediately following the ad break shows a gathering of people with signs that read 'Mokai Das Amar Rahe' (Mokai Das is immortal), which is a memorial slogan for a deceased person, representing a context of grief and mourning.",
+   "confidence": 0.95
+  },
+  "c022:brand_c": {
+   "violation": false,
+   "violated_contexts": [],
+   "evidence": "The video segments immediately preceding and following the ad break show a man drinking alcohol and looking at a wedding photograph, followed by a wedding flashback and a scene in a kitchen. None of the forbidden contexts (funeral, violence, illness, accident, hospital, or grief) are depicted or discussed.",
+   "confidence": 0.95
+  },
+  "c009:brand_e": {
+   "violation": false,
+   "violated_contexts": [],
+   "evidence": "The scenes immediately preceding and following the ad break do not contain any of the forbidden contexts, which include funeral, hospital, violence, accident, injury, or grief. The pre-break scene shows a man smoking outside a closed shop with posters, and the post-break scene shows him riding a motorcycle to a dock.",
+   "confidence": 0.95
   }
  }
 }

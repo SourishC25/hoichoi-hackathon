@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
+  <vmap:AdBreak timeOffset="00:13:32.375" breakType="linear" breakId="midroll-1">
+    <vmap:AdSource id="midroll-1-src" allowMultipleAds="false" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST version="3.0">
+          <Ad id="brand_e-e_30s_bn" sequence="1">
+            <InLine>
+              <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
+              <AdTitle>Brand E — e_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-1&creative=e_30s_bn&ev=impression]]></Impression>
+              <Creatives>
+                <Creative id="e_30s_bn" sequence="1">
+                  <Linear>
+                    <Duration>00:00:30.000</Duration>
+                    <TrackingEvents>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-1&creative=e_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-1&creative=e_30s_bn&ev=complete]]></Tracking>
+                    </TrackingEvents>
+                    <MediaFiles>
+                      <MediaFile id="e_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_e/e_30s_bn.mp4]]></MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+              <Extensions>
+                <Extension type="contextual-targeting"><Brand>brand_e</Brand><BreakScore>0.817</BreakScore><Relevance>0.800</Relevance><DominantActivity>smoking a cigarette</DominantActivity><Reason>The cut occurs during a clean scene transition from Mandar outside the shop to him riding his motorcycle, with no dialogue, though the background percussion beat continues across the break. Brand: The scene immediately following the break features a character riding a motorcycle on a road, making this highly relevant.</Reason></Extension>
+              </Extensions>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+    <vmap:TrackingEvents>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-1&creative=e_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-1&creative=e_30s_bn&ev=breakEnd]]></vmap:Tracking>
+    </vmap:TrackingEvents>
+  </vmap:AdBreak>
+  <vmap:AdBreak timeOffset="00:18:37.958" breakType="linear" breakId="midroll-2">
+    <vmap:AdSource id="midroll-2-src" allowMultipleAds="false" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST version="3.0">
+          <Ad id="brand_d-d_30s_bn" sequence="1">
+            <InLine>
+              <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
+              <AdTitle>Brand D — d_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-2&creative=d_30s_bn&ev=impression]]></Impression>
+              <Creatives>
+                <Creative id="d_30s_bn" sequence="1">
+                  <Linear>
+                    <Duration>00:00:30.000</Duration>
+                    <TrackingEvents>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-2&creative=d_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-2&creative=d_30s_bn&ev=complete]]></Tracking>
+                    </TrackingEvents>
+                    <MediaFiles>
+                      <MediaFile id="d_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_d/d_30s_bn.mp4]]></MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+              <Extensions>
+                <Extension type="contextual-targeting"><Brand>brand_d</Brand><BreakScore>0.858</BreakScore><Relevance>0.800</Relevance><DominantActivity>walking</DominantActivity><Reason>The cut occurs during a clean transition between two distinct scenes, with the music fading out before the ad break and a completely new sequence starting on a rooftop afterwards. Brand: The scene immediately after the break features a character receiving a phone call from his son, making telecom highly relevant.</Reason></Extension>
+              </Extensions>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+    <vmap:TrackingEvents>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-2&creative=d_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-2&creative=d_30s_bn&ev=breakEnd]]></vmap:Tracking>
+    </vmap:TrackingEvents>
+  </vmap:AdBreak>
+  <vmap:AdBreak timeOffset="00:28:41.792" breakType="linear" breakId="midroll-3">
+    <vmap:AdSource id="midroll-3-src" allowMultipleAds="false" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST version="3.0">
+          <Ad id="brand_c-c_30s_bn" sequence="1">
+            <InLine>
+              <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
+              <AdTitle>Brand C — c_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-3&creative=c_30s_bn&ev=impression]]></Impression>
+              <Creatives>
+                <Creative id="c_30s_bn" sequence="1">
+                  <Linear>
+                    <Duration>00:00:30.000</Duration>
+                    <TrackingEvents>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-3&creative=c_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-3&creative=c_30s_bn&ev=complete]]></Tracking>
+                    </TrackingEvents>
+                    <MediaFiles>
+                      <MediaFile id="c_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_c/c_30s_bn.mp4]]></MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+              <Extensions>
+                <Extension type="contextual-targeting"><Brand>brand_c</Brand><BreakScore>0.889</BreakScore><Relevance>0.850</Relevance><DominantActivity>contemplating a wedding photo in a wallet</DominantActivity><Reason>The cut occurs during a transition from the character looking at a wedding photograph in the present to a flashback of the actual wedding ceremony, making it a clean and natural narrative break. Brand: The lead-in scene features a wedding photo and the post-break scene depicts a wedding ceremony, making wedding-related cosmetics highly relevant.</Reason></Extension>
+              </Extensions>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+    <vmap:TrackingEvents>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-3&creative=c_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=mandaar&break=midroll-3&creative=c_30s_bn&ev=breakEnd]]></vmap:Tracking>
+    </vmap:TrackingEvents>
+  </vmap:AdBreak>
+</vmap:VMAP>
