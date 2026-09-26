@@ -1,0 +1,149 @@
+{
+ "breaks": 12,
+ "teacher_violations": 5,
+ "episodes": {
+  "bhojon_bilashi": {
+   "breaks": [
+    [
+     207,
+     "brand_e",
+     "traffic"
+    ],
+    [
+     570,
+     "brand_a",
+     "recipe"
+    ]
+   ],
+   "allowed": 2,
+   "teacher_violations": [
+    {
+     "t": 570.04,
+     "brand": "brand_a",
+     "teacher": [
+      "illness"
+     ]
+    }
+   ],
+   "audit_pass": true
+  },
+  "feluda": {
+   "breaks": [
+    [
+     544,
+     "brand_d",
+     "motorcycle"
+    ]
+   ],
+   "allowed": 2,
+   "teacher_violations": [
+    {
+     "t": 543.72,
+     "brand": "brand_d",
+     "teacher": [
+      "violence"
+     ]
+    }
+   ],
+   "audit_pass": true
+  },
+  "indubala_bhaater_hotel": {
+   "breaks": [
+    [
+     198,
+     "brand_d",
+     "phone"
+    ],
+    [
+     852,
+     "brand_g",
+     "a shop"
+    ]
+   ],
+   "allowed": 2,
+   "teacher_violations": [
+    {
+     "t": 851.64,
+     "brand": "brand_g",
+     "teacher": [
+      "funeral",
+      "grief"
+     ]
+    }
+   ],
+   "audit_pass": true
+  },
+  "mandaar": {
+   "breaks": [
+    [
+     563,
+     "brand_e",
+     "motorcycle"
+    ],
+    [
+     925,
+     "brand_b",
+     "moisturizer"
+    ],
+    [
+     2223,
+     "brand_d",
+     "morning routine"
+    ]
+   ],
+   "allowed": 3,
+   "teacher_violations": [
+    {
+     "t": 562.583,
+     "brand": "brand_e",
+     "teacher": [
+      "violence"
+     ]
+    }
+   ],
+   "audit_pass": true
+  },
+  "mohanagar": {
+   "breaks": [
+    [
+     266,
+     "brand_h",
+     "mobile shopping"
+    ],
+    [
+     597,
+     "brand_a",
+     "dinner"
+    ]
+   ],
+   "allowed": 2,
+   "teacher_violations": [],
+   "audit_pass": true
+  },
+  "money_honey": {
+   "breaks": [
+    [
+     559,
+     "brand_d",
+     "calling"
+    ],
+    [
+     1066,
+     "brand_b",
+     "a close-up of a person's face"
+    ]
+   ],
+   "allowed": 2,
+   "teacher_violations": [
+    {
+     "t": 1065.64,
+     "brand": "brand_b",
+     "teacher": [
+      "grief"
+     ]
+    }
+   ],
+   "audit_pass": true
+  }
+ }
+}

@@ -1,0 +1,5055 @@
+{
+ "video_id": "feluda",
+ "generated_at": "2026-09-26T14:21:44+0530",
+ "engine": "local",
+ "models": {
+  "vision": "openai/clip-vit-base-patch32",
+  "audio": "laion/clap-htsat-unfused",
+  "speech": "silero-vad"
+ },
+ "catalogue_hash": "7331d21427",
+ "brands": [
+  "brand_a",
+  "brand_b",
+  "brand_c",
+  "brand_d",
+  "brand_e",
+  "brand_f",
+  "brand_g",
+  "brand_h"
+ ],
+ "video": {
+  "duration": 1535.6,
+  "width": 854,
+  "height": 480,
+  "fps": 25.0
+ },
+ "rules": {
+  "max_breaks_per_hour": 6,
+  "min_gap_sec": 300,
+  "max_ad_load_pct": 12.0,
+  "no_break_first_sec": 120,
+  "no_break_last_sec": 90,
+  "min_break_score": 0.55,
+  "brand_relevance_weight": 0.15
+ },
+ "summary": {
+  "scenes": 23,
+  "camera_cuts": 349,
+  "candidates": 27,
+  "breaks": 1,
+  "ad_seconds": 30,
+  "ad_load_pct": 1.92,
+  "breaks_per_hour": 2.34,
+  "allowed_breaks": 2
+ },
+ "audit": [
+  {
+   "check": "No speech at any cut point (VAD)",
+   "pass": true,
+   "detail": "max speech overlap in ±guard window: 0.00s"
+  },
+  {
+   "check": "Every cut on a camera cut or black frame",
+   "pass": true,
+   "detail": "1/1 breaks frame-aligned"
+  },
+  {
+   "check": "Min gap between breaks",
+   "pass": true,
+   "detail": "single break or none"
+  },
+  {
+   "check": "Max breaks per hour",
+   "pass": true,
+   "detail": "1 placed, 2 allowed for 25.6 min"
+  },
+  {
+   "check": "Ad load within budget",
+   "pass": true,
+   "detail": "1.92% (max 12.0%)"
+  },
+  {
+   "check": "Protected opening/closing windows",
+   "pass": true,
+   "detail": "first 120s / last 90s untouched"
+  },
+  {
+   "check": "No negative-context brand placed (3 layers re-checked)",
+   "pass": true,
+   "detail": "violations: none"
+  },
+  {
+   "check": "Every placed brand passed the independent verifier",
+   "pass": true,
+   "detail": "1 verifier passes"
+  }
+ ],
+ "synopsis": "23 scenes over 25:35. Most screen time: mountains, a living room at home, a group of people standing. Brand-safety flags: funeral. (Local engine: CLIP + CLAP zero-shot on 1 fps frames and 5 s audio windows.)",
+ "breaks": [
+  {
+   "candidate_id": "c010",
+   "t": 543.72,
+   "quality": 1.01,
+   "where_score": 0.867,
+   "brand_id": "brand_d",
+   "brand_name": "Brand D",
+   "relevance": 0.739,
+   "matched_contexts": [
+    "travel"
+   ],
+   "dominant_activity": "motorcycle",
+   "creative": {
+    "id": "d_30s_bn",
+    "duration_sec": 30,
+    "language": "bn",
+    "url": "ads/brand_d/d_30s_bn.mp4"
+   },
+   "reason": "Visual change across the cut 0.20 (CLIP), 34.8s silence before / 4.0s after (VAD), speech density 0%/52%, loudness dip 19.1 dB, fade to black. Brand: Lead-in best matches “travel” (CLIP z=2.4 before / 1.7 after the cut)",
+   "last_line_before_cut": "",
+   "first_line_after_cut": "",
+   "blocked_brands": [
+    {
+     "brand_id": "brand_e",
+     "why": [
+      {
+       "negative_context": "verifier",
+       "evidence": "accident: CLIP visual: visual z=2.8 (thr 2.4), audio z=2.4 (thr 3.2), peak ~08:59"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_g",
+     "why": [
+      {
+       "negative_context": "verifier",
+       "evidence": "accident: CLIP visual: visual z=2.8 (thr 2.4), audio z=2.4 (thr 3.2), peak ~08:59"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "why": [
+      {
+       "negative_context": "verifier",
+       "evidence": "accident: CLIP visual: visual z=2.8 (thr 2.4), audio z=2.4 (thr 3.2), peak ~08:59"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "end": 47.72,
+   "boundary_novelty": 0.0,
+   "summary": "mountains (z=5.5) — also a landscape, beauty, road trip; audio mood quiet",
+   "dominant_activity": "mountains",
+   "contexts": [
+    "mountains",
+    "a landscape",
+    "beauty",
+    "road trip",
+    "highway",
+    "travel by car"
+   ],
+   "mood": "quiet",
+   "emotional_intensity": 0.492,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 1,
+   "start": 47.72,
+   "end": 80.48,
+   "boundary_novelty": 0.241,
+   "summary": "a living room at home (z=2.0) — also a bedroom, people talking in a room, an office; audio mood calm",
+   "dominant_activity": "a living room at home",
+   "contexts": [
+    "a living room at home",
+    "a bedroom",
+    "people talking in a room",
+    "an office",
+    "hotel"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.695,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 2,
+   "start": 80.48,
+   "end": 191.08,
+   "boundary_novelty": 0.508,
+   "summary": "mountains (z=5.1) — also a landscape, working remotely, train journey; audio mood tense",
+   "dominant_activity": "mountains",
+   "contexts": [
+    "mountains",
+    "a landscape",
+    "working remotely",
+    "train journey",
+    "journey",
+    "an outdoor scene in daylight"
+   ],
+   "mood": "tense",
+   "emotional_intensity": 1.0,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 3,
+   "start": 191.08,
+   "end": 260.6,
+   "boundary_novelty": 1.0,
+   "summary": "mountains (z=3.2) — also a group of people standing, eyeliner, fashion; audio mood conversational",
+   "dominant_activity": "mountains",
+   "contexts": [
+    "mountains",
+    "a group of people standing",
+    "eyeliner",
+    "fashion",
+    "airport",
+    "eating"
+   ],
+   "mood": "conversational",
+   "emotional_intensity": 0.426,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 4,
+   "start": 260.6,
+   "end": 302.0,
+   "boundary_novelty": 0.334,
+   "summary": "mountains (z=4.6) — also a landscape, a group of people standing, journey; audio mood calm",
+   "dominant_activity": "mountains",
+   "contexts": [
+    "mountains",
+    "a landscape",
+    "a group of people standing",
+    "journey",
+    "a crowd of people",
+    "beauty"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.687,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 5,
+   "start": 302.0,
+   "end": 351.52,
+   "boundary_novelty": 0.268,
+   "summary": "a group of people standing (z=1.8) — also personal finance, online meeting, a crowd of people; audio mood happy",
+   "dominant_activity": "a group of people standing",
+   "contexts": [
+    "a group of people standing",
+    "personal finance",
+    "online meeting",
+    "a crowd of people",
+    "banking"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.739,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 6,
+   "start": 351.52,
+   "end": 389.08,
+   "boundary_novelty": 0.123,
+   "summary": "mountains (z=1.6) — also a group of people standing, online meeting, family conversation; audio mood sad",
+   "dominant_activity": "mountains",
+   "contexts": [
+    "mountains",
+    "a group of people standing",
+    "online meeting",
+    "family conversation"
+   ],
+   "mood": "sad",
+   "emotional_intensity": 0.589,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 7,
+   "start": 389.08,
+   "end": 411.68,
+   "boundary_novelty": 0.365,
+   "summary": "a living room at home (z=3.4) — also family meal, dinner, family vacation; audio mood calm",
+   "dominant_activity": "a living room at home",
+   "contexts": [
+    "a living room at home",
+    "family meal",
+    "dinner",
+    "family vacation",
+    "a group of people standing",
+    "family conversation"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.49,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 8,
+   "start": 411.68,
+   "end": 509.6,
+   "boundary_novelty": 0.205,
+   "summary": "family meal (z=3.3) — also dinner, a living room at home, cooking; audio mood calm",
+   "dominant_activity": "family meal",
+   "contexts": [
+    "family meal",
+    "dinner",
+    "a living room at home",
+    "cooking",
+    "recipe",
+    "dressing"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.501,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 9,
+   "start": 509.6,
+   "end": 543.72,
+   "boundary_novelty": 0.305,
+   "summary": "motorcycle (z=4.1) — also mountains, a landscape, vehicle; audio mood tense",
+   "dominant_activity": "motorcycle",
+   "contexts": [
+    "motorcycle",
+    "mountains",
+    "a landscape",
+    "vehicle",
+    "boiling",
+    "traffic"
+   ],
+   "mood": "tense",
+   "emotional_intensity": 0.665,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 10,
+   "start": 543.72,
+   "end": 680.68,
+   "boundary_novelty": 0.35,
+   "summary": "driving (z=3.9) — also road trip, travel by car, the inside of a car; audio mood conversational",
+   "dominant_activity": "driving",
+   "contexts": [
+    "driving",
+    "road trip",
+    "travel by car",
+    "the inside of a car",
+    "automobile",
+    "car"
+   ],
+   "mood": "conversational",
+   "emotional_intensity": 0.412,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 11,
+   "start": 680.68,
+   "end": 702.84,
+   "boundary_novelty": 0.204,
+   "summary": "a landscape (z=3.1) — also resort, a living room at home, hotel; audio mood conversational",
+   "dominant_activity": "a landscape",
+   "contexts": [
+    "a landscape",
+    "resort",
+    "a living room at home",
+    "hotel",
+    "vacation",
+    "traffic"
+   ],
+   "mood": "conversational",
+   "emotional_intensity": 0.524,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 12,
+   "start": 702.84,
+   "end": 851.56,
+   "boundary_novelty": 0.166,
+   "summary": "a group of people standing (z=2.7) — also hotel, online meeting, airport; audio mood conversational",
+   "dominant_activity": "a group of people standing",
+   "contexts": [
+    "a group of people standing",
+    "hotel",
+    "online meeting",
+    "airport",
+    "people talking in a room",
+    "party"
+   ],
+   "mood": "conversational",
+   "emotional_intensity": 0.298,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 13,
+   "start": 851.56,
+   "end": 882.64,
+   "boundary_novelty": 0.307,
+   "summary": "mountains (z=4.1) — also travel by car, a landscape, automobile; audio mood happy",
+   "dominant_activity": "mountains",
+   "contexts": [
+    "mountains",
+    "travel by car",
+    "a landscape",
+    "automobile",
+    "road trip",
+    "car"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.821,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 14,
+   "start": 882.64,
+   "end": 962.44,
+   "boundary_novelty": 0.141,
+   "summary": "mountains (z=3.3) — also a landscape, resort, beach; audio mood happy",
+   "dominant_activity": "mountains",
+   "contexts": [
+    "mountains",
+    "a landscape",
+    "resort",
+    "beach",
+    "sightseeing",
+    "tourism"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.764,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 15,
+   "start": 962.44,
+   "end": 1081.36,
+   "boundary_novelty": 0.169,
+   "summary": "mountains (z=2.6) — also family vacation, family trip, vacation; audio mood happy",
+   "dominant_activity": "mountains",
+   "contexts": [
+    "mountains",
+    "family vacation",
+    "family trip",
+    "vacation",
+    "beach",
+    "travel"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.441,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 16,
+   "start": 1081.36,
+   "end": 1117.32,
+   "boundary_novelty": 0.293,
+   "summary": "beach (z=2.7) — also wedding, vacation, family vacation; audio mood happy; flagged: funeral",
+   "dominant_activity": "beach",
+   "contexts": [
+    "beach",
+    "wedding",
+    "vacation",
+    "family vacation",
+    "special occasion",
+    "festival food"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.937,
+   "sensitive": [
+    {
+     "topic": "funeral",
+     "confidence": 0.543,
+     "evidence": "CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28",
+     "vis": 3.43,
+     "aud": -0.207
+    }
+   ],
+   "ends_with": "transition",
+   "blocks_brands": [
+    "brand_a",
+    "brand_b",
+    "brand_c",
+    "brand_d",
+    "brand_e",
+    "brand_f",
+    "brand_g",
+    "brand_h"
+   ],
+   "blocked_contexts": [
+    "funeral",
+    "grief"
+   ]
+  },
+  {
+   "index": 17,
+   "start": 1117.32,
+   "end": 1172.2,
+   "boundary_novelty": 0.164,
+   "summary": "tourism (z=3.2) — also vacation, sightseeing, family vacation; audio mood happy",
+   "dominant_activity": "tourism",
+   "contexts": [
+    "tourism",
+    "vacation",
+    "sightseeing",
+    "family vacation",
+    "mountains",
+    "commuting"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.334,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 18,
+   "start": 1172.2,
+   "end": 1196.76,
+   "boundary_novelty": 0.16,
+   "summary": "train journey (z=2.2) — also checkout, dressing, product browsing; audio mood conversational",
+   "dominant_activity": "train journey",
+   "contexts": [
+    "train journey",
+    "checkout",
+    "dressing",
+    "product browsing",
+    "electronics shopping",
+    "fashion shopping"
+   ],
+   "mood": "conversational",
+   "emotional_intensity": 0.227,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 19,
+   "start": 1196.76,
+   "end": 1270.88,
+   "boundary_novelty": 0.231,
+   "summary": "eyeliner (z=2.0) — also a group of people standing, party, fashion shopping; audio mood conversational",
+   "dominant_activity": "eyeliner",
+   "contexts": [
+    "eyeliner",
+    "a group of people standing",
+    "party",
+    "fashion shopping",
+    "fashion",
+    "special occasion"
+   ],
+   "mood": "conversational",
+   "emotional_intensity": 0.376,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 20,
+   "start": 1270.88,
+   "end": 1292.44,
+   "boundary_novelty": 0.154,
+   "summary": "eyeliner (z=1.9) — also fashion, make-up, train journey; audio mood quiet",
+   "dominant_activity": "eyeliner",
+   "contexts": [
+    "eyeliner",
+    "fashion",
+    "make-up",
+    "train journey",
+    "electronics shopping"
+   ],
+   "mood": "quiet",
+   "emotional_intensity": 0.354,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 21,
+   "start": 1292.44,
+   "end": 1474.56,
+   "boundary_novelty": 0.125,
+   "summary": "a living room at home (z=2.2) — also a bedroom, heat, bill payment; audio mood calm",
+   "dominant_activity": "a living room at home",
+   "contexts": [
+    "a living room at home",
+    "a bedroom",
+    "heat",
+    "bill payment",
+    "text or credits on a dark screen",
+    "cream"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.572,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 22,
+   "start": 1474.56,
+   "end": 1535.6,
+   "boundary_novelty": 0.348,
+   "summary": "text or credits on a dark screen (z=2.0) — also n/a; audio mood happy",
+   "dominant_activity": "text or credits on a dark screen",
+   "contexts": [
+    "text or credits on a dark screen"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.728,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  }
+ ],
+ "candidates": [
+  {
+   "id": "c000",
+   "t0": 0.58,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 0.58,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.58,
+    "silence_after": 14.82,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c001",
+   "t0": 47.72,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 47.72,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.97,
+    "speech_density_10s_after": 0.99,
+    "loudness_dip_db": 9.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c002",
+   "t0": 80.48,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 84.72,
+   "scene_before": 2,
+   "scene_after": 3,
+   "signals": {
+    "snap_delta": 4.24,
+    "silence_before": 4.32,
+    "silence_after": 102.78,
+    "speech_density_10s_before": 0.19,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.1,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c003",
+   "t0": 191.08,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 191.08,
+   "scene_before": 2,
+   "scene_after": 3,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.28,
+    "silence_after": 0.52,
+    "speech_density_10s_before": 0.33,
+    "speech_density_10s_after": 0.84,
+    "loudness_dip_db": 15.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c004",
+   "t0": 260.6,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 260.6,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.77,
+    "speech_density_10s_after": 0.72,
+    "loudness_dip_db": 2.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c005",
+   "t0": 302.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "not chosen: pacing rules (min gap / max breaks) favoured a better nearby break"
+   ],
+   "t": 302.0,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 8.1,
+    "silence_after": 11.3,
+    "speech_density_10s_before": 0.19,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.154,
+    "suspense_hook": 0.431,
+    "natural_break_score": 0.846,
+    "visual_novelty": 0.375,
+    "reason": "Visual change across the cut 0.37 (CLIP), 8.1s silence before / 11.3s after (VAD), speech density 19%/0%, loudness dip 2.4 dB."
+   },
+   "where_score": 0.778,
+   "match": {
+    "dominant_activity": "mountains",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.496,
+      "matched_contexts": [
+       "lunch"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “lunch” (CLIP z=1.6 before / 0.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.218,
+      "matched_contexts": [],
+      "violations": [],
+      "rationale": "Lead-in best matches “bathroom” (CLIP z=0.7 before / 0.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.462,
+      "matched_contexts": [
+       "fashion",
+       "foundation",
+       "beauty"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “fashion” (CLIP z=1.6 before / 0.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.419,
+      "matched_contexts": [
+       "working remotely",
+       "travel",
+       "internet"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “working remotely” (CLIP z=1.7 before / -0.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.548,
+      "matched_contexts": [
+       "journey",
+       "family trip",
+       "road trip"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “journey” (CLIP z=2.2 before / -0.6 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.321,
+      "matched_contexts": [
+       "banking",
+       "online shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “banking” (CLIP z=1.2 before / 0.2 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.955,
+      "matched_contexts": [
+       "mountains"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “mountains” (CLIP z=4.6 before / -0.2 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.349,
+      "matched_contexts": [
+       "fashion shopping",
+       "online shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “fashion shopping” (CLIP z=1.2 before / 0.6 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.955,
+     "matched_contexts": [
+      "mountains"
+     ],
+     "rationale": "Lead-in best matches “mountains” (CLIP z=4.6 before / -0.2 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.548,
+     "matched_contexts": [
+      "journey",
+      "family trip",
+      "road trip"
+     ],
+     "rationale": "Lead-in best matches “journey” (CLIP z=2.2 before / -0.6 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.496,
+     "matched_contexts": [
+      "lunch"
+     ],
+     "rationale": "Lead-in best matches “lunch” (CLIP z=1.6 before / 0.9 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.462,
+     "matched_contexts": [
+      "fashion",
+      "foundation",
+      "beauty"
+     ],
+     "rationale": "Lead-in best matches “fashion” (CLIP z=1.6 before / 0.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.419,
+     "matched_contexts": [
+      "working remotely",
+      "travel",
+      "internet"
+     ],
+     "rationale": "Lead-in best matches “working remotely” (CLIP z=1.7 before / -0.3 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.349,
+     "matched_contexts": [
+      "fashion shopping",
+      "online shopping"
+     ],
+     "rationale": "Lead-in best matches “fashion shopping” (CLIP z=1.2 before / 0.6 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.321,
+     "matched_contexts": [
+      "banking",
+      "online shopping"
+     ],
+     "rationale": "Lead-in best matches “banking” (CLIP z=1.2 before / 0.2 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.218,
+     "matched_contexts": [],
+     "rationale": "Lead-in best matches “bathroom” (CLIP z=0.7 before / 0.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "mountains",
+   "quality": 0.921,
+   "selected": false
+  },
+  {
+   "id": "c006",
+   "t0": 351.52,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 351.52,
+   "scene_before": 5,
+   "scene_after": 6,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.93,
+    "speech_density_10s_after": 0.65,
+    "loudness_dip_db": 15.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c007",
+   "t0": 389.08,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 389.08,
+   "scene_before": 6,
+   "scene_after": 7,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 1.0,
+    "speech_density_10s_after": 0.74,
+    "loudness_dip_db": 10.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c008",
+   "t0": 411.68,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 411.68,
+   "scene_before": 7,
+   "scene_after": 8,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.82,
+    "speech_density_10s_after": 0.81,
+    "loudness_dip_db": 26.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c009",
+   "t0": 509.6,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "not chosen: pacing rules (min gap / max breaks) favoured a better nearby break"
+   ],
+   "t": 509.6,
+   "scene_before": 8,
+   "scene_after": 9,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.7,
+    "silence_after": 38.1,
+    "speech_density_10s_before": 0.57,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 16.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.533,
+    "jarring": 0.199,
+    "suspense_hook": 0.053,
+    "natural_break_score": 0.801,
+    "visual_novelty": 0.223,
+    "reason": "Visual change across the cut 0.22 (CLIP), 0.7s silence before / 38.1s after (VAD), speech density 57%/0%, loudness dip 16.5 dB."
+   },
+   "where_score": 0.71,
+   "match": {
+    "dominant_activity": "family meal",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.866,
+      "matched_contexts": [
+       "family meal",
+       "dinner",
+       "cooking"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “family meal” (CLIP z=3.4 before / 0.6 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.647,
+      "matched_contexts": [
+       "getting ready",
+       "cream",
+       "morning routine"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “getting ready” (CLIP z=2.3 before / 0.4 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.767,
+      "matched_contexts": [
+       "dressing",
+       "special occasion",
+       "party"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “dressing” (CLIP z=2.7 before / 0.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.704,
+      "matched_contexts": [
+       "family conversation",
+       "online meeting",
+       "working remotely"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “family conversation” (CLIP z=2.7 before / -0.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.742,
+      "matched_contexts": [
+       "family trip",
+       "journey"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “family trip” (CLIP z=2.3 before / 2.2 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.713,
+      "matched_contexts": [
+       "personal finance",
+       "payment",
+       "online shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “personal finance” (CLIP z=2.5 before / 0.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.769,
+      "matched_contexts": [
+       "family vacation",
+       "holiday",
+       "vacation"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “family vacation” (CLIP z=2.4 before / 2.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.708,
+      "matched_contexts": [
+       "home shopping",
+       "online shopping",
+       "gift"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “home shopping” (CLIP z=2.1 before / 2.3 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.866,
+     "matched_contexts": [
+      "family meal",
+      "dinner",
+      "cooking"
+     ],
+     "rationale": "Lead-in best matches “family meal” (CLIP z=3.4 before / 0.6 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.769,
+     "matched_contexts": [
+      "family vacation",
+      "holiday",
+      "vacation"
+     ],
+     "rationale": "Lead-in best matches “family vacation” (CLIP z=2.4 before / 2.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.767,
+     "matched_contexts": [
+      "dressing",
+      "special occasion",
+      "party"
+     ],
+     "rationale": "Lead-in best matches “dressing” (CLIP z=2.7 before / 0.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.742,
+     "matched_contexts": [
+      "family trip",
+      "journey"
+     ],
+     "rationale": "Lead-in best matches “family trip” (CLIP z=2.3 before / 2.2 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.713,
+     "matched_contexts": [
+      "personal finance",
+      "payment",
+      "online shopping"
+     ],
+     "rationale": "Lead-in best matches “personal finance” (CLIP z=2.5 before / 0.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.708,
+     "matched_contexts": [
+      "home shopping",
+      "online shopping",
+      "gift"
+     ],
+     "rationale": "Lead-in best matches “home shopping” (CLIP z=2.1 before / 2.3 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.704,
+     "matched_contexts": [
+      "family conversation",
+      "online meeting",
+      "working remotely"
+     ],
+     "rationale": "Lead-in best matches “family conversation” (CLIP z=2.7 before / -0.3 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.647,
+     "matched_contexts": [
+      "getting ready",
+      "cream",
+      "morning routine"
+     ],
+     "rationale": "Lead-in best matches “getting ready” (CLIP z=2.3 before / 0.4 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "family meal",
+   "quality": 0.84,
+   "selected": false
+  },
+  {
+   "id": "c010",
+   "t0": 543.72,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 543.72,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 34.82,
+    "silence_after": 3.98,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.52,
+    "loudness_dip_db": 19.1,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.867,
+    "jarring": 0.158,
+    "suspense_hook": 0.525,
+    "natural_break_score": 0.842,
+    "visual_novelty": 0.202,
+    "reason": "Visual change across the cut 0.20 (CLIP), 34.8s silence before / 4.0s after (VAD), speech density 0%/52%, loudness dip 19.1 dB, fade to black."
+   },
+   "where_score": 0.867,
+   "match": {
+    "dominant_activity": "motorcycle",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.74,
+      "matched_contexts": [
+       "boiling",
+       "frying"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “boiling” (CLIP z=2.7 before / 0.5 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.531,
+      "matched_contexts": [
+       "heat"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “heat” (CLIP z=1.7 before / 1.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.489,
+      "matched_contexts": [
+       "celebration",
+       "beauty",
+       "fashion"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “celebration” (CLIP z=1.8 before / 0.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.739,
+      "matched_contexts": [
+       "travel"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “travel” (CLIP z=2.4 before / 1.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.955,
+      "matched_contexts": [
+       "motorcycle",
+       "vehicle",
+       "traffic"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “motorcycle” (CLIP z=4.1 before / 1.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.568,
+      "matched_contexts": [
+       "shopping",
+       "online shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “shopping” (CLIP z=2.1 before / 0.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.95,
+      "matched_contexts": [
+       "mountains",
+       "road trip",
+       "tourism"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “mountains” (CLIP z=4.0 before / 1.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.675,
+      "matched_contexts": [
+       "delivery",
+       "shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “delivery” (CLIP z=2.2 before / 1.2 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.955,
+     "matched_contexts": [
+      "motorcycle",
+      "vehicle",
+      "traffic"
+     ],
+     "rationale": "Lead-in best matches “motorcycle” (CLIP z=4.1 before / 1.9 after the cut)",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": true,
+      "violated_contexts": [
+       "accident"
+      ],
+      "evidence": "accident: CLIP visual: visual z=2.8 (thr 2.4), audio z=2.4 (thr 3.2), peak ~08:59",
+      "confidence": 0.54
+     },
+     "verifier_blocked": true
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.95,
+     "matched_contexts": [
+      "mountains",
+      "road trip",
+      "tourism"
+     ],
+     "rationale": "Lead-in best matches “mountains” (CLIP z=4.0 before / 1.8 after the cut)",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": true,
+      "violated_contexts": [
+       "accident"
+      ],
+      "evidence": "accident: CLIP visual: visual z=2.8 (thr 2.4), audio z=2.4 (thr 3.2), peak ~08:59",
+      "confidence": 0.54
+     },
+     "verifier_blocked": true
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.74,
+     "matched_contexts": [
+      "boiling",
+      "frying"
+     ],
+     "rationale": "Lead-in best matches “boiling” (CLIP z=2.7 before / 0.5 after the cut)",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": true,
+      "violated_contexts": [
+       "accident"
+      ],
+      "evidence": "accident: CLIP visual: visual z=2.8 (thr 2.4), audio z=2.4 (thr 3.2), peak ~08:59",
+      "confidence": 0.54
+     },
+     "verifier_blocked": true
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.739,
+     "matched_contexts": [
+      "travel"
+     ],
+     "rationale": "Lead-in best matches “travel” (CLIP z=2.4 before / 1.7 after the cut)",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": false,
+      "violated_contexts": [],
+      "evidence": "No forbidden context above 0.8× threshold in 220 frames at 2 fps (t−90 s…t+20 s) or the soundtrack.",
+      "confidence": 0.9
+     }
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.675,
+     "matched_contexts": [
+      "delivery",
+      "shopping"
+     ],
+     "rationale": "Lead-in best matches “delivery” (CLIP z=2.2 before / 1.2 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.568,
+     "matched_contexts": [
+      "shopping",
+      "online shopping"
+     ],
+     "rationale": "Lead-in best matches “shopping” (CLIP z=2.1 before / 0.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.531,
+     "matched_contexts": [
+      "heat"
+     ],
+     "rationale": "Lead-in best matches “heat” (CLIP z=1.7 before / 1.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.489,
+     "matched_contexts": [
+      "celebration",
+      "beauty",
+      "fashion"
+     ],
+     "rationale": "Lead-in best matches “celebration” (CLIP z=1.8 before / 0.3 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "motorcycle",
+   "quality": 1.01,
+   "selected": true
+  },
+  {
+   "id": "c011",
+   "t0": 680.68,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "break quality 0.53 below threshold 0.55"
+   ],
+   "t": 684.6,
+   "scene_before": 11,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 3.92,
+    "silence_before": 2.5,
+    "silence_after": 3.9,
+    "speech_density_10s_before": 0.74,
+    "speech_density_10s_after": 0.43,
+    "loudness_dip_db": 2.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.797,
+    "jarring": 0.461,
+    "suspense_hook": 0.191,
+    "natural_break_score": 0.539,
+    "visual_novelty": 0.208,
+    "reason": "Visual change across the cut 0.21 (CLIP), 2.5s silence before / 3.9s after (VAD), speech density 74%/43%, loudness dip 2.2 dB."
+   },
+   "where_score": 0.529,
+   "match": {
+    "dominant_activity": "a landscape",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.355,
+      "matched_contexts": [
+       "boiling"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “boiling” (CLIP z=1.1 before / 1.2 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.401,
+      "matched_contexts": [
+       "cream",
+       "heat",
+       "shower"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “cream” (CLIP z=1.1 before / 1.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.613,
+      "matched_contexts": [
+       "foundation",
+       "beauty"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “foundation” (CLIP z=2.1 before / 0.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.618,
+      "matched_contexts": [
+       "streaming",
+       "travel",
+       "working remotely"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “streaming” (CLIP z=2.1 before / 0.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.741,
+      "matched_contexts": [
+       "traffic",
+       "road",
+       "highway"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “traffic” (CLIP z=2.7 before / 0.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.302,
+      "matched_contexts": [
+       "banking"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “banking” (CLIP z=0.9 before / 0.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.848,
+      "matched_contexts": [
+       "resort",
+       "mountains",
+       "vacation"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “resort” (CLIP z=3.1 before / 1.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.305,
+      "matched_contexts": [
+       "delivery"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “delivery” (CLIP z=1.0 before / 0.7 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.848,
+     "matched_contexts": [
+      "resort",
+      "mountains",
+      "vacation"
+     ],
+     "rationale": "Lead-in best matches “resort” (CLIP z=3.1 before / 1.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.741,
+     "matched_contexts": [
+      "traffic",
+      "road",
+      "highway"
+     ],
+     "rationale": "Lead-in best matches “traffic” (CLIP z=2.7 before / 0.3 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.618,
+     "matched_contexts": [
+      "streaming",
+      "travel",
+      "working remotely"
+     ],
+     "rationale": "Lead-in best matches “streaming” (CLIP z=2.1 before / 0.9 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.613,
+     "matched_contexts": [
+      "foundation",
+      "beauty"
+     ],
+     "rationale": "Lead-in best matches “foundation” (CLIP z=2.1 before / 0.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.401,
+     "matched_contexts": [
+      "cream",
+      "heat",
+      "shower"
+     ],
+     "rationale": "Lead-in best matches “cream” (CLIP z=1.1 before / 1.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.355,
+     "matched_contexts": [
+      "boiling"
+     ],
+     "rationale": "Lead-in best matches “boiling” (CLIP z=1.1 before / 1.2 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.305,
+     "matched_contexts": [
+      "delivery"
+     ],
+     "rationale": "Lead-in best matches “delivery” (CLIP z=1.0 before / 0.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.302,
+     "matched_contexts": [
+      "banking"
+     ],
+     "rationale": "Lead-in best matches “banking” (CLIP z=0.9 before / 0.9 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "a landscape",
+   "quality": 0.656,
+   "selected": false
+  },
+  {
+   "id": "c012",
+   "t0": 702.84,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 702.84,
+   "scene_before": 11,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.52,
+    "speech_density_10s_after": 0.96,
+    "loudness_dip_db": 12.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c013",
+   "t0": 851.56,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "break quality 0.54 below threshold 0.55"
+   ],
+   "t": 854.4,
+   "scene_before": 13,
+   "scene_after": 14,
+   "signals": {
+    "snap_delta": 2.84,
+    "silence_before": 2.2,
+    "silence_after": 15.9,
+    "speech_density_10s_before": 0.78,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 6.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.592,
+    "jarring": 0.488,
+    "suspense_hook": 0.08,
+    "natural_break_score": 0.512,
+    "visual_novelty": 0.139,
+    "reason": "Visual change across the cut 0.14 (CLIP), 2.2s silence before / 15.9s after (VAD), speech density 78%/0%, loudness dip 6.2 dB."
+   },
+   "where_score": 0.535,
+   "match": {
+    "dominant_activity": "mountains",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.395,
+      "matched_contexts": [
+       "boiling"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “boiling” (CLIP z=1.4 before / 0.6 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.401,
+      "matched_contexts": [
+       "self care"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “self care” (CLIP z=1.2 before / 1.5 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.801,
+      "matched_contexts": [
+       "beauty"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “beauty” (CLIP z=2.6 before / 2.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.58,
+      "matched_contexts": [
+       "travel",
+       "streaming",
+       "working remotely"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “travel” (CLIP z=1.7 before / 1.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.578,
+      "matched_contexts": [
+       "journey",
+       "road trip",
+       "travel by car"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “journey” (CLIP z=1.7 before / 1.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.214,
+      "matched_contexts": [],
+      "violations": [],
+      "rationale": "Lead-in best matches “online shopping” (CLIP z=0.5 before / 1.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.988,
+      "matched_contexts": [
+       "mountains"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “mountains” (CLIP z=4.8 before / 4.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.214,
+      "matched_contexts": [],
+      "violations": [],
+      "rationale": "Lead-in best matches “online shopping” (CLIP z=0.5 before / 1.1 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.988,
+     "matched_contexts": [
+      "mountains"
+     ],
+     "rationale": "Lead-in best matches “mountains” (CLIP z=4.8 before / 4.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.801,
+     "matched_contexts": [
+      "beauty"
+     ],
+     "rationale": "Lead-in best matches “beauty” (CLIP z=2.6 before / 2.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.58,
+     "matched_contexts": [
+      "travel",
+      "streaming",
+      "working remotely"
+     ],
+     "rationale": "Lead-in best matches “travel” (CLIP z=1.7 before / 1.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.578,
+     "matched_contexts": [
+      "journey",
+      "road trip",
+      "travel by car"
+     ],
+     "rationale": "Lead-in best matches “journey” (CLIP z=1.7 before / 1.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.401,
+     "matched_contexts": [
+      "self care"
+     ],
+     "rationale": "Lead-in best matches “self care” (CLIP z=1.2 before / 1.5 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.395,
+     "matched_contexts": [
+      "boiling"
+     ],
+     "rationale": "Lead-in best matches “boiling” (CLIP z=1.4 before / 0.6 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.214,
+     "matched_contexts": [],
+     "rationale": "Lead-in best matches “online shopping” (CLIP z=0.5 before / 1.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.214,
+     "matched_contexts": [],
+     "rationale": "Lead-in best matches “online shopping” (CLIP z=0.5 before / 1.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "mountains",
+   "quality": 0.683,
+   "selected": false
+  },
+  {
+   "id": "c014",
+   "t0": 882.64,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "break quality 0.50 below threshold 0.55"
+   ],
+   "t": 882.64,
+   "scene_before": 13,
+   "scene_after": 14,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 10.44,
+    "silence_after": 59.36,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 4.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.634,
+    "jarring": 0.552,
+    "suspense_hook": 0.566,
+    "natural_break_score": 0.448,
+    "visual_novelty": 0.099,
+    "reason": "Visual change across the cut 0.10 (CLIP), 10.4s silence before / 59.4s after (VAD), speech density 0%/0%, loudness dip 4.1 dB, music carries over."
+   },
+   "where_score": 0.499,
+   "match": {
+    "dominant_activity": "mountains",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.416,
+      "matched_contexts": [
+       "festival food"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “festival food” (CLIP z=1.1 before / 1.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.413,
+      "matched_contexts": [
+       "self care",
+       "heat"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “self care” (CLIP z=1.2 before / 1.4 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.789,
+      "matched_contexts": [
+       "beauty"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “beauty” (CLIP z=2.3 before / 3.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.797,
+      "matched_contexts": [
+       "travel",
+       "working remotely"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “travel” (CLIP z=2.4 before / 2.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.879,
+      "matched_contexts": [
+       "travel by car",
+       "road trip",
+       "automobile"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “travel by car” (CLIP z=3.2 before / 1.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.608,
+      "matched_contexts": [
+       "shopping",
+       "online shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “shopping” (CLIP z=1.8 before / 1.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.962,
+      "matched_contexts": [
+       "mountains",
+       "road trip",
+       "tourism"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “mountains” (CLIP z=4.1 before / 2.5 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.608,
+      "matched_contexts": [
+       "shopping",
+       "delivery",
+       "mobile shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “shopping” (CLIP z=1.8 before / 1.8 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.962,
+     "matched_contexts": [
+      "mountains",
+      "road trip",
+      "tourism"
+     ],
+     "rationale": "Lead-in best matches “mountains” (CLIP z=4.1 before / 2.5 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.879,
+     "matched_contexts": [
+      "travel by car",
+      "road trip",
+      "automobile"
+     ],
+     "rationale": "Lead-in best matches “travel by car” (CLIP z=3.2 before / 1.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.797,
+     "matched_contexts": [
+      "travel",
+      "working remotely"
+     ],
+     "rationale": "Lead-in best matches “travel” (CLIP z=2.4 before / 2.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.789,
+     "matched_contexts": [
+      "beauty"
+     ],
+     "rationale": "Lead-in best matches “beauty” (CLIP z=2.3 before / 3.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.608,
+     "matched_contexts": [
+      "shopping",
+      "online shopping"
+     ],
+     "rationale": "Lead-in best matches “shopping” (CLIP z=1.8 before / 1.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.608,
+     "matched_contexts": [
+      "shopping",
+      "delivery",
+      "mobile shopping"
+     ],
+     "rationale": "Lead-in best matches “shopping” (CLIP z=1.8 before / 1.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.416,
+     "matched_contexts": [
+      "festival food"
+     ],
+     "rationale": "Lead-in best matches “festival food” (CLIP z=1.1 before / 1.9 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.413,
+     "matched_contexts": [
+      "self care",
+      "heat"
+     ],
+     "rationale": "Lead-in best matches “self care” (CLIP z=1.2 before / 1.4 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "mountains",
+   "quality": 0.643,
+   "selected": false
+  },
+  {
+   "id": "c015",
+   "t0": 962.44,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 962.44,
+   "scene_before": 14,
+   "scene_after": 15,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 1.0,
+    "speech_density_10s_after": 0.92,
+    "loudness_dip_db": 10.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c016",
+   "t0": 1081.36,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 1081.36,
+   "scene_before": 15,
+   "scene_after": 16,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.96,
+    "silence_after": 37.34,
+    "speech_density_10s_before": 0.43,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 1.0,
+    "jarring": 0.263,
+    "suspense_hook": 0.334,
+    "natural_break_score": 0.737,
+    "visual_novelty": 0.293,
+    "reason": "Visual change across the cut 0.29 (CLIP), 4.0s silence before / 37.3s after (VAD), speech density 43%/0%, loudness dip 2.5 dB, music carries over."
+   },
+   "where_score": 0.66,
+   "match": {
+    "dominant_activity": "mountains",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.377,
+      "matched_contexts": [
+       "festival food"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “festival food” (CLIP z=1.2 before / 1.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.412,
+      "matched_contexts": [
+       "self care"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “self care” (CLIP z=1.4 before / 0.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.601,
+      "matched_contexts": [
+       "beauty",
+       "wedding",
+       "special occasion"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “beauty” (CLIP z=1.8 before / 1.5 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.801,
+      "matched_contexts": [
+       "travel",
+       "working remotely"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “travel” (CLIP z=2.8 before / 1.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.716,
+      "matched_contexts": [
+       "family trip",
+       "commuting",
+       "journey"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “family trip” (CLIP z=2.5 before / 0.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.254,
+      "matched_contexts": [],
+      "violations": [],
+      "rationale": "Lead-in best matches “salary” (CLIP z=1.1 before / -0.6 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.878,
+      "matched_contexts": [
+       "mountains",
+       "travel",
+       "tourism"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “mountains” (CLIP z=3.3 before / 1.4 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.275,
+      "matched_contexts": [],
+      "violations": [],
+      "rationale": "Lead-in best matches “delivery” (CLIP z=0.9 before / 0.6 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.878,
+     "matched_contexts": [
+      "mountains",
+      "travel",
+      "tourism"
+     ],
+     "rationale": "Lead-in best matches “mountains” (CLIP z=3.3 before / 1.4 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.801,
+     "matched_contexts": [
+      "travel",
+      "working remotely"
+     ],
+     "rationale": "Lead-in best matches “travel” (CLIP z=2.8 before / 1.3 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.716,
+     "matched_contexts": [
+      "family trip",
+      "commuting",
+      "journey"
+     ],
+     "rationale": "Lead-in best matches “family trip” (CLIP z=2.5 before / 0.7 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.601,
+     "matched_contexts": [
+      "beauty",
+      "wedding",
+      "special occasion"
+     ],
+     "rationale": "Lead-in best matches “beauty” (CLIP z=1.8 before / 1.5 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.412,
+     "matched_contexts": [
+      "self care"
+     ],
+     "rationale": "Lead-in best matches “self care” (CLIP z=1.4 before / 0.8 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.377,
+     "matched_contexts": [
+      "festival food"
+     ],
+     "rationale": "Lead-in best matches “festival food” (CLIP z=1.2 before / 1.1 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.275,
+     "matched_contexts": [],
+     "rationale": "Lead-in best matches “delivery” (CLIP z=0.9 before / 0.6 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.254,
+     "matched_contexts": [],
+     "rationale": "Lead-in best matches “salary” (CLIP z=1.1 before / -0.6 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "mountains",
+   "quality": 0.66,
+   "selected": false
+  },
+  {
+   "id": "c017",
+   "t0": 1117.32,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every brand is blocked by negative contexts here"
+   ],
+   "t": 1117.32,
+   "scene_before": 16,
+   "scene_after": 17,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 39.92,
+    "silence_after": 1.38,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.57,
+    "loudness_dip_db": 5.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.802,
+    "jarring": 0.416,
+    "suspense_hook": 0.247,
+    "natural_break_score": 0.584,
+    "visual_novelty": 0.173,
+    "reason": "Visual change across the cut 0.17 (CLIP), 39.9s silence before / 1.4s after (VAD), speech density 0%/57%, loudness dip 5.3 dB."
+   },
+   "where_score": 0.612,
+   "match": {
+    "dominant_activity": "beach",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.689,
+      "matched_contexts": [
+       "festival food"
+      ],
+      "violations": [
+       {
+        "negative_context": "funeral",
+        "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+       }
+      ],
+      "rationale": "Lead-in best matches “festival food” (CLIP z=2.2 before / 1.6 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.386,
+      "matched_contexts": [
+       "self care",
+       "washing face",
+       "cream"
+      ],
+      "violations": [
+       {
+        "negative_context": "funeral",
+        "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+       }
+      ],
+      "rationale": "Lead-in best matches “self care” (CLIP z=1.3 before / 0.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.769,
+      "matched_contexts": [
+       "wedding",
+       "special occasion",
+       "celebration"
+      ],
+      "violations": [
+       {
+        "negative_context": "funeral",
+        "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+       }
+      ],
+      "rationale": "Lead-in best matches “wedding” (CLIP z=2.6 before / 1.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.687,
+      "matched_contexts": [
+       "travel",
+       "working remotely"
+      ],
+      "violations": [
+       {
+        "negative_context": "funeral",
+        "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+       }
+      ],
+      "rationale": "Lead-in best matches “travel” (CLIP z=1.8 before / 2.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.745,
+      "matched_contexts": [
+       "family trip",
+       "commuting",
+       "journey"
+      ],
+      "violations": [
+       {
+        "negative_context": "funeral",
+        "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+       }
+      ],
+      "rationale": "Lead-in best matches “family trip” (CLIP z=2.1 before / 2.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.489,
+      "matched_contexts": [
+       "money transfer",
+       "shopping",
+       "mobile payment"
+      ],
+      "violations": [
+       {
+        "negative_context": "funeral",
+        "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+       }
+      ],
+      "rationale": "Lead-in best matches “money transfer” (CLIP z=1.6 before / 1.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.83,
+      "matched_contexts": [
+       "beach",
+       "family vacation",
+       "vacation"
+      ],
+      "violations": [
+       {
+        "negative_context": "funeral",
+        "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+       }
+      ],
+      "rationale": "Lead-in best matches “beach” (CLIP z=2.7 before / 2.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.588,
+      "matched_contexts": [
+       "mobile shopping",
+       "purchase",
+       "shopping"
+      ],
+      "violations": [
+       {
+        "negative_context": "funeral",
+        "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+       }
+      ],
+      "rationale": "Lead-in best matches “mobile shopping” (CLIP z=1.8 before / 1.7 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.83,
+     "matched_contexts": [
+      "beach",
+      "family vacation",
+      "vacation"
+     ],
+     "rationale": "Lead-in best matches “beach” (CLIP z=2.7 before / 2.3 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "llm_lead_in",
+       "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.769,
+     "matched_contexts": [
+      "wedding",
+      "special occasion",
+      "celebration"
+     ],
+     "rationale": "Lead-in best matches “wedding” (CLIP z=2.6 before / 1.3 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "llm_lead_in",
+       "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.745,
+     "matched_contexts": [
+      "family trip",
+      "commuting",
+      "journey"
+     ],
+     "rationale": "Lead-in best matches “family trip” (CLIP z=2.1 before / 2.8 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "llm_lead_in",
+       "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.689,
+     "matched_contexts": [
+      "festival food"
+     ],
+     "rationale": "Lead-in best matches “festival food” (CLIP z=2.2 before / 1.6 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "llm_lead_in",
+       "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.687,
+     "matched_contexts": [
+      "travel",
+      "working remotely"
+     ],
+     "rationale": "Lead-in best matches “travel” (CLIP z=1.8 before / 2.9 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "llm_lead_in",
+       "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.588,
+     "matched_contexts": [
+      "mobile shopping",
+      "purchase",
+      "shopping"
+     ],
+     "rationale": "Lead-in best matches “mobile shopping” (CLIP z=1.8 before / 1.7 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "llm_lead_in",
+       "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.489,
+     "matched_contexts": [
+      "money transfer",
+      "shopping",
+      "mobile payment"
+     ],
+     "rationale": "Lead-in best matches “money transfer” (CLIP z=1.6 before / 1.0 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "llm_lead_in",
+       "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+      }
+     ]
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.386,
+     "matched_contexts": [
+      "self care",
+      "washing face",
+      "cream"
+     ],
+     "rationale": "Lead-in best matches “self care” (CLIP z=1.3 before / 0.8 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "funeral",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "grief",
+       "source": "global_scene_tags",
+       "scene": 16,
+       "evidence": "funeral: CLIP visual: visual z=3.4 (thr 3.0), audio z=-0.2 (thr 4.0), peak ~18:28"
+      },
+      {
+       "negative_context": "funeral",
+       "source": "llm_lead_in",
+       "evidence": "CLIP visual: visual z=2.9 (thr 2.7), audio z=-0.3 (thr 3.6), peak ~18:28"
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "beach",
+   "quality": 0.612,
+   "selected": false
+  },
+  {
+   "id": "c018",
+   "t0": 1172.2,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1172.2,
+   "scene_before": 17,
+   "scene_after": 18,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.91,
+    "speech_density_10s_after": 0.81,
+    "loudness_dip_db": 19.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c019",
+   "t0": 1196.76,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1196.76,
+   "scene_before": 18,
+   "scene_after": 19,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.86,
+    "speech_density_10s_after": 0.38,
+    "loudness_dip_db": 7.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c020",
+   "t0": 1270.88,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1270.88,
+   "scene_before": 19,
+   "scene_after": 20,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.82,
+    "speech_density_10s_after": 0.65,
+    "loudness_dip_db": 21.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c021",
+   "t0": 1292.44,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1292.44,
+   "scene_before": 20,
+   "scene_after": 21,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.51,
+    "speech_density_10s_after": 0.41,
+    "loudness_dip_db": 7.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c022",
+   "t0": 1474.56,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1474.56,
+   "scene_before": 21,
+   "scene_after": 22,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 4.06,
+    "silence_after": 8.64,
+    "speech_density_10s_before": 0.29,
+    "speech_density_10s_after": 0.14,
+    "loudness_dip_db": 25.9,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c023",
+   "t0": 1490.38,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1490.38,
+   "scene_before": 22,
+   "scene_after": 22,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.68,
+    "speech_density_10s_after": 0.93,
+    "loudness_dip_db": 12.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c024",
+   "t0": 1505.0,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1505.0,
+   "scene_before": 22,
+   "scene_after": 22,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.93,
+    "speech_density_10s_after": 0.94,
+    "loudness_dip_db": 5.5,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c025",
+   "t0": 1513.42,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1513.42,
+   "scene_before": 22,
+   "scene_after": 22,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.94,
+    "speech_density_10s_after": 0.93,
+    "loudness_dip_db": 15.2,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c026",
+   "t0": 1533.86,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1533.86,
+   "scene_before": 22,
+   "scene_after": 22,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 4.96,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.5,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 58.3,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  }
+ ],
+ "speech": [
+  {
+   "start": 15.4,
+   "end": 16.5
+  },
+  {
+   "start": 16.7,
+   "end": 23.6
+  },
+  {
+   "start": 23.8,
+   "end": 30.0
+  },
+  {
+   "start": 30.1,
+   "end": 34.1
+  },
+  {
+   "start": 34.3,
+   "end": 40.7
+  },
+  {
+   "start": 40.8,
+   "end": 45.0
+  },
+  {
+   "start": 45.2,
+   "end": 53.4
+  },
+  {
+   "start": 53.4,
+   "end": 56.9
+  },
+  {
+   "start": 57.0,
+   "end": 59.3
+  },
+  {
+   "start": 65.9,
+   "end": 66.3
+  },
+  {
+   "start": 78.5,
+   "end": 80.4
+  },
+  {
+   "start": 187.5,
+   "end": 190.8
+  },
+  {
+   "start": 191.6,
+   "end": 194.6
+  },
+  {
+   "start": 194.6,
+   "end": 195.4
+  },
+  {
+   "start": 195.6,
+   "end": 198.2
+  },
+  {
+   "start": 198.5,
+   "end": 199.4
+  },
+  {
+   "start": 200.0,
+   "end": 203.4
+  },
+  {
+   "start": 204.2,
+   "end": 205.6
+  },
+  {
+   "start": 205.7,
+   "end": 206.3
+  },
+  {
+   "start": 206.8,
+   "end": 207.9
+  },
+  {
+   "start": 208.5,
+   "end": 209.8
+  },
+  {
+   "start": 210.2,
+   "end": 216.0
+  },
+  {
+   "start": 216.2,
+   "end": 220.2
+  },
+  {
+   "start": 220.5,
+   "end": 222.3
+  },
+  {
+   "start": 222.4,
+   "end": 226.5
+  },
+  {
+   "start": 227.2,
+   "end": 230.3
+  },
+  {
+   "start": 230.8,
+   "end": 242.2
+  },
+  {
+   "start": 242.2,
+   "end": 244.3
+  },
+  {
+   "start": 244.5,
+   "end": 245.3
+  },
+  {
+   "start": 245.4,
+   "end": 252.8
+  },
+  {
+   "start": 254.0,
+   "end": 256.3
+  },
+  {
+   "start": 256.8,
+   "end": 258.0
+  },
+  {
+   "start": 258.1,
+   "end": 259.2
+  },
+  {
+   "start": 259.7,
+   "end": 260.9
+  },
+  {
+   "start": 262.0,
+   "end": 266.5
+  },
+  {
+   "start": 268.1,
+   "end": 270.5
+  },
+  {
+   "start": 271.5,
+   "end": 272.9
+  },
+  {
+   "start": 273.4,
+   "end": 274.5
+  },
+  {
+   "start": 275.7,
+   "end": 277.0
+  },
+  {
+   "start": 279.5,
+   "end": 280.6
+  },
+  {
+   "start": 281.9,
+   "end": 284.0
+  },
+  {
+   "start": 286.7,
+   "end": 287.6
+  },
+  {
+   "start": 288.8,
+   "end": 293.9
+  },
+  {
+   "start": 313.3,
+   "end": 314.2
+  },
+  {
+   "start": 314.6,
+   "end": 318.7
+  },
+  {
+   "start": 318.9,
+   "end": 322.7
+  },
+  {
+   "start": 323.0,
+   "end": 335.4
+  },
+  {
+   "start": 335.6,
+   "end": 341.8
+  },
+  {
+   "start": 342.0,
+   "end": 343.8
+  },
+  {
+   "start": 344.0,
+   "end": 348.0
+  },
+  {
+   "start": 348.3,
+   "end": 356.3
+  },
+  {
+   "start": 359.8,
+   "end": 394.2
+  },
+  {
+   "start": 396.2,
+   "end": 397.5
+  },
+  {
+   "start": 398.1,
+   "end": 399.8
+  },
+  {
+   "start": 399.9,
+   "end": 402.1
+  },
+  {
+   "start": 402.2,
+   "end": 403.2
+  },
+  {
+   "start": 403.4,
+   "end": 406.6
+  },
+  {
+   "start": 407.4,
+   "end": 410.0
+  },
+  {
+   "start": 410.7,
+   "end": 412.0
+  },
+  {
+   "start": 412.4,
+   "end": 413.8
+  },
+  {
+   "start": 414.3,
+   "end": 415.6
+  },
+  {
+   "start": 415.6,
+   "end": 416.5
+  },
+  {
+   "start": 416.6,
+   "end": 417.4
+  },
+  {
+   "start": 417.5,
+   "end": 418.4
+  },
+  {
+   "start": 418.9,
+   "end": 421.4
+  },
+  {
+   "start": 421.7,
+   "end": 422.4
+  },
+  {
+   "start": 422.7,
+   "end": 426.1
+  },
+  {
+   "start": 426.5,
+   "end": 427.8
+  },
+  {
+   "start": 428.5,
+   "end": 429.0
+  },
+  {
+   "start": 429.6,
+   "end": 437.1
+  },
+  {
+   "start": 437.2,
+   "end": 438.6
+  },
+  {
+   "start": 438.6,
+   "end": 439.3
+  },
+  {
+   "start": 439.6,
+   "end": 441.5
+  },
+  {
+   "start": 443.2,
+   "end": 444.7
+  },
+  {
+   "start": 449.7,
+   "end": 450.7
+  },
+  {
+   "start": 451.2,
+   "end": 452.1
+  },
+  {
+   "start": 452.6,
+   "end": 455.4
+  },
+  {
+   "start": 455.6,
+   "end": 456.7
+  },
+  {
+   "start": 457.1,
+   "end": 457.9
+  },
+  {
+   "start": 458.0,
+   "end": 462.0
+  },
+  {
+   "start": 462.1,
+   "end": 464.5
+  },
+  {
+   "start": 464.6,
+   "end": 466.2
+  },
+  {
+   "start": 466.4,
+   "end": 468.2
+  },
+  {
+   "start": 468.6,
+   "end": 471.0
+  },
+  {
+   "start": 471.5,
+   "end": 473.7
+  },
+  {
+   "start": 474.2,
+   "end": 475.8
+  },
+  {
+   "start": 476.3,
+   "end": 481.4
+  },
+  {
+   "start": 482.4,
+   "end": 482.9
+  },
+  {
+   "start": 483.3,
+   "end": 484.7
+  },
+  {
+   "start": 485.7,
+   "end": 487.8
+  },
+  {
+   "start": 488.5,
+   "end": 490.8
+  },
+  {
+   "start": 491.0,
+   "end": 491.9
+  },
+  {
+   "start": 491.9,
+   "end": 499.7
+  },
+  {
+   "start": 501.0,
+   "end": 502.6
+  },
+  {
+   "start": 503.1,
+   "end": 505.0
+  },
+  {
+   "start": 505.6,
+   "end": 507.2
+  },
+  {
+   "start": 508.4,
+   "end": 508.9
+  },
+  {
+   "start": 547.7,
+   "end": 548.7
+  },
+  {
+   "start": 549.5,
+   "end": 556.7
+  },
+  {
+   "start": 557.3,
+   "end": 559.6
+  },
+  {
+   "start": 559.8,
+   "end": 561.6
+  },
+  {
+   "start": 561.8,
+   "end": 562.7
+  },
+  {
+   "start": 562.9,
+   "end": 568.5
+  },
+  {
+   "start": 568.6,
+   "end": 574.9
+  },
+  {
+   "start": 575.0,
+   "end": 575.7
+  },
+  {
+   "start": 576.0,
+   "end": 578.3
+  },
+  {
+   "start": 578.7,
+   "end": 581.5
+  },
+  {
+   "start": 581.8,
+   "end": 586.2
+  },
+  {
+   "start": 586.3,
+   "end": 588.0
+  },
+  {
+   "start": 588.3,
+   "end": 589.7
+  },
+  {
+   "start": 589.9,
+   "end": 593.6
+  },
+  {
+   "start": 593.8,
+   "end": 596.4
+  },
+  {
+   "start": 597.5,
+   "end": 601.7
+  },
+  {
+   "start": 602.0,
+   "end": 606.3
+  },
+  {
+   "start": 606.3,
+   "end": 613.7
+  },
+  {
+   "start": 614.1,
+   "end": 616.8
+  },
+  {
+   "start": 617.6,
+   "end": 623.7
+  },
+  {
+   "start": 623.8,
+   "end": 635.6
+  },
+  {
+   "start": 635.9,
+   "end": 639.1
+  },
+  {
+   "start": 639.6,
+   "end": 644.5
+  },
+  {
+   "start": 645.4,
+   "end": 649.7
+  },
+  {
+   "start": 650.0,
+   "end": 650.8
+  },
+  {
+   "start": 651.3,
+   "end": 652.3
+  },
+  {
+   "start": 652.4,
+   "end": 657.4
+  },
+  {
+   "start": 657.5,
+   "end": 661.1
+  },
+  {
+   "start": 661.8,
+   "end": 665.1
+  },
+  {
+   "start": 665.2,
+   "end": 665.8
+  },
+  {
+   "start": 666.5,
+   "end": 668.9
+  },
+  {
+   "start": 668.9,
+   "end": 671.3
+  },
+  {
+   "start": 671.8,
+   "end": 673.4
+  },
+  {
+   "start": 674.1,
+   "end": 675.3
+  },
+  {
+   "start": 675.4,
+   "end": 677.5
+  },
+  {
+   "start": 677.5,
+   "end": 682.1
+  },
+  {
+   "start": 688.5,
+   "end": 689.6
+  },
+  {
+   "start": 690.0,
+   "end": 692.3
+  },
+  {
+   "start": 693.1,
+   "end": 693.7
+  },
+  {
+   "start": 694.3,
+   "end": 695.4
+  },
+  {
+   "start": 695.5,
+   "end": 696.2
+  },
+  {
+   "start": 696.8,
+   "end": 698.1
+  },
+  {
+   "start": 700.6,
+   "end": 701.3
+  },
+  {
+   "start": 702.0,
+   "end": 703.2
+  },
+  {
+   "start": 703.2,
+   "end": 709.0
+  },
+  {
+   "start": 709.2,
+   "end": 712.5
+  },
+  {
+   "start": 712.7,
+   "end": 718.9
+  },
+  {
+   "start": 719.0,
+   "end": 721.1
+  },
+  {
+   "start": 721.1,
+   "end": 725.0
+  },
+  {
+   "start": 725.3,
+   "end": 726.6
+  },
+  {
+   "start": 726.7,
+   "end": 729.8
+  },
+  {
+   "start": 729.8,
+   "end": 731.5
+  },
+  {
+   "start": 734.8,
+   "end": 735.2
+  },
+  {
+   "start": 745.4,
+   "end": 746.2
+  },
+  {
+   "start": 752.3,
+   "end": 753.8
+  },
+  {
+   "start": 754.2,
+   "end": 755.0
+  },
+  {
+   "start": 755.2,
+   "end": 756.7
+  },
+  {
+   "start": 757.4,
+   "end": 759.0
+  },
+  {
+   "start": 760.0,
+   "end": 761.4
+  },
+  {
+   "start": 762.4,
+   "end": 769.1
+  },
+  {
+   "start": 769.6,
+   "end": 771.7
+  },
+  {
+   "start": 772.2,
+   "end": 773.9
+  },
+  {
+   "start": 774.5,
+   "end": 775.0
+  },
+  {
+   "start": 775.1,
+   "end": 777.4
+  },
+  {
+   "start": 778.2,
+   "end": 784.9
+  },
+  {
+   "start": 785.3,
+   "end": 787.7
+  },
+  {
+   "start": 788.0,
+   "end": 793.0
+  },
+  {
+   "start": 793.6,
+   "end": 797.6
+  },
+  {
+   "start": 798.3,
+   "end": 799.1
+  },
+  {
+   "start": 799.3,
+   "end": 800.0
+  },
+  {
+   "start": 800.1,
+   "end": 802.2
+  },
+  {
+   "start": 802.7,
+   "end": 804.0
+  },
+  {
+   "start": 804.3,
+   "end": 807.9
+  },
+  {
+   "start": 807.9,
+   "end": 814.0
+  },
+  {
+   "start": 814.3,
+   "end": 818.3
+  },
+  {
+   "start": 818.4,
+   "end": 825.4
+  },
+  {
+   "start": 825.4,
+   "end": 832.1
+  },
+  {
+   "start": 832.1,
+   "end": 833.8
+  },
+  {
+   "start": 834.2,
+   "end": 835.0
+  },
+  {
+   "start": 835.2,
+   "end": 837.4
+  },
+  {
+   "start": 837.5,
+   "end": 839.9
+  },
+  {
+   "start": 840.0,
+   "end": 852.2
+  },
+  {
+   "start": 870.3,
+   "end": 872.2
+  },
+  {
+   "start": 942.0,
+   "end": 942.8
+  },
+  {
+   "start": 944.8,
+   "end": 949.6
+  },
+  {
+   "start": 950.3,
+   "end": 964.5
+  },
+  {
+   "start": 965.2,
+   "end": 971.9
+  },
+  {
+   "start": 972.0,
+   "end": 974.5
+  },
+  {
+   "start": 974.7,
+   "end": 982.3
+  },
+  {
+   "start": 983.0,
+   "end": 986.6
+  },
+  {
+   "start": 987.2,
+   "end": 988.4
+  },
+  {
+   "start": 988.9,
+   "end": 993.0
+  },
+  {
+   "start": 993.2,
+   "end": 996.9
+  },
+  {
+   "start": 997.1,
+   "end": 1000.4
+  },
+  {
+   "start": 1000.6,
+   "end": 1002.6
+  },
+  {
+   "start": 1002.7,
+   "end": 1003.2
+  },
+  {
+   "start": 1004.7,
+   "end": 1013.9
+  },
+  {
+   "start": 1014.6,
+   "end": 1016.1
+  },
+  {
+   "start": 1016.6,
+   "end": 1019.0
+  },
+  {
+   "start": 1019.5,
+   "end": 1022.6
+  },
+  {
+   "start": 1023.2,
+   "end": 1026.7
+  },
+  {
+   "start": 1026.7,
+   "end": 1029.1
+  },
+  {
+   "start": 1029.3,
+   "end": 1030.8
+  },
+  {
+   "start": 1031.2,
+   "end": 1032.0
+  },
+  {
+   "start": 1032.4,
+   "end": 1034.8
+  },
+  {
+   "start": 1034.9,
+   "end": 1040.5
+  },
+  {
+   "start": 1042.1,
+   "end": 1044.1
+  },
+  {
+   "start": 1044.4,
+   "end": 1046.9
+  },
+  {
+   "start": 1050.0,
+   "end": 1051.3
+  },
+  {
+   "start": 1052.1,
+   "end": 1055.2
+  },
+  {
+   "start": 1055.3,
+   "end": 1058.1
+  },
+  {
+   "start": 1058.5,
+   "end": 1061.1
+  },
+  {
+   "start": 1061.3,
+   "end": 1062.2
+  },
+  {
+   "start": 1063.3,
+   "end": 1066.5
+  },
+  {
+   "start": 1066.7,
+   "end": 1070.6
+  },
+  {
+   "start": 1071.0,
+   "end": 1072.4
+  },
+  {
+   "start": 1073.8,
+   "end": 1075.3
+  },
+  {
+   "start": 1075.6,
+   "end": 1077.4
+  },
+  {
+   "start": 1118.7,
+   "end": 1120.9
+  },
+  {
+   "start": 1120.9,
+   "end": 1121.4
+  },
+  {
+   "start": 1121.9,
+   "end": 1124.5
+  },
+  {
+   "start": 1124.7,
+   "end": 1125.1
+  },
+  {
+   "start": 1127.6,
+   "end": 1128.5
+  },
+  {
+   "start": 1129.1,
+   "end": 1132.3
+  },
+  {
+   "start": 1132.7,
+   "end": 1133.6
+  },
+  {
+   "start": 1133.8,
+   "end": 1134.8
+  },
+  {
+   "start": 1135.8,
+   "end": 1137.5
+  },
+  {
+   "start": 1147.8,
+   "end": 1148.3
+  },
+  {
+   "start": 1148.8,
+   "end": 1149.4
+  },
+  {
+   "start": 1152.6,
+   "end": 1153.4
+  },
+  {
+   "start": 1153.8,
+   "end": 1154.4
+  },
+  {
+   "start": 1155.4,
+   "end": 1156.8
+  },
+  {
+   "start": 1157.3,
+   "end": 1158.3
+  },
+  {
+   "start": 1158.4,
+   "end": 1160.1
+  },
+  {
+   "start": 1160.1,
+   "end": 1164.8
+  },
+  {
+   "start": 1164.9,
+   "end": 1167.0
+  },
+  {
+   "start": 1167.1,
+   "end": 1168.8
+  },
+  {
+   "start": 1169.5,
+   "end": 1173.7
+  },
+  {
+   "start": 1174.0,
+   "end": 1178.5
+  },
+  {
+   "start": 1179.7,
+   "end": 1181.5
+  },
+  {
+   "start": 1181.9,
+   "end": 1185.7
+  },
+  {
+   "start": 1185.8,
+   "end": 1188.8
+  },
+  {
+   "start": 1188.8,
+   "end": 1190.1
+  },
+  {
+   "start": 1190.2,
+   "end": 1191.7
+  },
+  {
+   "start": 1191.9,
+   "end": 1193.0
+  },
+  {
+   "start": 1193.0,
+   "end": 1194.7
+  },
+  {
+   "start": 1195.8,
+   "end": 1197.6
+  },
+  {
+   "start": 1197.6,
+   "end": 1198.3
+  },
+  {
+   "start": 1199.4,
+   "end": 1201.1
+  },
+  {
+   "start": 1202.6,
+   "end": 1203.2
+  },
+  {
+   "start": 1207.7,
+   "end": 1208.9
+  },
+  {
+   "start": 1212.1,
+   "end": 1212.5
+  },
+  {
+   "start": 1213.3,
+   "end": 1214.4
+  },
+  {
+   "start": 1214.9,
+   "end": 1216.9
+  },
+  {
+   "start": 1217.0,
+   "end": 1219.0
+  },
+  {
+   "start": 1219.4,
+   "end": 1220.2
+  },
+  {
+   "start": 1220.6,
+   "end": 1221.4
+  },
+  {
+   "start": 1221.8,
+   "end": 1222.6
+  },
+  {
+   "start": 1223.0,
+   "end": 1223.7
+  },
+  {
+   "start": 1223.7,
+   "end": 1225.4
+  },
+  {
+   "start": 1225.4,
+   "end": 1227.5
+  },
+  {
+   "start": 1228.5,
+   "end": 1230.6
+  },
+  {
+   "start": 1231.1,
+   "end": 1231.9
+  },
+  {
+   "start": 1233.3,
+   "end": 1234.4
+  },
+  {
+   "start": 1235.3,
+   "end": 1235.9
+  },
+  {
+   "start": 1236.9,
+   "end": 1237.8
+  },
+  {
+   "start": 1238.2,
+   "end": 1238.8
+  },
+  {
+   "start": 1239.6,
+   "end": 1241.8
+  },
+  {
+   "start": 1241.9,
+   "end": 1243.3
+  },
+  {
+   "start": 1243.5,
+   "end": 1244.2
+  },
+  {
+   "start": 1244.5,
+   "end": 1246.3
+  },
+  {
+   "start": 1246.9,
+   "end": 1254.4
+  },
+  {
+   "start": 1254.9,
+   "end": 1257.3
+  },
+  {
+   "start": 1257.8,
+   "end": 1259.3
+  },
+  {
+   "start": 1261.6,
+   "end": 1263.1
+  },
+  {
+   "start": 1263.5,
+   "end": 1266.0
+  },
+  {
+   "start": 1266.2,
+   "end": 1266.9
+  },
+  {
+   "start": 1267.2,
+   "end": 1268.8
+  },
+  {
+   "start": 1269.0,
+   "end": 1271.8
+  },
+  {
+   "start": 1272.8,
+   "end": 1273.5
+  },
+  {
+   "start": 1275.0,
+   "end": 1277.7
+  },
+  {
+   "start": 1278.3,
+   "end": 1280.5
+  },
+  {
+   "start": 1282.6,
+   "end": 1284.5
+  },
+  {
+   "start": 1285.5,
+   "end": 1286.1
+  },
+  {
+   "start": 1286.1,
+   "end": 1286.6
+  },
+  {
+   "start": 1288.4,
+   "end": 1289.0
+  },
+  {
+   "start": 1290.9,
+   "end": 1292.5
+  },
+  {
+   "start": 1295.5,
+   "end": 1296.7
+  },
+  {
+   "start": 1297.4,
+   "end": 1299.0
+  },
+  {
+   "start": 1300.6,
+   "end": 1301.4
+  },
+  {
+   "start": 1302.0,
+   "end": 1303.4
+  },
+  {
+   "start": 1303.5,
+   "end": 1305.4
+  },
+  {
+   "start": 1305.9,
+   "end": 1311.5
+  },
+  {
+   "start": 1312.0,
+   "end": 1314.1
+  },
+  {
+   "start": 1314.4,
+   "end": 1315.2
+  },
+  {
+   "start": 1316.6,
+   "end": 1318.2
+  },
+  {
+   "start": 1318.6,
+   "end": 1319.3
+  },
+  {
+   "start": 1320.1,
+   "end": 1322.2
+  },
+  {
+   "start": 1322.3,
+   "end": 1323.8
+  },
+  {
+   "start": 1325.6,
+   "end": 1330.1
+  },
+  {
+   "start": 1330.6,
+   "end": 1333.6
+  },
+  {
+   "start": 1333.8,
+   "end": 1336.9
+  },
+  {
+   "start": 1337.2,
+   "end": 1339.7
+  },
+  {
+   "start": 1341.2,
+   "end": 1342.7
+  },
+  {
+   "start": 1343.7,
+   "end": 1345.6
+  },
+  {
+   "start": 1346.7,
+   "end": 1348.4
+  },
+  {
+   "start": 1349.3,
+   "end": 1350.2
+  },
+  {
+   "start": 1350.9,
+   "end": 1354.9
+  },
+  {
+   "start": 1357.2,
+   "end": 1358.5
+  },
+  {
+   "start": 1359.1,
+   "end": 1361.0
+  },
+  {
+   "start": 1361.2,
+   "end": 1361.8
+  },
+  {
+   "start": 1366.8,
+   "end": 1371.8
+  },
+  {
+   "start": 1372.2,
+   "end": 1374.7
+  },
+  {
+   "start": 1376.9,
+   "end": 1379.1
+  },
+  {
+   "start": 1381.5,
+   "end": 1383.5
+  },
+  {
+   "start": 1389.4,
+   "end": 1393.5
+  },
+  {
+   "start": 1393.8,
+   "end": 1394.2
+  },
+  {
+   "start": 1395.0,
+   "end": 1397.3
+  },
+  {
+   "start": 1397.8,
+   "end": 1399.7
+  },
+  {
+   "start": 1400.1,
+   "end": 1401.9
+  },
+  {
+   "start": 1402.3,
+   "end": 1403.8
+  },
+  {
+   "start": 1404.7,
+   "end": 1406.8
+  },
+  {
+   "start": 1407.6,
+   "end": 1410.6
+  },
+  {
+   "start": 1411.2,
+   "end": 1411.7
+  },
+  {
+   "start": 1411.9,
+   "end": 1414.8
+  },
+  {
+   "start": 1415.3,
+   "end": 1419.0
+  },
+  {
+   "start": 1419.1,
+   "end": 1420.8
+  },
+  {
+   "start": 1422.4,
+   "end": 1424.0
+  },
+  {
+   "start": 1424.4,
+   "end": 1425.4
+  },
+  {
+   "start": 1425.5,
+   "end": 1426.9
+  },
+  {
+   "start": 1427.0,
+   "end": 1429.6
+  },
+  {
+   "start": 1429.7,
+   "end": 1431.1
+  },
+  {
+   "start": 1431.4,
+   "end": 1432.2
+  },
+  {
+   "start": 1432.3,
+   "end": 1434.8
+  },
+  {
+   "start": 1435.1,
+   "end": 1436.3
+  },
+  {
+   "start": 1439.3,
+   "end": 1440.7
+  },
+  {
+   "start": 1441.0,
+   "end": 1442.2
+  },
+  {
+   "start": 1442.5,
+   "end": 1445.9
+  },
+  {
+   "start": 1446.1,
+   "end": 1447.4
+  },
+  {
+   "start": 1447.5,
+   "end": 1449.2
+  },
+  {
+   "start": 1449.8,
+   "end": 1451.9
+  },
+  {
+   "start": 1455.7,
+   "end": 1458.4
+  },
+  {
+   "start": 1462.1,
+   "end": 1464.7
+  },
+  {
+   "start": 1467.3,
+   "end": 1469.1
+  },
+  {
+   "start": 1469.5,
+   "end": 1470.5
+  },
+  {
+   "start": 1483.2,
+   "end": 1486.7
+  },
+  {
+   "start": 1487.1,
+   "end": 1491.1
+  },
+  {
+   "start": 1491.4,
+   "end": 1495.2
+  },
+  {
+   "start": 1495.4,
+   "end": 1497.5
+  },
+  {
+   "start": 1497.6,
+   "end": 1499.6
+  },
+  {
+   "start": 1499.7,
+   "end": 1503.6
+  },
+  {
+   "start": 1503.9,
+   "end": 1507.9
+  },
+  {
+   "start": 1508.1,
+   "end": 1512.2
+  },
+  {
+   "start": 1512.3,
+   "end": 1514.2
+  },
+  {
+   "start": 1514.5,
+   "end": 1516.2
+  },
+  {
+   "start": 1516.6,
+   "end": 1528.9
+  }
+ ],
+ "shots": [
+  1.64,
+  6.0,
+  44.84,
+  47.72,
+  56.84,
+  59.76,
+  63.96,
+  67.28,
+  75.56,
+  80.48,
+  84.84,
+  191.08,
+  194.64,
+  197.92,
+  199.92,
+  203.08,
+  205.68,
+  209.08,
+  212.12,
+  215.96,
+  217.32,
+  223.8,
+  224.92,
+  225.8,
+  229.28,
+  234.48,
+  236.4,
+  239.04,
+  241.4,
+  242.28,
+  242.76,
+  243.16,
+  243.72,
+  244.32,
+  248.08,
+  249.44,
+  250.72,
+  258.04,
+  260.6,
+  261.92,
+  263.08,
+  265.12,
+  267.0,
+  270.16,
+  271.48,
+  274.56,
+  302.0,
+  310.56,
+  349.4,
+  350.44,
+  351.52,
+  352.52,
+  389.08,
+  395.96,
+  411.68,
+  414.0,
+  415.52,
+  416.64,
+  420.08,
+  421.32,
+  424.08,
+  424.96,
+  425.72,
+  427.28,
+  429.72,
+  431.24,
+  433.16,
+  434.64,
+  436.12,
+  437.28,
+  438.64,
+  440.96,
+  443.4,
+  444.44,
+  446.08,
+  453.44,
+  454.32,
+  455.48,
+  460.16,
+  461.84,
+  464.24,
+  465.84,
+  468.16,
+  470.24,
+  472.68,
+  475.84,
+  480.08,
+  481.48,
+  483.08,
+  485.12,
+  489.72,
+  490.88,
+  494.88,
+  499.16,
+  502.72,
+  506.72,
+  509.6,
+  511.08,
+  514.4,
+  518.72,
+  520.64,
+  522.72,
+  523.28,
+  524.36,
+  525.72,
+  527.4,
+  528.0,
+  528.88,
+  530.64,
+  532.04,
+  532.92,
+  536.44,
+  537.12,
+  538.24,
+  543.72,
+  545.84,
+  549.0,
+  554.32,
+  562.24,
+  563.88,
+  566.6,
+  567.96,
+  569.4,
+  574.4,
+  578.68,
+  581.48,
+  586.08,
+  587.72,
+  592.84,
+  597.28,
+  603.84,
+  607.28,
+  609.08,
+  612.04,
+  613.32,
+  620.52,
+  621.92,
+  623.6,
+  626.44,
+  629.12,
+  631.32,
+  635.8,
+  638.04,
+  643.48,
+  649.88,
+  652.76,
+  656.76,
+  659.88,
+  662.52,
+  664.04,
+  669.8,
+  677.12,
+  680.68,
+  684.6,
+  686.48,
+  689.16,
+  691.64,
+  693.52,
+  695.8,
+  702.84,
+  703.92,
+  706.8,
+  710.88,
+  712.48,
+  715.48,
+  716.96,
+  722.28,
+  723.64,
+  728.84,
+  730.04,
+  746.48,
+  754.16,
+  755.76,
+  757.24,
+  764.68,
+  768.36,
+  769.64,
+  771.6,
+  773.52,
+  775.2,
+  779.08,
+  780.12,
+  782.08,
+  782.72,
+  785.08,
+  788.04,
+  792.96,
+  794.68,
+  798.92,
+  802.24,
+  808.68,
+  813.52,
+  814.56,
+  816.6,
+  818.28,
+  819.88,
+  820.96,
+  825.84,
+  830.88,
+  833.0,
+  834.04,
+  837.12,
+  839.64,
+  840.56,
+  843.24,
+  847.04,
+  848.64,
+  851.56,
+  854.4,
+  856.72,
+  857.92,
+  860.4,
+  861.48,
+  863.08,
+  866.32,
+  882.64,
+  886.8,
+  890.44,
+  896.24,
+  898.52,
+  901.04,
+  924.72,
+  948.84,
+  957.32,
+  962.44,
+  963.32,
+  966.44,
+  967.12,
+  969.44,
+  974.64,
+  977.08,
+  985.92,
+  987.08,
+  991.4,
+  992.92,
+  994.64,
+  997.56,
+  1000.2,
+  1002.0,
+  1003.12,
+  1008.64,
+  1010.44,
+  1026.48,
+  1033.36,
+  1040.16,
+  1044.2,
+  1047.04,
+  1049.56,
+  1053.48,
+  1056.32,
+  1061.96,
+  1064.08,
+  1066.28,
+  1071.68,
+  1072.52,
+  1073.8,
+  1074.44,
+  1075.72,
+  1081.36,
+  1087.96,
+  1090.0,
+  1092.04,
+  1099.4,
+  1103.76,
+  1111.64,
+  1117.32,
+  1123.64,
+  1137.8,
+  1142.64,
+  1145.72,
+  1151.2,
+  1153.48,
+  1156.8,
+  1168.24,
+  1172.2,
+  1173.52,
+  1178.52,
+  1179.56,
+  1182.36,
+  1187.8,
+  1189.4,
+  1194.36,
+  1196.76,
+  1199.6,
+  1200.24,
+  1204.28,
+  1207.88,
+  1211.08,
+  1217.92,
+  1218.72,
+  1220.36,
+  1221.64,
+  1224.48,
+  1227.56,
+  1234.16,
+  1237.88,
+  1247.92,
+  1252.08,
+  1259.12,
+  1260.52,
+  1267.84,
+  1269.36,
+  1270.88,
+  1272.64,
+  1279.56,
+  1281.44,
+  1285.0,
+  1286.0,
+  1292.44,
+  1296.76,
+  1300.16,
+  1310.16,
+  1310.52,
+  1312.04,
+  1314.08,
+  1316.68,
+  1317.68,
+  1320.24,
+  1323.0,
+  1326.52,
+  1330.16,
+  1334.44,
+  1336.12,
+  1336.96,
+  1350.04,
+  1352.08,
+  1355.36,
+  1362.0,
+  1371.4,
+  1375.52,
+  1392.2,
+  1396.04,
+  1418.04,
+  1420.12,
+  1421.0,
+  1425.32,
+  1427.44,
+  1430.76,
+  1432.92,
+  1435.88,
+  1438.44,
+  1452.04,
+  1457.4,
+  1458.48,
+  1460.96,
+  1464.72,
+  1467.28,
+  1470.32,
+  1474.56
+ ],
+ "blacks": [
+  {
+   "start": 0.04,
+   "end": 1.12
+  },
+  {
+   "start": 84.52,
+   "end": 84.92
+  },
+  {
+   "start": 543.76,
+   "end": 545.96
+  },
+  {
+   "start": 1474.6,
+   "end": 1481.6
+  },
+  {
+   "start": 1483.64,
+   "end": 1483.92
+  },
+  {
+   "start": 1485.84,
+   "end": 1486.16
+  },
+  {
+   "start": 1487.84,
+   "end": 1488.12
+  },
+  {
+   "start": 1490.16,
+   "end": 1490.6
+  },
+  {
+   "start": 1492.24,
+   "end": 1492.6
+  },
+  {
+   "start": 1494.64,
+   "end": 1494.92
+  },
+  {
+   "start": 1496.8,
+   "end": 1497.16
+  },
+  {
+   "start": 1499.2,
+   "end": 1499.56
+  },
+  {
+   "start": 1501.28,
+   "end": 1501.64
+  },
+  {
+   "start": 1503.64,
+   "end": 1506.36
+  },
+  {
+   "start": 1508.4,
+   "end": 1508.68
+  },
+  {
+   "start": 1513.2,
+   "end": 1513.64
+  },
+  {
+   "start": 1515.44,
+   "end": 1515.8
+  },
+  {
+   "start": 1522.8,
+   "end": 1523.08
+  },
+  {
+   "start": 1527.32,
+   "end": 1527.6
+  },
+  {
+   "start": 1529.8,
+   "end": 1530.08
+  },
+  {
+   "start": 1532.16,
+   "end": 1535.56
+  }
+ ],
+ "timings_sec": {
+  "local_understanding": 0.2,
+  "selection": 6.9,
+  "total_this_run": 7.1
+ },
+ "variant": "e1874d3194"
+}

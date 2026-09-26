@@ -132,7 +132,7 @@ For EVERY brand in the catalogue:
 - matched_contexts: which target_contexts match.
 - rationale: one sentence.
 Also state the dominant_activity of the lead-in scene."""
-    res = gemini.generate_json([gemini.clip_part(clip, fps=1.0)], prompt, MATCH_SCHEMA)
+    res = gemini.generate_json([gemini.clip_part(clip, fps=1.0)], prompt, MATCH_SCHEMA, low_res=True)
     clip.unlink(missing_ok=True)
     return res
 
@@ -165,7 +165,7 @@ Wider episode context:
 Watch and listen carefully (Bengali dialogue). violation = true if any forbidden context is shown, discussed,
 mourned, or strongly implied in the lead-in or the following scene, or if the emotional tone makes this ad
 tasteless there. When unsure, answer true."""
-    res = gemini.generate_json([gemini.clip_part(clip, fps=1.0)], prompt, VERIFY_SCHEMA, temperature=0.0)
+    res = gemini.generate_json([gemini.clip_part(clip, fps=1.0)], prompt, VERIFY_SCHEMA, temperature=0.0, low_res=True)
     clip.unlink(missing_ok=True)
     return res
 

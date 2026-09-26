@@ -139,7 +139,7 @@ Judge the cut point precisely, listening to the Bengali (and any English) dialog
     0.00–0.20  mid-conversation, mid-action, or mid-song.
   Most boundaries in a drama are NOT act-level; be discriminating.
 - reason: one sentence."""
-    res = gemini.generate_json([gemini.clip_part(clip, fps=2.0)], prompt, JUDGE_SCHEMA)
+    res = gemini.generate_json([gemini.clip_part(clip, fps=2.0)], prompt, JUDGE_SCHEMA, low_res=True)
     clip.unlink(missing_ok=True)
     return res
 

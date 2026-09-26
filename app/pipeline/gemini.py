@@ -55,8 +55,31 @@ def clip_part(path: Path, fps: float = 2.0) -> types.Part:
     )
 
 
+# Free-tier friendly: a process-wide request limiter (requests/minute) shared by all threads.
+RPM = float(os.getenv("GEMINI_RPM", "8"))
+_rl_lock = threading.Lock()
+_rl_next = [0.0]
+USAGE = {"calls": 0, "input_tokens": 0, "output_tokens": 0}
+
+
+def _throttle() -> None:
+    with _rl_lock:
+        now = time.time()
+        wait = max(0.0, _rl_next[0] - now)
+        _rl_next[0] = max(now, _rl_next[0]) + 60.0 / RPM
+    if wait:
+        time.sleep(wait)
+
+
+def _retry_delay(msg: str) -> float:
+    import re
+
+    m = re.search(r"retry(?:Delay)?['\"]?\s*[:=]\s*['\"]?(\d+(?:\.\d+)?)s", msg) or re.search(r"retry in (\d+(?:\.\d+)?)", msg, re.I)
+    return float(m.group(1)) + 1 if m else 30.0
+
+
 def generate_json(parts: list, prompt: str, schema: dict, model: str | None = None,
-                  low_res: bool = False, retries: int = 4, temperature: float = 0.1) -> dict:
+                  low_res: bool = False, retries: int = 6, temperature: float = 0.1) -> dict:
     cfg = types.GenerateContentConfig(
         temperature=temperature,
         response_mime_type="application/json",
@@ -66,17 +89,29 @@ def generate_json(parts: list, prompt: str, schema: dict, model: str | None = No
         cfg.media_resolution = types.MediaResolution.MEDIA_RESOLUTION_LOW
     last = None
     for attempt in range(retries):
+        _throttle()
         try:
             resp = client().models.generate_content(
                 model=model or MODEL_LOCAL, contents=[*parts, prompt], config=cfg
             )
+            um = getattr(resp, "usage_metadata", None)
+            USAGE["calls"] += 1
+            USAGE["input_tokens"] += getattr(um, "prompt_token_count", 0) or 0
+            USAGE["output_tokens"] += (getattr(um, "candidates_token_count", 0) or 0) + (getattr(um, "thoughts_token_count", 0) or 0)
             return json.loads(resp.text)
         except Exception as e:  # rate limits / transient 5xx / truncated JSON
             last = e
             msg = str(e)
             if any(code in msg[:40] for code in ("400", "401", "402", "403")):
                 raise RuntimeError(f"Gemini request rejected (not retryable): {msg[:300]}") from e
-            print(f"[gemini] attempt {attempt + 1} failed: {str(e)[:200]}", flush=True)
+            if "429" in msg[:40]:  # free-tier rate limit: wait as instructed, then retry
+                if "PerDay" in msg or "per day" in msg.lower():
+                    raise RuntimeError("Gemini free-tier daily quota reached; try again tomorrow or use BIRATI_ENGINE=local") from e
+                delay = _retry_delay(msg)
+                print(f"[gemini] rate-limited, waiting {delay:.0f}s", flush=True)
+                time.sleep(delay)
+                continue
+            print(f"[gemini] attempt {attempt + 1} failed: {msg[:200]}", flush=True)
             client(fresh=True)
             time.sleep(min(30, 3 * 2 ** attempt))
     raise RuntimeError(f"Gemini call failed after {retries} attempts: {last}")

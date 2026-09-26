@@ -5,3 +5,10 @@ data/uploads
 data/work/*/audio.wav
 data/work/*/thumbs
 **/__pycache__
+.git
+docs
+data/work/heldout_test*
+data/work/*.mp4
+data/work/*.jpg
+data/*.log
+web/ads

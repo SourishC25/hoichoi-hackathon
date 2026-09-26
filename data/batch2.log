@@ -9,3 +9,56 @@ Direct use of automatic function calling (AFC) in Models.generate_content is not
 [feluda] local judgement on 7 / 16 candidates
 [feluda] creatives ready for 8 brands
 [feluda] brand matching on 6 candidates x 8 brands
+[feluda] F · verifying brand_g at 00:14:14.400
+[feluda] F · verifying brand_d at 00:14:14.400
+[feluda] done · 1 breaks, ad load 1.92%
+[feluda] SUMMARY {"scenes": 13, "camera_cuts": 349, "candidates": 16, "breaks": 1, "ad_seconds": 30, "ad_load_pct": 1.92, "breaks_per_hour": 2.34, "allowed_breaks": 2}
+[mandaar] A · transcoding web proxy
+[mandaar] A · camera cuts (ffmpeg scdet) ‖ speech (Silero VAD) ‖ fades — in parallel
+C:\Users\souri\OneDrive\Documents\GitHub\Hoichoi\.venv\Lib\site-packages\torch\jit\_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+[mandaar] A · 332 camera cuts, 253 speech segments, 3 black segments
+[mandaar] B · uploading episode to Gemini
+[mandaar] uploaded proxy.mp4 -> files/d1xs34q0paz1
+[mandaar] B · Gemini watching full episode → semantic scenes
+[mandaar] global analysis: 332 shots, vocab 28 terms
+[mandaar] B · 32 scenes
+[mandaar] C · generating + snapping break candidates
+[mandaar] D · Gemini judging 26 cut points
+[mandaar] local judgement on 26 / 32 candidates
+[mandaar] creatives ready for 8 brands
+[mandaar] brand matching on 21 candidates x 8 brands
+[mandaar] F · verifying brand_b at 00:04:53.292
+[mandaar] F · verifying brand_e at 00:04:53.292
+[mandaar] F · verifying brand_g at 00:04:53.292
+[mandaar] F · verifying brand_c at 00:04:53.292
+[mandaar] F · verifying brand_d at 00:18:37.958
+[mandaar] F · verifying brand_g at 00:18:37.958
+[mandaar] F · verifying brand_a at 00:18:37.958
+[mandaar] F · verifying brand_b at 00:18:37.958
+[mandaar] F · verifying brand_d at 00:31:34.208
+[mandaar] F · verifying brand_c at 00:31:34.208
+[mandaar] F · verifying brand_a at 00:31:34.208
+[mandaar] F · verifying brand_b at 00:31:34.208
+[mandaar] F · verifying brand_a at 00:06:49.833
+[mandaar] F · verifying brand_c at 00:06:49.833
+[mandaar] F · verifying brand_g at 00:06:49.833
+[mandaar] F · verifying brand_d at 00:06:49.833
+[mandaar] F · verifying brand_e at 00:13:32.375
+[mandaar] F · verifying brand_g at 00:13:32.375
+[mandaar] F · verifying brand_a at 00:13:32.375
+[mandaar] F · verifying brand_b at 00:13:32.375
+[mandaar] F · verifying brand_c at 00:28:41.792
+[mandaar] F · verifying brand_f at 00:28:41.792
+[mandaar] F · verifying brand_a at 00:28:41.792
+[mandaar] F · verifying brand_b at 00:28:41.792
+[mandaar] F · verifying brand_d at 00:27:18.958
+[mandaar] F · verifying brand_b at 00:27:18.958
+[mandaar] F · verifying brand_a at 00:27:18.958
+[mandaar] F · verifying brand_c at 00:27:18.958
+[mandaar] F · verifying brand_b at 00:33:16.625
+[mandaar] F · verifying brand_e at 00:33:16.625
+[mandaar] F · verifying brand_f at 00:33:16.625
+[mandaar] F · verifying brand_h at 00:33:16.625
+[mandaar] done · 0 breaks, ad load 0.0%
+[mandaar] SUMMARY {"scenes": 32, "camera_cuts": 332, "candidates": 32, "breaks": 0, "ad_seconds": 0, "ad_load_pct": 0.0, "breaks_per_hour": 0.0, "allowed_breaks": 3}

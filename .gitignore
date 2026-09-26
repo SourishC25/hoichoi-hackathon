@@ -14,3 +14,6 @@ data/work/*.jpg
 web/ads/
 *.tmp.mp4
 data/work/heldout_test*/
+dist/
+data/work/*/local_embeds.npz
+data/embed.log

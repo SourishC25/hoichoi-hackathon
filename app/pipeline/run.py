@@ -7,19 +7,31 @@
   F  pacing selection + verification + creative choice            -> result.json (debug) + vmap.xml
 
 Changing the brand catalogue re-runs only E–F; changing pacing rules re-runs only F.
-Nothing here knows anything about specific videos or brands."""
+Nothing here knows anything about specific videos or brands.
+
+ENGINE (env BIRATI_ENGINE): "local" (default) = free open-source CLIP + CLAP + Silero on CPU, no API keys;
+"gemini" = cloud multimodal LLM (needs GEMINI_API_KEY + credits). Both implement the same stage contracts."""
 from __future__ import annotations
 
 import hashlib
 import json
+import os
 import time
 from pathlib import Path
 
-from . import ads, brands as brandlib, breaks, gemini, manifest, media, pacing, signals, understand
+from dotenv import load_dotenv
+
+from . import ads, brands as brandlib, breaks, manifest, media, pacing, signals, understand
 
 ROOT = Path(__file__).resolve().parents[2]
 WORK = ROOT / "data" / "work"
 WEB = ROOT / "web"
+
+load_dotenv(ROOT / ".env")
+# default: Gemini (free tier works) when a key is configured, otherwise the fully offline local engine
+ENGINE = os.getenv("BIRATI_ENGINE", "gemini" if os.getenv("GEMINI_API_KEY") else "local").lower()
+if ENGINE == "gemini":
+    from . import gemini
 
 
 def _load(p: Path):
@@ -78,6 +90,12 @@ def variant_id(brands: list[dict], rules: dict | None) -> str:
     return hashlib.sha1((catalogue_hash(brands) + json.dumps(rules, sort_keys=True)).encode()).hexdigest()[:10]
 
 
+def result_variant(brands: list[dict], rules: dict | None) -> str:
+    """Result/VMAP file key: catalogue + rules (+ engine, so engines never overwrite each other)."""
+    v = variant_id(brands, rules)
+    return v if ENGINE == "local" else f"{ENGINE}-{v}"
+
+
 def process(video_id: str, source: Path, brands: list[dict], rules: dict | None = None,
             log=print, force: set[str] | None = None) -> dict:
     rules = {**pacing.DEFAULT_RULES, **(rules or {})}
@@ -115,6 +133,18 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
     else:
         media.make_proxy(source, proxy)
     duration = perc["duration"]
+    if ENGINE == "local":
+        from . import local_engine, local_models
+        import numpy as np
+
+        if not (wd / "local_embeds.npz").exists():
+            t = time.time()
+            log("A · CLIP frame embeddings (1 fps) + CLAP audio embeddings (5 s windows)")
+            ft, fe = local_models.embed_frames(proxy, fps=1.0)
+            at, ae = local_models.embed_audio(proxy)
+            np.savez_compressed(wd / "local_embeds.npz", frame_t=ft, frame_e=fe, audio_t=at, audio_e=ae)
+            timings["embeddings"] = round(time.time() - t, 1)
+        return _process_local(video_id, wd, proxy, perc, brands, rules, log, timings, t_start)
 
     # ---- B. global scene understanding ----
     sp = wd / "scenes.json"
@@ -161,6 +191,17 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
         _save(mp, matched)
         timings["brand_matching"] = round(time.time() - t, 1)
 
+    models = {"global": scen.get("model"), "local": gemini.MODEL_LOCAL}
+    return _finish(video_id, wd, perc, scen, items, matched, mp, brands, rules, log, timings, t_start,
+                   lambda c, b: brandlib.verify(c, b, scenes, proxy, wd), models)
+
+
+
+def _finish(video_id, wd, perc, scen, items, matched, mp, brands, rules, log, timings, t_start, verify_fn, models):
+    """F · pacing selection + independent verification + creative choice + outputs (engine-agnostic)."""
+    duration = perc["duration"]
+    scenes = scen["scenes"]
+    ch = catalogue_hash(brands)
     # ---- F. selection + verification ----
     t = time.time()
     by_id = {b["brand_id"]: b for b in brands}
@@ -181,7 +222,7 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
 
     budget = pacing.ad_budget(duration, rules)
     final: list[dict] = []
-    for _ in range(4):
+    for _ in range(3):
         eligible = [c for c in merged if not c["rejections"]]
         chosen = pacing.select(eligible, duration, rules)
         final, dropped, remaining, prev_brand = [], False, budget, None
@@ -190,18 +231,19 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
             if len(viable) > 1 and viable[0]["brand_id"] == prev_brand and viable[0]["relevance"] - viable[1]["relevance"] < 0.2:
                 viable[0], viable[1] = viable[1], viable[0]
             pick = None
-            for r in viable[:4]:
+            for r in viable[:2]:
                 key = f"{c['id']}:{r['brand_id']}"
                 v = matched["verify"].get(key)
                 if v is None:
                     log(f"F · verifying {r['brand_id']} at {manifest.ts(c['t'])}")
                     try:
-                        v = brandlib.verify(c, by_id[r["brand_id"]], scenes, proxy, wd)
+                        v = verify_fn(c, by_id[r["brand_id"]])
                     except Exception as e:
                         v = {"violation": True, "violated_contexts": [], "evidence": f"verifier error (fail-closed): {e}", "confidence": 0, "error": True}
                     if not v.get("error"):
                         matched["verify"][key] = v
-                        _save(mp, matched)
+                        if mp:
+                            _save(mp, matched)
                 r["verifier"] = v
                 if v["violation"]:
                     r["verifier_blocked"] = True
@@ -246,7 +288,8 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
     result = {
         "video_id": video_id,
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
-        "models": {"global": scen.get("model"), "local": gemini.MODEL_LOCAL},
+        "engine": ENGINE,
+        "models": models,
         "catalogue_hash": ch,
         "brands": [b["brand_id"] for b in brands],
         "video": {k: perc[k] for k in ("duration", "width", "height", "fps")},
@@ -268,7 +311,7 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
         "blacks": perc["blacks"],
         "timings_sec": {**timings, "total_this_run": round(time.time() - t_start, 1)},
     }
-    v = variant_id(brands, rules)
+    v = result_variant(brands, rules)
     result["variant"] = v
     _save(wd / f"catalogue_{ch}.json", brands)
     _save(wd / f"result_{v}.json", result)
@@ -276,6 +319,27 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
     log(f"done · {len(final)} breaks, ad load {result['summary']['ad_load_pct']}%")
     return result
 
+
+def _process_local(video_id, wd, proxy, perc, brands, rules, log, timings, t_start):
+    """B–E with the free local engine (seconds per episode once embeddings are cached)."""
+    from . import local_engine
+
+    duration = perc["duration"]
+    t = time.time()
+    scen = local_engine.analyse(wd, duration, perc["shots"], brands, log=log)
+    scenes = scen["scenes"]
+    lst = breaks.generate(scenes, perc["shots"], perc["speech"], perc["blacks"], perc["loudness"], duration, rules)
+    local_engine.judge_all(lst, wd, scenes, log=log)
+    for c in lst:
+        c["where_score"] = breaks.where_score(c)
+    ads.ensure_all(WEB, brands, log=log)
+    pool = [json.loads(json.dumps(c)) for c in lst if not c["rejections"] and c["where_score"] >= 0.35]
+    local_engine.match_all(pool, brands, scenes, wd, log=log)
+    matched = {"catalogue_hash": catalogue_hash(brands), "items": {c["id"]: c for c in pool}, "verify": {}}
+    timings["local_understanding"] = round(time.time() - t, 1)
+    models = {"vision": "openai/clip-vit-base-patch32", "audio": "laion/clap-htsat-unfused", "speech": "silero-vad"}
+    return _finish(video_id, wd, perc, scen, lst, matched, None, brands, rules, log, timings, t_start,
+                   lambda c, b: local_engine.verify(c, b, proxy, wd), models)
 
 if __name__ == "__main__":
     import argparse

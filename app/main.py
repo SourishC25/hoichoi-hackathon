@@ -95,7 +95,7 @@ def _result_path(video_id: str, variant: str | None) -> Path:
         if p.exists():
             return p
         raise HTTPException(404, "unknown variant")
-    v = run.variant_id(default_brands(), None)
+    v = run.result_variant(default_brands(), None)
     for p in (wd / f"result_{v}.json", wd / "result.json"):
         if p.exists():
             return p

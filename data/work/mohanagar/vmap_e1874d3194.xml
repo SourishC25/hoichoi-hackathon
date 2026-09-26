@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
-  <vmap:AdBreak timeOffset="00:03:18.040" breakType="linear" breakId="midroll-1">
+  <vmap:AdBreak timeOffset="00:04:26.480" breakType="linear" breakId="midroll-1">
     <vmap:AdSource id="midroll-1-src" allowMultipleAds="false" followRedirects="true">
       <vmap:VASTAdData>
         <VAST version="3.0">
-          <Ad id="brand_e-e_30s_bn" sequence="1">
+          <Ad id="brand_h-h_30s_bn" sequence="1">
             <InLine>
               <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
-              <AdTitle>Brand E — e_30s_bn</AdTitle>
-              <Impression id="imp"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=e_30s_bn&ev=impression]]></Impression>
+              <AdTitle>Brand H — h_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=h_30s_bn&ev=impression]]></Impression>
               <Creatives>
-                <Creative id="e_30s_bn" sequence="1">
+                <Creative id="h_30s_bn" sequence="1">
                   <Linear>
                     <Duration>00:00:30.000</Duration>
                     <TrackingEvents>
-                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=e_30s_bn&ev=start]]></Tracking>
-                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=e_30s_bn&ev=complete]]></Tracking>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=h_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=h_30s_bn&ev=complete]]></Tracking>
                     </TrackingEvents>
                     <MediaFiles>
-                      <MediaFile id="e_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_e/e_30s_bn.mp4]]></MediaFile>
+                      <MediaFile id="h_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_h/h_30s_bn.mp4]]></MediaFile>
                     </MediaFiles>
                   </Linear>
                 </Creative>
               </Creatives>
               <Extensions>
-                <Extension type="contextual-targeting"><Brand>brand_e</Brand><BreakScore>0.991</BreakScore><Relevance>0.700</Relevance><DominantActivity>montage</DominantActivity><Reason>The cut is placed perfectly at the end of the opening credits and title card, before the first narrative scene begins, with no overlapping music or dialogue. Brand: The montage heavily features Dhaka's traffic, roads, and vehicles, making automotive and mobility themes highly relevant.</Reason></Extension>
+                <Extension type="contextual-targeting"><Brand>brand_h</Brand><BreakScore>0.778</BreakScore><Relevance>0.859</Relevance><DominantActivity>mobile shopping</DominantActivity><Reason>Visual change across the cut 0.21 (CLIP), 4.7s silence before / 3.7s after (VAD), speech density 45%/63%, loudness dip 11.3 dB. Brand: Lead-in best matches “mobile shopping” (CLIP z=3.3 before / 0.7 after the cut)</Reason></Extension>
               </Extensions>
             </InLine>
           </Ad>
@@ -32,8 +32,8 @@
       </vmap:VASTAdData>
     </vmap:AdSource>
     <vmap:TrackingEvents>
-      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=e_30s_bn&ev=breakStart]]></vmap:Tracking>
-      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=e_30s_bn&ev=breakEnd]]></vmap:Tracking>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=h_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=mohanagar&break=midroll-1&creative=h_30s_bn&ev=breakEnd]]></vmap:Tracking>
     </vmap:TrackingEvents>
   </vmap:AdBreak>
   <vmap:AdBreak timeOffset="00:09:57.360" breakType="linear" breakId="midroll-2">
@@ -60,7 +60,7 @@
                 </Creative>
               </Creatives>
               <Extensions>
-                <Extension type="contextual-targeting"><Brand>brand_a</Brand><BreakScore>0.844</BreakScore><Relevance>0.900</Relevance><DominantActivity>eating</DominantActivity><Reason>The scene transitions cleanly from the restaurant to a night driving sequence, with the dialogue fully concluded, though the tense background score continues across the cut. Brand: The lead-in scene features characters eating dinner at a restaurant, which directly aligns with the brand's target contexts of eating and dinner.</Reason></Extension>
+                <Extension type="contextual-targeting"><Brand>brand_a</Brand><BreakScore>0.855</BreakScore><Relevance>0.871</Relevance><DominantActivity>dinner</DominantActivity><Reason>Visual change across the cut 0.24 (CLIP), 16.2s silence before / 18.6s after (VAD), speech density 0%/0%, loudness dip 5.8 dB, music carries over. Brand: Lead-in best matches “dinner” (CLIP z=3.4 before / 0.4 after the cut)</Reason></Extension>
               </Extensions>
             </InLine>
           </Ad>

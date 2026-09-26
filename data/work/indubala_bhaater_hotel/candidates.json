@@ -1,0 +1,774 @@
+{
+ "rules": {
+  "no_break_first_sec": 120,
+  "no_break_last_sec": 90
+ },
+ "items": [
+  {
+   "id": "c000",
+   "t0": 5.04,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 5.04,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 5.04,
+    "silence_after": 13.66,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c001",
+   "t0": 17.52,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 17.52,
+   "scene_before": 2,
+   "scene_after": 3,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 17.52,
+    "silence_after": 1.18,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.45,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c002",
+   "t0": 65.96,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 65.96,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.26,
+    "silence_after": 10.94,
+    "speech_density_10s_before": 0.29,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 15.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c003",
+   "t0": 162.2,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 159.4,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": -2.8,
+    "silence_before": 2.8,
+    "silence_after": 2.1,
+    "speech_density_10s_before": 0.5,
+    "speech_density_10s_after": 0.75,
+    "loudness_dip_db": 12.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "Sure, good night.",
+    "first_line_after_cut": "মা",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.8,
+    "reason": "The phone call concludes naturally and the phone is locked before the cut, making it a clean transition before the next character enters the room."
+   },
+   "where_score": 0.666
+  },
+  {
+   "id": "c004",
+   "t0": 198.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 198.0,
+   "scene_before": 5,
+   "scene_after": 6,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 16.2,
+    "silence_after": 3.4,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.66,
+    "loudness_dip_db": 6.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "সত্যি, উচ্ছে ভাজা যে এত ভালো খেতে হয়, এটা কে জানত!",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition from an atmospheric scene of a girl in the rain to a bustling dining hall scene, marked by a title card, making it an excellent natural break."
+   },
+   "where_score": 0.736
+  },
+  {
+   "id": "c005",
+   "t0": 281.92,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 281.92,
+   "scene_before": 7,
+   "scene_after": 8,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.96,
+    "speech_density_10s_after": 0.88,
+    "loudness_dip_db": 18.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c006",
+   "t0": 326.92,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 326.92,
+   "scene_before": 8,
+   "scene_after": 9,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.42,
+    "silence_after": 0.08,
+    "speech_density_10s_before": 0.52,
+    "speech_density_10s_after": 0.99,
+    "loudness_dip_db": 20.6,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c007",
+   "t0": 426.56,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 426.56,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 37.86,
+    "silence_after": 1.84,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.71,
+    "loudness_dip_db": 11.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "আর দিদি",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.0,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition between a reflective scene of preparing food and a later scene of serving it to customers, with no overlapping dialogue or music."
+   },
+   "where_score": 0.824
+  },
+  {
+   "id": "c008",
+   "t0": 513.4,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "LLM heard a sentence cut: “তাইতো হে মন”"
+   ],
+   "t": 516.28,
+   "scene_before": 11,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 2.88,
+    "silence_before": 2.48,
+    "silence_after": 3.02,
+    "speech_density_10s_before": 0.4,
+    "speech_density_10s_after": 0.48,
+    "loudness_dip_db": 9.7,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "তাইতো হে মন",
+    "first_line_after_cut": "কী রে ধনা?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": true,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.3,
+    "jarring": 0.6,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.35,
+    "reason": "The cut is placed mid-sequence and splits a continuous song lyric, making it a jarring transition."
+   },
+   "where_score": 0.3
+  },
+  {
+   "id": "c009",
+   "t0": 613.84,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 613.84,
+   "scene_before": 11,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.52,
+    "speech_density_10s_after": 0.5,
+    "loudness_dip_db": 30.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c010",
+   "t0": 631.2,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 631.2,
+   "scene_before": 12,
+   "scene_after": 13,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 11.3,
+    "silence_after": 5.3,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.45,
+    "loudness_dip_db": 7.8,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "এত রাত্রে দরজায় ধাক্কা দিচ্ছে কে?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs at a natural transition point between the end of a dramatic sequence and the show's title card, with only the background music carrying over."
+   },
+   "where_score": 0.762
+  },
+  {
+   "id": "c011",
+   "t0": 639.2,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 639.2,
+   "scene_before": 13,
+   "scene_after": 14,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.27,
+    "speech_density_10s_after": 0.79,
+    "loudness_dip_db": 2.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c012",
+   "t0": 665.08,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 665.08,
+   "scene_before": 14,
+   "scene_after": 15,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.28,
+    "silence_after": 1.92,
+    "speech_density_10s_before": 0.72,
+    "speech_density_10s_after": 0.8,
+    "loudness_dip_db": 3.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c013",
+   "t0": 735.28,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 735.28,
+   "scene_before": 15,
+   "scene_after": 16,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.59,
+    "speech_density_10s_after": 0.78,
+    "loudness_dip_db": 8.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c014",
+   "t0": 766.96,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "LLM heard a sentence cut: “”"
+   ],
+   "t": 766.96,
+   "scene_before": 16,
+   "scene_after": 17,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 7.36,
+    "silence_after": 4.94,
+    "speech_density_10s_before": 0.26,
+    "speech_density_10s_after": 0.51,
+    "loudness_dip_db": 20.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": true,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.7,
+    "jarring": 0.4,
+    "suspense_hook": 0.3,
+    "natural_break_score": 0.6,
+    "reason": "The cut occurs during a scene transition from the morgue to Indubala's room, but it interrupts a continuous background song mid-phrase, making it slightly jarring."
+   },
+   "where_score": 0.585
+  },
+  {
+   "id": "c015",
+   "t0": 851.64,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 851.64,
+   "scene_before": 17,
+   "scene_after": 18,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 8.04,
+    "silence_after": 24.36,
+    "speech_density_10s_before": 0.16,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 12.5,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "মাঝি, মাঝি আপ যাইয়ে না",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.9,
+    "reason": "The scene fades to black naturally after a somber moment in the hospital corridor, transitioning cleanly to a flashback sequence at home."
+   },
+   "where_score": 0.924
+  },
+  {
+   "id": "c016",
+   "t0": 905.32,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 905.32,
+   "scene_before": 18,
+   "scene_after": 19,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.79,
+    "speech_density_10s_after": 0.06,
+    "loudness_dip_db": 1.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c017",
+   "t0": 1055.16,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1055.16,
+   "scene_before": 19,
+   "scene_after": 20,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 4.86,
+    "silence_after": 1.14,
+    "speech_density_10s_before": 0.2,
+    "speech_density_10s_after": 0.88,
+    "loudness_dip_db": 11.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.2,
+    "jarring": 0.7,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.3,
+    "reason": "The cut is highly jarring as it interrupts a single continuous shot of a character looking up, while the background song continues directly across the break."
+   },
+   "where_score": 0.255
+  },
+  {
+   "id": "c018",
+   "t0": 1138.4,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1134.8,
+   "scene_before": 20,
+   "scene_after": 21,
+   "signals": {
+    "snap_delta": -3.6,
+    "silence_before": 1.6,
+    "silence_after": 2.5,
+    "speech_density_10s_before": 0.81,
+    "speech_density_10s_after": 0.52,
+    "loudness_dip_db": 7.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "हम लोग वही ना चीकी ना",
+    "first_line_after_cut": "এই চল চল হট হট",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.3,
+    "suspense_hook": 0.2,
+    "natural_break_score": 0.75,
+    "reason": "The cut occurs at a clean scene transition from a happy flashback in the rain to the grim present-day morgue, although the background song continues across the break."
+   },
+   "where_score": 0.613
+  },
+  {
+   "id": "c019",
+   "t0": 1223.8,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1223.8,
+   "scene_before": 21,
+   "scene_after": 22,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 41.0,
+    "silence_after": 3.3,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.59,
+    "loudness_dip_db": 25.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "কাটেনা হাজারো দুঃখ মোর",
+    "first_line_after_cut": "মা কই?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition between a poignant scene in the past and a new scene in the present day, making it a highly natural break."
+   },
+   "where_score": 0.78
+  },
+  {
+   "id": "c020",
+   "t0": 1345.84,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1345.84,
+   "scene_before": 22,
+   "scene_after": 23,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.53,
+    "speech_density_10s_after": 0.39,
+    "loudness_dip_db": 5.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c021",
+   "t0": 1478.92,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1478.92,
+   "scene_before": 23,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 101.92,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 4.6,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c022",
+   "t0": 1491.74,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1491.74,
+   "scene_before": 24,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 114.74,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 13.2,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c023",
+   "t0": 1503.86,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1503.86,
+   "scene_before": 24,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 126.86,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 11.9,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c024",
+   "t0": 1515.18,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1515.18,
+   "scene_before": 24,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 138.18,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 8.5,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c025",
+   "t0": 1535.96,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1535.96,
+   "scene_before": 24,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 158.96,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 13.9,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c026",
+   "t0": 1545.46,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1545.46,
+   "scene_before": 24,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 168.46,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 3.7,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  }
+ ]
+}

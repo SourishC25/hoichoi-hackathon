@@ -1,0 +1,4594 @@
+{
+ "video_id": "indubala_bhaater_hotel",
+ "generated_at": "2026-09-26T14:22:05+0530",
+ "engine": "local",
+ "models": {
+  "vision": "openai/clip-vit-base-patch32",
+  "audio": "laion/clap-htsat-unfused",
+  "speech": "silero-vad"
+ },
+ "catalogue_hash": "7331d21427",
+ "brands": [
+  "brand_a",
+  "brand_b",
+  "brand_c",
+  "brand_d",
+  "brand_e",
+  "brand_f",
+  "brand_g",
+  "brand_h"
+ ],
+ "video": {
+  "duration": 1553.92,
+  "width": 854,
+  "height": 480,
+  "fps": 25.0
+ },
+ "rules": {
+  "max_breaks_per_hour": 6,
+  "min_gap_sec": 300,
+  "max_ad_load_pct": 12.0,
+  "no_break_first_sec": 120,
+  "no_break_last_sec": 90,
+  "min_break_score": 0.55,
+  "brand_relevance_weight": 0.15
+ },
+ "summary": {
+  "scenes": 22,
+  "camera_cuts": 187,
+  "candidates": 26,
+  "breaks": 2,
+  "ad_seconds": 60,
+  "ad_load_pct": 3.72,
+  "breaks_per_hour": 4.63,
+  "allowed_breaks": 2
+ },
+ "audit": [
+  {
+   "check": "No speech at any cut point (VAD)",
+   "pass": true,
+   "detail": "max speech overlap in ±guard window: 0.00s"
+  },
+  {
+   "check": "Every cut on a camera cut or black frame",
+   "pass": true,
+   "detail": "2/2 breaks frame-aligned"
+  },
+  {
+   "check": "Min gap between breaks",
+   "pass": true,
+   "detail": "smallest gap 654s (rule ≥ 300s)"
+  },
+  {
+   "check": "Max breaks per hour",
+   "pass": true,
+   "detail": "2 placed, 2 allowed for 25.9 min"
+  },
+  {
+   "check": "Ad load within budget",
+   "pass": true,
+   "detail": "3.72% (max 12.0%)"
+  },
+  {
+   "check": "Protected opening/closing windows",
+   "pass": true,
+   "detail": "first 120s / last 90s untouched"
+  },
+  {
+   "check": "No negative-context brand placed (3 layers re-checked)",
+   "pass": true,
+   "detail": "violations: none"
+  },
+  {
+   "check": "Every placed brand passed the independent verifier",
+   "pass": true,
+   "detail": "2 verifier passes"
+  }
+ ],
+ "synopsis": "22 scenes over 25:53. Most screen time: text or credits on a dark screen, washing face, a bedroom. Brand-safety flags: eating. (Local engine: CLIP + CLAP zero-shot on 1 fps frames and 5 s audio windows.)",
+ "breaks": [
+  {
+   "candidate_id": "c002",
+   "t": 198.0,
+   "quality": 0.873,
+   "where_score": 0.758,
+   "brand_id": "brand_d",
+   "brand_name": "Brand D",
+   "relevance": 0.765,
+   "matched_contexts": [
+    "phone",
+    "video call",
+    "mobile"
+   ],
+   "dominant_activity": "phone",
+   "creative": {
+    "id": "d_30s_bn",
+    "duration_sec": 30,
+    "language": "bn",
+    "url": "ads/brand_d/d_30s_bn.mp4"
+   },
+   "reason": "Visual change across the cut 0.32 (CLIP), 16.2s silence before / 3.4s after (VAD), speech density 0%/66%, loudness dip 6.1 dB. Brand: Lead-in best matches “phone” (CLIP z=3.0 before / -0.3 after the cut)",
+   "last_line_before_cut": "",
+   "first_line_after_cut": "",
+   "blocked_brands": []
+  },
+  {
+   "candidate_id": "c011",
+   "t": 851.64,
+   "quality": 1.065,
+   "where_score": 0.975,
+   "brand_id": "brand_g",
+   "brand_name": "Brand G",
+   "relevance": 0.603,
+   "matched_contexts": [
+    "train journey",
+    "airport",
+    "hotel"
+   ],
+   "dominant_activity": "a shop",
+   "creative": {
+    "id": "g_30s_bn",
+    "duration_sec": 30,
+    "language": "bn",
+    "url": "ads/brand_g/g_30s_bn.mp4"
+   },
+   "reason": "Visual change across the cut 0.22 (CLIP), 8.0s silence before / 24.4s after (VAD), speech density 16%/0%, loudness dip 12.5 dB, fade to black. Brand: Lead-in best matches “train journey” (CLIP z=2.0 before / 1.1 after the cut)",
+   "last_line_before_cut": "",
+   "first_line_after_cut": "",
+   "blocked_brands": []
+  }
+ ],
+ "scenes": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "end": 20.04,
+   "boundary_novelty": 0.0,
+   "summary": "text or credits on a dark screen (z=1.0) — also n/a; audio mood quiet",
+   "dominant_activity": "text or credits on a dark screen",
+   "contexts": [
+    "text or credits on a dark screen"
+   ],
+   "mood": "quiet",
+   "emotional_intensity": 0.701,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 1,
+   "start": 20.04,
+   "end": 74.6,
+   "boundary_novelty": 0.282,
+   "summary": "a landscape (z=1.6) — also text or credits on a dark screen, shower, skincare; audio mood tense",
+   "dominant_activity": "a landscape",
+   "contexts": [
+    "a landscape",
+    "text or credits on a dark screen",
+    "shower",
+    "skincare",
+    "a close-up of a person's face",
+    "an outdoor scene in daylight"
+   ],
+   "mood": "tense",
+   "emotional_intensity": 0.491,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 2,
+   "start": 74.6,
+   "end": 198.0,
+   "boundary_novelty": 0.203,
+   "summary": "phone (z=3.4) — also video call, mobile, a close-up of a person's face; audio mood quiet",
+   "dominant_activity": "phone",
+   "contexts": [
+    "phone",
+    "video call",
+    "mobile",
+    "a close-up of a person's face",
+    "the inside of a car",
+    "social media"
+   ],
+   "mood": "quiet",
+   "emotional_intensity": 0.462,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 3,
+   "start": 198.0,
+   "end": 281.92,
+   "boundary_novelty": 0.472,
+   "summary": "a living room at home (z=2.3) — also a city street, family meal, a shop; audio mood conversational",
+   "dominant_activity": "a living room at home",
+   "contexts": [
+    "a living room at home",
+    "a city street",
+    "family meal",
+    "a shop",
+    "bathroom",
+    "dinner"
+   ],
+   "mood": "conversational",
+   "emotional_intensity": 0.148,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 4,
+   "start": 281.92,
+   "end": 326.92,
+   "boundary_novelty": 0.129,
+   "summary": "food preparation (z=3.8) — also homemade food, festival food, cooking; audio mood conversational",
+   "dominant_activity": "food preparation",
+   "contexts": [
+    "food preparation",
+    "homemade food",
+    "festival food",
+    "cooking",
+    "shopping",
+    "mobile shopping"
+   ],
+   "mood": "conversational",
+   "emotional_intensity": 0.479,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 5,
+   "start": 326.92,
+   "end": 378.92,
+   "boundary_novelty": 0.182,
+   "summary": "seasoning (z=4.7) — also homemade food, recipe, food preparation; audio mood happy",
+   "dominant_activity": "seasoning",
+   "contexts": [
+    "seasoning",
+    "homemade food",
+    "recipe",
+    "food preparation",
+    "spices",
+    "cooking"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.77,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 6,
+   "start": 378.92,
+   "end": 426.56,
+   "boundary_novelty": 0.14,
+   "summary": "homemade food (z=3.9) — also seasoning, recipe, food preparation; audio mood sad",
+   "dominant_activity": "homemade food",
+   "contexts": [
+    "homemade food",
+    "seasoning",
+    "recipe",
+    "food preparation",
+    "frying",
+    "cooking"
+   ],
+   "mood": "sad",
+   "emotional_intensity": 0.882,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 7,
+   "start": 426.56,
+   "end": 458.44,
+   "boundary_novelty": 0.132,
+   "summary": "homemade food (z=3.6) — also seasoning, recipe, food preparation; audio mood conversational",
+   "dominant_activity": "homemade food",
+   "contexts": [
+    "homemade food",
+    "seasoning",
+    "recipe",
+    "food preparation",
+    "cooking",
+    "lunch"
+   ],
+   "mood": "conversational",
+   "emotional_intensity": 0.156,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 8,
+   "start": 458.44,
+   "end": 513.4,
+   "boundary_novelty": 0.169,
+   "summary": "homemade food (z=3.9) — also lunch, food preparation, family meal; audio mood conversational; flagged: eating",
+   "dominant_activity": "homemade food",
+   "contexts": [
+    "homemade food",
+    "lunch",
+    "food preparation",
+    "family meal",
+    "recipe",
+    "cooking"
+   ],
+   "mood": "conversational",
+   "emotional_intensity": 0.384,
+   "sensitive": [
+    {
+     "topic": "eating",
+     "confidence": 0.506,
+     "evidence": "CLIP visual: visual z=3.1 (thr 3.0), audio z=3.5 (thr 4.0), peak ~07:39",
+     "vis": 3.063,
+     "aud": 3.528
+    }
+   ],
+   "ends_with": "transition",
+   "blocks_brands": [
+    "brand_b"
+   ],
+   "blocked_contexts": [
+    "eating"
+   ]
+  },
+  {
+   "index": 9,
+   "start": 513.4,
+   "end": 631.2,
+   "boundary_novelty": 0.169,
+   "summary": "washing face (z=3.0) — also face wash, shower, bathroom; audio mood happy",
+   "dominant_activity": "washing face",
+   "contexts": [
+    "washing face",
+    "face wash",
+    "shower",
+    "bathroom",
+    "a city street",
+    "personal hygiene"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.382,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 10,
+   "start": 631.2,
+   "end": 819.8,
+   "boundary_novelty": 0.376,
+   "summary": "a bedroom (z=2.2) — also a living room at home, shower, text or credits on a dark screen; audio mood sad",
+   "dominant_activity": "a bedroom",
+   "contexts": [
+    "a bedroom",
+    "a living room at home",
+    "shower",
+    "text or credits on a dark screen",
+    "bathroom",
+    "self care"
+   ],
+   "mood": "sad",
+   "emotional_intensity": 0.546,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 11,
+   "start": 819.8,
+   "end": 851.64,
+   "boundary_novelty": 0.138,
+   "summary": "a shop (z=2.5) — also a city street, train journey, parking; audio mood quiet",
+   "dominant_activity": "a shop",
+   "contexts": [
+    "a shop",
+    "a city street",
+    "train journey",
+    "parking",
+    "hair care",
+    "a corridor"
+   ],
+   "mood": "quiet",
+   "emotional_intensity": 0.618,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 12,
+   "start": 851.64,
+   "end": 904.44,
+   "boundary_novelty": 0.124,
+   "summary": "celebration (z=2.5) — also lipstick, text or credits on a dark screen, foundation; audio mood calm",
+   "dominant_activity": "celebration",
+   "contexts": [
+    "celebration",
+    "lipstick",
+    "text or credits on a dark screen",
+    "foundation",
+    "special occasion",
+    "heat"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.693,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 13,
+   "start": 904.44,
+   "end": 1022.44,
+   "boundary_novelty": 0.155,
+   "summary": "text or credits on a dark screen (z=2.1) — also a living room at home, sweating, a dark night scene; audio mood sad",
+   "dominant_activity": "text or credits on a dark screen",
+   "contexts": [
+    "text or credits on a dark screen",
+    "a living room at home",
+    "sweating",
+    "a dark night scene",
+    "a close-up of a person's face",
+    "heat"
+   ],
+   "mood": "sad",
+   "emotional_intensity": 0.605,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 14,
+   "start": 1022.44,
+   "end": 1072.88,
+   "boundary_novelty": 1.0,
+   "summary": "text or credits on a dark screen (z=2.0) — also a close-up of a person's face, skincare, boiling; audio mood happy",
+   "dominant_activity": "text or credits on a dark screen",
+   "contexts": [
+    "text or credits on a dark screen",
+    "a close-up of a person's face",
+    "skincare",
+    "boiling",
+    "sweating",
+    "moisturizer"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.656,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 15,
+   "start": 1072.88,
+   "end": 1152.96,
+   "boundary_novelty": 0.199,
+   "summary": "text or credits on a dark screen (z=2.3) — also foundation, a dark night scene, shower; audio mood sad",
+   "dominant_activity": "text or credits on a dark screen",
+   "contexts": [
+    "text or credits on a dark screen",
+    "foundation",
+    "a dark night scene",
+    "shower",
+    "moisturizer",
+    "hotel"
+   ],
+   "mood": "sad",
+   "emotional_intensity": 0.583,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 16,
+   "start": 1152.96,
+   "end": 1223.8,
+   "boundary_novelty": 0.184,
+   "summary": "shower (z=2.6) — also a dark night scene, celebration, text or credits on a dark screen; audio mood happy",
+   "dominant_activity": "shower",
+   "contexts": [
+    "shower",
+    "a dark night scene",
+    "celebration",
+    "text or credits on a dark screen",
+    "foundation",
+    "a corridor"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.717,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 17,
+   "start": 1223.8,
+   "end": 1297.12,
+   "boundary_novelty": 0.295,
+   "summary": "washing face (z=2.4) — also bathroom, face wash, wedding; audio mood happy",
+   "dominant_activity": "washing face",
+   "contexts": [
+    "washing face",
+    "bathroom",
+    "face wash",
+    "wedding",
+    "a shop",
+    "boiling"
+   ],
+   "mood": "happy",
+   "emotional_intensity": 0.389,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 18,
+   "start": 1297.12,
+   "end": 1345.84,
+   "boundary_novelty": 0.171,
+   "summary": "washing face (z=2.2) — also sweating, a corridor, checkout; audio mood calm",
+   "dominant_activity": "washing face",
+   "contexts": [
+    "washing face",
+    "sweating",
+    "a corridor",
+    "checkout",
+    "moisturizer",
+    "shower"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.698,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 19,
+   "start": 1345.84,
+   "end": 1417.52,
+   "boundary_novelty": 0.147,
+   "summary": "celebration (z=2.3) — also text or credits on a dark screen, a dark night scene, special occasion; audio mood calm",
+   "dominant_activity": "celebration",
+   "contexts": [
+    "celebration",
+    "text or credits on a dark screen",
+    "a dark night scene",
+    "special occasion",
+    "foundation",
+    "a corridor"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.902,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 20,
+   "start": 1417.52,
+   "end": 1478.92,
+   "boundary_novelty": 1.0,
+   "summary": "heat (z=2.1) — also text or credits on a dark screen, a close-up of a person's face, celebration; audio mood calm",
+   "dominant_activity": "heat",
+   "contexts": [
+    "heat",
+    "text or credits on a dark screen",
+    "a close-up of a person's face",
+    "celebration",
+    "a dark night scene",
+    "seasoning"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.899,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  },
+  {
+   "index": 21,
+   "start": 1478.92,
+   "end": 1553.92,
+   "boundary_novelty": 1.0,
+   "summary": "text or credits on a dark screen (z=1.9) — also n/a; audio mood sad",
+   "dominant_activity": "text or credits on a dark screen",
+   "contexts": [
+    "text or credits on a dark screen"
+   ],
+   "mood": "sad",
+   "emotional_intensity": 1.0,
+   "sensitive": [],
+   "ends_with": "transition",
+   "blocks_brands": [],
+   "blocked_contexts": []
+  }
+ ],
+ "candidates": [
+  {
+   "id": "c000",
+   "t0": 12.74,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 12.74,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 12.74,
+    "silence_after": 5.96,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.34,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c001",
+   "t0": 74.6,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 74.6,
+   "scene_before": 1,
+   "scene_after": 2,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 11.9,
+    "silence_after": 2.3,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.72,
+    "loudness_dip_db": 17.6,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c002",
+   "t0": 198.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 198.0,
+   "scene_before": 2,
+   "scene_after": 3,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 16.2,
+    "silence_after": 3.4,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.66,
+    "loudness_dip_db": 6.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.182,
+    "suspense_hook": 0.193,
+    "natural_break_score": 0.818,
+    "visual_novelty": 0.315,
+    "reason": "Visual change across the cut 0.32 (CLIP), 16.2s silence before / 3.4s after (VAD), speech density 0%/66%, loudness dip 6.1 dB."
+   },
+   "where_score": 0.758,
+   "match": {
+    "dominant_activity": "phone",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.295,
+      "matched_contexts": [],
+      "violations": [],
+      "rationale": "Lead-in best matches “eating” (CLIP z=0.9 before / 1.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.352,
+      "matched_contexts": [
+       "skincare",
+       "sweating",
+       "self care"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “skincare” (CLIP z=1.1 before / 1.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.372,
+      "matched_contexts": [
+       "beauty",
+       "celebration",
+       "mirror"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “beauty” (CLIP z=1.2 before / 0.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.765,
+      "matched_contexts": [
+       "phone",
+       "video call",
+       "mobile"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “phone” (CLIP z=3.0 before / -0.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.377,
+      "matched_contexts": [
+       "driving",
+       "motorcycle"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “driving” (CLIP z=1.3 before / 0.4 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.339,
+      "matched_contexts": [
+       "digital wallet",
+       "merchant",
+       "transaction"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “digital wallet” (CLIP z=1.2 before / 0.4 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.311,
+      "matched_contexts": [
+       "train journey"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “train journey” (CLIP z=1.2 before / -0.2 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.25,
+      "matched_contexts": [],
+      "violations": [],
+      "rationale": "Lead-in best matches “mobile shopping” (CLIP z=0.6 before / 1.1 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.765,
+     "matched_contexts": [
+      "phone",
+      "video call",
+      "mobile"
+     ],
+     "rationale": "Lead-in best matches “phone” (CLIP z=3.0 before / -0.3 after the cut)",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": false,
+      "violated_contexts": [],
+      "evidence": "No forbidden context above 0.8× threshold in 220 frames at 2 fps (t−90 s…t+20 s) or the soundtrack.",
+      "confidence": 0.9
+     }
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.377,
+     "matched_contexts": [
+      "driving",
+      "motorcycle"
+     ],
+     "rationale": "Lead-in best matches “driving” (CLIP z=1.3 before / 0.4 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.372,
+     "matched_contexts": [
+      "beauty",
+      "celebration",
+      "mirror"
+     ],
+     "rationale": "Lead-in best matches “beauty” (CLIP z=1.2 before / 0.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.352,
+     "matched_contexts": [
+      "skincare",
+      "sweating",
+      "self care"
+     ],
+     "rationale": "Lead-in best matches “skincare” (CLIP z=1.1 before / 1.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.339,
+     "matched_contexts": [
+      "digital wallet",
+      "merchant",
+      "transaction"
+     ],
+     "rationale": "Lead-in best matches “digital wallet” (CLIP z=1.2 before / 0.4 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.311,
+     "matched_contexts": [
+      "train journey"
+     ],
+     "rationale": "Lead-in best matches “train journey” (CLIP z=1.2 before / -0.2 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.295,
+     "matched_contexts": [],
+     "rationale": "Lead-in best matches “eating” (CLIP z=0.9 before / 1.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.25,
+     "matched_contexts": [],
+     "rationale": "Lead-in best matches “mobile shopping” (CLIP z=0.6 before / 1.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "phone",
+   "quality": 0.873,
+   "selected": true
+  },
+  {
+   "id": "c003",
+   "t0": 281.92,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 281.92,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.96,
+    "speech_density_10s_after": 0.88,
+    "loudness_dip_db": 18.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c004",
+   "t0": 326.92,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 326.92,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.42,
+    "silence_after": 0.08,
+    "speech_density_10s_before": 0.52,
+    "speech_density_10s_after": 0.99,
+    "loudness_dip_db": 20.6,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c005",
+   "t0": 378.92,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 378.92,
+   "scene_before": 5,
+   "scene_after": 6,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.96,
+    "speech_density_10s_after": 0.98,
+    "loudness_dip_db": 10.7,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c006",
+   "t0": 426.56,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "not chosen: pacing rules (min gap / max breaks) favoured a better nearby break"
+   ],
+   "t": 426.56,
+   "scene_before": 6,
+   "scene_after": 7,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 37.86,
+    "silence_after": 1.84,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.71,
+    "loudness_dip_db": 11.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.838,
+    "jarring": 0.353,
+    "suspense_hook": 0.304,
+    "natural_break_score": 0.647,
+    "visual_novelty": 0.189,
+    "reason": "Visual change across the cut 0.19 (CLIP), 37.9s silence before / 1.8s after (VAD), speech density 0%/71%, loudness dip 11.9 dB."
+   },
+   "where_score": 0.684,
+   "match": {
+    "dominant_activity": "homemade food",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.957,
+      "matched_contexts": [
+       "homemade food",
+       "seasoning",
+       "recipe"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “homemade food” (CLIP z=3.9 before / 2.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.672,
+      "matched_contexts": [
+       "bathroom",
+       "getting ready",
+       "moisturizer"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “bathroom” (CLIP z=2.0 before / 1.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.627,
+      "matched_contexts": [
+       "getting ready",
+       "make-up",
+       "salon"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “getting ready” (CLIP z=1.9 before / 1.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.453,
+      "matched_contexts": [
+       "family conversation",
+       "working remotely",
+       "travel"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “family conversation” (CLIP z=1.5 before / 0.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.492,
+      "matched_contexts": [
+       "journey",
+       "family trip"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “journey” (CLIP z=1.5 before / 1.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.602,
+      "matched_contexts": [
+       "merchant",
+       "payment"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “merchant” (CLIP z=1.7 before / 2.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.462,
+      "matched_contexts": [
+       "hotel",
+       "resort",
+       "family vacation"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “hotel” (CLIP z=1.6 before / 0.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.389,
+      "matched_contexts": [
+       "shopping",
+       "checkout",
+       "gift"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “shopping” (CLIP z=1.2 before / 1.3 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.957,
+     "matched_contexts": [
+      "homemade food",
+      "seasoning",
+      "recipe"
+     ],
+     "rationale": "Lead-in best matches “homemade food” (CLIP z=3.9 before / 2.9 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.672,
+     "matched_contexts": [
+      "bathroom",
+      "getting ready",
+      "moisturizer"
+     ],
+     "rationale": "Lead-in best matches “bathroom” (CLIP z=2.0 before / 1.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.627,
+     "matched_contexts": [
+      "getting ready",
+      "make-up",
+      "salon"
+     ],
+     "rationale": "Lead-in best matches “getting ready” (CLIP z=1.9 before / 1.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.602,
+     "matched_contexts": [
+      "merchant",
+      "payment"
+     ],
+     "rationale": "Lead-in best matches “merchant” (CLIP z=1.7 before / 2.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.492,
+     "matched_contexts": [
+      "journey",
+      "family trip"
+     ],
+     "rationale": "Lead-in best matches “journey” (CLIP z=1.5 before / 1.3 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.462,
+     "matched_contexts": [
+      "hotel",
+      "resort",
+      "family vacation"
+     ],
+     "rationale": "Lead-in best matches “hotel” (CLIP z=1.6 before / 0.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.453,
+     "matched_contexts": [
+      "family conversation",
+      "working remotely",
+      "travel"
+     ],
+     "rationale": "Lead-in best matches “family conversation” (CLIP z=1.5 before / 0.9 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.389,
+     "matched_contexts": [
+      "shopping",
+      "checkout",
+      "gift"
+     ],
+     "rationale": "Lead-in best matches “shopping” (CLIP z=1.2 before / 1.3 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "homemade food",
+   "quality": 0.828,
+   "selected": false
+  },
+  {
+   "id": "c007",
+   "t0": 458.44,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 458.44,
+   "scene_before": 7,
+   "scene_after": 8,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.78,
+    "speech_density_10s_after": 0.96,
+    "loudness_dip_db": 21.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c008",
+   "t0": 513.4,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "break quality 0.42 below threshold 0.55"
+   ],
+   "t": 516.28,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 2.88,
+    "silence_before": 2.48,
+    "silence_after": 3.02,
+    "speech_density_10s_before": 0.4,
+    "speech_density_10s_after": 0.48,
+    "loudness_dip_db": 9.7,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.509,
+    "jarring": 0.562,
+    "suspense_hook": 0.308,
+    "natural_break_score": 0.438,
+    "visual_novelty": 0.082,
+    "reason": "Visual change across the cut 0.08 (CLIP), 2.5s silence before / 3.0s after (VAD), speech density 40%/48%, loudness dip 9.7 dB."
+   },
+   "where_score": 0.422,
+   "match": {
+    "dominant_activity": "washing face",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.474,
+      "matched_contexts": [
+       "boiling",
+       "kitchen",
+       "cooking"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “boiling” (CLIP z=1.2 before / 2.4 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.743,
+      "matched_contexts": [
+       "shower",
+       "bathroom",
+       "self care"
+      ],
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "CLIP visual: visual z=3.0 (thr 2.7), audio z=3.5 (thr 3.6), peak ~07:38"
+       }
+      ],
+      "rationale": "Lead-in best matches “shower” (CLIP z=2.0 before / 3.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.421,
+      "matched_contexts": [
+       "special occasion",
+       "beauty",
+       "mirror"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “special occasion” (CLIP z=0.9 before / 2.6 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.43,
+      "matched_contexts": [
+       "travel",
+       "working remotely"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “travel” (CLIP z=1.4 before / 0.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.3,
+      "matched_contexts": [],
+      "violations": [],
+      "rationale": "Lead-in best matches “commuting” (CLIP z=1.0 before / 0.6 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.352,
+      "matched_contexts": [
+       "merchant",
+       "online shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “merchant” (CLIP z=0.9 before / 1.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.603,
+      "matched_contexts": [
+       "sightseeing",
+       "tourism",
+       "travel"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “sightseeing” (CLIP z=1.9 before / 1.2 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.371,
+      "matched_contexts": [
+       "fashion shopping",
+       "home shopping",
+       "online shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “fashion shopping” (CLIP z=1.1 before / 1.4 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.603,
+     "matched_contexts": [
+      "sightseeing",
+      "tourism",
+      "travel"
+     ],
+     "rationale": "Lead-in best matches “sightseeing” (CLIP z=1.9 before / 1.2 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.474,
+     "matched_contexts": [
+      "boiling",
+      "kitchen",
+      "cooking"
+     ],
+     "rationale": "Lead-in best matches “boiling” (CLIP z=1.2 before / 2.4 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.43,
+     "matched_contexts": [
+      "travel",
+      "working remotely"
+     ],
+     "rationale": "Lead-in best matches “travel” (CLIP z=1.4 before / 0.9 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.421,
+     "matched_contexts": [
+      "special occasion",
+      "beauty",
+      "mirror"
+     ],
+     "rationale": "Lead-in best matches “special occasion” (CLIP z=0.9 before / 2.6 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.371,
+     "matched_contexts": [
+      "fashion shopping",
+      "home shopping",
+      "online shopping"
+     ],
+     "rationale": "Lead-in best matches “fashion shopping” (CLIP z=1.1 before / 1.4 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.352,
+     "matched_contexts": [
+      "merchant",
+      "online shopping"
+     ],
+     "rationale": "Lead-in best matches “merchant” (CLIP z=0.9 before / 1.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.3,
+     "matched_contexts": [],
+     "rationale": "Lead-in best matches “commuting” (CLIP z=1.0 before / 0.6 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.743,
+     "matched_contexts": [
+      "shower",
+      "bathroom",
+      "self care"
+     ],
+     "rationale": "Lead-in best matches “shower” (CLIP z=2.0 before / 3.1 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 8,
+       "evidence": "eating: CLIP visual: visual z=3.1 (thr 3.0), audio z=3.5 (thr 4.0), peak ~07:39"
+      },
+      {
+       "negative_context": "eating",
+       "source": "llm_lead_in",
+       "evidence": "CLIP visual: visual z=3.0 (thr 2.7), audio z=3.5 (thr 3.6), peak ~07:38"
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "washing face",
+   "quality": 0.512,
+   "selected": false
+  },
+  {
+   "id": "c009",
+   "t0": 631.2,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "not chosen: pacing rules (min gap / max breaks) favoured a better nearby break"
+   ],
+   "t": 631.2,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 11.3,
+    "silence_after": 5.3,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.45,
+    "loudness_dip_db": 7.8,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.0,
+    "suspense_hook": 0.158,
+    "natural_break_score": 1.0,
+    "visual_novelty": 0.412,
+    "reason": "Visual change across the cut 0.41 (CLIP), 11.3s silence before / 5.3s after (VAD), speech density 0%/45%, loudness dip 7.8 dB, fade to black."
+   },
+   "where_score": 0.942,
+   "match": {
+    "dominant_activity": "washing face",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.606,
+      "matched_contexts": [
+       "boiling",
+       "kitchen",
+       "food preparation"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “boiling” (CLIP z=2.2 before / 0.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.834,
+      "matched_contexts": [
+       "washing face",
+       "personal hygiene",
+       "face wash"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “washing face” (CLIP z=3.2 before / 0.5 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.615,
+      "matched_contexts": [
+       "make-up",
+       "dressing",
+       "beauty"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “make-up” (CLIP z=2.3 before / 0.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.575,
+      "matched_contexts": [
+       "internet",
+       "family conversation",
+       "streaming"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “internet” (CLIP z=1.9 before / 1.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.791,
+      "matched_contexts": [
+       "commuting",
+       "traffic",
+       "road"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “commuting” (CLIP z=3.1 before / -0.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.628,
+      "matched_contexts": [
+       "merchant",
+       "online shopping",
+       "payment"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “merchant” (CLIP z=2.3 before / 0.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.594,
+      "matched_contexts": [
+       "sightseeing",
+       "train journey",
+       "tourism"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “sightseeing” (CLIP z=2.2 before / 0.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.528,
+      "matched_contexts": [
+       "online shopping",
+       "delivery",
+       "fashion shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “online shopping” (CLIP z=1.8 before / 0.6 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.791,
+     "matched_contexts": [
+      "commuting",
+      "traffic",
+      "road"
+     ],
+     "rationale": "Lead-in best matches “commuting” (CLIP z=3.1 before / -0.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.628,
+     "matched_contexts": [
+      "merchant",
+      "online shopping",
+      "payment"
+     ],
+     "rationale": "Lead-in best matches “merchant” (CLIP z=2.3 before / 0.3 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.615,
+     "matched_contexts": [
+      "make-up",
+      "dressing",
+      "beauty"
+     ],
+     "rationale": "Lead-in best matches “make-up” (CLIP z=2.3 before / 0.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.606,
+     "matched_contexts": [
+      "boiling",
+      "kitchen",
+      "food preparation"
+     ],
+     "rationale": "Lead-in best matches “boiling” (CLIP z=2.2 before / 0.3 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.594,
+     "matched_contexts": [
+      "sightseeing",
+      "train journey",
+      "tourism"
+     ],
+     "rationale": "Lead-in best matches “sightseeing” (CLIP z=2.2 before / 0.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.575,
+     "matched_contexts": [
+      "internet",
+      "family conversation",
+      "streaming"
+     ],
+     "rationale": "Lead-in best matches “internet” (CLIP z=1.9 before / 1.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.528,
+     "matched_contexts": [
+      "online shopping",
+      "delivery",
+      "fashion shopping"
+     ],
+     "rationale": "Lead-in best matches “online shopping” (CLIP z=1.8 before / 0.6 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.834,
+     "matched_contexts": [
+      "washing face",
+      "personal hygiene",
+      "face wash"
+     ],
+     "rationale": "Lead-in best matches “washing face” (CLIP z=3.2 before / 0.5 after the cut)",
+     "blocked": true,
+     "blocks": [
+      {
+       "negative_context": "eating",
+       "source": "global_scene_tags",
+       "scene": 8,
+       "evidence": "eating: CLIP visual: visual z=3.1 (thr 3.0), audio z=3.5 (thr 4.0), peak ~07:39"
+      }
+     ]
+    }
+   ],
+   "dominant_activity": "washing face",
+   "quality": 1.061,
+   "selected": false
+  },
+  {
+   "id": "c010",
+   "t0": 819.8,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "break quality 0.49 below threshold 0.55"
+   ],
+   "t": 819.8,
+   "scene_before": 10,
+   "scene_after": 11,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 1.1,
+    "silence_after": 0.7,
+    "speech_density_10s_before": 0.5,
+    "speech_density_10s_after": 0.28,
+    "loudness_dip_db": 13.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.512,
+    "jarring": 0.505,
+    "suspense_hook": 0.248,
+    "natural_break_score": 0.495,
+    "visual_novelty": 0.185,
+    "reason": "Visual change across the cut 0.18 (CLIP), 1.1s silence before / 0.7s after (VAD), speech density 50%/28%, loudness dip 13.2 dB."
+   },
+   "where_score": 0.487,
+   "match": {
+    "dominant_activity": "a bedroom",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.413,
+      "matched_contexts": [
+       "homemade food",
+       "kitchen"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “homemade food” (CLIP z=1.3 before / 1.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.427,
+      "matched_contexts": [
+       "self care",
+       "shower",
+       "heat"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “self care” (CLIP z=1.4 before / 0.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.523,
+      "matched_contexts": [
+       "lipstick",
+       "celebration",
+       "wedding"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “lipstick” (CLIP z=1.8 before / 0.5 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.198,
+      "matched_contexts": [],
+      "violations": [],
+      "rationale": "Lead-in best matches “wifi” (CLIP z=0.2 before / 1.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.261,
+      "matched_contexts": [],
+      "violations": [],
+      "rationale": "Lead-in best matches “journey” (CLIP z=0.8 before / 0.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.257,
+      "matched_contexts": [],
+      "violations": [],
+      "rationale": "Lead-in best matches “checkout” (CLIP z=0.6 before / 1.3 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.32,
+      "matched_contexts": [
+       "hotel"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “hotel” (CLIP z=1.0 before / 0.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.394,
+      "matched_contexts": [
+       "package",
+       "fashion shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “package” (CLIP z=1.0 before / 1.8 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.523,
+     "matched_contexts": [
+      "lipstick",
+      "celebration",
+      "wedding"
+     ],
+     "rationale": "Lead-in best matches “lipstick” (CLIP z=1.8 before / 0.5 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.427,
+     "matched_contexts": [
+      "self care",
+      "shower",
+      "heat"
+     ],
+     "rationale": "Lead-in best matches “self care” (CLIP z=1.4 before / 0.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.413,
+     "matched_contexts": [
+      "homemade food",
+      "kitchen"
+     ],
+     "rationale": "Lead-in best matches “homemade food” (CLIP z=1.3 before / 1.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.394,
+     "matched_contexts": [
+      "package",
+      "fashion shopping"
+     ],
+     "rationale": "Lead-in best matches “package” (CLIP z=1.0 before / 1.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.32,
+     "matched_contexts": [
+      "hotel"
+     ],
+     "rationale": "Lead-in best matches “hotel” (CLIP z=1.0 before / 0.9 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.261,
+     "matched_contexts": [],
+     "rationale": "Lead-in best matches “journey” (CLIP z=0.8 before / 0.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.257,
+     "matched_contexts": [],
+     "rationale": "Lead-in best matches “checkout” (CLIP z=0.6 before / 1.3 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.198,
+     "matched_contexts": [],
+     "rationale": "Lead-in best matches “wifi” (CLIP z=0.2 before / 1.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "a bedroom",
+   "quality": 0.565,
+   "selected": false
+  },
+  {
+   "id": "c011",
+   "t0": 851.64,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 851.64,
+   "scene_before": 11,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 8.04,
+    "silence_after": 24.36,
+    "speech_density_10s_before": 0.16,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 12.5,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.914,
+    "jarring": 0.0,
+    "suspense_hook": 0.185,
+    "natural_break_score": 1.0,
+    "visual_novelty": 0.222,
+    "reason": "Visual change across the cut 0.22 (CLIP), 8.0s silence before / 24.4s after (VAD), speech density 16%/0%, loudness dip 12.5 dB, fade to black."
+   },
+   "where_score": 0.975,
+   "match": {
+    "dominant_activity": "a shop",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.384,
+      "matched_contexts": [
+       "kitchen",
+       "lunch",
+       "boiling"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “kitchen” (CLIP z=1.2 before / 1.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.582,
+      "matched_contexts": [
+       "shower",
+       "hair care",
+       "moisturizer"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “shower” (CLIP z=1.6 before / 2.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.502,
+      "matched_contexts": [
+       "make-up",
+       "mirror",
+       "beauty"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “make-up” (CLIP z=1.7 before / 0.6 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.586,
+      "matched_contexts": [
+       "streaming",
+       "wifi",
+       "messaging"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “streaming” (CLIP z=1.9 before / 1.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.557,
+      "matched_contexts": [
+       "parking",
+       "commuting",
+       "highway"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “parking” (CLIP z=2.0 before / 0.5 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.477,
+      "matched_contexts": [
+       "checkout",
+       "payment",
+       "shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “checkout” (CLIP z=1.6 before / 0.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.603,
+      "matched_contexts": [
+       "train journey",
+       "airport",
+       "hotel"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “train journey” (CLIP z=2.0 before / 1.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.568,
+      "matched_contexts": [
+       "package",
+       "checkout",
+       "mobile shopping"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “package” (CLIP z=1.8 before / 1.3 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.603,
+     "matched_contexts": [
+      "train journey",
+      "airport",
+      "hotel"
+     ],
+     "rationale": "Lead-in best matches “train journey” (CLIP z=2.0 before / 1.1 after the cut)",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": false,
+      "violated_contexts": [],
+      "evidence": "No forbidden context above 0.8× threshold in 220 frames at 2 fps (t−90 s…t+20 s) or the soundtrack.",
+      "confidence": 0.9
+     }
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.586,
+     "matched_contexts": [
+      "streaming",
+      "wifi",
+      "messaging"
+     ],
+     "rationale": "Lead-in best matches “streaming” (CLIP z=1.9 before / 1.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.582,
+     "matched_contexts": [
+      "shower",
+      "hair care",
+      "moisturizer"
+     ],
+     "rationale": "Lead-in best matches “shower” (CLIP z=1.6 before / 2.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.568,
+     "matched_contexts": [
+      "package",
+      "checkout",
+      "mobile shopping"
+     ],
+     "rationale": "Lead-in best matches “package” (CLIP z=1.8 before / 1.3 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.557,
+     "matched_contexts": [
+      "parking",
+      "commuting",
+      "highway"
+     ],
+     "rationale": "Lead-in best matches “parking” (CLIP z=2.0 before / 0.5 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.502,
+     "matched_contexts": [
+      "make-up",
+      "mirror",
+      "beauty"
+     ],
+     "rationale": "Lead-in best matches “make-up” (CLIP z=1.7 before / 0.6 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.477,
+     "matched_contexts": [
+      "checkout",
+      "payment",
+      "shopping"
+     ],
+     "rationale": "Lead-in best matches “checkout” (CLIP z=1.6 before / 0.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.384,
+     "matched_contexts": [
+      "kitchen",
+      "lunch",
+      "boiling"
+     ],
+     "rationale": "Lead-in best matches “kitchen” (CLIP z=1.2 before / 1.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "a shop",
+   "quality": 1.065,
+   "selected": true
+  },
+  {
+   "id": "c012",
+   "t0": 904.44,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 904.44,
+   "scene_before": 12,
+   "scene_after": 13,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.78,
+    "speech_density_10s_after": 0.15,
+    "loudness_dip_db": 3.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c013",
+   "t0": 1022.44,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1022.44,
+   "scene_before": 13,
+   "scene_after": 14,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.53,
+    "speech_density_10s_after": 0.8,
+    "loudness_dip_db": 1.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c014",
+   "t0": 1072.88,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1072.88,
+   "scene_before": 14,
+   "scene_after": 15,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.08,
+    "silence_after": 0.02,
+    "speech_density_10s_before": 0.99,
+    "speech_density_10s_after": 0.86,
+    "loudness_dip_db": 2.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c015",
+   "t0": 1152.96,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1152.96,
+   "scene_before": 15,
+   "scene_after": 16,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.62,
+    "speech_density_10s_after": 0.82,
+    "loudness_dip_db": 17.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c016",
+   "t0": 1223.8,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "verifier blocked every viable brand"
+   ],
+   "t": 1223.8,
+   "scene_before": 16,
+   "scene_after": 17,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 41.0,
+    "silence_after": 3.3,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.59,
+    "loudness_dip_db": 25.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.124,
+    "suspense_hook": 0.312,
+    "natural_break_score": 0.876,
+    "visual_novelty": 0.32,
+    "reason": "Visual change across the cut 0.32 (CLIP), 41.0s silence before / 3.3s after (VAD), speech density 0%/59%, loudness dip 25.2 dB."
+   },
+   "where_score": 0.83,
+   "match": {
+    "dominant_activity": "shower",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.624,
+      "matched_contexts": [
+       "kitchen",
+       "cooking",
+       "frying"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “kitchen” (CLIP z=1.8 before / 2.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.842,
+      "matched_contexts": [
+       "shower",
+       "bathroom",
+       "personal hygiene"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “shower” (CLIP z=2.7 before / 2.4 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.64,
+      "matched_contexts": [
+       "foundation",
+       "celebration",
+       "special occasion"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “foundation” (CLIP z=2.1 before / 1.2 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.433,
+      "matched_contexts": [
+       "calling",
+       "streaming",
+       "phone"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “calling” (CLIP z=1.5 before / 0.6 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.428,
+      "matched_contexts": [
+       "motorcycle",
+       "journey",
+       "vehicle"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “motorcycle” (CLIP z=1.1 before / 2.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.512,
+      "matched_contexts": [
+       "transaction",
+       "payment",
+       "checkout"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “transaction” (CLIP z=1.8 before / 0.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.516,
+      "matched_contexts": [
+       "hotel"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “hotel” (CLIP z=1.7 before / 0.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.52,
+      "matched_contexts": [
+       "delivery",
+       "package",
+       "gift"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “delivery” (CLIP z=1.8 before / 0.6 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.842,
+     "matched_contexts": [
+      "shower",
+      "bathroom",
+      "personal hygiene"
+     ],
+     "rationale": "Lead-in best matches “shower” (CLIP z=2.7 before / 2.4 after the cut)",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": true,
+      "violated_contexts": [
+       "accident",
+       "hospital",
+       "grief"
+      ],
+      "evidence": "accident: CLIP visual: visual z=2.4 (thr 2.4), audio z=2.0 (thr 3.2), peak ~20:04; hospital: CLIP visual: visual z=2.8 (thr 2.4), audio z=2.2 (thr 3.2), peak ~20:00; grief: CLIP visual: visual z=2.4 (thr 2.4), audio z=1.7 (thr 3.2), peak ~19:55",
+      "confidence": 0.544
+     },
+     "verifier_blocked": true
+    },
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.64,
+     "matched_contexts": [
+      "foundation",
+      "celebration",
+      "special occasion"
+     ],
+     "rationale": "Lead-in best matches “foundation” (CLIP z=2.1 before / 1.2 after the cut)",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": true,
+      "violated_contexts": [
+       "accident",
+       "hospital",
+       "grief"
+      ],
+      "evidence": "accident: CLIP visual: visual z=2.4 (thr 2.4), audio z=2.0 (thr 3.2), peak ~20:04; hospital: CLIP visual: visual z=2.8 (thr 2.4), audio z=2.2 (thr 3.2), peak ~20:00; grief: CLIP visual: visual z=2.4 (thr 2.4), audio z=1.7 (thr 3.2), peak ~19:55",
+      "confidence": 0.544
+     },
+     "verifier_blocked": true
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.624,
+     "matched_contexts": [
+      "kitchen",
+      "cooking",
+      "frying"
+     ],
+     "rationale": "Lead-in best matches “kitchen” (CLIP z=1.8 before / 2.0 after the cut)",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": true,
+      "violated_contexts": [
+       "hospital",
+       "bathroom",
+       "accident",
+       "grief"
+      ],
+      "evidence": "hospital: CLIP visual: visual z=2.8 (thr 2.4), audio z=2.2 (thr 3.2), peak ~20:00; bathroom: CLIP visual: visual z=2.8 (thr 2.4), audio z=2.0 (thr 3.2), peak ~20:32; accident: CLIP visual: visual z=2.4 (thr 2.4), audio z=2.0 (thr 3.2), peak ~20:04; grief: CLIP visual: visual z=2.4 (thr 2.4), audio z=1.7 (thr 3.2), peak ~19:55",
+      "confidence": 0.544
+     },
+     "verifier_blocked": true
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.52,
+     "matched_contexts": [
+      "delivery",
+      "package",
+      "gift"
+     ],
+     "rationale": "Lead-in best matches “delivery” (CLIP z=1.8 before / 0.6 after the cut)",
+     "blocked": false,
+     "blocks": [],
+     "verifier": {
+      "violation": true,
+      "violated_contexts": [
+       "hospital",
+       "accident",
+       "grief"
+      ],
+      "evidence": "hospital: CLIP visual: visual z=2.8 (thr 2.4), audio z=2.2 (thr 3.2), peak ~20:00; accident: CLIP visual: visual z=2.4 (thr 2.4), audio z=2.0 (thr 3.2), peak ~20:04; grief: CLIP visual: visual z=2.4 (thr 2.4), audio z=1.7 (thr 3.2), peak ~19:55",
+      "confidence": 0.544
+     },
+     "verifier_blocked": true
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.516,
+     "matched_contexts": [
+      "hotel"
+     ],
+     "rationale": "Lead-in best matches “hotel” (CLIP z=1.7 before / 0.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.512,
+     "matched_contexts": [
+      "transaction",
+      "payment",
+      "checkout"
+     ],
+     "rationale": "Lead-in best matches “transaction” (CLIP z=1.8 before / 0.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.433,
+     "matched_contexts": [
+      "calling",
+      "streaming",
+      "phone"
+     ],
+     "rationale": "Lead-in best matches “calling” (CLIP z=1.5 before / 0.6 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.428,
+     "matched_contexts": [
+      "motorcycle",
+      "journey",
+      "vehicle"
+     ],
+     "rationale": "Lead-in best matches “motorcycle” (CLIP z=1.1 before / 2.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "shower",
+   "quality": 0.956,
+   "selected": false
+  },
+  {
+   "id": "c017",
+   "t0": 1297.12,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "not chosen: pacing rules (min gap / max breaks) favoured a better nearby break"
+   ],
+   "t": 1297.12,
+   "scene_before": 17,
+   "scene_after": 18,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 10.52,
+    "silence_after": 2.88,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.39,
+    "loudness_dip_db": 10.6,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.745,
+    "jarring": 0.389,
+    "suspense_hook": 0.313,
+    "natural_break_score": 0.611,
+    "visual_novelty": 0.148,
+    "reason": "Visual change across the cut 0.15 (CLIP), 10.5s silence before / 2.9s after (VAD), speech density 0%/39%, loudness dip 10.6 dB."
+   },
+   "where_score": 0.664,
+   "match": {
+    "dominant_activity": "washing face",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.545,
+      "matched_contexts": [
+       "boiling",
+       "kitchen",
+       "frying"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “boiling” (CLIP z=1.7 before / 1.2 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.634,
+      "matched_contexts": [
+       "washing face",
+       "face wash",
+       "bathroom"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “washing face” (CLIP z=1.9 before / 1.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.687,
+      "matched_contexts": [
+       "wedding",
+       "dressing",
+       "salon"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “wedding” (CLIP z=2.4 before / 0.6 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.453,
+      "matched_contexts": [
+       "calling",
+       "family conversation",
+       "streaming"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “calling” (CLIP z=1.5 before / 0.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.528,
+      "matched_contexts": [
+       "journey"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “journey” (CLIP z=1.8 before / 0.7 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.666,
+      "matched_contexts": [
+       "merchant",
+       "shopping",
+       "checkout"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “merchant” (CLIP z=2.2 before / 1.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.504,
+      "matched_contexts": [
+       "hotel",
+       "sightseeing",
+       "train journey"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “hotel” (CLIP z=1.6 before / 1.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.655,
+      "matched_contexts": [
+       "fashion shopping",
+       "shopping",
+       "checkout"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “fashion shopping” (CLIP z=2.3 before / 0.7 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.687,
+     "matched_contexts": [
+      "wedding",
+      "dressing",
+      "salon"
+     ],
+     "rationale": "Lead-in best matches “wedding” (CLIP z=2.4 before / 0.6 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.666,
+     "matched_contexts": [
+      "merchant",
+      "shopping",
+      "checkout"
+     ],
+     "rationale": "Lead-in best matches “merchant” (CLIP z=2.2 before / 1.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.655,
+     "matched_contexts": [
+      "fashion shopping",
+      "shopping",
+      "checkout"
+     ],
+     "rationale": "Lead-in best matches “fashion shopping” (CLIP z=2.3 before / 0.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.634,
+     "matched_contexts": [
+      "washing face",
+      "face wash",
+      "bathroom"
+     ],
+     "rationale": "Lead-in best matches “washing face” (CLIP z=1.9 before / 1.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.545,
+     "matched_contexts": [
+      "boiling",
+      "kitchen",
+      "frying"
+     ],
+     "rationale": "Lead-in best matches “boiling” (CLIP z=1.7 before / 1.2 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.528,
+     "matched_contexts": [
+      "journey"
+     ],
+     "rationale": "Lead-in best matches “journey” (CLIP z=1.8 before / 0.7 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.504,
+     "matched_contexts": [
+      "hotel",
+      "sightseeing",
+      "train journey"
+     ],
+     "rationale": "Lead-in best matches “hotel” (CLIP z=1.6 before / 1.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.453,
+     "matched_contexts": [
+      "calling",
+      "family conversation",
+      "streaming"
+     ],
+     "rationale": "Lead-in best matches “calling” (CLIP z=1.5 before / 0.9 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "washing face",
+   "quality": 0.767,
+   "selected": false
+  },
+  {
+   "id": "c018",
+   "t0": 1345.84,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1345.84,
+   "scene_before": 18,
+   "scene_after": 19,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.53,
+    "speech_density_10s_after": 0.39,
+    "loudness_dip_db": 5.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c019",
+   "t0": 1417.52,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "not chosen: pacing rules (min gap / max breaks) favoured a better nearby break"
+   ],
+   "t": 1417.52,
+   "scene_before": 19,
+   "scene_after": 20,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 40.52,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 17.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.815,
+    "jarring": 0.359,
+    "suspense_hook": 0.582,
+    "natural_break_score": 0.641,
+    "visual_novelty": 0.179,
+    "reason": "Visual change across the cut 0.18 (CLIP), 40.5s silence before / 99.0s after (VAD), speech density 0%/0%, loudness dip 17.1 dB, music carries over."
+   },
+   "where_score": 0.675,
+   "match": {
+    "dominant_activity": "celebration",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "relevance": 0.475,
+      "matched_contexts": [
+       "homemade food",
+       "boiling",
+       "frying"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “homemade food” (CLIP z=1.5 before / 1.1 after the cut)"
+     },
+     {
+      "brand_id": "brand_b",
+      "relevance": 0.573,
+      "matched_contexts": [
+       "shower",
+       "bathroom",
+       "self care"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “shower” (CLIP z=1.7 before / 1.5 after the cut)"
+     },
+     {
+      "brand_id": "brand_c",
+      "relevance": 0.658,
+      "matched_contexts": [
+       "celebration",
+       "special occasion",
+       "foundation"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “celebration” (CLIP z=2.3 before / 0.8 after the cut)"
+     },
+     {
+      "brand_id": "brand_d",
+      "relevance": 0.332,
+      "matched_contexts": [
+       "phone",
+       "calling",
+       "streaming"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “phone” (CLIP z=1.0 before / 0.9 after the cut)"
+     },
+     {
+      "brand_id": "brand_e",
+      "relevance": 0.309,
+      "matched_contexts": [
+       "journey"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “journey” (CLIP z=1.0 before / 0.5 after the cut)"
+     },
+     {
+      "brand_id": "brand_f",
+      "relevance": 0.322,
+      "matched_contexts": [
+       "shopping",
+       "merchant",
+       "transaction"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “shopping” (CLIP z=1.1 before / 0.5 after the cut)"
+     },
+     {
+      "brand_id": "brand_g",
+      "relevance": 0.508,
+      "matched_contexts": [
+       "holiday",
+       "hotel",
+       "family vacation"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “holiday” (CLIP z=1.7 before / 1.0 after the cut)"
+     },
+     {
+      "brand_id": "brand_h",
+      "relevance": 0.465,
+      "matched_contexts": [
+       "package",
+       "delivery",
+       "gift"
+      ],
+      "violations": [],
+      "rationale": "Lead-in best matches “package” (CLIP z=1.5 before / 1.0 after the cut)"
+     }
+    ]
+   },
+   "brand_ranking": [
+    {
+     "brand_id": "brand_c",
+     "relevance": 0.658,
+     "matched_contexts": [
+      "celebration",
+      "special occasion",
+      "foundation"
+     ],
+     "rationale": "Lead-in best matches “celebration” (CLIP z=2.3 before / 0.8 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_b",
+     "relevance": 0.573,
+     "matched_contexts": [
+      "shower",
+      "bathroom",
+      "self care"
+     ],
+     "rationale": "Lead-in best matches “shower” (CLIP z=1.7 before / 1.5 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_g",
+     "relevance": 0.508,
+     "matched_contexts": [
+      "holiday",
+      "hotel",
+      "family vacation"
+     ],
+     "rationale": "Lead-in best matches “holiday” (CLIP z=1.7 before / 1.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_a",
+     "relevance": 0.475,
+     "matched_contexts": [
+      "homemade food",
+      "boiling",
+      "frying"
+     ],
+     "rationale": "Lead-in best matches “homemade food” (CLIP z=1.5 before / 1.1 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_h",
+     "relevance": 0.465,
+     "matched_contexts": [
+      "package",
+      "delivery",
+      "gift"
+     ],
+     "rationale": "Lead-in best matches “package” (CLIP z=1.5 before / 1.0 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_d",
+     "relevance": 0.332,
+     "matched_contexts": [
+      "phone",
+      "calling",
+      "streaming"
+     ],
+     "rationale": "Lead-in best matches “phone” (CLIP z=1.0 before / 0.9 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_f",
+     "relevance": 0.322,
+     "matched_contexts": [
+      "shopping",
+      "merchant",
+      "transaction"
+     ],
+     "rationale": "Lead-in best matches “shopping” (CLIP z=1.1 before / 0.5 after the cut)",
+     "blocked": false,
+     "blocks": []
+    },
+    {
+     "brand_id": "brand_e",
+     "relevance": 0.309,
+     "matched_contexts": [
+      "journey"
+     ],
+     "rationale": "Lead-in best matches “journey” (CLIP z=1.0 before / 0.5 after the cut)",
+     "blocked": false,
+     "blocks": []
+    }
+   ],
+   "dominant_activity": "celebration",
+   "quality": 0.774,
+   "selected": false
+  },
+  {
+   "id": "c020",
+   "t0": 1478.92,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1478.92,
+   "scene_before": 20,
+   "scene_after": 21,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 101.92,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 4.6,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c021",
+   "t0": 1491.74,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1491.74,
+   "scene_before": 21,
+   "scene_after": 21,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 114.74,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 13.2,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c022",
+   "t0": 1503.86,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1503.86,
+   "scene_before": 21,
+   "scene_after": 21,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 126.86,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 11.9,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c023",
+   "t0": 1515.18,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1515.18,
+   "scene_before": 21,
+   "scene_after": 21,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 138.18,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 8.5,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c024",
+   "t0": 1535.96,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1535.96,
+   "scene_before": 21,
+   "scene_after": 21,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 158.96,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 13.9,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  },
+  {
+   "id": "c025",
+   "t0": 1545.46,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1545.46,
+   "scene_before": 21,
+   "scene_after": 21,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 168.46,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 3.7,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0,
+   "quality": 0.0,
+   "selected": false
+  }
+ ],
+ "speech": [
+  {
+   "start": 18.7,
+   "end": 19.1
+  },
+  {
+   "start": 19.4,
+   "end": 20.1
+  },
+  {
+   "start": 20.3,
+   "end": 22.6
+  },
+  {
+   "start": 24.4,
+   "end": 25.5
+  },
+  {
+   "start": 40.1,
+   "end": 41.1
+  },
+  {
+   "start": 43.0,
+   "end": 43.8
+  },
+  {
+   "start": 44.1,
+   "end": 45.1
+  },
+  {
+   "start": 45.4,
+   "end": 58.0
+  },
+  {
+   "start": 60.3,
+   "end": 60.8
+  },
+  {
+   "start": 62.3,
+   "end": 62.7
+  },
+  {
+   "start": 76.9,
+   "end": 79.4
+  },
+  {
+   "start": 79.9,
+   "end": 87.4
+  },
+  {
+   "start": 88.2,
+   "end": 90.8
+  },
+  {
+   "start": 91.0,
+   "end": 92.2
+  },
+  {
+   "start": 92.9,
+   "end": 93.9
+  },
+  {
+   "start": 94.2,
+   "end": 94.7
+  },
+  {
+   "start": 95.1,
+   "end": 97.2
+  },
+  {
+   "start": 97.5,
+   "end": 98.7
+  },
+  {
+   "start": 99.1,
+   "end": 105.9
+  },
+  {
+   "start": 106.3,
+   "end": 108.8
+  },
+  {
+   "start": 109.2,
+   "end": 112.0
+  },
+  {
+   "start": 112.1,
+   "end": 117.2
+  },
+  {
+   "start": 117.4,
+   "end": 120.3
+  },
+  {
+   "start": 120.4,
+   "end": 125.4
+  },
+  {
+   "start": 125.8,
+   "end": 128.9
+  },
+  {
+   "start": 129.2,
+   "end": 129.9
+  },
+  {
+   "start": 130.3,
+   "end": 135.7
+  },
+  {
+   "start": 136.4,
+   "end": 137.4
+  },
+  {
+   "start": 138.6,
+   "end": 139.4
+  },
+  {
+   "start": 140.2,
+   "end": 144.1
+  },
+  {
+   "start": 144.7,
+   "end": 146.1
+  },
+  {
+   "start": 147.1,
+   "end": 148.6
+  },
+  {
+   "start": 149.2,
+   "end": 150.5
+  },
+  {
+   "start": 151.2,
+   "end": 153.2
+  },
+  {
+   "start": 153.5,
+   "end": 155.0
+  },
+  {
+   "start": 156.2,
+   "end": 156.6
+  },
+  {
+   "start": 161.5,
+   "end": 162.2
+  },
+  {
+   "start": 162.5,
+   "end": 165.2
+  },
+  {
+   "start": 165.3,
+   "end": 171.0
+  },
+  {
+   "start": 172.5,
+   "end": 174.4
+  },
+  {
+   "start": 175.0,
+   "end": 175.9
+  },
+  {
+   "start": 176.2,
+   "end": 177.0
+  },
+  {
+   "start": 181.1,
+   "end": 181.8
+  },
+  {
+   "start": 201.4,
+   "end": 219.9
+  },
+  {
+   "start": 220.2,
+   "end": 229.2
+  },
+  {
+   "start": 229.6,
+   "end": 234.3
+  },
+  {
+   "start": 234.5,
+   "end": 239.6
+  },
+  {
+   "start": 239.9,
+   "end": 242.4
+  },
+  {
+   "start": 242.9,
+   "end": 243.5
+  },
+  {
+   "start": 244.0,
+   "end": 244.9
+  },
+  {
+   "start": 245.1,
+   "end": 253.0
+  },
+  {
+   "start": 254.1,
+   "end": 254.9
+  },
+  {
+   "start": 255.1,
+   "end": 258.9
+  },
+  {
+   "start": 259.8,
+   "end": 260.7
+  },
+  {
+   "start": 261.1,
+   "end": 276.6
+  },
+  {
+   "start": 277.0,
+   "end": 280.7
+  },
+  {
+   "start": 280.7,
+   "end": 288.3
+  },
+  {
+   "start": 288.8,
+   "end": 291.2
+  },
+  {
+   "start": 293.4,
+   "end": 296.2
+  },
+  {
+   "start": 296.6,
+   "end": 297.5
+  },
+  {
+   "start": 298.4,
+   "end": 299.6
+  },
+  {
+   "start": 301.8,
+   "end": 305.3
+  },
+  {
+   "start": 305.9,
+   "end": 308.0
+  },
+  {
+   "start": 308.5,
+   "end": 309.5
+  },
+  {
+   "start": 310.1,
+   "end": 313.2
+  },
+  {
+   "start": 314.2,
+   "end": 315.6
+  },
+  {
+   "start": 316.2,
+   "end": 317.1
+  },
+  {
+   "start": 317.6,
+   "end": 319.6
+  },
+  {
+   "start": 320.3,
+   "end": 322.9
+  },
+  {
+   "start": 323.1,
+   "end": 323.5
+  },
+  {
+   "start": 327.0,
+   "end": 338.8
+  },
+  {
+   "start": 338.9,
+   "end": 342.0
+  },
+  {
+   "start": 342.2,
+   "end": 343.6
+  },
+  {
+   "start": 343.7,
+   "end": 350.5
+  },
+  {
+   "start": 351.3,
+   "end": 367.2
+  },
+  {
+   "start": 367.8,
+   "end": 372.9
+  },
+  {
+   "start": 373.3,
+   "end": 388.7
+  },
+  {
+   "start": 428.4,
+   "end": 430.7
+  },
+  {
+   "start": 430.8,
+   "end": 432.8
+  },
+  {
+   "start": 433.8,
+   "end": 444.8
+  },
+  {
+   "start": 444.9,
+   "end": 445.3
+  },
+  {
+   "start": 446.2,
+   "end": 448.7
+  },
+  {
+   "start": 449.6,
+   "end": 450.2
+  },
+  {
+   "start": 451.0,
+   "end": 457.0
+  },
+  {
+   "start": 457.1,
+   "end": 457.5
+  },
+  {
+   "start": 457.9,
+   "end": 462.7
+  },
+  {
+   "start": 463.1,
+   "end": 470.5
+  },
+  {
+   "start": 471.0,
+   "end": 472.3
+  },
+  {
+   "start": 472.8,
+   "end": 473.6
+  },
+  {
+   "start": 474.8,
+   "end": 477.5
+  },
+  {
+   "start": 485.3,
+   "end": 486.0
+  },
+  {
+   "start": 486.3,
+   "end": 487.4
+  },
+  {
+   "start": 488.2,
+   "end": 489.8
+  },
+  {
+   "start": 489.9,
+   "end": 491.3
+  },
+  {
+   "start": 492.0,
+   "end": 493.8
+  },
+  {
+   "start": 494.9,
+   "end": 495.8
+  },
+  {
+   "start": 496.0,
+   "end": 500.2
+  },
+  {
+   "start": 500.5,
+   "end": 501.3
+  },
+  {
+   "start": 501.5,
+   "end": 502.3
+  },
+  {
+   "start": 502.7,
+   "end": 503.9
+  },
+  {
+   "start": 504.6,
+   "end": 505.4
+  },
+  {
+   "start": 505.5,
+   "end": 506.5
+  },
+  {
+   "start": 507.7,
+   "end": 510.5
+  },
+  {
+   "start": 512.8,
+   "end": 513.8
+  },
+  {
+   "start": 519.3,
+   "end": 520.2
+  },
+  {
+   "start": 521.7,
+   "end": 523.4
+  },
+  {
+   "start": 523.8,
+   "end": 525.8
+  },
+  {
+   "start": 526.1,
+   "end": 527.7
+  },
+  {
+   "start": 528.0,
+   "end": 533.2
+  },
+  {
+   "start": 533.4,
+   "end": 534.1
+  },
+  {
+   "start": 534.3,
+   "end": 556.4
+  },
+  {
+   "start": 558.3,
+   "end": 558.9
+  },
+  {
+   "start": 559.8,
+   "end": 561.0
+  },
+  {
+   "start": 561.5,
+   "end": 562.2
+  },
+  {
+   "start": 562.3,
+   "end": 563.2
+  },
+  {
+   "start": 563.7,
+   "end": 564.5
+  },
+  {
+   "start": 565.9,
+   "end": 567.6
+  },
+  {
+   "start": 571.2,
+   "end": 572.4
+  },
+  {
+   "start": 574.1,
+   "end": 582.2
+  },
+  {
+   "start": 582.6,
+   "end": 583.7
+  },
+  {
+   "start": 583.8,
+   "end": 597.2
+  },
+  {
+   "start": 598.8,
+   "end": 600.5
+  },
+  {
+   "start": 607.5,
+   "end": 611.8
+  },
+  {
+   "start": 612.9,
+   "end": 615.7
+  },
+  {
+   "start": 616.8,
+   "end": 619.9
+  },
+  {
+   "start": 636.5,
+   "end": 639.9
+  },
+  {
+   "start": 640.0,
+   "end": 641.0
+  },
+  {
+   "start": 641.1,
+   "end": 643.1
+  },
+  {
+   "start": 643.8,
+   "end": 644.5
+  },
+  {
+   "start": 645.4,
+   "end": 648.2
+  },
+  {
+   "start": 648.5,
+   "end": 655.3
+  },
+  {
+   "start": 655.5,
+   "end": 658.9
+  },
+  {
+   "start": 659.8,
+   "end": 662.2
+  },
+  {
+   "start": 663.6,
+   "end": 664.8
+  },
+  {
+   "start": 667.0,
+   "end": 668.1
+  },
+  {
+   "start": 668.2,
+   "end": 696.0
+  },
+  {
+   "start": 696.5,
+   "end": 708.5
+  },
+  {
+   "start": 710.9,
+   "end": 713.7
+  },
+  {
+   "start": 715.6,
+   "end": 717.4
+  },
+  {
+   "start": 718.4,
+   "end": 719.7
+  },
+  {
+   "start": 720.2,
+   "end": 722.6
+  },
+  {
+   "start": 724.5,
+   "end": 726.1
+  },
+  {
+   "start": 726.4,
+   "end": 728.8
+  },
+  {
+   "start": 730.7,
+   "end": 731.8
+  },
+  {
+   "start": 733.1,
+   "end": 734.1
+  },
+  {
+   "start": 734.7,
+   "end": 735.5
+  },
+  {
+   "start": 737.4,
+   "end": 745.0
+  },
+  {
+   "start": 745.7,
+   "end": 746.3
+  },
+  {
+   "start": 746.5,
+   "end": 752.3
+  },
+  {
+   "start": 752.6,
+   "end": 756.0
+  },
+  {
+   "start": 756.6,
+   "end": 759.6
+  },
+  {
+   "start": 771.9,
+   "end": 777.4
+  },
+  {
+   "start": 777.9,
+   "end": 783.4
+  },
+  {
+   "start": 784.7,
+   "end": 790.0
+  },
+  {
+   "start": 790.8,
+   "end": 796.5
+  },
+  {
+   "start": 797.0,
+   "end": 799.2
+  },
+  {
+   "start": 799.3,
+   "end": 801.3
+  },
+  {
+   "start": 805.5,
+   "end": 807.4
+  },
+  {
+   "start": 808.1,
+   "end": 808.8
+  },
+  {
+   "start": 811.5,
+   "end": 813.7
+  },
+  {
+   "start": 814.5,
+   "end": 815.9
+  },
+  {
+   "start": 817.3,
+   "end": 818.7
+  },
+  {
+   "start": 820.5,
+   "end": 821.9
+  },
+  {
+   "start": 828.4,
+   "end": 830.5
+  },
+  {
+   "start": 836.8,
+   "end": 839.0
+  },
+  {
+   "start": 839.8,
+   "end": 841.1
+  },
+  {
+   "start": 842.0,
+   "end": 843.6
+  },
+  {
+   "start": 876.0,
+   "end": 877.0
+  },
+  {
+   "start": 877.5,
+   "end": 879.8
+  },
+  {
+   "start": 881.5,
+   "end": 883.4
+  },
+  {
+   "start": 884.6,
+   "end": 887.4
+  },
+  {
+   "start": 889.5,
+   "end": 892.2
+  },
+  {
+   "start": 894.1,
+   "end": 895.0
+  },
+  {
+   "start": 895.1,
+   "end": 896.2
+  },
+  {
+   "start": 896.5,
+   "end": 898.0
+  },
+  {
+   "start": 898.6,
+   "end": 901.5
+  },
+  {
+   "start": 902.4,
+   "end": 903.4
+  },
+  {
+   "start": 903.7,
+   "end": 905.9
+  },
+  {
+   "start": 919.7,
+   "end": 925.2
+  },
+  {
+   "start": 925.7,
+   "end": 930.2
+  },
+  {
+   "start": 930.7,
+   "end": 933.0
+  },
+  {
+   "start": 934.4,
+   "end": 936.4
+  },
+  {
+   "start": 936.7,
+   "end": 939.3
+  },
+  {
+   "start": 940.3,
+   "end": 941.9
+  },
+  {
+   "start": 942.8,
+   "end": 943.7
+  },
+  {
+   "start": 944.1,
+   "end": 945.0
+  },
+  {
+   "start": 945.2,
+   "end": 946.4
+  },
+  {
+   "start": 946.8,
+   "end": 949.8
+  },
+  {
+   "start": 950.9,
+   "end": 952.4
+  },
+  {
+   "start": 954.2,
+   "end": 956.1
+  },
+  {
+   "start": 956.5,
+   "end": 957.8
+  },
+  {
+   "start": 957.8,
+   "end": 958.2
+  },
+  {
+   "start": 958.8,
+   "end": 959.5
+  },
+  {
+   "start": 960.9,
+   "end": 961.5
+  },
+  {
+   "start": 962.1,
+   "end": 962.7
+  },
+  {
+   "start": 964.4,
+   "end": 965.7
+  },
+  {
+   "start": 968.8,
+   "end": 970.7
+  },
+  {
+   "start": 972.6,
+   "end": 974.8
+  },
+  {
+   "start": 975.1,
+   "end": 978.0
+  },
+  {
+   "start": 978.5,
+   "end": 981.4
+  },
+  {
+   "start": 982.7,
+   "end": 983.8
+  },
+  {
+   "start": 985.6,
+   "end": 986.6
+  },
+  {
+   "start": 988.2,
+   "end": 989.7
+  },
+  {
+   "start": 989.8,
+   "end": 991.4
+  },
+  {
+   "start": 991.6,
+   "end": 994.0
+  },
+  {
+   "start": 995.0,
+   "end": 997.7
+  },
+  {
+   "start": 998.9,
+   "end": 1001.8
+  },
+  {
+   "start": 1002.3,
+   "end": 1006.7
+  },
+  {
+   "start": 1008.6,
+   "end": 1011.3
+  },
+  {
+   "start": 1011.4,
+   "end": 1013.2
+  },
+  {
+   "start": 1015.4,
+   "end": 1016.8
+  },
+  {
+   "start": 1018.0,
+   "end": 1019.5
+  },
+  {
+   "start": 1020.8,
+   "end": 1023.5
+  },
+  {
+   "start": 1023.9,
+   "end": 1028.0
+  },
+  {
+   "start": 1029.2,
+   "end": 1030.0
+  },
+  {
+   "start": 1030.4,
+   "end": 1036.5
+  },
+  {
+   "start": 1036.7,
+   "end": 1041.2
+  },
+  {
+   "start": 1045.0,
+   "end": 1046.6
+  },
+  {
+   "start": 1049.7,
+   "end": 1050.3
+  },
+  {
+   "start": 1056.3,
+   "end": 1061.5
+  },
+  {
+   "start": 1061.6,
+   "end": 1072.8
+  },
+  {
+   "start": 1072.9,
+   "end": 1077.4
+  },
+  {
+   "start": 1078.5,
+   "end": 1082.6
+  },
+  {
+   "start": 1083.4,
+   "end": 1084.3
+  },
+  {
+   "start": 1084.4,
+   "end": 1092.8
+  },
+  {
+   "start": 1095.2,
+   "end": 1097.3
+  },
+  {
+   "start": 1099.0,
+   "end": 1100.7
+  },
+  {
+   "start": 1102.2,
+   "end": 1103.8
+  },
+  {
+   "start": 1104.5,
+   "end": 1106.7
+  },
+  {
+   "start": 1107.0,
+   "end": 1110.6
+  },
+  {
+   "start": 1112.7,
+   "end": 1115.4
+  },
+  {
+   "start": 1117.9,
+   "end": 1118.8
+  },
+  {
+   "start": 1119.9,
+   "end": 1121.2
+  },
+  {
+   "start": 1122.0,
+   "end": 1123.7
+  },
+  {
+   "start": 1123.9,
+   "end": 1125.8
+  },
+  {
+   "start": 1125.8,
+   "end": 1129.4
+  },
+  {
+   "start": 1129.7,
+   "end": 1133.2
+  },
+  {
+   "start": 1137.3,
+   "end": 1141.0
+  },
+  {
+   "start": 1142.9,
+   "end": 1144.4
+  },
+  {
+   "start": 1145.0,
+   "end": 1146.2
+  },
+  {
+   "start": 1147.7,
+   "end": 1148.3
+  },
+  {
+   "start": 1148.7,
+   "end": 1149.8
+  },
+  {
+   "start": 1150.9,
+   "end": 1152.2
+  },
+  {
+   "start": 1152.4,
+   "end": 1156.3
+  },
+  {
+   "start": 1156.4,
+   "end": 1156.9
+  },
+  {
+   "start": 1158.1,
+   "end": 1162.5
+  },
+  {
+   "start": 1163.2,
+   "end": 1164.0
+  },
+  {
+   "start": 1164.9,
+   "end": 1167.7
+  },
+  {
+   "start": 1169.5,
+   "end": 1170.7
+  },
+  {
+   "start": 1170.7,
+   "end": 1172.5
+  },
+  {
+   "start": 1172.7,
+   "end": 1174.1
+  },
+  {
+   "start": 1175.2,
+   "end": 1177.9
+  },
+  {
+   "start": 1180.3,
+   "end": 1182.8
+  },
+  {
+   "start": 1227.1,
+   "end": 1227.9
+  },
+  {
+   "start": 1228.3,
+   "end": 1229.2
+  },
+  {
+   "start": 1229.3,
+   "end": 1233.3
+  },
+  {
+   "start": 1233.6,
+   "end": 1238.1
+  },
+  {
+   "start": 1241.0,
+   "end": 1243.2
+  },
+  {
+   "start": 1244.2,
+   "end": 1245.3
+  },
+  {
+   "start": 1245.5,
+   "end": 1249.6
+  },
+  {
+   "start": 1249.7,
+   "end": 1251.4
+  },
+  {
+   "start": 1251.5,
+   "end": 1258.0
+  },
+  {
+   "start": 1258.5,
+   "end": 1259.4
+  },
+  {
+   "start": 1260.0,
+   "end": 1262.9
+  },
+  {
+   "start": 1263.7,
+   "end": 1269.2
+  },
+  {
+   "start": 1269.6,
+   "end": 1271.4
+  },
+  {
+   "start": 1271.9,
+   "end": 1273.2
+  },
+  {
+   "start": 1273.8,
+   "end": 1275.8
+  },
+  {
+   "start": 1276.6,
+   "end": 1277.8
+  },
+  {
+   "start": 1278.2,
+   "end": 1281.5
+  },
+  {
+   "start": 1281.9,
+   "end": 1284.1
+  },
+  {
+   "start": 1284.7,
+   "end": 1285.4
+  },
+  {
+   "start": 1285.8,
+   "end": 1286.6
+  },
+  {
+   "start": 1300.0,
+   "end": 1301.1
+  },
+  {
+   "start": 1302.0,
+   "end": 1304.1
+  },
+  {
+   "start": 1306.4,
+   "end": 1307.9
+  },
+  {
+   "start": 1308.5,
+   "end": 1309.2
+  },
+  {
+   "start": 1310.9,
+   "end": 1312.5
+  },
+  {
+   "start": 1313.0,
+   "end": 1313.8
+  },
+  {
+   "start": 1316.6,
+   "end": 1318.0
+  },
+  {
+   "start": 1319.4,
+   "end": 1321.5
+  },
+  {
+   "start": 1323.6,
+   "end": 1324.4
+  },
+  {
+   "start": 1324.6,
+   "end": 1326.0
+  },
+  {
+   "start": 1327.6,
+   "end": 1328.8
+  },
+  {
+   "start": 1330.0,
+   "end": 1332.5
+  },
+  {
+   "start": 1332.7,
+   "end": 1334.8
+  },
+  {
+   "start": 1335.1,
+   "end": 1336.9
+  },
+  {
+   "start": 1337.9,
+   "end": 1339.6
+  },
+  {
+   "start": 1342.2,
+   "end": 1343.9
+  },
+  {
+   "start": 1345.0,
+   "end": 1348.6
+  },
+  {
+   "start": 1349.4,
+   "end": 1350.5
+  },
+  {
+   "start": 1374.2,
+   "end": 1374.9
+  },
+  {
+   "start": 1376.2,
+   "end": 1377.0
+  }
+ ],
+ "shots": [
+  0.6,
+  1.52,
+  5.04,
+  10.04,
+  20.04,
+  36.72,
+  38.76,
+  65.96,
+  74.6,
+  76.76,
+  83.08,
+  87.12,
+  90.6,
+  100.2,
+  103.4,
+  113.6,
+  120.12,
+  126.88,
+  131.04,
+  135.36,
+  143.0,
+  146.24,
+  153.0,
+  158.64,
+  159.4,
+  162.2,
+  164.96,
+  178.84,
+  190.76,
+  198.0,
+  202.0,
+  206.44,
+  210.08,
+  213.64,
+  216.52,
+  219.8,
+  237.04,
+  242.16,
+  249.48,
+  252.52,
+  256.2,
+  262.24,
+  264.2,
+  266.88,
+  269.56,
+  271.4,
+  273.24,
+  276.24,
+  277.08,
+  278.32,
+  281.92,
+  304.08,
+  312.64,
+  326.92,
+  334.92,
+  337.24,
+  339.12,
+  342.64,
+  350.84,
+  352.96,
+  355.16,
+  359.24,
+  361.08,
+  362.16,
+  363.88,
+  366.64,
+  368.4,
+  371.0,
+  375.08,
+  378.92,
+  380.96,
+  383.08,
+  384.4,
+  385.84,
+  391.08,
+  393.04,
+  394.92,
+  402.16,
+  410.24,
+  426.56,
+  445.28,
+  451.56,
+  455.0,
+  458.44,
+  459.56,
+  462.92,
+  466.12,
+  470.52,
+  473.88,
+  476.88,
+  481.28,
+  483.52,
+  487.16,
+  490.04,
+  493.24,
+  499.84,
+  506.32,
+  513.4,
+  516.28,
+  533.04,
+  538.44,
+  549.76,
+  563.08,
+  569.24,
+  583.52,
+  589.2,
+  593.76,
+  599.88,
+  613.84,
+  623.04,
+  631.2,
+  639.2,
+  646.32,
+  665.08,
+  670.68,
+  674.8,
+  678.4,
+  683.12,
+  687.6,
+  695.6,
+  707.16,
+  735.28,
+  766.96,
+  819.8,
+  841.4,
+  851.64,
+  881.04,
+  881.72,
+  882.16,
+  904.44,
+  904.88,
+  905.32,
+  914.32,
+  919.12,
+  925.24,
+  932.76,
+  941.12,
+  957.08,
+  961.92,
+  1022.44,
+  1022.88,
+  1047.0,
+  1047.68,
+  1048.12,
+  1055.16,
+  1056.68,
+  1061.6,
+  1072.88,
+  1077.68,
+  1080.84,
+  1085.96,
+  1094.08,
+  1106.04,
+  1112.12,
+  1116.28,
+  1117.24,
+  1126.0,
+  1126.68,
+  1133.16,
+  1134.8,
+  1138.4,
+  1146.12,
+  1152.96,
+  1155.76,
+  1169.04,
+  1170.64,
+  1171.32,
+  1171.76,
+  1174.56,
+  1175.24,
+  1176.12,
+  1200.44,
+  1205.92,
+  1223.8,
+  1228.0,
+  1249.32,
+  1251.28,
+  1255.48,
+  1256.52,
+  1270.88,
+  1286.56,
+  1297.12,
+  1321.8,
+  1328.96,
+  1345.84,
+  1417.52,
+  1478.92
+ ],
+ "blacks": [
+  {
+   "start": 10.04,
+   "end": 15.44
+  },
+  {
+   "start": 17.28,
+   "end": 17.76
+  },
+  {
+   "start": 631.2,
+   "end": 631.68
+  },
+  {
+   "start": 851.64,
+   "end": 852.64
+  },
+  {
+   "start": 1488.04,
+   "end": 1495.44
+  },
+  {
+   "start": 1497.2,
+   "end": 1501.12
+  },
+  {
+   "start": 1502.84,
+   "end": 1504.88
+  },
+  {
+   "start": 1510.32,
+   "end": 1512.48
+  },
+  {
+   "start": 1514.12,
+   "end": 1516.24
+  },
+  {
+   "start": 1529.2,
+   "end": 1529.48
+  },
+  {
+   "start": 1531.04,
+   "end": 1531.32
+  },
+  {
+   "start": 1533.0,
+   "end": 1538.92
+  },
+  {
+   "start": 1540.48,
+   "end": 1542.8
+  },
+  {
+   "start": 1544.4,
+   "end": 1546.52
+  },
+  {
+   "start": 1548.2,
+   "end": 1550.28
+  },
+  {
+   "start": 1551.96,
+   "end": 1553.88
+  }
+ ],
+ "timings_sec": {
+  "local_understanding": 0.2,
+  "selection": 20.4,
+  "total_this_run": 20.6
+ },
+ "variant": "e1874d3194"
+}

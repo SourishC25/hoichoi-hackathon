@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
+  <vmap:AdBreak timeOffset="00:09:19.200" breakType="linear" breakId="midroll-1">
+    <vmap:AdSource id="midroll-1-src" allowMultipleAds="false" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST version="3.0">
+          <Ad id="brand_d-d_30s_bn" sequence="1">
+            <InLine>
+              <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
+              <AdTitle>Brand D — d_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=money_honey&break=midroll-1&creative=d_30s_bn&ev=impression]]></Impression>
+              <Creatives>
+                <Creative id="d_30s_bn" sequence="1">
+                  <Linear>
+                    <Duration>00:00:30.000</Duration>
+                    <TrackingEvents>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=money_honey&break=midroll-1&creative=d_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=money_honey&break=midroll-1&creative=d_30s_bn&ev=complete]]></Tracking>
+                    </TrackingEvents>
+                    <MediaFiles>
+                      <MediaFile id="d_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_d/d_30s_bn.mp4]]></MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+              <Extensions>
+                <Extension type="contextual-targeting"><Brand>brand_d</Brand><BreakScore>0.973</BreakScore><Relevance>0.786</Relevance><DominantActivity>calling</DominantActivity><Reason>Visual change across the cut 0.31 (CLIP), 5.9s silence before / 35.5s after (VAD), speech density 40%/0%, loudness dip 16.0 dB. Brand: Lead-in best matches “calling” (CLIP z=2.8 before / 0.9 after the cut)</Reason></Extension>
+              </Extensions>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+    <vmap:TrackingEvents>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=money_honey&break=midroll-1&creative=d_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=money_honey&break=midroll-1&creative=d_30s_bn&ev=breakEnd]]></vmap:Tracking>
+    </vmap:TrackingEvents>
+  </vmap:AdBreak>
+  <vmap:AdBreak timeOffset="00:17:45.640" breakType="linear" breakId="midroll-2">
+    <vmap:AdSource id="midroll-2-src" allowMultipleAds="false" followRedirects="true">
+      <vmap:VASTAdData>
+        <VAST version="3.0">
+          <Ad id="brand_b-b_30s_bn" sequence="1">
+            <InLine>
+              <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
+              <AdTitle>Brand B — b_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=money_honey&break=midroll-2&creative=b_30s_bn&ev=impression]]></Impression>
+              <Creatives>
+                <Creative id="b_30s_bn" sequence="1">
+                  <Linear>
+                    <Duration>00:00:30.000</Duration>
+                    <TrackingEvents>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=money_honey&break=midroll-2&creative=b_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=money_honey&break=midroll-2&creative=b_30s_bn&ev=complete]]></Tracking>
+                    </TrackingEvents>
+                    <MediaFiles>
+                      <MediaFile id="b_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_b/b_30s_bn.mp4]]></MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+              <Extensions>
+                <Extension type="contextual-targeting"><Brand>brand_b</Brand><BreakScore>0.914</BreakScore><Relevance>0.683</Relevance><DominantActivity>a close-up of a person's face</DominantActivity><Reason>Visual change across the cut 0.36 (CLIP), 11.9s silence before / 15.2s after (VAD), speech density 0%/0%, loudness dip 3.3 dB. Brand: Lead-in best matches “shower” (CLIP z=2.3 before / 1.1 after the cut)</Reason></Extension>
+              </Extensions>
+            </InLine>
+          </Ad>
+        </VAST>
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+    <vmap:TrackingEvents>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=money_honey&break=midroll-2&creative=b_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=money_honey&break=midroll-2&creative=b_30s_bn&ev=breakEnd]]></vmap:Tracking>
+    </vmap:TrackingEvents>
+  </vmap:AdBreak>
+</vmap:VMAP>

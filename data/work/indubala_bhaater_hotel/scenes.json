@@ -1,0 +1,673 @@
+{
+ "synopsis": "In this poignant episode, Indubala prepares a special taro paste recipe at her hotel, bringing back memories of her childhood and her close bond with Lachmi. The narrative takes a tragic turn as a sudden train accident claims Lachmi's life, leaving Indubala devastated. In the present, despite winning the legal battle for her house, Indubala is consumed by grief as she performs the final rituals for her departed friend.",
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.04,
+   "summary": "The production company's logo animation is displayed.",
+   "dominant_activity": "logo animation",
+   "contexts": [
+    "logo",
+    "animation",
+    "red background"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "index": 0
+  },
+  {
+   "start": 5.04,
+   "end": 10.04,
+   "summary": "A disclaimer screen is shown, stating that the program is a work of fiction and contains warnings about tobacco and alcohol consumption.",
+   "dominant_activity": "text on screen",
+   "contexts": [
+    "disclaimer",
+    "text",
+    "warning"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.04,
+   "llm_start": 5.0,
+   "index": 1
+  },
+  {
+   "start": 10.04,
+   "end": 20.04,
+   "summary": "The opening credits of the series are displayed on a black background.",
+   "dominant_activity": "text on screen",
+   "contexts": [
+    "credits",
+    "opening credits",
+    "black background"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.04,
+   "llm_start": 10.0,
+   "index": 2
+  },
+  {
+   "start": 20.04,
+   "end": 65.96,
+   "summary": "In a dreamlike flashback, a young girl and her brother run through a lush, rain-drenched taro field as she searches for him.",
+   "dominant_activity": "running in field",
+   "contexts": [
+    "taro field",
+    "rain",
+    "children",
+    "flashback",
+    "dream"
+   ],
+   "mood": "mysterious",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.04,
+   "llm_start": 20.0,
+   "index": 3
+  },
+  {
+   "start": 65.96,
+   "end": 162.2,
+   "summary": "An elderly Indubala receives a video call from her son and granddaughter, who share updates about their lives and discuss visiting her.",
+   "dominant_activity": "phone call",
+   "contexts": [
+    "elderly woman",
+    "video call",
+    "smartphone",
+    "family conversation",
+    "night"
+   ],
+   "mood": "warm",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "conversation_continues",
+   "snap_delta": 0.96,
+   "llm_start": 65.0,
+   "index": 4
+  },
+  {
+   "start": 162.2,
+   "end": 198.0,
+   "summary": "Lachmi enters the room to discuss the next day's menu with Indubala, warning her about a girl who might come asking for taro paste.",
+   "dominant_activity": "conversation in bedroom",
+   "contexts": [
+    "bedroom",
+    "night",
+    "elderly woman",
+    "helper",
+    "menu planning"
+   ],
+   "mood": "calm",
+   "emotional_intensity": 0.3,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.2,
+   "llm_start": 162.0,
+   "index": 5
+  },
+  {
+   "start": 198.0,
+   "end": 202.0,
+   "summary": "The \"hoichoi Originals\" title card is shown on screen.",
+   "dominant_activity": "title card",
+   "contexts": [
+    "title card",
+    "logo",
+    "branding"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 198.0,
+   "index": 6
+  },
+  {
+   "start": 202.0,
+   "end": 281.92,
+   "summary": "Customers enjoy their meals at Indubala's hotel, praising the authentic home-cooked food, while Lachmi arrives with a fresh taro root.",
+   "dominant_activity": "eating in restaurant",
+   "contexts": [
+    "hotel",
+    "restaurant",
+    "customers",
+    "eating",
+    "taro root",
+    "serving food"
+   ],
+   "mood": "cheerful",
+   "emotional_intensity": 0.5,
+   "sensitive": [
+    {
+     "topic": "eating",
+     "evidence": "customers eating rice and curry",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.0,
+   "llm_start": 202.0,
+   "index": 7
+  },
+  {
+   "start": 281.92,
+   "end": 326.92,
+   "summary": "Indubala buys fresh vegetables from a street vendor, and later prepares taro with Lachmi while reminiscing about her childhood village.",
+   "dominant_activity": "cooking preparation",
+   "contexts": [
+    "vegetable vendor",
+    "taro root",
+    "kitchen",
+    "reminiscing",
+    "grinding stone"
+   ],
+   "mood": "nostalgic",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.92,
+   "llm_start": 281.0,
+   "index": 8
+  },
+  {
+   "start": 326.92,
+   "end": 426.56,
+   "summary": "Intercut with memories of her childhood in the taro fields, Indubala and Lachmi grind the taro paste and taste the delicious preparation together.",
+   "dominant_activity": "grinding paste",
+   "contexts": [
+    "grinding stone",
+    "taro paste",
+    "flashback",
+    "rain",
+    "tasting food"
+   ],
+   "mood": "nostalgic",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "eating",
+     "evidence": "tasting the taro paste with rice",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.92,
+   "llm_start": 326.0,
+   "index": 9
+  },
+  {
+   "start": 426.56,
+   "end": 513.4,
+   "summary": "Indubala serves the freshly prepared taro paste to her delighted customers, who capture the moment on their phones.",
+   "dominant_activity": "serving food",
+   "contexts": [
+    "restaurant",
+    "customers",
+    "taro paste",
+    "vlogging",
+    "eating",
+    "banana leaf"
+   ],
+   "mood": "joyful",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "eating",
+     "evidence": "customers eating vlogger's food",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.56,
+   "llm_start": 426.0,
+   "index": 10
+  },
+  {
+   "start": 513.4,
+   "end": 613.84,
+   "summary": "In a tragic flashback, Daya arrives at Indubala's house in tears to deliver the devastating news that Lachmi was killed by a train.",
+   "dominant_activity": "receiving bad news",
+   "contexts": [
+    "rain",
+    "crying",
+    "devastating news",
+    "accident",
+    "grief",
+    "shock"
+   ],
+   "mood": "tragic",
+   "emotional_intensity": 0.9,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "daya crying and telling indubala about lachmi's death",
+     "confidence": 1.0
+    },
+    {
+     "topic": "death",
+     "evidence": "discussion of lachmi being run over by a train",
+     "confidence": 1.0
+    },
+    {
+     "topic": "accident",
+     "evidence": "train accident mentioned",
+     "confidence": 1.0
+    },
+    {
+     "topic": "crying",
+     "evidence": "daya crying hysterically",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.4,
+   "llm_start": 513.0,
+   "index": 11
+  },
+  {
+   "start": 613.84,
+   "end": 631.2,
+   "summary": "A cart carrying body bags is wheeled away from the railway tracks under the supervision of the police.",
+   "dominant_activity": "transporting bodies",
+   "contexts": [
+    "railway tracks",
+    "body bags",
+    "police",
+    "cart",
+    "gloomy weather"
+   ],
+   "mood": "somber",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "dead body",
+     "evidence": "body bags on a cart",
+     "confidence": 0.9
+    },
+    {
+     "topic": "death",
+     "evidence": "aftermath of train accident",
+     "confidence": 0.9
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.84,
+   "llm_start": 613.0,
+   "index": 12
+  },
+  {
+   "start": 631.2,
+   "end": 639.2,
+   "summary": "The title card for \"Indubala Bhaater Hotel\" is displayed on screen.",
+   "dominant_activity": "title card",
+   "contexts": [
+    "title card",
+    "bengali text",
+    "black background"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.2,
+   "llm_start": 631.0,
+   "index": 13
+  },
+  {
+   "start": 639.2,
+   "end": 665.08,
+   "summary": "During a stormy night, Indubala comforts her children in bed when they hear a sudden knock at the door.",
+   "dominant_activity": "resting in bed",
+   "contexts": [
+    "bedroom",
+    "storm",
+    "children",
+    "knocking",
+    "night"
+   ],
+   "mood": "tense",
+   "emotional_intensity": 0.4,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.2,
+   "llm_start": 639.0,
+   "index": 14
+  },
+  {
+   "start": 665.08,
+   "end": 735.28,
+   "summary": "A drenched Lachmi enters the house with her child, explaining that she had to walk because the trains were suspended due to the storm.",
+   "dominant_activity": "welcoming guest",
+   "contexts": [
+    "rain",
+    "drenched",
+    "mother and child",
+    "hospitality",
+    "night"
+   ],
+   "mood": "relieved",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.08,
+   "llm_start": 665.0,
+   "index": 15
+  },
+  {
+   "start": 735.28,
+   "end": 766.96,
+   "summary": "In a cold morgue, workers prepare stretchers and arrange ice blocks around the remains of the deceased.",
+   "dominant_activity": "preparing bodies in morgue",
+   "contexts": [
+    "morgue",
+    "ice blocks",
+    "stretchers",
+    "body bags",
+    "workers"
+   ],
+   "mood": "grim",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "dead body",
+     "evidence": "body bags and remains in a morgue",
+     "confidence": 1.0
+    },
+    {
+     "topic": "death",
+     "evidence": "morgue setting",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.28,
+   "llm_start": 735.0,
+   "index": 16
+  },
+  {
+   "start": 766.96,
+   "end": 851.64,
+   "summary": "Indubala looks at herself in the mirror, overwhelmed by grief, before visiting the morgue to stand beside Lachmi's body.",
+   "dominant_activity": "grieving",
+   "contexts": [
+    "mirror",
+    "morgue",
+    "dead body",
+    "grief",
+    "silent crying"
+   ],
+   "mood": "sorrowful",
+   "emotional_intensity": 0.9,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "indubala grieving over lachmi's body",
+     "confidence": 1.0
+    },
+    {
+     "topic": "dead body",
+     "evidence": "lachmi's body on a stretcher",
+     "confidence": 1.0
+    },
+    {
+     "topic": "death",
+     "evidence": "morgue visit",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.96,
+   "llm_start": 766.0,
+   "index": 17
+  },
+  {
+   "start": 851.64,
+   "end": 905.32,
+   "summary": "In a warm memory, Indubala and Lachmi share tea at night as Lachmi talks about her childhood village and her first love, Arjun.",
+   "dominant_activity": "drinking tea and talking",
+   "contexts": [
+    "tea cups",
+    "night",
+    "friendship",
+    "reminiscing",
+    "first love"
+   ],
+   "mood": "tender",
+   "emotional_intensity": 0.5,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.64,
+   "llm_start": 851.0,
+   "index": 18
+  },
+  {
+   "start": 905.32,
+   "end": 1055.16,
+   "summary": "Standing by Lachmi's bandaged face in the morgue, Indubala remembers their intimate conversation about love and relationships.",
+   "dominant_activity": "grieving in morgue",
+   "contexts": [
+    "morgue",
+    "bandaged face",
+    "flashback",
+    "conversation",
+    "grief"
+   ],
+   "mood": "melancholic",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "standing by deceased friend",
+     "confidence": 1.0
+    },
+    {
+     "topic": "dead body",
+     "evidence": "bandaged face of deceased",
+     "confidence": 1.0
+    },
+    {
+     "topic": "death",
+     "evidence": "morgue scene",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": -3.68,
+   "llm_start": 909.0,
+   "index": 19
+  },
+  {
+   "start": 1055.16,
+   "end": 1138.4,
+   "summary": "Indubala continues to stand in silent sorrow next to her deceased friend in the dimly lit morgue.",
+   "dominant_activity": "silent mourning",
+   "contexts": [
+    "morgue",
+    "stretcher",
+    "dim light",
+    "grief",
+    "silence"
+   ],
+   "mood": "somber",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "mourning deceased friend",
+     "confidence": 1.0
+    },
+    {
+     "topic": "dead body",
+     "evidence": "body on stretcher",
+     "confidence": 1.0
+    },
+    {
+     "topic": "death",
+     "evidence": "morgue",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.16,
+   "llm_start": 1055.0,
+   "index": 20
+  },
+  {
+   "start": 1138.4,
+   "end": 1223.8,
+   "summary": "Indubala signs the official release papers at the morgue, identifying herself as Lachmi's sister, and then steps out into the pouring rain.",
+   "dominant_activity": "signing papers",
+   "contexts": [
+    "morgue office",
+    "release papers",
+    "signature",
+    "rain",
+    "grief"
+   ],
+   "mood": "sorrowful",
+   "emotional_intensity": 0.7,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "signing release papers for deceased friend",
+     "confidence": 0.9
+    },
+    {
+     "topic": "death",
+     "evidence": "morgue release process",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.4,
+   "llm_start": 1138.0,
+   "index": 21
+  },
+  {
+   "start": 1223.8,
+   "end": 1345.84,
+   "summary": "In the present day, Nikhil Babu arrives to deliver the news that Indubala has won the court case for the house, but is saddened to learn of Lachmi's passing.",
+   "dominant_activity": "delivering news",
+   "contexts": [
+    "hotel courtyard",
+    "lawyer",
+    "court case victory",
+    "sad news",
+    "grief"
+   ],
+   "mood": "bittersweet",
+   "emotional_intensity": 0.6,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "learning about lachmi's death",
+     "confidence": 0.9
+    },
+    {
+     "topic": "death",
+     "evidence": "mention of lachmi's passing",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.8,
+   "llm_start": 1223.0,
+   "index": 22
+  },
+  {
+   "start": 1345.84,
+   "end": 1478.92,
+   "summary": "Indubala prepares a traditional food offering and lights a lamp for Lachmi's soul on the day of her shraddh, mourning her deeply.",
+   "dominant_activity": "preparing ritual offering",
+   "contexts": [
+    "hotel",
+    "diya",
+    "food offering",
+    "shraddh",
+    "grief",
+    "mourning"
+   ],
+   "mood": "sorrowful",
+   "emotional_intensity": 0.8,
+   "sensitive": [
+    {
+     "topic": "grief",
+     "evidence": "mourning lachmi and preparing offering",
+     "confidence": 1.0
+    },
+    {
+     "topic": "mourning",
+     "evidence": "shraddh ritual preparation",
+     "confidence": 1.0
+    },
+    {
+     "topic": "religious ritual",
+     "evidence": "lighting lamp and offering food for the soul",
+     "confidence": 1.0
+    }
+   ],
+   "ends_with": "transition",
+   "snap_delta": 0.84,
+   "llm_start": 1345.0,
+   "index": 23
+  },
+  {
+   "start": 1478.92,
+   "end": 1553.92,
+   "summary": "The closing credits of the episode roll on a black screen.",
+   "dominant_activity": "text on screen",
+   "contexts": [
+    "credits",
+    "closing credits",
+    "black background"
+   ],
+   "mood": "neutral",
+   "emotional_intensity": 0.1,
+   "sensitive": [],
+   "ends_with": "transition",
+   "snap_delta": 0.92,
+   "llm_start": 1478.0,
+   "index": 24
+  }
+ ],
+ "sensitive_vocab": [
+  "funeral",
+  "hospital",
+  "violence",
+  "illness",
+  "bathroom",
+  "accident",
+  "grief",
+  "eating",
+  "medical emergency",
+  "injury",
+  "financial distress",
+  "death",
+  "dead body",
+  "mourning",
+  "crying",
+  "blood",
+  "fight",
+  "weapon",
+  "crime",
+  "police arrest",
+  "alcohol",
+  "smoking",
+  "drugs",
+  "sexual content",
+  "poverty",
+  "suicide",
+  "religious ritual",
+  "heated argument"
+ ],
+ "model": "gemini-3.5-flash"
+}

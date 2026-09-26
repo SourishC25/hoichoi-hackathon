@@ -1,0 +1,1068 @@
+{
+ "rules": {
+  "no_break_first_sec": 120,
+  "no_break_last_sec": 90
+ },
+ "items": [
+  {
+   "id": "c000",
+   "t0": 14.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 14.0,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 14.0,
+    "silence_after": 121.1,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 14.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c001",
+   "t0": 92.292,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 92.292,
+   "scene_before": 1,
+   "scene_after": 2,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 92.29,
+    "silence_after": 42.81,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 5.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c002",
+   "t0": 107.792,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 107.792,
+   "scene_before": 2,
+   "scene_after": 3,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 107.79,
+    "silence_after": 27.31,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c003",
+   "t0": 168.333,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 168.333,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.73,
+    "silence_after": 261.77,
+    "speech_density_10s_before": 0.25,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "Yes Modon babu, what can I do for you?",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.8,
+    "natural_break_score": 0.95,
+    "reason": "The cut occurs right after a suspenseful reveal of a smiling boy, leading into the title card, making it a perfect act-level cliffhanger for an ad break."
+   },
+   "where_score": 0.788
+  },
+  {
+   "id": "c004",
+   "t0": 293.292,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 293.292,
+   "scene_before": 5,
+   "scene_after": 6,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 128.69,
+    "silence_after": 136.81,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 7.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.1,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.9,
+    "reason": "The cut occurs during a transition from a surreal nightmare sequence on the beach to Mandar waking up in his room, making it a highly natural and non-jarring break."
+   },
+   "where_score": 0.851
+  },
+  {
+   "id": "c005",
+   "t0": 409.833,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 409.833,
+   "scene_before": 6,
+   "scene_after": 7,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 245.23,
+    "silence_after": 20.27,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 10.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.1,
+    "suspense_hook": 0.2,
+    "natural_break_score": 0.85,
+    "reason": "The cut is a clean transition between two entirely different scenes, moving from Mandar's indoor workout to an outdoor gathering by the water, with no overlapping dialogue or music."
+   },
+   "where_score": 0.816
+  },
+  {
+   "id": "c006",
+   "t0": 562.583,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 562.583,
+   "scene_before": 7,
+   "scene_after": 8,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 12.78,
+    "silence_after": 14.82,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 9.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "মোকাই দাস",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs during a clean transition from the police officer finishing his food at the stall to a new scene showing a man arriving at the fishery on a motorcycle."
+   },
+   "where_score": 0.73
+  },
+  {
+   "id": "c007",
+   "t0": 618.125,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 618.125,
+   "scene_before": 8,
+   "scene_after": 9,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.52,
+    "silence_after": 0.77,
+    "speech_density_10s_before": 0.65,
+    "speech_density_10s_after": 0.82,
+    "loudness_dip_db": 14.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "আপনাকে বলা থাকল স্যার।",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.3,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs during a transition from the chaotic fight at the pond to a quiet conversation between a police officer and a local man, making it a natural scene break."
+   },
+   "where_score": 0.713
+  },
+  {
+   "id": "c008",
+   "t0": 724.833,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 724.833,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 62.03,
+    "silence_after": 119.97,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 4.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.3,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition between two distinct scenes, moving from the police officer watching the road to Mandar at a tea stall, with the background music fading out beforehand."
+   },
+   "where_score": 0.767
+  },
+  {
+   "id": "c009",
+   "t0": 812.375,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 812.375,
+   "scene_before": 10,
+   "scene_after": 11,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 149.58,
+    "silence_after": 32.42,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 4.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.3,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs during a clean scene transition from Mandar outside the shop to him riding his motorcycle, with no dialogue, though the background percussion beat continues across the break."
+   },
+   "where_score": 0.697
+  },
+  {
+   "id": "c010",
+   "t0": 846.667,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "LLM: conversation continues across the cut"
+   ],
+   "t": 850.042,
+   "scene_before": 12,
+   "scene_after": 13,
+   "signals": {
+    "snap_delta": 3.38,
+    "silence_before": 3.44,
+    "silence_after": 2.16,
+    "speech_density_10s_before": 0.15,
+    "speech_density_10s_after": 0.67,
+    "loudness_dip_db": 8.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "কথা আছে",
+    "first_line_after_cut": "মদনের হালারকে সামলাও কই দিচ্ছি",
+    "dialogue_continues_across_cut": true,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.2,
+    "jarring": 0.8,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.3,
+    "reason": "The cut is highly jarring as it interrupts the very beginning of a confrontation, splitting Mandar's opening line 'I need to talk' from his actual grievance which resumes immediately after the break."
+   },
+   "where_score": 0.24
+  },
+  {
+   "id": "c011",
+   "t0": 900.042,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 900.042,
+   "scene_before": 12,
+   "scene_after": 13,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 7.04,
+    "silence_after": 42.96,
+    "speech_density_10s_before": 0.23,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 5.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "এই কাজে যা শালা বোকাচোদা বুড়ো, যা!",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.3,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition between two distinct scenes, with the dock confrontation fully resolved and a new sequence beginning with a shot of a clinic flyer."
+   },
+   "where_score": 0.789
+  },
+  {
+   "id": "c012",
+   "t0": 962.083,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "LLM: conversation continues across the cut"
+   ],
+   "t": 966.0,
+   "scene_before": 14,
+   "scene_after": 15,
+   "signals": {
+    "snap_delta": 3.92,
+    "silence_before": 0.5,
+    "silence_after": 0.5,
+    "speech_density_10s_before": 0.53,
+    "speech_density_10s_after": 0.18,
+    "loudness_dip_db": 4.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "ফোন করে নিবি একটা",
+    "first_line_after_cut": "আচ্ছা",
+    "dialogue_continues_across_cut": true,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.3,
+    "jarring": 0.5,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.35,
+    "reason": "The ad break cuts directly into the middle of a phone conversation, separating the woman's instruction from the man's response."
+   },
+   "where_score": 0.247
+  },
+  {
+   "id": "c013",
+   "t0": 1023.5,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1019.792,
+   "scene_before": 14,
+   "scene_after": 15,
+   "signals": {
+    "snap_delta": -3.71,
+    "silence_before": 4.19,
+    "silence_after": 3.61,
+    "speech_density_10s_before": 0.16,
+    "speech_density_10s_after": 0.27,
+    "loudness_dip_db": 0.6,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "জানতাম",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.5,
+    "jarring": 0.6,
+    "suspense_hook": 0.4,
+    "natural_break_score": 0.55,
+    "reason": "The ad break is placed as Mandar approaches the stopped car, but since the same sequence and the background song continue immediately after the cut, it feels somewhat disruptive."
+   },
+   "where_score": 0.38
+  },
+  {
+   "id": "c014",
+   "t0": 1113.875,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1117.958,
+   "scene_before": 16,
+   "scene_after": 17,
+   "signals": {
+    "snap_delta": 4.08,
+    "silence_before": 3.16,
+    "silence_after": 24.84,
+    "speech_density_10s_before": 0.17,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "কোথায় গেল মালটা?",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.1,
+    "suspense_hook": 0.2,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition between two distinct scenes, with the music fading out before the ad break and a completely new sequence starting on a rooftop afterwards."
+   },
+   "where_score": 0.738
+  },
+  {
+   "id": "c015",
+   "t0": 1145.208,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "LLM: conversation continues across the cut"
+   ],
+   "t": 1141.0,
+   "scene_before": 16,
+   "scene_after": 17,
+   "signals": {
+    "snap_delta": -4.21,
+    "silence_before": 26.2,
+    "silence_after": 1.8,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.73,
+    "loudness_dip_db": 16.7,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "কী?",
+    "first_line_after_cut": "ডাবলু ভাই আজ কই দিছে কাল থেকে আমি দেখাশোনা করব।",
+    "dialogue_continues_across_cut": true,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.3,
+    "jarring": 0.6,
+    "suspense_hook": 0.8,
+    "natural_break_score": 0.35,
+    "reason": "The ad break is placed in the middle of an active phone conversation, cutting right after Bonka's shocked reaction ('What?') and before Fontus's explanation, which creates suspense but interrupts the dialogue flow."
+   },
+   "where_score": 0.376
+  },
+  {
+   "id": "c016",
+   "t0": 1196.125,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1196.125,
+   "scene_before": 17,
+   "scene_after": 18,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.62,
+    "silence_after": 21.47,
+    "speech_density_10s_before": 0.24,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 10.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "পাস",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.0,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.85,
+    "reason": "The phone call and card game sequence concludes fully, and the cut occurs at a clean transition to a completely new scene with a different character."
+   },
+   "where_score": 0.837
+  },
+  {
+   "id": "c017",
+   "t0": 1298.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1298.0,
+   "scene_before": 18,
+   "scene_after": 19,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 5.8,
+    "silence_after": 53.7,
+    "speech_density_10s_before": 0.18,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 7.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "খেলবো",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.4,
+    "jarring": 0.5,
+    "suspense_hook": 0.6,
+    "natural_break_score": 0.45,
+    "reason": "The cut occurs in the middle of a tense sequence where Mandar is staring at his reflection, with the ominous background score continuing across the break."
+   },
+   "where_score": 0.397
+  },
+  {
+   "id": "c018",
+   "t0": 1390.375,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1390.375,
+   "scene_before": 19,
+   "scene_after": 20,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 20.78,
+    "silence_after": 10.42,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 6.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.3,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs during a clean transition between scenes, after Dablu Bhai leaves the living room and before he begins his phone call on the balcony."
+   },
+   "where_score": 0.762
+  },
+  {
+   "id": "c019",
+   "t0": 1460.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1460.0,
+   "scene_before": 20,
+   "scene_after": 21,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 41.0,
+    "silence_after": 56.8,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.75,
+    "reason": "The cut occurs at a natural transition point as Laili finishes observing the vaccination camp and prepares to leave on a motorized cart, though the ambient music continues across the break."
+   },
+   "where_score": 0.585
+  },
+  {
+   "id": "c020",
+   "t0": 1545.125,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1545.125,
+   "scene_before": 21,
+   "scene_after": 22,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 11.42,
+    "silence_after": 56.17,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 9.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "আজকে... এক্ষুনি...",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.3,
+    "jarring": 0.7,
+    "suspense_hook": 0.4,
+    "natural_break_score": 0.3,
+    "reason": "The cut occurs abruptly in the middle of an intimate scene, right after the female character asks for a child, interrupting the sequence mid-action."
+   },
+   "where_score": 0.328
+  },
+  {
+   "id": "c021",
+   "t0": 1638.958,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1638.958,
+   "scene_before": 22,
+   "scene_after": 23,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 19.86,
+    "silence_after": 84.54,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.7,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.75,
+    "reason": "The cut cleanly separates the action of pouring the drink from the action of consuming it, serving as a natural pause in the sequence."
+   },
+   "where_score": 0.61
+  },
+  {
+   "id": "c022",
+   "t0": 1721.792,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1721.792,
+   "scene_before": 23,
+   "scene_after": 24,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 102.69,
+    "silence_after": 1.71,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.04,
+    "loudness_dip_db": 6.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "This stupid rascal",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs during a transition from the character looking at a wedding photograph in the present to a flashback of the actual wedding ceremony, making it a clean and natural narrative break."
+   },
+   "where_score": 0.761
+  },
+  {
+   "id": "c023",
+   "t0": 1822.833,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1822.833,
+   "scene_before": 24,
+   "scene_after": 25,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 39.83,
+    "silence_after": 45.77,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 3.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.3,
+    "jarring": 0.5,
+    "suspense_hook": 0.2,
+    "natural_break_score": 0.45,
+    "reason": "The cut is placed mid-action while Dablu Bhai is being loaded into the vehicle, interrupting a continuous sequence before the car departs."
+   },
+   "where_score": 0.414
+  },
+  {
+   "id": "c024",
+   "t0": 1894.208,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1894.208,
+   "scene_before": 25,
+   "scene_after": 26,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 16.51,
+    "silence_after": 142.39,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 7.6,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.1,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a long silence after a tense phone call ends, transitioning cleanly to a new scene in a different location."
+   },
+   "where_score": 0.8
+  },
+  {
+   "id": "c025",
+   "t0": 1914.708,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [],
+   "t": 1914.708,
+   "scene_before": 26,
+   "scene_after": 27,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 37.01,
+    "silence_after": 121.89,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 6.3,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.7,
+    "jarring": 0.3,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.75,
+    "reason": "The cut occurs during a silent transition between two different scenes in a montage, with no dialogue, making it a relatively clean break despite the continuous background score."
+   },
+   "where_score": 0.736
+  },
+  {
+   "id": "c026",
+   "t0": 1983.458,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1983.458,
+   "scene_before": 26,
+   "scene_after": 27,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 105.76,
+    "silence_after": 53.14,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 2.7,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.3,
+    "jarring": 0.7,
+    "suspense_hook": 0.2,
+    "natural_break_score": 0.35,
+    "reason": "The cut occurs in the middle of an ongoing cross-cut montage sequence between the street and the dark room, interrupting the visual rhythm and continuous atmospheric music."
+   },
+   "where_score": 0.302
+  },
+  {
+   "id": "c027",
+   "t0": 1996.625,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1996.625,
+   "scene_before": 27,
+   "scene_after": 28,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 118.92,
+    "silence_after": 39.97,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 3.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.3,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs at a clean scene transition from the reflective montage to Mandar arriving at the clinic, with no dialogue or continuous action interrupted."
+   },
+   "where_score": 0.743
+  },
+  {
+   "id": "c028",
+   "t0": 2128.75,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 2128.75,
+   "scene_before": 28,
+   "scene_after": 29,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.25,
+    "silence_after": 2.45,
+    "speech_density_10s_before": 0.48,
+    "speech_density_10s_after": 0.35,
+    "loudness_dip_db": 7.8,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c029",
+   "t0": 2240.583,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 2240.583,
+   "scene_before": 29,
+   "scene_after": 30,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 69.68,
+    "silence_after": 23.42,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 18.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.4,
+    "jarring": 0.5,
+    "suspense_hook": 0.6,
+    "natural_break_score": 0.4,
+    "reason": "The cut occurs in the middle of a phone call sequence, splitting the scene of Mandar on the phone from Laili receiving the call."
+   },
+   "where_score": 0.42
+  },
+  {
+   "id": "c030",
+   "t0": 2306.958,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 2306.958,
+   "scene_before": 30,
+   "scene_after": 31,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 9.96,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 5.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c031",
+   "t0": 2344.604,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 2344.604,
+   "scene_before": 31,
+   "scene_after": 31,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 47.6,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 40.4,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  }
+ ]
+}

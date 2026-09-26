@@ -1,0 +1,1006 @@
+{
+ "catalogue_hash": "7331d21427",
+ "items": {
+  "c003": {
+   "id": "c003",
+   "t0": 162.2,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 159.4,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": -2.8,
+    "silence_before": 2.8,
+    "silence_after": 2.1,
+    "speech_density_10s_before": 0.5,
+    "speech_density_10s_after": 0.75,
+    "loudness_dip_db": 12.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "Sure, good night.",
+    "first_line_after_cut": "মা",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.8,
+    "reason": "The phone call concludes naturally and the phone is locked before the cut, making it a clean transition before the next character enters the room."
+   },
+   "where_score": 0.666,
+   "match": {
+    "dominant_activity": "video call on a mobile phone",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.7,
+      "matched_contexts": [
+       "cooking",
+       "food preparation",
+       "recipe"
+      ],
+      "rationale": "The characters discuss cooking a recipe during the video call, and the post-break scene focuses on planning the next day's menu."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There are no skincare, personal hygiene, or morning routine elements in the scenes around the break."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenes do not feature any makeup, beauty routines, or preparation for special occasions."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.95,
+      "matched_contexts": [
+       "phone",
+       "mobile",
+       "calling",
+       "video call",
+       "internet",
+       "communication",
+       "family conversation"
+      ],
+      "rationale": "The lead-in scene prominently features a family video call on a smartphone, making it highly relevant for a telecom brand."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There are no vehicles, driving, or road travel elements in the scenes."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scenes do not involve any shopping, payments, or financial transactions."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.4,
+      "matched_contexts": [
+       "travel",
+       "vacation",
+       "holiday"
+      ],
+      "rationale": "The son discusses planning a long holiday to visit his mother, which touches upon travel and vacation themes."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "There is no online shopping or product delivery depicted in the scenes."
+     }
+    ]
+   }
+  },
+  "c004": {
+   "id": "c004",
+   "t0": 198.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 198.0,
+   "scene_before": 5,
+   "scene_after": 6,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 16.2,
+    "silence_after": 3.4,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.66,
+    "loudness_dip_db": 6.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "সত্যি, উচ্ছে ভাজা যে এত ভালো খেতে হয়, এটা কে জানত!",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition from an atmospheric scene of a girl in the rain to a bustling dining hall scene, marked by a title card, making it an excellent natural break."
+   },
+   "where_score": 0.736,
+   "match": {
+    "dominant_activity": "running in field",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 0.8,
+      "matched_contexts": [
+       "eating",
+       "homemade food",
+       "food preparation"
+      ],
+      "rationale": "The scene after the break features customers eating and enjoying homemade food at a restaurant, which aligns perfectly with the brand's focus."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "Customers are shown eating rice and curry in the restaurant scene after the break."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The brand has a violation due to the presence of eating in the post-break scene."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "None of the target contexts match the activities in the lead-in or post-break scenes."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "There are no telecom-related activities like phone calls or internet usage in the immediate scenes surrounding the ad break."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "No automotive or travel-by-car themes are present in the scenes around the ad break."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "There are no financial transactions or shopping activities depicted in the scenes."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.5,
+      "matched_contexts": [
+       "hotel"
+      ],
+      "rationale": "The scene after the break is set in Indubala's hotel/eatery, which matches the brand's hospitality theme."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "No online shopping or delivery activities are shown in the scenes."
+     }
+    ]
+   }
+  },
+  "c007": {
+   "id": "c007",
+   "t0": 426.56,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 426.56,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 37.86,
+    "silence_after": 1.84,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.71,
+    "loudness_dip_db": 11.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "আর দিদি",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1.0,
+    "jarring": 0.0,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition between a reflective scene of preparing food and a later scene of serving it to customers, with no overlapping dialogue or music."
+   },
+   "where_score": 0.824,
+   "match": {
+    "dominant_activity": "food preparation",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [],
+      "relevance": 1.0,
+      "matched_contexts": [
+       "cooking",
+       "kitchen",
+       "eating",
+       "food preparation",
+       "homemade food"
+      ],
+      "rationale": "The scene features characters preparing, mixing, and tasting homemade food in a kitchen setting, which perfectly aligns with the brand's focus on cooking and food preparation."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "eating",
+        "evidence": "The characters are tasting the taro paste with rice in the lead-in scene, and customers are eating in the restaurant in the surrounding context."
+       }
+      ],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The brand is not relevant to the scene, and there is a violation due to the presence of eating and tasting food in the scene."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene focuses on traditional food preparation and has no connection to makeup, beauty, or getting ready."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "family conversation"
+      ],
+      "rationale": "While there is a warm conversation between the characters, the scene does not feature any mobile devices or connectivity themes."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "The scene is set entirely indoors in a kitchen/home environment and has no relevance to vehicles or travel."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene depicts food preparation and tasting at home, with no financial transactions or shopping activities taking place."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [],
+      "relevance": 0.3,
+      "matched_contexts": [
+       "hotel"
+      ],
+      "rationale": "Although the setting is technically Indubala's hotel, the scene focuses on intimate food preparation rather than travel or tourism."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [],
+      "relevance": 0.0,
+      "matched_contexts": [],
+      "rationale": "There are no elements of shopping, delivery, or e-commerce in this traditional cooking scene."
+     }
+    ]
+   }
+  },
+  "c010": {
+   "id": "c010",
+   "t0": 631.2,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 631.2,
+   "scene_before": 12,
+   "scene_after": 13,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 11.3,
+    "silence_after": 5.3,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.45,
+    "loudness_dip_db": 7.8,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "এত রাত্রে দরজায় ধাক্কা দিচ্ছে কে?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.8,
+    "reason": "The cut occurs at a natural transition point between the end of a dramatic sequence and the show's title card, with only the background music carrying over."
+   },
+   "where_score": 0.762,
+   "match": {
+    "dominant_activity": "transporting dead bodies",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber scene of transporting dead bodies from a train accident violates the negative contexts of accident and grief, and has no relevance to food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       },
+       {
+        "negative_context": "eating",
+        "evidence": "The context mentions customers eating food in the scene prior to the flashback."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene involves transporting dead bodies from an accident, violating negative contexts of accident, grief, and eating, with no relevance to skincare."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber scene of transporting dead bodies from an accident violates the negative contexts of accident and grief, and is completely unrelated to beauty or cosmetics."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The lead-in scene shows transporting dead bodies, which has no relevance to telecom or mobile connectivity."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0.1,
+      "matched_contexts": [],
+      "rationale": "The scene depicts the aftermath of a fatal train accident, violating the negative contexts of accident and grief."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber scene of transporting dead bodies violates the negative context of grief and has no connection to digital payments."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0.2,
+      "matched_contexts": [
+       "train journey"
+      ],
+      "rationale": "Although railway tracks are shown, the scene depicts the aftermath of a fatal train accident, which directly violates the negative contexts of accident and grief."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "accident",
+        "evidence": "The scene shows the aftermath of a fatal train accident where body bags are being transported."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "The context mentions Daya crying hysterically and grieving over Lachmi's death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber scene of transporting dead bodies from an accident violates the negative contexts of accident and grief, and has no relevance to online shopping."
+     }
+    ]
+   }
+  },
+  "c015": {
+   "id": "c015",
+   "t0": 851.64,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 851.64,
+   "scene_before": 17,
+   "scene_after": 18,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 8.04,
+    "silence_after": 24.36,
+    "speech_density_10s_before": 0.16,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 12.5,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "মাঝি, মাঝি আপ যাইয়ে না",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.9,
+    "reason": "The scene fades to black naturally after a somber moment in the hospital corridor, transitioning cleanly to a flashback sequence at home."
+   },
+   "where_score": 0.924,
+   "match": {
+    "dominant_activity": "grieving in a hospital corridor",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a hospital corridor where characters are waiting."
+       },
+       {
+        "negative_context": "illness",
+        "evidence": "Lachmi is shown dying on her bed before the scene shifts to the hospital."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown sitting in the hospital corridor, deeply grieving."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's setting in a hospital corridor and the heavy theme of grief and illness directly violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The characters are waiting in a hospital corridor."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown in deep grief over Lachmi's critical condition or death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The hospital setting and the depiction of intense grief violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a hospital corridor."
+       },
+       {
+        "negative_context": "illness",
+        "evidence": "Lachmi is shown in a critical, dying state."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is visibly grieving in the hospital."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's focus on illness, grief, and its hospital setting violates the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The characters are waiting outside a hospital room."
+       },
+       {
+        "negative_context": "medical emergency",
+        "evidence": "Lachmi is dying, leading to an urgent hospital situation."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene depicts a medical emergency and takes place in a hospital, violating the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a hospital corridor."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown grieving in the hospital."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The hospital setting and the theme of grief violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a hospital corridor."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown in a state of deep grief."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's hospital setting and depiction of grief violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The characters are in a hospital corridor."
+       },
+       {
+        "negative_context": "illness",
+        "evidence": "Lachmi is shown in a terminal or critical state."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown grieving."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The hospital setting, illness, and grief depicted in the scene violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a hospital corridor."
+       },
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown grieving."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's hospital setting and the heavy emotional grief violate the brand's negative contexts."
+     }
+    ]
+   }
+  },
+  "c018": {
+   "id": "c018",
+   "t0": 1138.4,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1134.8,
+   "scene_before": 20,
+   "scene_after": 21,
+   "signals": {
+    "snap_delta": -3.6,
+    "silence_before": 1.6,
+    "silence_after": 2.5,
+    "speech_density_10s_before": 0.81,
+    "speech_density_10s_after": 0.52,
+    "loudness_dip_db": 7.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "हम लोग वही ना चीकी ना",
+    "first_line_after_cut": "এই চল চল হট হট",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.3,
+    "suspense_hook": 0.2,
+    "natural_break_score": 0.75,
+    "reason": "The cut occurs at a clean scene transition from a happy flashback in the rain to the grim present-day morgue, although the background song continues across the break."
+   },
+   "where_score": 0.613,
+   "match": {
+    "dominant_activity": "grieving in a morgue",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning the death of her friend Lachmi in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene depicts intense grief and mourning in a morgue, which violates the brand's negative context of grief."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend in a somber morgue setting."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a morgue, which is a hospital-adjacent medical facility."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber morgue setting and themes of grief violate the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is grieving the loss of her friend Lachmi."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The characters are inside a morgue, a medical facility."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "A beauty brand is highly inappropriate for a scene centered around grief and a morgue."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a morgue where Indubala has to sign release papers."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The morgue setting violates the brand's negative context of hospital environments."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown in deep sorrow and mourning."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's heavy focus on grief and the morgue setting violates the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber atmosphere of grief and the morgue setting are direct violations of the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is grieving the death of her friend."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "A travel brand cannot be advertised during a scene of intense grief in a morgue."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her friend's death."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's focus on grief and the morgue setting violates the brand's negative contexts."
+     }
+    ]
+   }
+  },
+  "c019": {
+   "id": "c019",
+   "t0": 1223.8,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1223.8,
+   "scene_before": 21,
+   "scene_after": 22,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 41.0,
+    "silence_after": 3.3,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.59,
+    "loudness_dip_db": 25.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "কাটেনা হাজারো দুঃখ মোর",
+    "first_line_after_cut": "মা কই?",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.85,
+    "reason": "The cut occurs during a clean transition between a poignant scene in the past and a new scene in the present day, making it a highly natural break."
+   },
+   "where_score": 0.78,
+   "match": {
+    "dominant_activity": "signing papers",
+    "brands": [
+     {
+      "brand_id": "brand_a",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend and signing release papers at the morgue, and later Nikhil Babu is saddened to learn of her death."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's heavy focus on grief and mourning a deceased friend violates the brand's negative context, with no relevance to food or cooking."
+     },
+     {
+      "brand_id": "brand_b",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is shown in deep grief signing release papers for her deceased friend at the morgue."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place inside a morgue, which is a hospital-related facility."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber morgue setting and themes of grief violate the brand's negative contexts of hospital and grief."
+     },
+     {
+      "brand_id": "brand_c",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend at the morgue, and the overall tone is highly sorrowful."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The characters are inside a morgue signing official release papers."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's focus on grief and the morgue setting directly violates the brand's negative contexts."
+     },
+     {
+      "brand_id": "brand_d",
+      "violations": [
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place inside a morgue where Indubala is signing release papers."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The morgue setting violates the brand's negative context of hospital, and there is no telecom-related activity."
+     },
+     {
+      "brand_id": "brand_e",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is grieving the loss of her friend, and Nikhil Babu is later saddened by the news of her passing."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set inside a morgue where official papers are being signed."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The somber scene of signing release papers at a morgue violates the brand's negative contexts of grief and hospital."
+     },
+     {
+      "brand_id": "brand_f",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend, and the post-break scene mentions her death."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene involves mourning and signing papers at a morgue, violating the brand's negative contexts of grief and hospital."
+     },
+     {
+      "brand_id": "brand_g",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is in deep sorrow over her friend's death, and the characters discuss the passing after the break."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene is set in a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The heavy themes of grief and the morgue setting violate the brand's negative contexts of grief and hospital."
+     },
+     {
+      "brand_id": "brand_h",
+      "violations": [
+       {
+        "negative_context": "grief",
+        "evidence": "Indubala is mourning her deceased friend, and the post-break scene deals with the sadness of her passing."
+       },
+       {
+        "negative_context": "hospital",
+        "evidence": "The scene takes place inside a morgue."
+       }
+      ],
+      "relevance": 0,
+      "matched_contexts": [],
+      "rationale": "The scene's focus on grief and the morgue setting violates the brand's negative contexts of grief and hospital."
+     }
+    ]
+   }
+  }
+ },
+ "verify": {
+  "c007:brand_a": {
+   "violation": false,
+   "violated_contexts": [],
+   "evidence": "The scenes immediately preceding and following the ad break depict traditional food preparation (grinding taro paste) and customers happily eating in a restaurant setting. There are no depictions, discussions, or implications of funerals, hospitals, violence, illness, bathrooms, accidents, or grief.",
+   "confidence": 0.95
+  }
+ }
+}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
-  <vmap:AdBreak timeOffset="00:03:31.880" breakType="linear" breakId="midroll-1">
+  <vmap:AdBreak timeOffset="00:03:26.840" breakType="linear" breakId="midroll-1">
     <vmap:AdSource id="midroll-1-src" allowMultipleAds="false" followRedirects="true">
       <vmap:VASTAdData>
         <VAST version="3.0">
@@ -24,7 +24,7 @@
                 </Creative>
               </Creatives>
               <Extensions>
-                <Extension type="contextual-targeting"><Brand>brand_e</Brand><BreakScore>1.029</BreakScore><Relevance>0.800</Relevance><DominantActivity>title sequence featuring a driving montage</DominantActivity><Reason>The cut is placed perfectly between the end of the show's title sequence and the beginning of the episode's first scene. Brand: The prominent use of the food truck driving through the town in both the title sequence and the post-break scene makes automotive/mobility highly relevant.</Reason></Extension>
+                <Extension type="contextual-targeting"><Brand>brand_e</Brand><BreakScore>0.966</BreakScore><Relevance>0.928</Relevance><DominantActivity>traffic</DominantActivity><Reason>Visual change across the cut 0.31 (CLIP), 32.2s silence before / 14.9s after (VAD), speech density 0%/0%, loudness dip 4.7 dB. Brand: Lead-in best matches “traffic” (CLIP z=3.7 before / 1.8 after the cut)</Reason></Extension>
               </Extensions>
             </InLine>
           </Ad>
@@ -36,31 +36,31 @@
       <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=bhojon_bilashi&break=midroll-1&creative=e_30s_bn&ev=breakEnd]]></vmap:Tracking>
     </vmap:TrackingEvents>
   </vmap:AdBreak>
-  <vmap:AdBreak timeOffset="00:09:41.160" breakType="linear" breakId="midroll-2">
+  <vmap:AdBreak timeOffset="00:09:30.040" breakType="linear" breakId="midroll-2">
     <vmap:AdSource id="midroll-2-src" allowMultipleAds="false" followRedirects="true">
       <vmap:VASTAdData>
         <VAST version="3.0">
-          <Ad id="brand_d-d_30s_bn" sequence="1">
+          <Ad id="brand_a-a_30s_bn" sequence="1">
             <InLine>
               <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
-              <AdTitle>Brand D — d_30s_bn</AdTitle>
-              <Impression id="imp"><![CDATA[{BASE}/api/track?video=bhojon_bilashi&break=midroll-2&creative=d_30s_bn&ev=impression]]></Impression>
+              <AdTitle>Brand A — a_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=bhojon_bilashi&break=midroll-2&creative=a_30s_bn&ev=impression]]></Impression>
               <Creatives>
-                <Creative id="d_30s_bn" sequence="1">
+                <Creative id="a_30s_bn" sequence="1">
                   <Linear>
                     <Duration>00:00:30.000</Duration>
                     <TrackingEvents>
-                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=bhojon_bilashi&break=midroll-2&creative=d_30s_bn&ev=start]]></Tracking>
-                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=bhojon_bilashi&break=midroll-2&creative=d_30s_bn&ev=complete]]></Tracking>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=bhojon_bilashi&break=midroll-2&creative=a_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=bhojon_bilashi&break=midroll-2&creative=a_30s_bn&ev=complete]]></Tracking>
                     </TrackingEvents>
                     <MediaFiles>
-                      <MediaFile id="d_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_d/d_30s_bn.mp4]]></MediaFile>
+                      <MediaFile id="a_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_a/a_30s_bn.mp4]]></MediaFile>
                     </MediaFiles>
                   </Linear>
                 </Creative>
               </Creatives>
               <Extensions>
-                <Extension type="contextual-targeting"><Brand>brand_d</Brand><BreakScore>0.760</BreakScore><Relevance>0.300</Relevance><DominantActivity>cooking in kitchen</DominantActivity><Reason>The cut is placed cleanly between the end of a cooking demonstration montage and the start of a new conversation segment, with no overlapping dialogue or music. Brand: While the characters are engaged in a conversation, there is no focus on mobile devices, internet connectivity, or telecom services.</Reason></Extension>
+                <Extension type="contextual-targeting"><Brand>brand_a</Brand><BreakScore>0.820</BreakScore><Relevance>0.938</Relevance><DominantActivity>recipe</DominantActivity><Reason>Visual change across the cut 0.13 (CLIP), 7.9s silence before / 11.6s after (VAD), speech density 21%/0%, loudness dip 12.6 dB. Brand: Lead-in best matches “recipe” (CLIP z=3.4 before / 3.2 after the cut)</Reason></Extension>
               </Extensions>
             </InLine>
           </Ad>
@@ -68,8 +68,8 @@
       </vmap:VASTAdData>
     </vmap:AdSource>
     <vmap:TrackingEvents>
-      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=bhojon_bilashi&break=midroll-2&creative=d_30s_bn&ev=breakStart]]></vmap:Tracking>
-      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=bhojon_bilashi&break=midroll-2&creative=d_30s_bn&ev=breakEnd]]></vmap:Tracking>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=bhojon_bilashi&break=midroll-2&creative=a_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=bhojon_bilashi&break=midroll-2&creative=a_30s_bn&ev=breakEnd]]></vmap:Tracking>
     </vmap:TrackingEvents>
   </vmap:AdBreak>
 </vmap:VMAP>

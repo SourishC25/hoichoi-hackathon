@@ -1,0 +1,8 @@
+{
+ "scene_tau": 0.12,
+ "vis_thr": 3.0,
+ "aud_thr": 4.0,
+ "rel_mid": 1.5,
+ "rel_width": 0.7,
+ "per_term": {}
+}

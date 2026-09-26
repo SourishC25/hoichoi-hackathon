@@ -1,0 +1,208 @@
+{
+ "teacher": "Gemini scene labels from development runs",
+ "episodes": [
+  "bhojon_bilashi",
+  "feluda",
+  "indubala_bhaater_hotel",
+  "mandaar",
+  "mohanagar",
+  "money_honey"
+ ],
+ "scene_boundaries": {
+  "tau": 0.12,
+  "f1": 0.44,
+  "precision": 0.386,
+  "recall": 0.513,
+  "loeo_f1": 0.41
+ },
+ "sensitive_in_sample": {
+  "f2": 0.309,
+  "precision": 0.091,
+  "recall": 0.767,
+  "flag_rate": 0.298,
+  "positives": 120
+ },
+ "sensitive_loeo": {
+  "precision": 0.081,
+  "recall": 0.524,
+  "f2": 0.238,
+  "flag_rate": 0.236
+ },
+ "per_term": {
+  "accident": {
+   "f2": 0.0,
+   "precision": 0.0,
+   "recall": 0.0,
+   "flag_rate": 0.314,
+   "positives": 1
+  },
+  "alcohol": {
+   "f2": 0.6,
+   "precision": 0.231,
+   "recall": 1.0,
+   "flag_rate": 0.107,
+   "positives": 3
+  },
+  "bathroom": {
+   "f2": 0.119,
+   "precision": 0.026,
+   "recall": 1.0,
+   "flag_rate": 0.314,
+   "positives": 1
+  },
+  "blood": {
+   "f2": 0.143,
+   "precision": 0.032,
+   "recall": 1.0,
+   "flag_rate": 0.256,
+   "positives": 1
+  },
+  "crime": {
+   "f2": 0.482,
+   "precision": 0.17,
+   "recall": 0.889,
+   "flag_rate": 0.388,
+   "positives": 9
+  },
+  "crying": {
+   "f2": 0.233,
+   "precision": 0.065,
+   "recall": 0.667,
+   "flag_rate": 0.256,
+   "positives": 3
+  },
+  "dead body": {
+   "f2": 0.476,
+   "precision": 0.171,
+   "recall": 0.857,
+   "flag_rate": 0.289,
+   "positives": 7
+  },
+  "death": {
+   "f2": 0.5,
+   "precision": 0.2,
+   "recall": 0.8,
+   "flag_rate": 0.331,
+   "positives": 10
+  },
+  "drugs": {
+   "f2": 0.135,
+   "precision": 0.03,
+   "recall": 1.0,
+   "flag_rate": 0.273,
+   "positives": 1
+  },
+  "eating": {
+   "f2": 0.6,
+   "precision": 0.257,
+   "recall": 0.9,
+   "flag_rate": 0.289,
+   "positives": 10
+  },
+  "fight": {
+   "f2": 0.263,
+   "precision": 0.067,
+   "recall": 1.0,
+   "flag_rate": 0.248,
+   "positives": 2
+  },
+  "financial distress": {
+   "f2": 0.274,
+   "precision": 0.07,
+   "recall": 1.0,
+   "flag_rate": 0.471,
+   "positives": 4
+  },
+  "funeral": {
+   "f2": 0.489,
+   "precision": 0.205,
+   "recall": 0.75,
+   "flag_rate": 0.364,
+   "positives": 12
+  },
+  "grief": {
+   "f2": 0.479,
+   "precision": 0.237,
+   "recall": 0.643,
+   "flag_rate": 0.314,
+   "positives": 14
+  },
+  "heated argument": {
+   "f2": 0.345,
+   "precision": 0.154,
+   "recall": 0.5,
+   "flag_rate": 0.215,
+   "positives": 8
+  },
+  "illness": {
+   "f2": 0.091,
+   "precision": 0.026,
+   "recall": 0.25,
+   "flag_rate": 0.322,
+   "positives": 4
+  },
+  "injury": {
+   "f2": 0.238,
+   "precision": 0.059,
+   "recall": 1.0,
+   "flag_rate": 0.281,
+   "positives": 2
+  },
+  "mourning": {
+   "f2": 0.106,
+   "precision": 0.023,
+   "recall": 1.0,
+   "flag_rate": 0.355,
+   "positives": 1
+  },
+  "police arrest": {
+   "f2": 0.256,
+   "precision": 0.065,
+   "recall": 1.0,
+   "flag_rate": 0.256,
+   "positives": 2
+  },
+  "poverty": {
+   "f2": 0.189,
+   "precision": 0.044,
+   "recall": 1.0,
+   "flag_rate": 0.372,
+   "positives": 2
+  },
+  "religious ritual": {
+   "f2": 0.104,
+   "precision": 0.023,
+   "recall": 1.0,
+   "flag_rate": 0.364,
+   "positives": 1
+  },
+  "sexual content": {
+   "f2": 0.1,
+   "precision": 0.026,
+   "recall": 0.333,
+   "flag_rate": 0.314,
+   "positives": 3
+  },
+  "smoking": {
+   "f2": 0.526,
+   "precision": 0.24,
+   "recall": 0.75,
+   "flag_rate": 0.207,
+   "positives": 8
+  },
+  "violence": {
+   "f2": 0.493,
+   "precision": 0.179,
+   "recall": 0.875,
+   "flag_rate": 0.322,
+   "positives": 8
+  },
+  "weapon": {
+   "f2": 0.238,
+   "precision": 0.067,
+   "recall": 0.667,
+   "flag_rate": 0.248,
+   "positives": 3
+  }
+ }
+}

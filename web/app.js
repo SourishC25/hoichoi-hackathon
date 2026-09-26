@@ -6,6 +6,22 @@ const fmt = (t) => { t = Math.max(0, t); const h = Math.floor(t / 3600), m = Mat
 const fmtShort = (t) => fmt(t).replace(/\.\d$/, "");
 const pct = (x) => Math.round((x || 0) * 100);
 
+// Same UI, two hosts: the FastAPI server (live processing) or a static export (free hosting).
+const STATIC = !!window.BIRATI_STATIC;
+const q = (v, extra = "") => (v ? `?variant=${encodeURIComponent(v)}${extra ? "&" + extra : ""}` : extra ? "?" + extra : "");
+const U = {
+  videos: () => (STATIC ? "api/videos.json" : "/api/videos"),
+  result: (id, v) => (STATIC ? `data/${id}/result${v ? "_" + v : ""}.json` : `/api/videos/${id}/result${q(v)}`),
+  vmap: (id, v) => (STATIC ? `data/${id}/vmap${v ? "_" + v : ""}.xml` : `/api/videos/${id}/vmap.xml${q(v)}`),
+  vmapDownload: (id, v) => (STATIC ? U.vmap(id, v) : `/api/videos/${id}/vmap.xml${q(v, "download=1")}`),
+  debug: (id, v) => (STATIC ? U.result(id, v) : `/api/videos/${id}/debug.json${q(v)}`),
+  media: (id) => (STATIC ? `media/${id}.mp4` : `/media/${id}.mp4`),
+  thumb: (id, t) => (STATIC ? `thumbs/${id}/${t.toFixed(2)}.jpg` : `/api/thumb/${id}/${t.toFixed(2)}`),
+  brands: () => (STATIC ? "api/brands.json" : "/api/brands"),
+  rules: () => (STATIC ? "api/rules.json" : "/api/rules"),
+  catalogue: (id, v) => (STATIC ? `data/${id}/catalogue${v ? "_" + v : ""}.json` : `/api/videos/${id}/catalogue${q(v)}`),
+};
+
 const EXAMPLE_BRAND = {
   brand_id: "brand_i", display_name: "Brand I", category: "beverages/tea",
   target_contexts: ["tea", "drinking tea", "cha", "adda", "conversation over tea", "morning", "breakfast", "relaxing at home", "cafe", "guests at home"],
@@ -25,7 +41,7 @@ const state = { videos: [], id: null, variant: null, result: null, breaks: [], l
 
 // ---------------- library ----------------
 async function loadLibrary(selectFirst = false) {
-  const vids = await (await fetch("/api/videos")).json();
+  const vids = await (await fetch(U.videos())).json();
   state.videos = vids;
   const lib = $("#library");
   if (!vids.length) { lib.innerHTML = '<div class="muted sm">No processed episodes yet — upload one.</div>'; return; }
@@ -43,24 +59,22 @@ async function loadLibrary(selectFirst = false) {
 }
 
 async function openEpisode(id, variant = null) {
-  const q = variant ? `?variant=${encodeURIComponent(variant)}` : "";
-  const res = await fetch(`/api/videos/${id}/result${q}`);
+  const res = await fetch(U.result(id, variant));
   if (!res.ok) { alert("Could not load result"); return; }
   const r = await res.json();
   const sameVideo = state.id === id;
-  state.id = id; state.variant = r.variant || null; state.result = r;
+  state.id = id; state.variant = STATIC ? variant : (r.variant || null); state.result = r;
   history.replaceState(null, "", `#/${id}${variant ? "/" + variant : ""}`);
   $$(".lib-item").forEach((el) => el.classList.toggle("active", el.dataset.id === id));
   $("#empty").hidden = true; $("#episode").hidden = false;
   $("#ep-title").textContent = id.replace(/_/g, " ");
   $("#ep-synopsis").textContent = r.synopsis || "";
-  const vq = state.variant ? `?variant=${state.variant}` : "";
-  $("#dl-vmap").href = `/api/videos/${id}/vmap.xml${vq}${vq ? "&" : "?"}download=1`;
-  $("#dl-debug").href = `/api/videos/${id}/debug.json${vq}`;
+  $("#dl-vmap").href = U.vmapDownload(id, state.variant);
+  $("#dl-debug").href = U.debug(id, state.variant);
   renderKpis(r);
   const content = $("#content");
-  if (!sameVideo) { content.src = `/media/${id}.mp4`; state.lastT = 0; }
-  await loadVmap(`/api/videos/${id}/vmap.xml${vq}`);
+  if (!sameVideo) { content.src = U.media(id); state.lastT = 0; }
+  await loadVmap(U.vmap(id, state.variant));
   renderBreakNav(); renderTimeline(); renderBreaks(); renderCandidates(); renderScenes(); await renderConfig();
 }
 
@@ -165,7 +179,7 @@ function renderBreakNav() {
   if (!state.breaks.length) { nav.innerHTML = '<h4>Ad breaks</h4><div class="muted sm">No break met the quality and safety bar under these pacing rules.</div>'; return; }
   nav.innerHTML = "<h4>Jump to 6 s before a break</h4>" + state.breaks.map((b) => `
     <div class="bn-item ${b.played ? "played" : ""}" data-i="${b.i}">
-      <img loading="lazy" src="/api/thumb/${state.id}/${Math.max(0, b.offset - 1).toFixed(2)}" alt="">
+      <img loading="lazy" src="${U.thumb(state.id, Math.max(0, b.offset - 1))}" alt="">
       <div><div class="tt">${fmt(b.offset)}</div><div class="bb">${esc(b.meta?.brand_name || "")}</div>
       <div class="muted sm">${esc(b.meta?.creative?.id || "")} · ${b.duration}s</div></div></div>`).join("");
   $$(".bn-item", nav).forEach((el) => el.onclick = () => jumpBefore(+el.dataset.i));
@@ -249,13 +263,15 @@ function renderBreaks() {
     const blocked = ranking.filter((x) => x.blocked || x.verifier_blocked);
     const verif = ranking.find((x) => x.brand_id === b.brand_id)?.verifier;
     return `<div class="card brk">
-      <div><img loading="lazy" src="/api/thumb/${state.id}/${Math.max(0, b.t - 1).toFixed(2)}" alt=""><button class="btn sm" style="margin-top:8px;width:100%" onclick="jumpBefore(${i})">▶ Watch this cut</button></div>
+      <div><img loading="lazy" src="${U.thumb(state.id, Math.max(0, b.t - 1))}" alt=""><button class="btn sm" style="margin-top:8px;width:100%" onclick="jumpBefore(${i})">▶ Watch this cut</button></div>
       <div>
         <h4><span class="mono">${fmt(b.t)}</span> ${esc(b.brand_name)} <span class="pill">${esc(b.creative.id)} · ${b.creative.duration_sec}s</span>
           <span class="pill ok">quality ${pct(b.quality)}%</span><span class="pill">relevance ${pct(b.relevance)}%</span>
           ${verif ? `<span class="pill ok">✓ safety verifier passed</span>` : ""}</h4>
         <div class="muted sm">Lead-in activity: <b style="color:var(--text)">${esc(b.dominant_activity)}</b> · matched: ${esc((b.matched_contexts || []).join(", ") || "—")}</div>
-        <div class="lines"><div><small>last line before cut</small>${esc(b.last_line_before_cut || "— (no speech)")}</div><div><small>first line after</small>${esc(b.first_line_after_cut || "— (no speech)")}</div></div>
+        ${r.engine === "local"
+          ? `<div class="lines"><div><small>speech-free before cut (VAD)</small>${s.silence_before >= 99 ? "no speech" : s.silence_before + " s"}</div><div><small>speech-free after cut (VAD)</small>${s.silence_after >= 99 ? "no speech" : s.silence_after + " s"} · visual change ${pct(j.visual_novelty)}%</div></div>`
+          : `<div class="lines"><div><small>last line before cut</small>${esc(b.last_line_before_cut || "— (no speech)")}</div><div><small>first line after</small>${esc(b.first_line_after_cut || "— (no speech)")}</div></div>`}
         <div class="bars">${bar("natural break", j.natural_break_score)}${bar("beat complete", j.story_beat_complete)}${bar("not jarring", 1 - (j.jarring ?? 1))}${bar("suspense hook", j.suspense_hook)}</div>
         <div class="muted sm">Silence around cut: ${s.silence_before}s before / ${s.silence_after}s after · snapped ${s.snap_delta}s to a camera cut · loudness dip ${s.loudness_dip_db} dB${s.fade_to_black ? " · fade to black" : ""}</div>
         <p style="margin:8px 0 0">${esc(b.reason)}</p>
@@ -290,10 +306,9 @@ function renderScenes() {
 }
 
 async function renderConfig() {
-  if (!state.defaultBrands) state.defaultBrands = await (await fetch("/api/brands")).json();
-  if (!state.defaultRules) state.defaultRules = await (await fetch("/api/rules")).json();
-  const vq = state.variant ? `?variant=${state.variant}` : "";
-  const cat = await (await fetch(`/api/videos/${state.id}/catalogue${vq}`)).json();
+  if (!state.defaultBrands) state.defaultBrands = await (await fetch(U.brands())).json();
+  if (!state.defaultRules) state.defaultRules = await (await fetch(U.rules())).json();
+  const cat = await (await fetch(U.catalogue(state.id, state.variant))).json();
   $("#brands-json").value = JSON.stringify(cat, null, 2);
   const rules = state.result.rules || state.defaultRules;
   $("#rules-form").innerHTML = Object.keys(state.defaultRules).map((k) => `<label for="r-${k}">${esc(RULE_LABELS[k] || k)}</label><input id="r-${k}" name="${k}" type="number" step="any" value="${rules[k] ?? state.defaultRules[k]}">`).join("");
@@ -319,6 +334,13 @@ async function pollJob(id, onDone) {
 async function rerun() {
   let brands;
   try { brands = JSON.parse($("#brands-json").value); } catch (e) { alert("Catalogue JSON is invalid: " + e.message); return; }
+  if (STATIC) {
+    const plus9 = brands.some((b) => b.brand_id === "brand_i");
+    const edited = brands.length !== state.defaultBrands.length + (plus9 ? 1 : 0);
+    if (edited) alert("This free static demo holds precomputed runs for the default catalogue and the default + unseen Brand I catalogue. For arbitrary catalogues / pacing rules, run Birati locally (see README) — it re-runs in seconds.");
+    openEpisode(state.id, plus9 ? "plus9" : null);
+    return;
+  }
   const fd = new FormData();
   fd.append("brands", JSON.stringify(brands)); fd.append("rules", JSON.stringify(currentRules()));
   const btn = $("#btn-rerun"); btn.disabled = true; btn.textContent = "Re-running…";
@@ -365,7 +387,8 @@ function boot() {
     $$(".tab").forEach((x) => x.classList.toggle("active", x === t));
     $$(".tab-body").forEach((b) => b.hidden = b.id !== "tab-" + t.dataset.tab);
   });
-  $("#btn-upload").onclick = () => $("#dlg-upload").showModal();
+  $("#btn-upload").onclick = () => $(STATIC ? "#dlg-local" : "#dlg-upload").showModal();
+  if (STATIC) { $("#btn-upload").textContent = "Process your own episode"; $("#btn-rerun").textContent = "Show run with this catalogue"; }
   $("#btn-how").onclick = () => $("#dlg-how").showModal();
   $("#upload-form").addEventListener("submit", (e) => { if (e.submitter?.value === "cancel") return; uploadEpisode(e); });
   $("#btn-rerun").onclick = rerun;
