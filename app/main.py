@@ -12,7 +12,7 @@ import uuid
 from pathlib import Path
 
 from fastapi import FastAPI, File, Form, HTTPException, Request, UploadFile
-from fastapi.responses import FileResponse, JSONResponse, Response
+from fastapi.responses import FileResponse, JSONResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 
 from .pipeline import media, pacing, run
@@ -30,6 +30,34 @@ DEFAULT_BRANDS = ROOT / "data" / "brands.json"
 UPLOADS.mkdir(parents=True, exist_ok=True)
 WORK.mkdir(parents=True, exist_ok=True)
 UPLOAD_WORK.mkdir(parents=True, exist_ok=True)
+
+
+# Sample-episode proxies are too large for the git repo; a server built from GitHub serves them from the
+# static mirror (same files the public static demo uses) and downloads one locally only when needed.
+SAMPLE_MIRROR = os.getenv("BIRATI_SAMPLE_MIRROR", "https://sourish25-birati.static.hf.space").rstrip("/")
+_dl_lock = threading.Lock()
+
+
+def _is_sample(video_id: str) -> bool:
+    return (WORK / video_id).exists()
+
+
+def ensure_sample_proxy(video_id: str, log=print) -> Path | None:
+    """Download a sample's proxy from the mirror if it's missing locally (blocking; call from a job)."""
+    import urllib.request
+
+    dst = WORK / video_id / "proxy.mp4"
+    if dst.exists() or not _is_sample(video_id):
+        return dst if dst.exists() else None
+    with _dl_lock:
+        if not dst.exists():
+            log(f"A · fetching sample video from mirror")
+            tmp = dst.with_suffix(".part")
+            with urllib.request.urlopen(f"{SAMPLE_MIRROR}/media/{video_id}.mp4", timeout=120) as r, tmp.open("wb") as f:
+                while chunk := r.read(1 << 20):
+                    f.write(chunk)
+            tmp.replace(dst)
+    return dst
 
 
 def work_dir(video_id: str) -> Path:
@@ -95,8 +123,8 @@ def _source_for(video_id: str) -> Path:
         if p.exists():
             return p
     proxy = work_dir(video_id) / "proxy.mp4"
-    if proxy.exists():
-        return proxy
+    if proxy.exists() or _is_sample(video_id):
+        return proxy  # a missing sample proxy is fetched from the mirror inside the job
     raise HTTPException(404, "unknown video")
 
 
@@ -173,8 +201,11 @@ def get_catalogue(video_id: str, variant: str | None = None):
 
 @app.get("/media/{video_id}.mp4")
 def get_media(video_id: str):
-    p = work_dir(_safe_id(video_id)) / "proxy.mp4"
+    vid = _safe_id(video_id)
+    p = work_dir(vid) / "proxy.mp4"
     if not p.exists():
+        if _is_sample(vid):
+            return RedirectResponse(f"{SAMPLE_MIRROR}/media/{vid}.mp4", status_code=307)
         raise HTTPException(404)
     return FileResponse(p, media_type="video/mp4")
 
@@ -184,6 +215,8 @@ def get_thumb(video_id: str, t: float):
     video_id = _safe_id(video_id)
     proxy = work_dir(video_id) / "proxy.mp4"
     if not proxy.exists():
+        if _is_sample(video_id):  # break thumbnails are pre-rendered on the mirror
+            return RedirectResponse(f"{SAMPLE_MIRROR}/thumbs/{video_id}/{t:.2f}.jpg", status_code=307)
         raise HTTPException(404)
     d = work_dir(video_id) / "thumbs"
     d.mkdir(exist_ok=True)
@@ -300,7 +333,12 @@ async def rerun(video_id: str, brands: str | None = Form(None), rules: str | Non
     bl, rl = _parse_brands(brands), _parse_rules(rules)
     force = set("ABCE") if full else set()
     root = work_dir(vid).parent
-    return _submit(vid, "full" if full else "rerun", lambda log: run.process(vid, src, bl, rl, log=log, force=force, work_root=root))
+
+    def job(log):
+        ensure_sample_proxy(vid, log)
+        return run.process(vid, src, bl, rl, log=log, force=force, work_root=root)
+
+    return _submit(vid, "full" if full else "rerun", job)
 
 
 @app.get("/api/jobs/{job_id}")

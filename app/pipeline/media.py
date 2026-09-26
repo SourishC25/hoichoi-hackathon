@@ -37,16 +37,35 @@ def probe(path: Path) -> dict:
     }
 
 
+def _streams(path: Path) -> dict:
+    out = run(["ffprobe", "-v", "error", "-print_format", "json", "-show_streams", "-show_format", str(path)]).stdout
+    info = json.loads(out)
+    v = next((x for x in info["streams"] if x["codec_type"] == "video"), {})
+    a = next((x for x in info["streams"] if x["codec_type"] == "audio"), {})
+    return {"v": v, "a": a, "bitrate": int(info.get("format", {}).get("bit_rate") or 0)}
+
+
 def make_proxy(src: Path, dst: Path, height: int = 480) -> Path:
-    """Web/LLM friendly H.264 proxy with fast-start so it streams with range requests."""
+    """Web/LLM friendly H.264 proxy with fast-start so it streams with range requests.
+    Fast path: sources that are already browser-safe H.264 ≤ 720p are only remuxed (seconds, no
+    quality loss) — re-encoding a 25-min episode on a small shared CPU would take ~15 min."""
     if dst.exists():
         return dst
     tmp = dst.with_suffix(".tmp.mp4")
-    run([
-        "ffmpeg", "-y", "-v", "error", "-i", str(src),
-        "-vf", f"scale=-2:{height}", "-c:v", "libx264", "-preset", "veryfast", "-crf", "27",
-        "-c:a", "aac", "-b:a", "96k", "-ac", "2", "-movflags", "+faststart", str(tmp),
-    ])
+    st = _streams(src)
+    v, a = st["v"], st["a"]
+    web_safe = (v.get("codec_name") == "h264" and v.get("pix_fmt") in ("yuv420p", "yuvj420p")
+                and int(v.get("height") or 9999) <= 720 and st["bitrate"] <= 3_000_000)
+    if web_safe:
+        audio = ["-c:a", "copy"] if a.get("codec_name") == "aac" else ["-c:a", "aac", "-b:a", "96k", "-ac", "2"]
+        run(["ffmpeg", "-y", "-v", "error", "-i", str(src), "-map", "0:v:0", "-map", "0:a:0?", "-c:v", "copy",
+             *audio, "-movflags", "+faststart", str(tmp)])
+    else:
+        run([
+            "ffmpeg", "-y", "-v", "error", "-i", str(src),
+            "-vf", f"scale=-2:{height}", "-c:v", "libx264", "-preset", "superfast", "-crf", "27",
+            "-c:a", "aac", "-b:a", "96k", "-ac", "2", "-movflags", "+faststart", str(tmp),
+        ])
     tmp.replace(dst)
     return dst
 
