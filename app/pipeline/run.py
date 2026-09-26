@@ -199,6 +199,42 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
 
 
 
+# ---- sticky safety verdicts ----
+# A brand-safety block, once found at a moment, must never disappear on a later run (e.g. after adding a
+# new brand, or when a lighter fallback model re-checks). Verdicts are keyed by moment + brand + that brand's
+# negative contexts, so changing a brand's rules still gets a fresh check.
+LITE_MIN_CONFIDENCE = 0.85
+
+
+def _neg_key(brand: dict) -> str:
+    negs = sorted(n.strip().lower() for n in brand.get("negative_contexts", []))
+    return hashlib.sha1(json.dumps(negs).encode()).hexdigest()[:8]
+
+
+def _load_sticky(wd: Path) -> dict:
+    sticky = _load(wd / "safety_verdicts.json") or {}
+    for mf in wd.glob("match_*.json"):  # seed from every earlier run of this episode
+        cat = _load(wd / f"catalogue_{mf.stem.split('_', 1)[1]}.json")
+        m = _load(mf)
+        if not cat or not m:
+            continue
+        negk = {b["brand_id"]: _neg_key(b) for b in cat}
+        for key, v in (m.get("verify") or {}).items():
+            cid, bid = key.split(":", 1)
+            if bid in negk and not v.get("error"):
+                sk = f"{cid}:{bid}:{negk[bid]}"
+                if sk not in sticky or v.get("violation"):
+                    sticky[sk] = v
+    return sticky
+
+
+def _strict(v: dict) -> dict:
+    """Fail closed on a 'safe' verdict from a lighter fallback model unless it is highly confident."""
+    if not v.get("violation") and "lite" in str(v.get("_model", "")) and float(v.get("confidence") or 0) < LITE_MIN_CONFIDENCE:
+        return {**v, "violation": True, "evidence": f"low-confidence 'safe' verdict from fallback model {v.get('_model')} — blocked (fail-closed). {v.get('evidence', '')}"}
+    return v
+
+
 def _finish(video_id, wd, perc, scen, items, matched, mp, brands, rules, log, timings, t_start, verify_fn, models):
     """F · pacing selection + independent verification + creative choice + outputs (engine-agnostic)."""
     duration = perc["duration"]
@@ -222,6 +258,7 @@ def _finish(video_id, wd, perc, scen, items, matched, mp, brands, rules, log, ti
         if not c["rejections"] and not viable:
             c["rejections"].append("no brand available after safety blocks")
 
+    sticky = _load_sticky(wd)
     budget = pacing.ad_budget(duration, rules)
     final: list[dict] = []
     for _ in range(3):
@@ -235,17 +272,22 @@ def _finish(video_id, wd, perc, scen, items, matched, mp, brands, rules, log, ti
             pick = None
             for r in viable[:2]:
                 key = f"{c['id']}:{r['brand_id']}"
-                v = matched["verify"].get(key)
+                sk = f"{key}:{_neg_key(by_id[r['brand_id']])}"
+                prior = sticky.get(sk)
+                v = prior if (prior and prior.get("violation")) else matched["verify"].get(key) or prior
                 if v is None:
                     log(f"F · verifying {r['brand_id']} at {manifest.ts(c['t'])}")
                     try:
-                        v = verify_fn(c, by_id[r["brand_id"]])
+                        v = _strict(verify_fn(c, by_id[r["brand_id"]]))
                     except Exception as e:
                         v = {"violation": True, "violated_contexts": [], "evidence": f"verifier error (fail-closed): {e}", "confidence": 0, "error": True}
                     if not v.get("error"):
                         matched["verify"][key] = v
                         if mp:
                             _save(mp, matched)
+                        if sk not in sticky or v.get("violation"):
+                            sticky[sk] = v
+                            _save(wd / "safety_verdicts.json", sticky)
                 r["verifier"] = v
                 if v["violation"]:
                     r["verifier_blocked"] = True

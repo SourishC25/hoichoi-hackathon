@@ -1,6 +1,6 @@
 {
  "video_id": "feluda",
- "generated_at": "2026-09-26T19:22:00+0530",
+ "generated_at": "2026-09-26T20:24:46+0530",
  "engine": "gemini",
  "models": {
   "global": "gemini-3.5-flash",
@@ -92,28 +92,33 @@
    "t": 854.4,
    "quality": 0.847,
    "where_score": 0.705,
-   "brand_id": "brand_g",
-   "brand_name": "Brand G",
-   "relevance": 0.95,
+   "brand_id": "brand_d",
+   "brand_name": "Brand D",
+   "relevance": 0.6,
    "matched_contexts": [
-    "travel",
-    "vacation",
-    "holiday",
-    "tourism",
-    "mountains",
-    "sightseeing"
+    "travel"
    ],
    "dominant_activity": "sightseeing",
    "creative": {
-    "id": "g_30s_bn",
+    "id": "d_30s_bn",
     "duration_sec": 30,
     "language": "bn",
-    "url": "ads/brand_g/g_30s_bn.mp4"
+    "url": "ads/brand_d/d_30s_bn.mp4"
    },
-   "reason": "The conversation in the room concludes naturally with a transition line, followed by scenic establishing shots of Kashmir, making it an excellent and non-disruptive place for an ad break. Brand: The scene showcases a scenic Shikara boat ride with mountain landscapes in Srinagar, aligning perfectly with travel and tourism.",
+   "reason": "The conversation in the room concludes naturally with a transition line, followed by scenic establishing shots of Kashmir, making it an excellent and non-disruptive place for an ad break. Brand: The scenic travel setting provides a moderate relevance match for mobile connectivity while traveling.",
    "last_line_before_cut": "তাহলে আপনাদের সাথে আবার দেখা হচ্ছে ভূস্বর্গে।",
    "first_line_after_cut": "",
-   "blocked_brands": []
+   "blocked_brands": [
+    {
+     "brand_id": "brand_g",
+     "why": [
+      {
+       "negative_context": "verifier",
+       "evidence": "The elderly character (Mr. Mitter) discusses his failing health, stating that his body/health has broken down ('শরীর ভেঙে গেছে') and he has to travel with a doctor ('ডাক্তার নিয়ে ঘুরতে হয়'), which directly relates to illness."
+      }
+     ]
+    }
+   ]
   }
  ],
  "scenes": [
@@ -2493,11 +2498,14 @@
      "blocked": false,
      "blocks": [],
      "verifier": {
-      "violation": false,
-      "violated_contexts": [],
-      "evidence": "The scenes directly before and after the ad break depict polite conversation about vacationing and sightseeing in Kashmir followed by scenic landscape shots of Dal Lake, with no references to funeral, hospital, violence, accident, illness, or grief.",
+      "violation": true,
+      "violated_contexts": [
+       "illness"
+      ],
+      "evidence": "The elderly character (Mr. Mitter) discusses his failing health, stating that his body/health has broken down ('শরীর ভেঙে গেছে') and he has to travel with a doctor ('ডাক্তার নিয়ে ঘুরতে হয়'), which directly relates to illness.",
       "confidence": 0.95
-     }
+     },
+     "verifier_blocked": true
     },
     {
      "brand_id": "brand_d",
@@ -2507,7 +2515,13 @@
      ],
      "rationale": "The scenic travel setting provides a moderate relevance match for mobile connectivity while traveling.",
      "blocked": false,
-     "blocks": []
+     "blocks": [],
+     "verifier": {
+      "violation": false,
+      "violated_contexts": [],
+      "evidence": "The scenes preceding and following the ad break contain lighthearted conversation about travel, writing mystery novels, and scenic views of Kashmir. There is no mention or depiction of funerals, hospitals, medical emergencies, or violence.",
+      "confidence": 0.95
+     }
     },
     {
      "brand_id": "brand_e",
@@ -4805,9 +4819,8 @@
   }
  ],
  "timings_sec": {
-  "brand_matching": 151.8,
-  "selection": 10.4,
-  "total_this_run": 162.3
+  "selection": 0.0,
+  "total_this_run": 0.0
  },
  "variant": "gemini-1701086b74"
 }

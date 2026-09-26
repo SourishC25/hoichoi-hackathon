@@ -117,7 +117,10 @@ def generate_json(parts: list, prompt: str, schema: dict, model: str | None = No
             USAGE["calls"] += 1
             USAGE["input_tokens"] += getattr(um, "prompt_token_count", 0) or 0
             USAGE["output_tokens"] += (getattr(um, "candidates_token_count", 0) or 0) + (getattr(um, "thoughts_token_count", 0) or 0)
-            return json.loads(resp.text)
+            out = json.loads(resp.text)
+            if isinstance(out, dict):
+                out["_model"] = use  # callers can be stricter with verdicts from lighter fallback models
+            return out
         except Exception as e:  # rate limits / transient 5xx / truncated JSON
             last = e
             msg = str(e)

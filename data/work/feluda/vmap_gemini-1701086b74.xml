@@ -4,27 +4,27 @@
     <vmap:AdSource id="midroll-1-src" allowMultipleAds="false" followRedirects="true">
       <vmap:VASTAdData>
         <VAST version="3.0">
-          <Ad id="brand_g-g_30s_bn" sequence="1">
+          <Ad id="brand_d-d_30s_bn" sequence="1">
             <InLine>
               <AdSystem version="1.0">hoichoi-contextual-adbreak</AdSystem>
-              <AdTitle>Brand G — g_30s_bn</AdTitle>
-              <Impression id="imp"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=g_30s_bn&ev=impression]]></Impression>
+              <AdTitle>Brand D — d_30s_bn</AdTitle>
+              <Impression id="imp"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=d_30s_bn&ev=impression]]></Impression>
               <Creatives>
-                <Creative id="g_30s_bn" sequence="1">
+                <Creative id="d_30s_bn" sequence="1">
                   <Linear>
                     <Duration>00:00:30.000</Duration>
                     <TrackingEvents>
-                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=g_30s_bn&ev=start]]></Tracking>
-                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=g_30s_bn&ev=complete]]></Tracking>
+                      <Tracking event="start"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=d_30s_bn&ev=start]]></Tracking>
+                      <Tracking event="complete"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=d_30s_bn&ev=complete]]></Tracking>
                     </TrackingEvents>
                     <MediaFiles>
-                      <MediaFile id="g_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_g/g_30s_bn.mp4]]></MediaFile>
+                      <MediaFile id="d_30s_bn-mp4" delivery="progressive" type="video/mp4" width="854" height="480"><![CDATA[{BASE}/ads/brand_d/d_30s_bn.mp4]]></MediaFile>
                     </MediaFiles>
                   </Linear>
                 </Creative>
               </Creatives>
               <Extensions>
-                <Extension type="contextual-targeting"><Brand>brand_g</Brand><BreakScore>0.847</BreakScore><Relevance>0.950</Relevance><DominantActivity>sightseeing</DominantActivity><Reason>The conversation in the room concludes naturally with a transition line, followed by scenic establishing shots of Kashmir, making it an excellent and non-disruptive place for an ad break. Brand: The scene showcases a scenic Shikara boat ride with mountain landscapes in Srinagar, aligning perfectly with travel and tourism.</Reason></Extension>
+                <Extension type="contextual-targeting"><Brand>brand_d</Brand><BreakScore>0.847</BreakScore><Relevance>0.600</Relevance><DominantActivity>sightseeing</DominantActivity><Reason>The conversation in the room concludes naturally with a transition line, followed by scenic establishing shots of Kashmir, making it an excellent and non-disruptive place for an ad break. Brand: The scenic travel setting provides a moderate relevance match for mobile connectivity while traveling.</Reason></Extension>
               </Extensions>
             </InLine>
           </Ad>
@@ -32,8 +32,8 @@
       </vmap:VASTAdData>
     </vmap:AdSource>
     <vmap:TrackingEvents>
-      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=g_30s_bn&ev=breakStart]]></vmap:Tracking>
-      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=g_30s_bn&ev=breakEnd]]></vmap:Tracking>
+      <vmap:Tracking event="breakStart"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=d_30s_bn&ev=breakStart]]></vmap:Tracking>
+      <vmap:Tracking event="breakEnd"><![CDATA[{BASE}/api/track?video=feluda&break=midroll-1&creative=d_30s_bn&ev=breakEnd]]></vmap:Tracking>
     </vmap:TrackingEvents>
   </vmap:AdBreak>
 </vmap:VMAP>
