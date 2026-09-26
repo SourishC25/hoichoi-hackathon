@@ -13,3 +13,4 @@ data/work/*.mp4
 data/work/*.jpg
 web/ads/
 *.tmp.mp4
+data/work/heldout_test*/
