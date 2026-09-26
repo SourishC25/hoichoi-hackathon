@@ -3,6 +3,7 @@ import { Download, FileJson, Film, Info, Loader2, Play, Radio, Sparkles, Upload 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { api, detectRuntime, isStatic as staticMode, loadVmap, U } from "@/lib/api";
 import { brandColor, cx, fmt, title } from "@/lib/format";
+import { planSummary, stageLabel } from "@/lib/plain";
 import type { AdBreak, Brand, Job, Result, Rules, VideoItem } from "@/lib/types";
 import { HowDialog, UploadDialog } from "./Dialogs";
 import { BreaksPanel, CandidatesPanel, ConfigPanel, ScenesPanel, UNSEEN_BRAND, VmapPanel } from "./Panels";
@@ -10,7 +11,7 @@ import Player, { type PlayerHandle } from "./Player";
 import Timeline from "./Timeline";
 import { Button, Chip } from "./ui";
 
-const TABS = [["breaks", "Ad breaks"], ["candidates", "All candidates"], ["scenes", "Scenes"], ["config", "Brands & pacing"], ["vmap", "VMAP"]] as const;
+const TABS = [["breaks", "Ad plan"], ["candidates", "Every moment considered"], ["scenes", "Scenes"], ["config", "Advertisers & rules"], ["vmap", "Schedule file"]] as const;
 type Tab = (typeof TABS)[number][0];
 
 export default function App() {
@@ -113,8 +114,8 @@ export default function App() {
   if (!ready || !r || !id) return <Splash />;
   const s = r.summary;
   const stats: [string, string][] = [
-    [fmt(r.video.duration, false), "Runtime"], [String(s.scenes), "Semantic scenes"], [String(s.camera_cuts), "Camera cuts"],
-    [`${s.breaks}/${s.allowed_breaks}`, "Breaks placed"], [`${s.ad_load_pct}%`, `Ad load · max ${r.rules.max_ad_load_pct}%`], [String(s.candidates), "Candidates judged"],
+    [fmt(r.video.duration, false), "Runtime"], [String(s.scenes), "Story scenes"], [String(s.camera_cuts), "Shot changes"],
+    [`${s.breaks} of ${s.allowed_breaks}`, "Ad breaks placed"], [`${s.ad_load_pct}%`, `Ad time · max ${r.rules.max_ad_load_pct}%`], [String(s.candidates), "Moments considered"],
   ];
 
   return (
@@ -132,7 +133,7 @@ export default function App() {
           <div className="flex items-center gap-2">
             {isStatic ? <Chip tone="warn">Static mirror</Chip> : <Chip tone="ok"><Radio size={11} /> Live</Chip>}
             <Button variant="ghost" size="sm" onClick={() => setHowOpen(true)}><Info size={15} /> <span className="hidden sm:inline">How it works</span></Button>
-            <Button variant="primary" size="sm" onClick={() => setUpOpen(true)}><Upload size={15} /> <span className="hidden sm:inline">Upload episode</span></Button>
+            <Button variant="primary" size="sm" onClick={() => setUpOpen(true)}><Upload size={15} /> <span className="hidden sm:inline">Add an episode</span></Button>
           </div>
         </div>
       </header>
@@ -154,13 +155,14 @@ export default function App() {
           <section className="animate-fade-up">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div className="max-w-3xl">
-                <div className="mb-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-coral"><Film size={13} /> Now analysing{variant === "plus9" && " · 9-brand catalogue"}</div>
+                <div className="mb-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-coral"><Film size={13} /> Ad plan{variant === "plus9" && " · with the sample tea brand"}</div>
                 <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{title(id)}</h1>
                 {r.synopsis && <p className="mt-3 text-[15px] leading-relaxed text-mist-300">{r.synopsis}</p>}
+                <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-mint/10 px-3.5 py-1.5 text-[13px] font-medium text-mint ring-1 ring-inset ring-mint/25">{planSummary(r)}</p>
               </div>
               <div className="flex gap-2">
-                <a href={U.vmapDownload(id, variant)} target="_blank" className="glass inline-flex h-9 items-center gap-2 rounded-full px-4 text-xs font-medium transition hover:bg-white/10"><Download size={14} /> VMAP</a>
-                <a href={U.debug(id, variant)} target="_blank" className="glass inline-flex h-9 items-center gap-2 rounded-full px-4 text-xs font-medium transition hover:bg-white/10"><FileJson size={14} /> Debug JSON</a>
+                <a href={U.vmapDownload(id, variant)} target="_blank" className="glass inline-flex h-9 items-center gap-2 rounded-full px-4 text-xs font-medium transition hover:bg-white/10"><Download size={14} /> Ad schedule <span className="text-mist-500">(for your player)</span></a>
+                <a href={U.debug(id, variant)} target="_blank" className="glass inline-flex h-9 items-center gap-2 rounded-full px-4 text-xs font-medium transition hover:bg-white/10"><FileJson size={14} /> Full report</a>
               </div>
             </div>
             <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-6">
@@ -177,8 +179,8 @@ export default function App() {
           <section ref={stage} className="mt-6 grid scroll-mt-28 gap-5 xl:grid-cols-[1fr_300px]">
             <Player ref={player} src={U.media(id)} breaks={breaks} onTime={setTime} onPlayed={setPlayed} />
             <div className="glass rounded-3xl p-4">
-              <div className="mb-3 px-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-mist-500">Jump to 6 s before a break</div>
-              {breaks.length === 0 && <p className="px-1 text-[13px] text-mist-500">No break met the quality and safety bar.</p>}
+              <div className="mb-3 px-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-mist-500">Watch a break (starts 6 s before)</div>
+              {breaks.length === 0 && <p className="px-1 text-[13px] text-mist-500">No moment met the safety and quality bar.</p>}
               <div className="space-y-2.5">
                 {breaks.map((b) => (
                   <button key={b.id} onClick={() => watch(b.i)}
@@ -216,7 +218,7 @@ export default function App() {
             {tab === "candidates" && <CandidatesPanel r={r} onSeek={seek} />}
             {tab === "scenes" && <ScenesPanel r={r} onSeek={seek} />}
             {tab === "config" && <ConfigPanel catalogue={catalogue} setCatalogue={setCatalogue} rules={rules} setRules={setRules} defaults={defaults} onRun={rerun} busy={busy} isStatic={isStatic} />}
-            {tab === "vmap" && <VmapPanel xml={xml} />}
+            {tab === "vmap" && <VmapPanel xml={xml} href={U.vmapDownload(id, variant)} />}
           </section>
         </main>
       </div>
@@ -257,7 +259,14 @@ function Jobs({ jobs }: { jobs: Job[] }) {
             </span>
             <Chip tone={j.status === "done" ? "ok" : j.status === "error" ? "bad" : "warn"}>{j.status}</Chip>
           </div>
-          <pre className="mt-2 max-h-40 overflow-y-auto whitespace-pre-wrap font-mono text-[10.5px] leading-relaxed text-mist-500">{(j.log || []).slice(-10).join("\n") || "queued…"}</pre>
+          <ol className="mt-2 space-y-1 text-[11.5px]">
+            {[...new Set((j.log || []).map(stageLabel))].slice(-6).map((l, i, arr) => (
+              <li key={i} className={cx("flex items-start gap-1.5", i === arr.length - 1 && j.status === "running" ? "text-coral" : "text-mist-500")}>
+                <span>{i === arr.length - 1 && j.status === "running" ? "›" : "✓"}</span><span>{l}</span>
+              </li>
+            ))}
+            {!(j.log || []).length && <li className="text-mist-500">Waiting in queue…</li>}
+          </ol>
         </div>
       ))}
     </div>

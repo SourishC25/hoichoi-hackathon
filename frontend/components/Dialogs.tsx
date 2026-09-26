@@ -39,10 +39,10 @@ export function UploadDialog({ open, onClose, onSubmit, isStatic }: {
 
   return (
     <Modal open={open} onClose={onClose}>
-      <h3 className="text-xl font-semibold">Upload an episode</h3>
+      <h3 className="text-xl font-semibold">Add an episode</h3>
       <p className="mt-1.5 text-[13px] leading-relaxed text-mist-500">
-        Any length of Bengali drama. The full pipeline runs live — camera cuts, speech, scene understanding, cut judgement,
-        brand safety, pacing — and you can watch every step.
+        Any length of Bengali drama. Birati watches and listens to it, finds the safe moments, matches your advertisers and
+        builds the ad plan — you can follow each step as it runs (a few minutes for a full episode).
       </p>
       <button
         onClick={() => input.current?.click()}
@@ -87,9 +87,20 @@ const STEPS = [
 export function HowDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
   return (
     <Modal open={open} onClose={onClose} wide>
-      <h3 className="text-2xl font-semibold">How Birati decides <span className="text-gradient">where, whether & what</span></h3>
-      <p className="mt-2 text-sm text-mist-500">The model makes the judgement calls; deterministic signals provide the precision.</p>
-      <ol className="relative mt-7 space-y-5 before:absolute before:bottom-3 before:left-[19px] before:top-3 before:w-px before:bg-gradient-to-b before:from-coral before:via-rose before:to-violet">
+      <h3 className="text-2xl font-semibold">How Birati works</h3>
+      <ol className="mt-5 grid gap-3 sm:grid-cols-3">
+        {[["1", "Add an episode", "Upload a file or paste a link. Birati watches and listens to the whole thing."],
+          ["2", "Add your advertisers", "Each ad says where it wants to appear and where it must never appear. Brands are data — add one any time."],
+          ["3", "Get a safe ad plan", "Watch every break in the player, read why it was chosen, and download the schedule file your video player uses to insert the ads."]].map(([n, t, d]) => (
+          <li key={n} className="rounded-2xl bg-white/[0.04] p-4 ring-1 ring-inset ring-white/8">
+            <div className="bg-accent mb-2 flex size-7 items-center justify-center rounded-full text-[13px] font-bold text-white">{n}</div>
+            <div className="font-semibold">{t}</div>
+            <p className="mt-1 text-[13px] leading-relaxed text-mist-300">{d}</p>
+          </li>
+        ))}
+      </ol>
+      <p className="mt-7 text-[11px] font-semibold uppercase tracking-[0.18em] text-mist-500">Under the hood — the model judges, signals guarantee</p>
+      <ol className="relative mt-4 space-y-5 before:absolute before:bottom-3 before:left-[19px] before:top-3 before:w-px before:bg-gradient-to-b before:from-coral before:via-rose before:to-violet">
         {STEPS.map(({ icon: Icon, t, d }, i) => (
           <li key={t} className="relative flex animate-fade-up gap-4" style={{ animationDelay: `${i * 70}ms` }}>
             <span className="glass-strong relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full text-coral"><Icon size={17} /></span>
