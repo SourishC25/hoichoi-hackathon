@@ -45,6 +45,28 @@ at most two verifier attempts per break, and automatic fall-through across free 
 its daily quota keep a new episode within free limits (~25 calls). Every stage is cached, so re-running
 with a new brand catalogue re-uses the scene analysis.
 
+## "Isn't this just prompting Gemini?" — no, and we measured why
+
+A single prompt ("give me ad-break timestamps and a brand for each") fails every one of the judges'
+hard tests. The system around the model is what makes it shippable:
+
+| Naive LLM call | What breaks | What Birati does instead |
+|---|---|---|
+| Use the model's timestamps | **41 % of Gemini's own scene boundaries fall inside speech** on the six samples (45/110) — mid-dialogue cuts | Boundaries are only *hints*: each is snapped to a frame-exact camera cut inside a speech-free gap (21 rescued, 26 rejected outright). A mid-sentence cut is structurally impossible. |
+| Ask "is this cut OK?" with a timestamp | ±1 s timestamp perception → the model judges the wrong moment (our first run scored 0.9 for nearly every cut) | An **"AD BREAK" card is spliced into the clip** at the exact frame, plus an anchored 0–1 rubric — the model judges the real cut. |
+| Ask for "max 6 breaks/hour, 5 min apart" | LLMs *usually* comply; pacing needs a guarantee | Exact dynamic programme over candidates; the self-audit re-checks every rule from raw signals. |
+| "Avoid brands near funerals" in the prompt | One model call, one chance to miss a spoken death | Three independent fail-closed layers (scene tags, lead-in review, adversarial verifier) + deterministic re-check; any doubt drops the break. |
+| Trust the output | No audit trail for ad-ops | Debug JSON with evidence for every candidate, rejection, block and verifier verdict; VMAP/VAST that a real player consumes. |
+
+**Why a multimodal LLM at all, rather than a "video segmentation model"?** Segmentation models on the Hub
+segment *pixels* (SAM-style) or detect *camera cuts* (shot-boundary models — we do that with ffmpeg
+`scdet`). Neither knows that two characters are *talking about* a death. In Bengali drama the contexts that
+disqualify a placement are overwhelmingly **spoken**, not shown. We built the open-weights alternative
+(CLIP + CLAP + Silero VAD, z-score calibrated against the LLM's labels, `scripts/calibrate_local.py`) and
+measured it: it placed ads next to grief or violence in 3 of 8 breaks, or placed nothing when made strict
+enough to be safe. Free CPU Bengali ASR (Whisper-small, wav2vec2-bn) was not reliable on drama audio. The
+model choice follows from the data, and the offline engine ships as `BIRATI_ENGINE=local` for transparency.
+
 ## Pipeline
 
 ```

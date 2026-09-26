@@ -56,11 +56,12 @@ Keep the browser at full screen with the live demo link open. Target: **4:30–4
 - Show **VMAP ↓** and **Debug JSON ↓**: "a standard VMAP any player can consume, and a debug JSON that
   explains every single decision."
 
-## 4:20 – 4:40 · Why an LLM is the core (show the README table)
-> "I also built a fully offline engine on open-source CLIP and CLAP models and measured it against the
-> LLM: it placed ads next to grief or violence three times out of eight, because in these dramas those
-> contexts are *spoken*, not shown. That's why the LLM is the core — and the offline engine ships as a
-> fallback."
+## 4:20 – 4:40 · "Isn't this just Gemini?" (show the README table)
+> "Two numbers. First: 41 % of Gemini's *own* scene boundaries land inside someone's speech — used raw,
+> that's a mid-dialogue cut almost half the time. The signal layer snaps or rejects every one of them.
+> Second: I built the open-source alternative — CLIP, CLAP, voice activity — and measured it: it placed ads
+> next to grief or violence in three of eight breaks, because in Bengali drama those contexts are *spoken*,
+> not shown. The model is the core because the data says so; the system around it is what makes it safe."
 
 ## 4:40 – 4:55 · Close
 > "Birati: Gemini for understanding, signals for precision, hard guarantees for safety.
