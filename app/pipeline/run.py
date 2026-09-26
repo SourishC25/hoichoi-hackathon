@@ -99,10 +99,10 @@ def result_variant(brands: list[dict], rules: dict | None) -> str:
 
 
 def process(video_id: str, source: Path, brands: list[dict], rules: dict | None = None,
-            log=print, force: set[str] | None = None) -> dict:
+            log=print, force: set[str] | None = None, work_root: Path | None = None) -> dict:
     rules = {**pacing.DEFAULT_RULES, **(rules or {})}
     force = force or set()
-    wd = WORK / video_id
+    wd = (work_root or WORK) / video_id
     wd.mkdir(parents=True, exist_ok=True)
     t_start = time.time()
     timings = {}

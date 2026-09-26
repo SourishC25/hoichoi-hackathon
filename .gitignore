@@ -17,3 +17,4 @@ data/work/heldout_test*/
 dist/
 data/work/*/local_embeds.npz
 data/embed.log
+data/*.mp4

@@ -3,6 +3,7 @@ catalogue / pacing rules, VMAP + debug JSON downloads, and the demo player UI.""
 from __future__ import annotations
 
 import json
+import os
 import queue
 import re
 import threading
@@ -17,12 +18,23 @@ from fastapi.staticfiles import StaticFiles
 from .pipeline import media, pacing, run
 
 ROOT = run.ROOT
-WORK = run.WORK
+WORK = run.WORK                      # sample episodes baked into the image / repo
 WEB = run.WEB
-UPLOADS = ROOT / "data" / "uploads"
+# Uploads + their results live on a persistent volume when one is mounted (BIRATI_DATA_DIR or /data),
+# otherwise beside the samples. Sample results are read-only and never depend on the volume.
+_vol = Path(os.getenv("BIRATI_DATA_DIR") or "/data")
+DATA_DIR = _vol if (_vol.exists() and os.access(_vol, os.W_OK)) else ROOT / "data"
+UPLOADS = DATA_DIR / "uploads"
+UPLOAD_WORK = DATA_DIR / "work" if DATA_DIR != ROOT / "data" else WORK
 DEFAULT_BRANDS = ROOT / "data" / "brands.json"
 UPLOADS.mkdir(parents=True, exist_ok=True)
 WORK.mkdir(parents=True, exist_ok=True)
+UPLOAD_WORK.mkdir(parents=True, exist_ok=True)
+
+
+def work_dir(video_id: str) -> Path:
+    """Where this video's cached stages live: the sample root if it is a sample, else the upload root."""
+    return WORK / video_id if (WORK / video_id).exists() else UPLOAD_WORK / video_id
 
 app = FastAPI(title="Birati — contextual ad breaks")
 
@@ -82,14 +94,14 @@ def _source_for(video_id: str) -> Path:
         p = base / f"{video_id}.mp4"
         if p.exists():
             return p
-    proxy = WORK / video_id / "proxy.mp4"
+    proxy = work_dir(video_id) / "proxy.mp4"
     if proxy.exists():
         return proxy
     raise HTTPException(404, "unknown video")
 
 
 def _result_path(video_id: str, variant: str | None) -> Path:
-    wd = WORK / video_id
+    wd = work_dir(video_id)
     if variant:
         p = wd / f"result_{_safe_id(variant)}.json"
         if p.exists():
@@ -111,7 +123,8 @@ def _result_path(video_id: str, variant: str | None) -> Path:
 @app.get("/api/videos")
 def list_videos():
     out = []
-    for wd in sorted(WORK.iterdir()) if WORK.exists() else []:
+    roots = [WORK] + ([UPLOAD_WORK] if UPLOAD_WORK != WORK else [])
+    for wd in sorted(p for r in roots for p in r.iterdir()):
         if not wd.is_dir():
             continue
         try:
@@ -141,7 +154,7 @@ def download_debug(video_id: str, variant: str | None = None):
 def get_vmap(video_id: str, request: Request, variant: str | None = None, download: int = 0):
     video_id = _safe_id(video_id)
     r = json.loads(_result_path(video_id, variant).read_text(encoding="utf-8"))
-    wd = WORK / video_id
+    wd = work_dir(video_id)
     p = wd / f"vmap_{r.get('variant')}.xml"
     if not p.exists():
         p = wd / "vmap.xml"
@@ -154,13 +167,13 @@ def get_vmap(video_id: str, request: Request, variant: str | None = None, downlo
 @app.get("/api/videos/{video_id}/catalogue")
 def get_catalogue(video_id: str, variant: str | None = None):
     r = json.loads(_result_path(_safe_id(video_id), variant).read_text(encoding="utf-8"))
-    p = WORK / _safe_id(video_id) / f"catalogue_{r['catalogue_hash']}.json"
+    p = work_dir(_safe_id(video_id)) / f"catalogue_{r['catalogue_hash']}.json"
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else default_brands()
 
 
 @app.get("/media/{video_id}.mp4")
 def get_media(video_id: str):
-    p = WORK / _safe_id(video_id) / "proxy.mp4"
+    p = work_dir(_safe_id(video_id)) / "proxy.mp4"
     if not p.exists():
         raise HTTPException(404)
     return FileResponse(p, media_type="video/mp4")
@@ -169,10 +182,10 @@ def get_media(video_id: str):
 @app.get("/api/thumb/{video_id}/{t}")
 def get_thumb(video_id: str, t: float):
     video_id = _safe_id(video_id)
-    proxy = WORK / video_id / "proxy.mp4"
+    proxy = work_dir(video_id) / "proxy.mp4"
     if not proxy.exists():
         raise HTTPException(404)
-    d = WORK / video_id / "thumbs"
+    d = work_dir(video_id) / "thumbs"
     d.mkdir(exist_ok=True)
     return FileResponse(media.thumbnail(proxy, d / f"{t:.2f}.jpg", t), media_type="image/jpeg",
                         headers={"Cache-Control": "public, max-age=86400"})
@@ -218,15 +231,15 @@ def _parse_rules(text: str | None) -> dict:
 @app.post("/api/upload")
 async def upload(file: UploadFile = File(...), brands: str | None = Form(None), rules: str | None = Form(None)):
     vid = _safe_id(Path(file.filename or "video").stem)
-    if (WORK / vid).exists():
+    if (WORK / vid).exists() or (UPLOAD_WORK / vid).exists():
         vid = f"{vid}_{uuid.uuid4().hex[:4]}"
     dst = UPLOADS / f"{vid}.mp4"
     with dst.open("wb") as f:
         while chunk := await file.read(1 << 20):
             f.write(chunk)
     bl, rl = _parse_brands(brands), _parse_rules(rules)
-    (WORK / vid).mkdir(parents=True, exist_ok=True)
-    return _submit(vid, "full", lambda log: run.process(vid, dst, bl, rl, log=log))
+    (UPLOAD_WORK / vid).mkdir(parents=True, exist_ok=True)
+    return _submit(vid, "full", lambda log: run.process(vid, dst, bl, rl, log=log, work_root=UPLOAD_WORK))
 
 
 def _download_url(url: str, dst: Path, log) -> None:
@@ -265,16 +278,16 @@ def _download_url(url: str, dst: Path, log) -> None:
 async def ingest_url(url: str = Form(...), brands: str | None = Form(None), rules: str | None = Form(None)):
     stem = Path(url.split("?")[0].rstrip("/")).stem
     vid = _safe_id(stem if stem and stem not in ("view", "download", "edit") else "episode")
-    if (WORK / vid).exists():
+    if (WORK / vid).exists() or (UPLOAD_WORK / vid).exists():
         vid = f"{vid}_{uuid.uuid4().hex[:4]}"
     dst = UPLOADS / f"{vid}.mp4"
     bl, rl = _parse_brands(brands), _parse_rules(rules)
-    (WORK / vid).mkdir(parents=True, exist_ok=True)
+    (UPLOAD_WORK / vid).mkdir(parents=True, exist_ok=True)
 
     def job(log):
         log("A · fetching video from URL")
         _download_url(url, dst, log)
-        return run.process(vid, dst, bl, rl, log=log)
+        return run.process(vid, dst, bl, rl, log=log, work_root=UPLOAD_WORK)
 
     return _submit(vid, "full", job)
 
@@ -286,7 +299,8 @@ async def rerun(video_id: str, brands: str | None = Form(None), rules: str | Non
     src = _source_for(vid)
     bl, rl = _parse_brands(brands), _parse_rules(rules)
     force = set("ABCE") if full else set()
-    return _submit(vid, "full" if full else "rerun", lambda log: run.process(vid, src, bl, rl, log=log, force=force))
+    root = work_dir(vid).parent
+    return _submit(vid, "full" if full else "rerun", lambda log: run.process(vid, src, bl, rl, log=log, force=force, work_root=root))
 
 
 @app.get("/api/jobs/{job_id}")
