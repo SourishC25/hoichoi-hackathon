@@ -1,77 +1,81 @@
-# Birati — 5-minute explainer video script
+# Birati — 5-minute demo: flow + script
 
-Record the screen with **Windows + Alt + R** (Xbox Game Bar) or OBS, with your mic on.
-Speak naturally; the lines below are a guide, not something to read word for word.
-Keep the browser at full screen with the live demo link open. Target: **4:30–4:50**.
+**URL:** https://hoichoi-hackathon-production.up.railway.app · record with **Win + Alt + R** · target **4:45**
+**Upload file ready:** `data\videos\money_honey.mp4` (22 min, not in the demo list → a genuinely live run)
 
----
-
-## 0:00 – 0:30 · The problem (show the home page)
-> "Hi, I'm [your name]. For hoichoi's ad-supported tier, every mid-roll has three decisions:
-> **where** to cut without interrupting a sentence, **whether** a break is warranted at all under pacing
-> rules, and **what** brand fits — without ever putting a food ad after a funeral.
-> I built **Birati** — Bengali for 'pause' — an AI-native system that makes all three decisions."
-
-## 0:30 – 1:20 · How it works (click "How it works", then close it)
-> "The design principle: **the LLM makes the judgement calls, deterministic signals provide the
-> precision**.
-> First, Gemini watches and *listens to* the entire episode — Bengali dialogue included — and groups
-> the camera shots into semantically coherent scenes: what's happening, the dominant activity, the mood,
-> and every sensitive topic, even ones that are only *talked about*.
-> In parallel, frame-exact camera cuts and a language-agnostic voice-activity model tell us exactly when
-> someone is speaking. A break can only land on a real camera cut inside a speech-free gap — so a
-> mid-sentence cut is structurally impossible, not just unlikely."
-
-## 1:20 – 2:30 · WHERE + the player (open *mohanagar* or *money_honey*)
-- Point at the **timeline**: "scenes on top — red ones contain something a brand has blocked; blue is
-  speech; green dots are the breaks it chose, amber were good but lost to pacing, red were rejected."
-- Hover a **red candidate**: "this one was rejected — every nearby cut overlaps speech."
-- Click **"Jump to 6 s before a break"** and let it play:
-> "Watch — the scene ends, the dialogue has finished… and it cuts to the ad. The player is reading the
-> standard **VMAP** manifest, cutting on the exact frame, firing VAST tracking beacons, and when the ad
-> ends it resumes from the exact cut frame."
-- Let the ad play ~5 s, then skip ahead to show the resume.
-
-## 2:30 – 3:20 · WHAT + safety (scroll to the break cards)
-> "For each slot, Gemini re-watches a clip with an 'AD BREAK' card spliced in at the cut, so it knows
-> exactly where the ad sits. It scores every brand — the dominant activity wins — here the lead-in is
-> people eating at a restaurant, so the food brand wins…"
-- Open **"Full brand ranking for this slot"**:
-> "…and negative contexts are a **hard block from three independent layers**: the episode-level
-> scene tags, the lead-in clip review, and a separate adversarial verifier that is told to look for
-> reasons *not* to air the ad. Any doubt fails closed. Here the skincare brand is blocked because its
-> advertiser excluded 'eating'."
-- Point at the **Self-audit** card: "and every hard rule is re-checked from raw signals — zero speech at
-  every cut, pacing and ad-load respected, no negative-context violations."
-
-## 3:20 – 3:50 · Generalises to an unseen brand (Brands & pacing tab)
-- Click **"+ Add unseen 9th brand"** → **Re-run brand matching & pacing** and show the live log in the sidebar.
-> "The catalogue is data, not code. Here's a ninth brand — a tea brand — added with zero code changes;
-> it's scored in every slot and hard-blocked wherever its negative contexts appear."
-
-## 3:50 – 4:20 · Live processing (https://hoichoi-hackathon-production.up.railway.app)
-- Upload a short clip (5–8 min keeps it within the free Gemini quota) and show the live progress log:
-> "Any episode can be processed live — upload a file or paste a Google-Drive link. It runs on the free tier
-> of Gemini, with rate-limiting and automatic fall-back between free models."
-- Show **VMAP ↓** and **Debug JSON ↓**: "a standard VMAP any player can consume, and a debug JSON that
-  explains every single decision."
-
-## 4:20 – 4:40 · "Isn't this just Gemini?" (show the README table)
-> "Two numbers. First: 41 % of Gemini's *own* scene boundaries land inside someone's speech — used raw,
-> that's a mid-dialogue cut almost half the time. The signal layer snaps or rejects every one of them.
-> Second: I built the open-source alternative — CLIP, CLAP, voice activity — and measured it: it placed ads
-> next to grief or violence in three of eight breaks, because in Bengali drama those contexts are *spoken*,
-> not shown. The model is the core because the data says so; the system around it is what makes it safe."
-
-## 4:40 – 4:55 · Close
-> "Birati: Gemini for understanding, signals for precision, hard guarantees for safety.
-> The code is on GitHub and the demo is live. Thank you!"
+> Order matters: do the *sample-brand update* **before** starting the upload — jobs run one at a time,
+> so an update queued behind a 5-minute upload would make you wait on camera.
 
 ---
 
-### Checklist before recording
-- [ ] https://hoichoi-hackathon-production.up.railway.app loads and the sample episodes appear
-- [ ] Have a 5–8 min clip ready for the live-upload segment (free Gemini quota)
-- [ ] Play one break end to end once beforehand (so the video is cached)
-- [ ] Browser zoom ~90% so the timeline and cards fit
-- [ ] Close other tabs / notifications
+## 0:00 – 0:25 · Hook (home page, Feluda open)
+> "Hi, I'm [your name]. On an ad-supported OTT tier every mid-roll is three decisions: **where** to pause
+> without cutting someone mid-sentence, **whether** a break is allowed under the pacing rules, and **what**
+> advertiser belongs there — without ever putting a food ad after a funeral. This is **Birati** — Bengali for
+> 'pause' — and it makes all three decisions from the video itself."
+
+## 0:25 – 1:00 · Safety over inventory (Feluda)
+- Point at the green line: **"1 ad break placed in 26 minutes … 2 allowed by the pacing rules."**
+- Point at the **timeline** → the two **red-hatched** scenes.
+> "The rules allowed two breaks, it placed one. These hatched scenes are the retired judge talking about
+> death sentences and his guilt — any break near them would put an advertiser next to a topic it forbids,
+> so Birati chose *not* to sell that slot. Choosing nothing over a risky placement is deliberate."
+- Hover a red dot on the Candidates lane: "and every rejected moment says why."
+
+## 1:00 – 1:30 · A new advertiser, zero code (Advertisers & rules)
+- Open **Advertisers & rules** → show a brand card (**Wants / Never near**).
+> "Each advertiser is just data — where it wants to appear, where it must never appear."
+- Click **Add a sample brand (beverages/tea)** → **Update the ad plan** → watch the sidebar job finish.
+> "I've added a brand the system has never seen. No code change — it's scored in every moment of the
+> episode, and kept out wherever its forbidden topics appear."
+
+## 1:30 – 1:50 · Start the live run (Add an episode)
+- **Add an episode** → drop `money_honey.mp4` → **Upload & process**.
+> "Now a fresh episode, live. Watch the sidebar — it's watching the video, understanding the story,
+> finding safe moments, matching advertisers and running safety checks. It takes a few minutes, so while
+> it works, let me show a finished one."
+
+## 1:50 – 3:20 · The ad plan (open Mandaar)
+- **Ad plan** tab → **Safety checks — 8 of 8 passed**.
+> "After deciding, it re-checks every guarantee from the video itself: nobody speaking at any cut, every cut
+> on a shot change, gaps, breaks per hour, ad time, the opening and ending untouched, and no advertiser next
+> to a forbidden topic."
+- First break card — read the three rows:
+> "**Why this moment** — the scene has ended and nobody speaks around the cut. **Why this advertiser** — the
+> scene just before is *[read the activity on screen]*, which matches this brand's *[read the matched words]*.
+> **Kept out here** — these brands weren't allowed, and here's the topic that blocked each one."
+- If the card shows **Last words before the cut** in Bengali: "those are the actual last words before the pause."
+  If it says *nobody speaking*: "and here nobody is speaking at all around the cut."
+- Click **▶ Watch this break**:
+> "It plays up to the cut … pauses on that exact frame … plays the ad … and resumes exactly where it left off."
+- (Optional) **Show the numbers behind this decision** — one sentence: "the scores are here for anyone who wants them."
+
+## 3:20 – 3:50 · "Isn't this just an AI prompt?"
+> "Two numbers. Forty-one percent of the model's own scene boundaries fall *inside* someone's speech — used
+> raw, that's a mid-sentence cut almost half the time; Birati snaps each one to a silent shot change or
+> rejects it. And I built a fully open-source version with vision and audio models — it placed ads next to
+> grief or violence three times in eight, because in Bengali drama those topics are *spoken*, not shown. The
+> model reads the story; the system around it guarantees the safety."
+
+## 3:50 – 4:30 · Live result + hand-off (back to Money Honey when the job says Done)
+- Open the new episode → green summary line + its break cards (and play one if there's time).
+- Open **Schedule file**:
+> "This is the hand-off: the industry-standard ad schedule a real video player or ad server reads — when to
+> pause, which ad file, and which events to report back. And **Full report** is the audit trail: every
+> moment considered and why."
+- *If the upload is still running:* show the sidebar steps and say "it finishes in a minute — the plan
+  lands here exactly like the ones you've seen."
+- *If it shows the daily-quota message:* "it's on a free AI tier and today's quota is used up; it resets
+  tomorrow" — then stay on Mandaar.
+
+## 4:30 – 4:50 · Close
+> "Birati: an AI that understands the story, signals that guarantee the cut, and safety rules that can't be
+> bent. The code is on GitHub and the app is live. Thank you."
+
+---
+
+### Before you press record
+- [ ] Hard-refresh the page (Ctrl + Shift + R) and open **Feluda**
+- [ ] `money_honey.mp4` ready in File Explorer
+- [ ] Browser zoom ~90 %, other tabs and notifications closed
+- [ ] Keep the Birati tab in front while the upload runs
