@@ -119,3 +119,6 @@ ol.how li { margin-bottom: 10px; color: #cfd5e2; } ol.how b { color: var(--text)
 }
 .or { text-align: center; color: var(--muted); font-size: 12px; margin: 4px 0; }
 .url-in { width: 100%; margin: 6px 0 12px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; background: #0b0d12; color: var(--text); font: 13px var(--mono); }
+.audit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+.audit-grid > div { background: var(--panel-2); border-radius: 6px; padding: 8px 10px; font-size: 13px; }
+.audit-grid .pass b { color: var(--ok); } .audit-grid .fail b { color: var(--bad); }

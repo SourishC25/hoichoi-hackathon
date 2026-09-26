@@ -1,0 +1,533 @@
+{
+ "rules": {
+  "no_break_first_sec": 120,
+  "no_break_last_sec": 90
+ },
+ "items": [
+  {
+   "id": "c000",
+   "t0": 0.84,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 0.84,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.84,
+    "silence_after": 14.46,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c001",
+   "t0": 15.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 11.0,
+   "scene_before": 0,
+   "scene_after": 1,
+   "signals": {
+    "snap_delta": -4.0,
+    "silence_before": 11.0,
+    "silence_after": 4.3,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.29,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c002",
+   "t0": 100.72,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 100.72,
+   "scene_before": 1,
+   "scene_after": 2,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.84,
+    "speech_density_10s_after": 0.96,
+    "loudness_dip_db": 35.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c003",
+   "t0": 173.72,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 176.16,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 2.44,
+    "silence_before": 1.56,
+    "silence_after": 45.54,
+    "speech_density_10s_before": 0.47,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 12.7,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "এটা তো শ্রীরামপুর",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.8,
+    "jarring": 0.3,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.75,
+    "reason": "The cut occurs during an establishing aerial montage of Serampore, right after the protagonist's realization, making it a relatively natural transition point despite the continuing music and sequence."
+   },
+   "where_score": 0.609
+  },
+  {
+   "id": "c004",
+   "t0": 211.88,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 211.88,
+   "scene_before": 3,
+   "scene_after": 4,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 37.28,
+    "silence_after": 9.82,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.02,
+    "loudness_dip_db": 18.1,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "ভারতবর্ষে শুধু ব্রিটিশরাই উপনিবেশ তৈরি",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 1,
+    "jarring": 0,
+    "suspense_hook": 0,
+    "natural_break_score": 0.95,
+    "reason": "The cut is placed perfectly between the end of the show's title sequence and the beginning of the episode's first scene."
+   },
+   "where_score": 0.909
+  },
+  {
+   "id": "c005",
+   "t0": 265.16,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 265.16,
+   "scene_before": 4,
+   "scene_after": 5,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 3.36,
+    "silence_after": 1.24,
+    "speech_density_10s_before": 0.35,
+    "speech_density_10s_after": 0.63,
+    "loudness_dip_db": 11.0,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "বেরিয়ে পড়ি",
+    "first_line_after_cut": "দাদা দাদা দাদা",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.5,
+    "natural_break_score": 0.85,
+    "reason": "The presenter finishes his introduction and walks out of the frame, making it a clean and natural transition to an ad break before he begins interacting with the locals."
+   },
+   "where_score": 0.774
+  },
+  {
+   "id": "c006",
+   "t0": 317.96,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 317.96,
+   "scene_before": 5,
+   "scene_after": 6,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 6.66,
+    "silence_after": 0.04,
+    "speech_density_10s_before": 0.33,
+    "speech_density_10s_after": 0.75,
+    "loudness_dip_db": 11.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c007",
+   "t0": 374.08,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 374.08,
+   "scene_before": 6,
+   "scene_after": 7,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 1.68,
+    "silence_after": 5.12,
+    "speech_density_10s_before": 0.64,
+    "speech_density_10s_after": 0.43,
+    "loudness_dip_db": 0.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "Welcome to Srirampur.",
+    "first_line_after_cut": "দারুণ জায়গা সিলেক্ট করেছ।",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.9,
+    "jarring": 0.1,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.85,
+    "reason": "The ad break is placed during an aerial transition shot between two distinct locations, making it a very clean and natural scene change."
+   },
+   "where_score": 0.646
+  },
+  {
+   "id": "c008",
+   "t0": 435.16,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 435.16,
+   "scene_before": 7,
+   "scene_after": 8,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.98,
+    "speech_density_10s_after": 0.81,
+    "loudness_dip_db": 26.5,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c009",
+   "t0": 546.8,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "LLM: conversation continues across the cut"
+   ],
+   "t": 548.84,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 2.04,
+    "silence_before": 1.84,
+    "silence_after": 4.66,
+    "speech_density_10s_before": 0.67,
+    "speech_density_10s_after": 0.51,
+    "loudness_dip_db": 13.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "ছানার পাতুড়ি",
+    "first_line_after_cut": "ডিশটা তো ভুল বললি",
+    "dialogue_continues_across_cut": true,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.4,
+    "jarring": 0.6,
+    "suspense_hook": 0.2,
+    "natural_break_score": 0.4,
+    "reason": "The cut occurs mid-sequence during a cooking montage of the revealed dish, interrupting the ongoing conversation and music which resume immediately after the break."
+   },
+   "where_score": 0.331
+  },
+  {
+   "id": "c010",
+   "t0": 581.16,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 581.16,
+   "scene_before": 9,
+   "scene_after": 10,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 19.06,
+    "silence_after": 0.44,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.96,
+    "loudness_dip_db": 11.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "",
+    "first_line_after_cut": "আচ্ছা, এই যে আমরা একটা...",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": false,
+    "music_continues_across_cut": false,
+    "story_beat_complete": 0.8,
+    "jarring": 0.2,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.8,
+    "reason": "The cut is placed cleanly between the end of a cooking demonstration montage and the start of a new conversation segment, with no overlapping dialogue or music."
+   },
+   "where_score": 0.715
+  },
+  {
+   "id": "c011",
+   "t0": 647.72,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 647.72,
+   "scene_before": 10,
+   "scene_after": 11,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 1.0,
+    "speech_density_10s_after": 0.99,
+    "loudness_dip_db": 23.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c012",
+   "t0": 768.52,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 768.52,
+   "scene_before": 11,
+   "scene_after": 12,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 1.0,
+    "speech_density_10s_after": 0.96,
+    "loudness_dip_db": 26.2,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c013",
+   "t0": 811.24,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 811.24,
+   "scene_before": 12,
+   "scene_after": 13,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.04,
+    "silence_after": 0.16,
+    "speech_density_10s_before": 0.78,
+    "speech_density_10s_after": 0.74,
+    "loudness_dip_db": 4.9,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c014",
+   "t0": 890.28,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 891.56,
+   "scene_before": 14,
+   "scene_after": 15,
+   "signals": {
+    "snap_delta": 1.28,
+    "silence_before": 1.36,
+    "silence_after": 10.14,
+    "speech_density_10s_before": 0.81,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 7.4,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "আমাদের আজকের সেকেন্ড ডিশ হলো রেলওয়ে মাটন কারি।",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.5,
+    "jarring": 0.4,
+    "suspense_hook": 0.0,
+    "natural_break_score": 0.6,
+    "reason": "The cut occurs during a transition in a cooking montage, splitting the introduction of the dish from its preparation while the background music continues seamlessly."
+   },
+   "where_score": 0.439
+  },
+  {
+   "id": "c015",
+   "t0": 1033.0,
+   "sources": [
+    "scene_boundary"
+   ],
+   "rejections": [],
+   "t": 1035.0,
+   "scene_before": 15,
+   "scene_after": 16,
+   "signals": {
+    "snap_delta": 2.0,
+    "silence_before": 0.7,
+    "silence_after": 13.3,
+    "speech_density_10s_before": 0.76,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 10.3,
+    "fade_to_black": false,
+    "on_camera_cut": true
+   },
+   "judge": {
+    "last_line_before_cut": "ঠিক আছে দিয়ে এসো তাহলে",
+    "first_line_after_cut": "",
+    "dialogue_continues_across_cut": false,
+    "cut_is_mid_sentence": false,
+    "same_sequence_continues": true,
+    "music_continues_across_cut": true,
+    "story_beat_complete": 0.5,
+    "jarring": 0.4,
+    "suspense_hook": 0.1,
+    "natural_break_score": 0.45,
+    "reason": "The cut occurs mid-montage during the preparation of a food platter, interrupting the continuous background music and visual flow of the dish being assembled."
+   },
+   "where_score": 0.394
+  },
+  {
+   "id": "c016",
+   "t0": 1192.32,
+   "sources": [
+    "fade_to_black",
+    "scene_boundary"
+   ],
+   "rejections": [
+    "inside protected opening/closing window",
+    "every nearby cut point overlaps speech (mid-dialogue)"
+   ],
+   "t": 1192.32,
+   "scene_before": 15,
+   "scene_after": 16,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 0.0,
+    "silence_after": 0.0,
+    "speech_density_10s_before": 0.68,
+    "speech_density_10s_after": 0.19,
+    "loudness_dip_db": 13.3,
+    "fade_to_black": true,
+    "on_camera_cut": true
+   },
+   "where_score": 0.0
+  },
+  {
+   "id": "c017",
+   "t0": 1224.22,
+   "sources": [
+    "fade_to_black"
+   ],
+   "rejections": [
+    "inside protected opening/closing window"
+   ],
+   "t": 1224.22,
+   "scene_before": 16,
+   "scene_after": 16,
+   "signals": {
+    "snap_delta": 0.0,
+    "silence_before": 29.72,
+    "silence_after": 99.0,
+    "speech_density_10s_before": 0.0,
+    "speech_density_10s_after": 0.0,
+    "loudness_dip_db": 0.0,
+    "fade_to_black": true,
+    "on_camera_cut": false
+   },
+   "where_score": 0.0
+  }
+ ]
+}

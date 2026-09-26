@@ -73,6 +73,9 @@ def generate_json(parts: list, prompt: str, schema: dict, model: str | None = No
             return json.loads(resp.text)
         except Exception as e:  # rate limits / transient 5xx / truncated JSON
             last = e
+            msg = str(e)
+            if any(code in msg[:40] for code in ("400", "401", "402", "403")):
+                raise RuntimeError(f"Gemini request rejected (not retryable): {msg[:300]}") from e
             print(f"[gemini] attempt {attempt + 1} failed: {str(e)[:200]}", flush=True)
             client(fresh=True)
             time.sleep(min(30, 3 * 2 ** attempt))

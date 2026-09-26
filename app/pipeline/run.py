@@ -34,6 +34,45 @@ def catalogue_hash(brands: list[dict]) -> str:
     return hashlib.sha1(json.dumps(brands, sort_keys=True).encode()).hexdigest()[:10]
 
 
+def self_audit(final: list[dict], cands: list[dict], perc: dict, duration: float, rules: dict,
+               by_id: dict, scenes: list[dict]) -> list[dict]:
+    """Re-check every hard guarantee on the final plan from raw signals (not from LLM output)."""
+    checks = []
+
+    def add(name, ok, detail):
+        checks.append({"check": name, "pass": bool(ok), "detail": detail})
+
+    speech = perc["speech"]
+    worst = max((signals.speech_overlap(speech, b["t"] - breaks.GUARD_BEFORE, b["t"] + breaks.GUARD_AFTER) for b in final), default=0.0)
+    add("No speech at any cut point (VAD)", worst == 0, f"max speech overlap in ±guard window: {worst:.2f}s")
+    shots = perc["shots"]
+    off = [b for b in final if not any(abs(s - b["t"]) < 0.05 for s in shots)
+           and not any(x["start"] <= b["t"] <= x["end"] for x in perc["blacks"])]
+    add("Every cut on a camera cut or black frame", not off, f"{len(final) - len(off)}/{len(final)} breaks frame-aligned")
+    gaps = [b2["t"] - b1["t"] for b1, b2 in zip(final, final[1:])]
+    add("Min gap between breaks", all(g >= rules["min_gap_sec"] for g in gaps),
+        f"smallest gap {min(gaps):.0f}s (rule ≥ {rules['min_gap_sec']}s)" if gaps else "single break or none")
+    allowed = pacing.allowed_breaks(duration, rules)
+    add("Max breaks per hour", len(final) <= allowed, f"{len(final)} placed, {allowed} allowed for {duration / 60:.1f} min")
+    ad_time = sum(b["creative"]["duration_sec"] for b in final)
+    load = 100 * ad_time / (duration + ad_time) if final else 0.0
+    add("Ad load within budget", load <= rules["max_ad_load_pct"] + 1e-6, f"{load:.2f}% (max {rules['max_ad_load_pct']}%)")
+    add("Protected opening/closing windows", all(rules["no_break_first_sec"] <= b["t"] <= duration - rules["no_break_last_sec"] for b in final),
+        f"first {rules['no_break_first_sec']}s / last {rules['no_break_last_sec']}s untouched")
+    by_c = {c["id"]: c for c in cands}
+    viol = []
+    for b in final:
+        r = next(x for x in by_c[b["candidate_id"]]["brand_ranking"] if x["brand_id"] == b["brand_id"])
+        det = brandlib.deterministic_blocks(by_id[b["brand_id"]], scenes, b["t"])
+        if r["blocks"] or det or (r.get("verifier") or {}).get("violation"):
+            viol.append(b["brand_id"])
+    add("No negative-context brand placed (3 layers re-checked)", not viol, "violations: " + (", ".join(viol) if viol else "none"))
+    add("Every placed brand passed the independent verifier",
+        all((next(x for x in by_c[b["candidate_id"]]["brand_ranking"] if x["brand_id"] == b["brand_id"]).get("verifier") or {}).get("violation") is False for b in final),
+        f"{len(final)} verifier passes")
+    return checks
+
+
 def variant_id(brands: list[dict], rules: dict | None) -> str:
     rules = {**pacing.DEFAULT_RULES, **(rules or {})}
     return hashlib.sha1((catalogue_hash(brands) + json.dumps(rules, sort_keys=True)).encode()).hexdigest()[:10]
@@ -151,9 +190,10 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
                     try:
                         v = brandlib.verify(c, by_id[r["brand_id"]], scenes, proxy, wd)
                     except Exception as e:
-                        v = {"violation": True, "violated_contexts": [], "evidence": f"verifier error (fail-closed): {e}", "confidence": 0}
-                    matched["verify"][key] = v
-                    _save(mp, matched)
+                        v = {"violation": True, "violated_contexts": [], "evidence": f"verifier error (fail-closed): {e}", "confidence": 0, "error": True}
+                    if not v.get("error"):
+                        matched["verify"][key] = v
+                        _save(mp, matched)
                 r["verifier"] = v
                 if v["violation"]:
                     r["verifier_blocked"] = True
@@ -194,6 +234,7 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
 
     brandlib.annotate_scenes(scenes, brands)
     ad_time = sum(b["creative"]["duration_sec"] for b in final)
+    audit = self_audit(final, merged, perc, duration, rules, by_id, scenes)
     result = {
         "video_id": video_id,
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
@@ -209,6 +250,7 @@ def process(video_id: str, source: Path, brands: list[dict], rules: dict | None 
             "breaks_per_hour": round(len(final) / (duration / 3600), 2),
             "allowed_breaks": pacing.allowed_breaks(duration, rules),
         },
+        "audit": audit,
         "synopsis": scen.get("synopsis", ""),
         "breaks": final,
         "scenes": scenes,

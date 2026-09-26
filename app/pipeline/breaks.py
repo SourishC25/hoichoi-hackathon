@@ -158,6 +158,9 @@ def judge_all(cands: list[dict], proxy: Path, workdir: Path, scenes: list[dict],
 
     with ThreadPoolExecutor(workers) as ex:
         list(ex.map(one, todo))
+    failed = [c for c in todo if c.get("judge") is None]
+    if failed:  # never cache a half-judged stage
+        raise RuntimeError(f"{len(failed)} cut judgements failed: {failed[0]['rejections'][-1]}")
     for c in todo:
         j = c.get("judge")
         if not j:

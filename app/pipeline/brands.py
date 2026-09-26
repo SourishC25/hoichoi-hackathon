@@ -185,6 +185,9 @@ def match_all(cands: list[dict], brands: list[dict], scenes: list[dict], proxy: 
 
     with ThreadPoolExecutor(workers) as ex:
         list(ex.map(one, cands))
+    failed = [c for c in cands if c.get("match") is None]
+    if failed:  # never cache a half-matched stage
+        raise RuntimeError(f"{len(failed)} brand-matching calls failed: {failed[0]['rejections'][-1]}")
 
     for c in cands:
         ranking = []

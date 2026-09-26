@@ -232,10 +232,17 @@ function updatePlayhead() {
 // ---------------- tabs ----------------
 function bar(label, v) { return `<div class="bar"><div class="l">${esc(label)} · ${pct(v)}%</div><div class="track"><div class="fill" style="width:${pct(v)}%"></div></div></div>`; }
 
+function auditCard(r) {
+  if (!r.audit) return "";
+  const ok = r.audit.every((a) => a.pass);
+  return `<div class="card audit"><h4 style="margin:0 0 8px">${ok ? "✓" : "✕"} Self-audit — hard guarantees re-checked from raw signals</h4>
+    <div class="audit-grid">${r.audit.map((a) => `<div class="${a.pass ? "pass" : "fail"}"><b>${a.pass ? "PASS" : "FAIL"}</b> ${esc(a.check)}<div class="muted sm">${esc(a.detail)}</div></div>`).join("")}</div></div>`;
+}
+
 function renderBreaks() {
   const r = state.result, el = $("#tab-breaks");
-  if (!r.breaks.length) { el.innerHTML = '<div class="card muted">No ad breaks were placed — no boundary met the quality + brand-safety bar under the current pacing rules. That is a deliberate outcome, not a failure.</div>'; return; }
-  el.innerHTML = r.breaks.map((b, i) => {
+  if (!r.breaks.length) { el.innerHTML = auditCard(r) + '<div class="card muted">No ad breaks were placed — no boundary met the quality + brand-safety bar under the current pacing rules. That is a deliberate outcome, not a failure.</div>'; return; }
+  el.innerHTML = auditCard(r) + r.breaks.map((b, i) => {
     const c = r.candidates.find((x) => x.id === b.candidate_id) || {};
     const j = c.judge || {}, s = c.signals || {};
     const ranking = (c.brand_ranking || []);
